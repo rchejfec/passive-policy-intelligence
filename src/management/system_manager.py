@@ -5,6 +5,7 @@ Contains system-level functions for database management and maintenance.
 
 import os
 import chromadb
+from typing import Optional, Any
 from src.management.db_utils import get_db_connection
 
 # --- Configuration (mirrors configuration in indexing scripts) ---
@@ -14,7 +15,7 @@ DATA_DIR = os.path.join(ROOT_DIR, 'data')
 CHROMA_DB_PATH = os.path.join(DATA_DIR, 'chroma_db')
 COLLECTION_NAME = 'irpp_research'
 
-def initialize_chroma_db():
+def initialize_chroma_db() -> None:
     """
     Connects to ChromaDB and ensures the required collection exists.
 
@@ -40,7 +41,7 @@ def initialize_chroma_db():
         print(f"DATABASE ERROR: An error occurred with ChromaDB setup: {e}")
 
 # Add this new function at the end of the file
-def reset_analysis_data():
+def reset_analysis_data() -> None:
     """
     Deletes all records from the article_anchor_links table and resets the
     'analyzed_at' timestamp in the articles table.
@@ -67,7 +68,7 @@ def reset_analysis_data():
         if conn:
             conn.close()
 
-def reset_subscriber_data():
+def reset_subscriber_data() -> None:
     """
     Deletes all records from the subscribers and subscriptions tables.
     This is done explicitly to clean up any potential orphan subscription
@@ -97,7 +98,7 @@ def reset_subscriber_data():
             conn.close()
 
 
-def reset_anchor_data():
+def reset_anchor_data() -> None:
     """
     DEACTIVATES all active anchors by setting their 'is_active' flag to 0.
     This is a non-destructive reset.
@@ -120,11 +121,15 @@ def reset_anchor_data():
             conn.close()
 
 # --- NEW ---
-def reset_enrichment_data(limit=None, offset=0):
+def reset_enrichment_data(limit: Optional[int] = None, offset: int = 0) -> None:
     """
     Resets the enrichment_processed_at timestamp and is_org_highlight flag
     for a specified number of articles, allowing them to be re-processed.
     Sorts by article ID ASC to ensure predictability.
+
+    Args:
+        limit: The maximum number of articles to reset.
+        offset: The starting offset for resetting articles.
     """
     conn = get_db_connection()
     try:

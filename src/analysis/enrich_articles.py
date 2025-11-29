@@ -10,7 +10,9 @@ import argparse
 import pandas as pd
 from datetime import datetime
 import psycopg2
+import psycopg2.extensions
 from psycopg2.extras import execute_batch
+from typing import Tuple, Dict, Any, Optional
 
 # --- Path Setup ---
 try:
@@ -31,11 +33,17 @@ TIER1_CATEGORIES = [
 TIER2_CATEGORY = 'Government'
 TIER3_CATEGORY = 'News Media'
 
-def load_data_to_process(conn):
+def load_data_to_process(conn: psycopg2.extensions.connection) -> Tuple[pd.DataFrame, pd.DataFrame]:
     """
     Loads all article link data for articles that have not yet been enriched.
     CHANGED: This now selects the article_anchor_links primary key (link_id)
              for efficient updates.
+
+    Args:
+        conn: Database connection.
+
+    Returns:
+        Tuple of (DataFrame to process, historical DataFrame).
     """
     print("Loading dataset from the database for enrichment...")
     sql = """
@@ -69,10 +77,16 @@ def load_data_to_process(conn):
     
     return to_process_df, historical_df
 
-def calculate_threshold_map(conn):
+def calculate_threshold_map(conn: psycopg2.extensions.connection) -> pd.DataFrame:
     """
     Learns the historical performance thresholds from the database.
     This logic is unchanged but now reads directly from the DB.
+
+    Args:
+        conn: Database connection.
+
+    Returns:
+        DataFrame containing threshold map.
     """
     print("Calculating historical performance to create threshold map...")
     sql = """
@@ -92,16 +106,24 @@ def calculate_threshold_map(conn):
     print("Threshold map successfully calculated.")
     return threshold_map
 
-def apply_enrichment_logic(articles_to_process_df, full_historical_df, threshold_map):
+def apply_enrichment_logic(articles_to_process_df: pd.DataFrame, full_historical_df: pd.DataFrame, threshold_map: pd.DataFrame) -> pd.DataFrame:
     """
     Enriches articles with `is_anchor_highlight` and `is_org_highlight` flags.
     The core logic here is preserved from your original script.
+
+    Args:
+        articles_to_process_df: DataFrame of articles to process.
+        full_historical_df: Historical data DataFrame.
+        threshold_map: Threshold map DataFrame.
+
+    Returns:
+        Enriched DataFrame.
     """
     print("Applying enrichment logic to articles...")
     if articles_to_process_df.empty:
         return articles_to_process_df
         
-    def apply_anchor_rules(row):
+    def apply_anchor_rules(row: pd.Series) -> bool:
         category = row['source_category']
         anchor = row['anchor_name']
         score = row['abs_score']
@@ -129,9 +151,13 @@ def apply_enrichment_logic(articles_to_process_df, full_historical_df, threshold
     print(f"Enrichment complete. Flagged {num_anchor_highlights:,} anchor highlights and {num_org_highlights:,} org highlights.")
     return enriched_df
 
-def update_database_with_enrichments(conn, enriched_df):
+def update_database_with_enrichments(conn: psycopg2.extensions.connection, enriched_df: pd.DataFrame) -> None:
     """
     NEW: Writes the calculated enrichment flags back to the database.
+
+    Args:
+        conn: Database connection.
+        enriched_df: DataFrame containing enriched data.
     """
     if enriched_df.empty:
         print("No enrichments to save to the database.")
@@ -161,8 +187,15 @@ def update_database_with_enrichments(conn, enriched_df):
         execute_batch(cursor, update_timestamp_sql, processed_ids_data)
         print(f"- Stamped {cursor.rowcount} articles as 'enriched'.")
 
-def main(conn):
-    """Main execution function for the enrichment process."""
+def main(conn: psycopg2.extensions.connection) -> int:
+    """Main execution function for the enrichment process.
+
+    Args:
+        conn: Database connection.
+
+    Returns:
+        Number of org highlights found.
+    """
     print("\n--- Starting Enrichment Engine ---")
     try:
         to_process_df, historical_df = load_data_to_process(conn)

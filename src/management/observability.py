@@ -4,11 +4,12 @@ Handles logging of pipeline runs and metrics to the database.
 """
 
 import psycopg2
+import psycopg2.extensions
 from datetime import datetime
+from typing import Dict, Any, Optional
 
-def create_observability_table(conn):
-    """
-    Creates the pipeline_runs table if it doesn't exist.
+def create_observability_table(conn: psycopg2.extensions.connection) -> None:
+    """Creates the pipeline_runs table if it doesn't exist.
 
     Args:
         conn: A psycopg2 connection object.
@@ -33,15 +34,14 @@ def create_observability_table(conn):
         print(f"Observability Error: Failed to create table: {e}")
         conn.rollback()
 
-def start_run(conn) -> int:
-    """
-    Starts a new pipeline run logging entry.
+def start_run(conn: psycopg2.extensions.connection) -> int:
+    """Starts a new pipeline run logging entry.
 
     Args:
         conn: A psycopg2 connection object.
 
     Returns:
-        int: The ID of the new run.
+        int: The ID of the new run, or -1 if failure.
     """
     insert_sql = """
     INSERT INTO pipeline_runs (status, start_time)
@@ -60,9 +60,8 @@ def start_run(conn) -> int:
         conn.rollback()
         return -1 # Return invalid ID if failure
 
-def end_run(conn, run_id: int, status: str, metrics_dict: dict):
-    """
-    Updates the pipeline run entry with end time, status, and metrics.
+def end_run(conn: psycopg2.extensions.connection, run_id: int, status: str, metrics_dict: Dict[str, int]) -> None:
+    """Updates the pipeline run entry with end time, status, and metrics.
 
     Args:
         conn: A psycopg2 connection object.

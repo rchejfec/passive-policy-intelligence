@@ -17,18 +17,25 @@ and ID generation.
 import os
 import re
 import pandas as pd
+from typing import Any
 
-def slugify(text):
+def slugify(text: str) -> str:
     """
     Converts a string into a URL-friendly "slug".
     Example: "The Affordability Action Council" -> "the-affordability-action-council"
+
+    Args:
+        text: Input string.
+
+    Returns:
+        Slugified string.
     """
     text = text.lower()
     text = re.sub(r'[^a-z0-9\s-]', '', text)  # Remove special characters
     text = re.sub(r'[\s-]+', '-', text)      # Replace spaces and hyphens with a single hyphen
     return text.strip('-')
 
-def update_kb_with_charters(kb_path, charters_dir):
+def update_kb_with_charters(kb_path: str, charters_dir: str) -> None:
     """
     Scans a directory for program charter files and adds them to the knowledge base CSV.
 

@@ -5,7 +5,8 @@ import requests
 import pandas as pd
 from datetime import datetime
 from dataclasses import dataclass, field
-from typing import List
+from typing import List, Dict, Any, Optional
+import psycopg2.extensions
 
 sys.path.append(os.path.join(os.path.dirname(__file__), '..', '..'))
 from src.management.db_utils import get_db_connection
@@ -22,15 +23,27 @@ class Article:
     is_highlight: bool
     anchors: List[str] = field(default_factory=list)
 
-def should_run():
-    """Ensures the digest only sends in the morning."""
+def should_run() -> bool:
+    """Ensures the digest only sends in the morning.
+
+    Returns:
+        True if it should run, False otherwise.
+    """
     current_hour = datetime.now().hour
     if current_hour >= 20:
         print(f"Skipping Digest: Current hour is {current_hour} (Afternoon). Digest only runs in AM.")
         return False
     return True
 
-def fetch_candidates(conn):
+def fetch_candidates(conn: psycopg2.extensions.connection) -> pd.DataFrame:
+    """Fetches candidate articles from the database.
+
+    Args:
+        conn: Database connection.
+
+    Returns:
+        DataFrame containing candidate articles.
+    """
     print("Fetching candidate articles...")
     # Fetch all potential matches first (Highlights OR Score > Min)
     sql = f"""
@@ -49,8 +62,15 @@ def fetch_candidates(conn):
     df = pd.read_sql_query(sql, conn)
     return df
 
-def process_articles(df):
-    """Aggregates rows (1 article : N anchors) into unique Article objects."""
+def process_articles(df: pd.DataFrame) -> List[Article]:
+    """Aggregates rows (1 article : N anchors) into unique Article objects.
+
+    Args:
+        df: DataFrame of article rows.
+
+    Returns:
+        List of Article objects.
+    """
     if df.empty: return []
     
     articles_map = {}
@@ -72,8 +92,15 @@ def process_articles(df):
 
     return list(articles_map.values())
 
-def filter_by_scope(articles):
-    """Filters articles based on Configured Allowed Anchors/Types."""
+def filter_by_scope(articles: List[Article]) -> List[Article]:
+    """Filters articles based on Configured Allowed Anchors/Types.
+
+    Args:
+        articles: List of Article objects.
+
+    Returns:
+        Filtered list of Article objects.
+    """
     # If no filters are set, return everything
     if not config.ALLOWED_ANCHORS and not config.ALLOWED_ANCHOR_TYPES:
         return articles
@@ -110,12 +137,19 @@ def filter_by_scope(articles):
     print(f"Scope Filter: Kept {len(keep_list)} out of {len(articles)} articles.")
     return keep_list
 
-def select_content(all_articles):
-    """Sorts articles into sections and picks the winners."""
+def select_content(all_articles: List[Article]) -> Dict[str, List[Article]]:
+    """Sorts articles into sections and picks the winners.
+
+    Args:
+        all_articles: List of Article objects.
+
+    Returns:
+        Dictionary mapping section titles to lists of Article objects.
+    """
     selected_ids = set()
     sections_content = {}
     
-    def pick_top_n(candidates, limit):
+    def pick_top_n(candidates: List[Article], limit: int) -> List[Article]:
         candidates.sort(key=lambda x: (x.is_highlight, x.score), reverse=True)
         picks = []
         for art in candidates:
@@ -137,8 +171,13 @@ def select_content(all_articles):
         
     return sections_content
 
-def mark_as_sent(conn, articles_data):
-    """Updates the database timestamp for sent articles."""
+def mark_as_sent(conn: psycopg2.extensions.connection, articles_data: Dict[str, List[Article]]) -> None:
+    """Updates the database timestamp for sent articles.
+
+    Args:
+        conn: Database connection.
+        articles_data: Dictionary of sections containing articles.
+    """
     ids_to_update = []
     for section in articles_data.values():
         for art in section:
@@ -153,7 +192,12 @@ def mark_as_sent(conn, articles_data):
         )
     print(f"Marked {len(ids_to_update)} articles as sent.")
 
-def main(conn):
+def main(conn: psycopg2.extensions.connection) -> None:
+    """Main execution logic for the digest delivery engine.
+
+    Args:
+        conn: Database connection.
+    """
     print("--- Starting Digest Delivery Engine ---")
     
     if not should_run(): return

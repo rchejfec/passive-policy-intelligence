@@ -7,6 +7,8 @@ from datetime import datetime
 from time import mktime
 import requests
 import psycopg2
+import psycopg2.extensions
+from typing import List, Dict, Any, Tuple, Optional
 
 # CHANGED: This import is now only used when the script is run standalone for testing.
 from src.management.db_utils import get_db_connection
@@ -18,23 +20,48 @@ HEADERS = {
 # --- Database Functions ---
 # CHANGED: All functions now accept a 'conn' object.
 
-def get_active_feeds(conn):
-    """Retrieves all active feed URLs from the sources table."""
+def get_active_feeds(conn: psycopg2.extensions.connection) -> List[Dict[str, Any]]:
+    """Retrieves all active feed URLs from the sources table.
+
+    Args:
+        conn: Active database connection.
+
+    Returns:
+        List of dictionaries containing source information.
+    """
     with conn.cursor() as cursor:
         cursor.execute("SELECT id, name, feed_url, social_feed_url, ga_feed_url FROM sources WHERE is_active = TRUE")
         sources = [dict(zip([column[0] for column in cursor.description], row)) for row in cursor.fetchall()]
     print(f"Found {len(sources)} active sources to check.")
     return sources
 
-def article_exists(conn, link):
-    """Checks if an article with the given link already exists in the database."""
+def article_exists(conn: psycopg2.extensions.connection, link: str) -> bool:
+    """Checks if an article with the given link already exists in the database.
+
+    Args:
+        conn: Active database connection.
+        link: URL of the article to check.
+
+    Returns:
+        True if article exists, False otherwise.
+    """
     with conn.cursor() as cursor:
         cursor.execute("SELECT id FROM articles WHERE link = %s", (link,))
         exists = cursor.fetchone() is not None
     return exists
 
-def add_article_to_db(conn, source_id, title, link, summary, published_date, retrieved_from_url):
-    """Inserts a new article into the articles table, ignoring duplicates."""
+def add_article_to_db(conn: psycopg2.extensions.connection, source_id: int, title: str, link: str, summary: str, published_date: str, retrieved_from_url: str) -> None:
+    """Inserts a new article into the articles table, ignoring duplicates.
+
+    Args:
+        conn: Active database connection.
+        source_id: ID of the source.
+        title: Article title.
+        link: Article URL.
+        summary: Article summary.
+        published_date: Date published.
+        retrieved_from_url: URL where the article was found (feed URL).
+    """
     with conn.cursor() as cursor:
         # CHANGED: Using ON CONFLICT for efficient duplicate handling in PostgreSQL.
         cursor.execute("""
@@ -46,8 +73,18 @@ def add_article_to_db(conn, source_id, title, link, summary, published_date, ret
 # --- Feed Parsing Function ---
 # CHANGED: This function now accepts a 'conn' object to pass down.
 
-def fetch_and_process_feed(conn, source_id, source_name, feed_url):
-    """Fetches a single RSS feed and adds new articles to the database."""
+def fetch_and_process_feed(conn: psycopg2.extensions.connection, source_id: int, source_name: str, feed_url: str) -> Tuple[int, str]:
+    """Fetches a single RSS feed and adds new articles to the database.
+
+    Args:
+        conn: Active database connection.
+        source_id: ID of the source.
+        source_name: Name of the source.
+        feed_url: URL of the RSS feed.
+
+    Returns:
+        Tuple containing count of new articles found and status message.
+    """
     if not feed_url:
         return 0, "Skipped (empty URL)"
         
@@ -85,8 +122,18 @@ def fetch_and_process_feed(conn, source_id, source_name, feed_url):
 # --- Main Execution Logic ---
 # CHANGED: The main logic is wrapped in a function that accepts a connection.
 
-def main(conn):
-    """Main execution logic for the RSS fetcher."""
+def main(conn: psycopg2.extensions.connection) -> Optional[int]:
+    """Main execution logic for the RSS fetcher.
+
+    Args:
+        conn: Active database connection.
+
+    Returns:
+        Total number of new articles added, or None if failed (though implementation returns early on some failures).
+
+    Raises:
+        psycopg2.Error: If database error occurs.
+    """
     print("--- Running RSS Fetcher ---")
     
     try:
@@ -94,7 +141,7 @@ def main(conn):
         
         if not active_sources:
             print("No active sources found. Skipping.")
-            return
+            return 0 # Return 0 instead of None for consistency
             
         total_new_articles = 0
         

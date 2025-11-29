@@ -4,10 +4,11 @@
 import sqlite3
 import csv
 import questionary
-from questionary import Choice  # <-- Add this import line
+from questionary import Choice
+from typing import Optional, List, Dict, Any, Union
 from src.management.db_utils import get_db_connection, slugify
 
-def list_subscribers():
+def list_subscribers() -> None:
     """Lists all subscribers and their ACTIVE anchor subscriptions."""
     conn = get_db_connection()
     try:
@@ -39,8 +40,18 @@ def list_subscribers():
         if conn:
             conn.close()
 
-def add_subscriber(email: str, name: str, override: bool = False, conn: sqlite3.Connection = None):
-    """Adds or updates a single subscriber, returns their ID. Can use an existing db connection."""
+def add_subscriber(email: str, name: str, override: bool = False, conn: Any = None) -> Optional[int]:
+    """Adds or updates a single subscriber, returns their ID. Can use an existing db connection.
+
+    Args:
+        email: Subscriber email.
+        name: Subscriber name.
+        override: Whether to update name if subscriber exists.
+        conn: Optional existing database connection.
+
+    Returns:
+        The subscriber ID, or None if failed.
+    """
     # If no connection is passed, create a temporary one.
     close_conn_after = False
     if conn is None:
@@ -77,8 +88,12 @@ def add_subscriber(email: str, name: str, override: bool = False, conn: sqlite3.
     return subscriber_id
 
 
-def import_subscribers_from_file(file_path: str):
-    """Imports subscribers and their subscriptions from a CSV file."""
+def import_subscribers_from_file(file_path: str) -> None:
+    """Imports subscribers and their subscriptions from a CSV file.
+
+    Args:
+        file_path: Path to the CSV file.
+    """
     print("Starting subscriber import with validation...")
     conn = get_db_connection() # Open one connection for the whole process
     try:
@@ -122,7 +137,7 @@ def import_subscribers_from_file(file_path: str):
 
 ## Add this entire function to the end of the file.
 
-def delete_subscribers_interactive():
+def delete_subscribers_interactive() -> None:
     """Launches an interactive wizard to delete one or more subscribers."""
     conn = get_db_connection()
     try:

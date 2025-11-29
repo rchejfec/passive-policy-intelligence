@@ -2,6 +2,7 @@
 import os
 import sys
 import psycopg2
+from typing import Optional
 from src.management import db_utils
 
 try:
@@ -21,7 +22,7 @@ from src.analysis import enrich_articles
 from src.delivery import engine as delivery_engine
 from src.management import observability
 
-def run_pipeline():
+def run_pipeline() -> None:
     """
     Main orchestrator function to run the data pipeline steps sequentially.
     """

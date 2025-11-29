@@ -22,6 +22,7 @@ import feedparser
 import requests
 from bs4 import BeautifulSoup
 import time
+from typing import List, Dict, Any
 
 # --- CONFIGURATION ---
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -31,7 +32,7 @@ OUTPUT_CSV = os.path.join(USER_CONTENT_DIR, 'knowledge_base.csv')
 
 # --- MAIN FUNCTIONS ---
 
-def extract_product_name_from_url(url):
+def extract_product_name_from_url(url: str) -> str:
     """Extracts a human-readable 'product name' from a URL.
 
     This function takes a URL, extracts the last significant segment of its
@@ -74,7 +75,7 @@ def extract_product_name_from_url(url):
         return ""
 
 
-def gather_raw_articles_from_sources(sources_csv_path):
+def gather_raw_articles_from_sources(sources_csv_path: str) -> List[Dict[str, Any]]:
     """Scrapes articles from sources listed in a CSV file.
 
     Reads a CSV file containing RSS feeds and direct web links, fetches
@@ -138,7 +139,7 @@ def gather_raw_articles_from_sources(sources_csv_path):
     return articles
 
 
-def enrich_and_save_knowledge_base(articles, output_csv_path):
+def enrich_and_save_knowledge_base(articles: List[Dict[str, Any]], output_csv_path: str) -> None:
     """Enriches article data with product names and saves it to a CSV.
 
     Takes a list of raw article data, adds a 'product_name' column based
@@ -175,8 +176,15 @@ def enrich_and_save_knowledge_base(articles, output_csv_path):
     except Exception as e:
         print(f"An error occurred while writing the CSV: {e}")
 
-def read_existing_knowledge_base(file_path):
-    """Reads an existing knowledge base CSV into a list of dictionaries."""
+def read_existing_knowledge_base(file_path: str) -> List[Dict[str, Any]]:
+    """Reads an existing knowledge base CSV into a list of dictionaries.
+
+    Args:
+        file_path: Path to CSV file.
+
+    Returns:
+        List of dictionaries representing CSV rows.
+    """
     articles = []
     try:
         with open(file_path, mode='r', encoding='utf-8') as infile:
@@ -187,7 +195,7 @@ def read_existing_knowledge_base(file_path):
         print(f"Error: Could not find file at {file_path}")
     return articles
 
-def main():
+def main() -> None:
     """Main function to run the knowledge base build process."""
     print("--- Starting Knowledge Base Build Process ---")
 

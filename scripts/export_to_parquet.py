@@ -20,6 +20,8 @@ import sys
 import argparse
 import pandas as pd
 from datetime import datetime, timedelta
+import psycopg2.extensions
+from typing import Optional
 
 # Path setup
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -34,7 +36,7 @@ OUTPUT_DIR = os.path.join(ROOT_DIR, 'portal', 'src', 'data')
 DEFAULT_MORNING_PAPER_DAYS = 7
 
 
-def export_morning_paper(conn, days=DEFAULT_MORNING_PAPER_DAYS):
+def export_morning_paper(conn: psycopg2.extensions.connection, days: int = DEFAULT_MORNING_PAPER_DAYS) -> int:
     """
     Export recent articles with their anchor matches for the morning paper view.
 
@@ -86,7 +88,7 @@ def export_morning_paper(conn, days=DEFAULT_MORNING_PAPER_DAYS):
     return len(df)
 
 
-def export_archive(conn):
+def export_archive(conn: psycopg2.extensions.connection) -> int:
     """
     Export all historical articles with their anchor matches for archive view.
 
@@ -135,7 +137,7 @@ def export_archive(conn):
     return len(df)
 
 
-def export_sources(conn):
+def export_sources(conn: psycopg2.extensions.connection) -> int:
     """
     Export source metadata for transparency and filtering.
 
@@ -172,7 +174,7 @@ def export_sources(conn):
     return len(df)
 
 
-def export_anchors(conn):
+def export_anchors(conn: psycopg2.extensions.connection) -> int:
     """
     Export semantic anchor definitions for UI and filtering.
 
@@ -207,7 +209,7 @@ def export_anchors(conn):
     return len(df)
 
 
-def main():
+def main() -> None:
     """Main execution function."""
     parser = argparse.ArgumentParser(
         description='Export PostgreSQL data to Parquet files for Think Tank Portal'

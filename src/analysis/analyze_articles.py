@@ -12,7 +12,9 @@ import numpy as np
 import pandas as pd
 import chromadb
 import psycopg2
+import psycopg2.extensions
 from scipy.spatial.distance import cdist # ADD THIS LINE
+from typing import List, Dict, Any, Optional, Tuple
 
 # --- Path Setup ---
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -38,22 +40,42 @@ CATEGORIES_TO_FILTER = ['News Media', 'Misc. Research']
 # --- HELPER FUNCTIONS ---
 # ==============================================================================
 
-def setup_logging():
+def setup_logging() -> str:
+    """Sets up the log directory and file.
+
+    Returns:
+        Path to the log file.
+    """
     os.makedirs(LOG_DIR, exist_ok=True)
     log_file = os.path.join(LOG_DIR, 'analysis_log.txt')
     open(log_file, 'w').close()
     return log_file
 
-def log_message(message, log_file, level='INFO'):
+def log_message(message: str, log_file: str, level: str = 'INFO') -> None:
+    """Logs a message to console and file.
+
+    Args:
+        message: Message to log.
+        log_file: Path to log file.
+        level: Log level.
+    """
     log_entry = f"{time.strftime('%Y-%m-%d %H:%M:%S')} - {level} - {message}"
     print(log_entry)
     with open(log_file, 'a', encoding='utf-8') as f:
         f.write(log_entry + '\n')
 
-def load_anchors_with_embeddings(conn, chroma_collection, log_file):
+def load_anchors_with_embeddings(conn: psycopg2.extensions.connection, chroma_collection: Any, log_file: str) -> Dict[int, Dict[str, Any]]:
     """
     Loads all ACTIVE anchors and calculates their representative embeddings.
     This is the corrected version that handles all component types.
+
+    Args:
+        conn: Database connection.
+        chroma_collection: ChromaDB collection.
+        log_file: Path to log file.
+
+    Returns:
+        Dictionary mapping anchor ID to anchor data (name, embeddings).
     """
     log_message("Loading all ACTIVE anchors and their component embeddings...", log_file)
     with conn.cursor() as cursor:
@@ -100,11 +122,29 @@ def load_anchors_with_embeddings(conn, chroma_collection, log_file):
     
     return final_anchor_embeddings
 
-def calculate_similarity(article_embeddings, anchor_embeddings):
+def calculate_similarity(article_embeddings: List[np.ndarray], anchor_embeddings: List[np.ndarray]) -> float:
+    """Calculates cosine similarity between article and anchor embeddings.
+
+    Args:
+        article_embeddings: List of article embeddings.
+        anchor_embeddings: List of anchor embeddings.
+
+    Returns:
+        Similarity score.
+    """
     if not article_embeddings or not anchor_embeddings: return 0.0
     return np.mean(np.sort(1 - cdist(np.array(article_embeddings), np.array(anchor_embeddings), 'cosine'), axis=None)[-K_FOR_SIMILARITY:])
 
-def get_unanalyzed_articles(conn, batch_size=BATCH_SIZE):
+def get_unanalyzed_articles(conn: psycopg2.extensions.connection, batch_size: int = BATCH_SIZE) -> List[Dict[str, Any]]:
+    """Fetches a batch of unanalyzed articles.
+
+    Args:
+        conn: Database connection.
+        batch_size: Batch size.
+
+    Returns:
+        List of unanalyzed articles.
+    """
     with conn.cursor() as cursor:
         cursor.execute("""
             SELECT a.id, a.title, src.category as source_category
@@ -115,7 +155,16 @@ def get_unanalyzed_articles(conn, batch_size=BATCH_SIZE):
         """, (batch_size,))
         return [dict(zip([column[0] for column in cursor.description], row)) for row in cursor.fetchall()]
 
-def get_article_embeddings(chroma_collection, article_db_ids):
+def get_article_embeddings(chroma_collection: Any, article_db_ids: List[int]) -> Dict[int, List[np.ndarray]]:
+    """Fetches embeddings for a list of articles from ChromaDB.
+
+    Args:
+        chroma_collection: ChromaDB collection.
+        article_db_ids: List of article IDs.
+
+    Returns:
+        Dictionary mapping article ID to list of embeddings.
+    """
     article_embeddings = {db_id: [] for db_id in article_db_ids}
     results = chroma_collection.get(where={"article_db_id": {"$in": article_db_ids}}, include=["metadatas", "embeddings"])
     if results['ids']:
@@ -129,8 +178,16 @@ def get_article_embeddings(chroma_collection, article_db_ids):
 # --- MAIN ORCHESTRATION ---
 # ==============================================================================
 
-def main(conn, limit=None):
-    """Main function to orchestrate the analysis process."""
+def main(conn: psycopg2.extensions.connection, limit: Optional[int] = None) -> int:
+    """Main function to orchestrate the analysis process.
+
+    Args:
+        conn: Database connection.
+        limit: Optional limit on number of articles to process.
+
+    Returns:
+        Total number of articles analyzed.
+    """
     log_file = setup_logging()
     
     try:
@@ -149,9 +206,6 @@ def main(conn, limit=None):
     batch_size = limit if limit else BATCH_SIZE
     total_articles_analyzed = 0
     
-    # Add this flag before the loop
-    first_article_debug_done = False
-
     log_message("--- Starting Article Analysis Process ---", log_file)
     while True:
         articles_to_process = get_unanalyzed_articles(conn, batch_size)
@@ -170,29 +224,12 @@ def main(conn, limit=None):
             article_id = article['id']
             article_embeddings = batch_article_embeddings.get(article_id, [])
             
-                        # --- START DEBUGGING BLOCK ---
-            if not first_article_debug_done:
-                print("\n\n--- DEBUGGING FIRST ARTICLE ---")
-                print(f"  Article ID: {article_id}")
-                print(f"  Source Category: {article.get('source_category')}")
-                print(f"  Number of embeddings found for this article: {len(article_embeddings)}")
-            # --- END DEBUGGING BLOCK ---
-
             if not article_embeddings:
-                if not first_article_debug_done:
-                    print("  DEBUG: No embeddings found, skipping.")
                 continue
 
             for anchor_id, anchor_data in anchors.items():
                 score = calculate_similarity(article_embeddings, anchor_data['embeddings'])
 
-                # --- MORE DEBUGGING ---
-                if not first_article_debug_done:
-                    print(f"  - Calculated score against anchor '{anchor_data['name']}': {score:.4f}")
-                    # Set the flag so we don't print this again
-                    first_article_debug_done = True
-                # --- END MORE DEBUGGING ---
-                
                 # --- NEW LOGIC: Conditional Threshold Filter ---
                 if article['source_category'] in CATEGORIES_TO_FILTER:
                     if score < MINIMUM_SIMILARITY_SCORE:
