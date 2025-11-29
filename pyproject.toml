@@ -1,0 +1,91 @@
+[project]
+name = "passive-policy-intelligence"
+version = "0.4.0"
+description = "Automated environmental scanning infrastructure for policy intelligence"
+readme = "README.md"
+requires-python = ">=3.9"
+license = {text = "MIT"}
+authors = [
+    {name = "Ricardo Chejfec"}
+]
+keywords = ["policy", "intelligence", "semantic-analysis", "rss", "vector-search"]
+
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Topic :: Scientific/Engineering :: Information Analysis",
+]
+
+dependencies = [
+    # Data Analysis & Notebooks
+    "pandas",
+    "numpy==1.26.4",
+    "ipykernel",
+    "matplotlib",
+    "scipy",
+    "tabulate",
+    "plotly",
+    "umap-learn",
+    "nbformat>=4.2.0",
+    "hdbscan",
+    "seaborn",
+
+    # Core AI & Vector DB
+    "chromadb",
+    "sentence-transformers",
+    "torch",
+
+    # Data Ingestion & Scraping
+    "beautifulsoup4",
+    "feedparser",
+    "requests",
+    "PyMuPDF",
+    "trafilatura",
+
+    # TUI for Management Scripts
+    "textual",
+    "questionary",
+
+    # Database & Config
+    "python-dotenv",
+    "psycopg2-binary",
+
+    # Data Export
+    "pyarrow",  # For Parquet files
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+    "mypy",
+    "black",
+    "ruff",
+]
+
+[project.scripts]
+ppi-manage = "manage:main"  # CLI shortcut
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.uv]
+dev-dependencies = []
+
+[tool.ruff]
+line-length = 100
+target-version = "py39"
+
+[tool.black]
+line-length = 100
+target-version = ['py39']
+
+[tool.mypy]
+python_version = "3.9"
+warn_return_any = true
+warn_unused_configs = true
+ignore_missing_imports = true

@@ -16,6 +16,11 @@ __pycache__/
 venv/
 ENV/
 env/
+.python-version
+
+# UV (Python package manager)
+uv.lock
+.uv/
 
 # Data & Databases
 /data/
