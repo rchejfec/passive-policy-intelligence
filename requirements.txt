@@ -1,0 +1,31 @@
+# For Data Analysis & Notebooks
+pandas
+numpy==1.26.4
+ipykernel
+matplotlib
+scipy
+tabulate
+plotly
+umap-learn
+nbformat>=4.2.0
+hdbscan
+seaborn
+
+# For Core AI & Vector DB
+chromadb
+sentence-transformers
+torch
+
+# For Data Ingestion & Scraping
+beautifulsoup4
+feedparser
+requests
+PyMuPDF
+trafilatura
+
+# TUI for Management Scripts
+textual
+questionary
+
+python-dotenv
+psycopg2-binary

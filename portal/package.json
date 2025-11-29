@@ -1,0 +1,14 @@
+{
+  "name": "think-tank-intelligence-portal",
+  "version": "1.0.0",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "dev": "observable preview",
+    "build": "observable build",
+    "clean": "observable clean"
+  },
+  "devDependencies": {
+    "@observablehq/framework": "latest"
+  }
+}
