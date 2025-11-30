@@ -242,7 +242,7 @@ def main(conn: psycopg2.extensions.connection, limit: Optional[int] = None) -> i
             log_message(f"Inserting {len(links_to_insert)} new anchor links into the database...", log_file)
             with conn.cursor() as cursor:
                 cursor.executemany("INSERT INTO article_anchor_links (article_id, anchor_id, similarity_score) VALUES (%s, %s, %s)", links_to_insert)
-        
+
         if skipped_links > 0:
             log_message(f"Skipped {skipped_links} links that did not meet the {MINIMUM_SIMILARITY_SCORE} threshold for filtered categories.", log_file)
 
@@ -250,7 +250,10 @@ def main(conn: psycopg2.extensions.connection, limit: Optional[int] = None) -> i
         update_ids = [[article_id] for article_id in article_ids]
         with conn.cursor() as cursor:
             cursor.executemany("UPDATE articles SET analyzed_at = CURRENT_TIMESTAMP WHERE id = %s", update_ids)
-        
+
+        # Commit after each batch to persist progress
+        conn.commit()
+
         total_articles_analyzed += len(articles_to_process)
         if limit: break # If in limit mode, only run one batch
         
