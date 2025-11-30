@@ -100,6 +100,49 @@ def clear_existing_demo_links(conn, dry_run=False):
     print(f"   ✓ Deleted {existing_count:,} existing links")
 
 
+def reset_analyzed_timestamps(conn, months=None, since_date=None, dry_run=False):
+    """Clear analyzed_at timestamps so articles will be re-analyzed."""
+    print(f"\n🔄 Resetting analyzed_at timestamps...")
+
+    if since_date:
+        where_clause = "published_date >= %s"
+        params = (since_date,)
+    else:
+        cutoff_date = datetime.now() - timedelta(days=months * 30)
+        where_clause = "published_date >= %s"
+        params = (cutoff_date,)
+
+    with conn.cursor() as cursor:
+        cursor.execute(f"""
+            SELECT COUNT(*)
+            FROM articles
+            WHERE {where_clause}
+              AND analyzed_at IS NOT NULL
+        """, params)
+        count = cursor.fetchone()[0]
+
+    if count == 0:
+        print("   ℹ️  No articles need timestamp reset")
+        return
+
+    print(f"   Found {count:,} articles with analyzed_at timestamps")
+
+    if dry_run:
+        print("   [DRY RUN] Would reset analyzed_at to NULL for these articles")
+        return
+
+    with conn.cursor() as cursor:
+        cursor.execute(f"""
+            UPDATE articles
+            SET analyzed_at = NULL
+            WHERE {where_clause}
+              AND analyzed_at IS NOT NULL
+        """, params)
+        conn.commit()
+
+    print(f"   ✓ Reset {count:,} analyzed_at timestamps")
+
+
 def run_analysis(conn, dry_run=False):
     """Run the analysis module to generate new matches."""
     print(f"\n🔍 Running semantic analysis...")
@@ -185,6 +228,9 @@ def main():
 
         # Clear existing demo links
         clear_existing_demo_links(conn, dry_run=args.dry_run)
+
+        # Reset analyzed_at timestamps so articles will be re-analyzed
+        reset_analyzed_timestamps(conn, months=args.months, since_date=since_date, dry_run=args.dry_run)
 
         # Run analysis
         if not args.dry_run:
