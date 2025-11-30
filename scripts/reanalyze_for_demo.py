@@ -188,12 +188,15 @@ def main():
                        help='Analyze articles since date (YYYY-MM-DD)')
     parser.add_argument('--dry-run', action='store_true',
                        help='Preview actions without making changes')
+    parser.add_argument('--resume', action='store_true',
+                       help='Resume from interruption (skip clearing links and resetting timestamps)')
     args = parser.parse_args()
 
     print("=" * 70)
     print("RE-ANALYZE ARTICLES FOR DEMO")
     print("=" * 70)
     print(f"Mode: {'DRY RUN (preview only)' if args.dry_run else 'EXECUTE'}")
+    print(f"Resume: {'Yes (preserving existing links)' if args.resume else 'No (fresh start)'}")
     if args.since:
         print(f"Period: Since {args.since}")
         since_date = datetime.strptime(args.since, '%Y-%m-%d').date()
@@ -226,11 +229,15 @@ def main():
             print("\n❌ ERROR: No articles found in specified period")
             return
 
-        # Clear existing demo links
-        clear_existing_demo_links(conn, dry_run=args.dry_run)
+        # Only clear and reset on fresh start (not on resume)
+        if not args.resume:
+            # Clear existing demo links
+            clear_existing_demo_links(conn, dry_run=args.dry_run)
 
-        # Reset analyzed_at timestamps so articles will be re-analyzed
-        reset_analyzed_timestamps(conn, months=args.months, since_date=since_date, dry_run=args.dry_run)
+            # Reset analyzed_at timestamps so articles will be re-analyzed
+            reset_analyzed_timestamps(conn, months=args.months, since_date=since_date, dry_run=args.dry_run)
+        else:
+            print("\n⏭️  Resuming from previous run (skipping clear and reset)")
 
         # Run analysis
         if not args.dry_run:
