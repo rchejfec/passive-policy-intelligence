@@ -73,15 +73,13 @@ def create_semantic_anchors(conn, anchors, dry_run=False):
         for anchor in anchors:
             cursor.execute("""
                 INSERT INTO semantic_anchors
-                    (name, anchor_author, is_active, created_at, updated_at)
-                VALUES (%s, %s, %s, %s, %s)
+                    (name, anchor_author, is_active)
+                VALUES (%s, %s, %s)
                 RETURNING id
             """, (
                 anchor['name'],
                 anchor['author'],
-                True,
-                datetime.now(),
-                datetime.now()
+                True
             ))
             anchor_id = cursor.fetchone()[0]
             created_ids.append(anchor_id)
@@ -164,9 +162,9 @@ def deactivate_prog_anchors(conn, dry_run=False):
     with conn.cursor() as cursor:
         cursor.execute("""
             UPDATE semantic_anchors
-            SET is_active = false, updated_at = %s
+            SET is_active = false
             WHERE name LIKE 'PROG:%' AND is_active = true
-        """, (datetime.now(),))
+        """)
         conn.commit()
 
     print(f"   ✓ Deactivated {len(prog_anchors)} PROG: anchors")
