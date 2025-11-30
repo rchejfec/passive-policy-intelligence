@@ -4,9 +4,14 @@
 
 import argparse
 import sys
+from typing import Any
 
-def handle_subscribers(args):
-    """Dispatcher for subscriber commands."""
+def handle_subscribers(args: argparse.Namespace) -> None:
+    """Dispatcher for subscriber commands.
+
+    Args:
+        args: Parsed command-line arguments.
+    """
     from src.management.subscriber_manager import (
         list_subscribers,
         add_subscriber,
@@ -22,8 +27,12 @@ def handle_subscribers(args):
     elif args.action == 'delete':  # <-- Add case for delete
         delete_subscribers_interactive()
 
-def handle_anchors(args):
-    """Dispatcher for anchor commands."""
+def handle_anchors(args: argparse.Namespace) -> None:
+    """Dispatcher for anchor commands.
+
+    Args:
+        args: Parsed command-line arguments.
+    """
     from src.management.anchor_manager import (
         list_anchors,
         generate_template_csv,
@@ -49,7 +58,12 @@ def handle_anchors(args):
         print(f"Unknown action for anchors: {args.action}")
 
 # NEW: Dispatcher for system commands.
-def handle_system(args):
+def handle_system(args: argparse.Namespace) -> None:
+    """Dispatcher for system commands.
+
+    Args:
+        args: Parsed command-line arguments.
+    """
     from src.management.system_manager import (
         reset_analysis_data,
         reset_anchor_data,
@@ -74,7 +88,12 @@ def handle_system(args):
     else:
         print(f"Unknown action for system: {args.action}")
 
-def handle_testing(args):
+def handle_testing(args: argparse.Namespace) -> None:
+    """Dispatcher for testing commands.
+
+    Args:
+        args: Parsed command-line arguments.
+    """
     from src.management.testing_manager import (
         generate_test_anchors_csv,
         generate_test_subscribers_csv
@@ -86,7 +105,7 @@ def handle_testing(args):
     else:
         print(f"Unknown action for testing: {args.action}")
 
-def main():
+def main() -> None:
     """Main entry point for the management script."""
     parser = argparse.ArgumentParser(
         description="A master command-line interface (CLI) for managing the AI Daily Digest system.",

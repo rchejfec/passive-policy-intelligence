@@ -6,17 +6,37 @@ import csv
 import sys
 import questionary
 from questionary import Choice
+from typing import Optional, List, Tuple, Dict, Any, Set
 from src.management.db_utils import get_db_connection, get_all_component_types
 
 # --- NEW: Helper for case-insensitive matching ---
 def _slugify(text: str) -> str:
-    """Converts text to a simplified, comparable format."""
+    """Converts text to a simplified, comparable format.
+
+    Args:
+        text: The input string to slugify.
+
+    Returns:
+        The slugified string (lowercase and stripped).
+    """
     return text.lower().strip()
 
 # --- Core Database & Helper Functions ---
 
-def _create_anchor_in_db(name: str, description: str, author: str, programs: list, tags: list, kb_items: list):
-    """Writes a new anchor and its components to the database."""
+def _create_anchor_in_db(name: str, description: str, author: str, programs: List[str], tags: List[str], kb_items: List[str]) -> Optional[int]:
+    """Writes a new anchor and its components to the database.
+
+    Args:
+        name: Name of the anchor.
+        description: Description of the anchor.
+        author: Author of the anchor.
+        programs: List of associated programs.
+        tags: List of associated tags.
+        kb_items: List of associated KB items.
+
+    Returns:
+        The ID of the newly created anchor, or None if creation failed or skipped.
+    """
     if not programs and not tags and not kb_items:
         print(f"❌ Error for anchor '{name}': Cannot create an anchor with no components. Please add at least one program, tag, or KB item.")
         return None
@@ -27,7 +47,7 @@ def _create_anchor_in_db(name: str, description: str, author: str, programs: lis
             # MODIFIED: Check for uniqueness against ALL anchors (active or inactive).
             if conn.execute("SELECT id FROM semantic_anchors WHERE name = ?", (name,)).fetchone():
                 print(f"⚠️  Skipping: An anchor named '{name}' already exists in the database.")
-                return
+                return None
 
             cursor = conn.cursor()
             cursor.execute(
@@ -60,8 +80,12 @@ def _create_anchor_in_db(name: str, description: str, author: str, programs: lis
     return None
 
 
-def _get_all_components():
-    """Fetches all possible component values from the database using the centralized utility."""
+def _get_all_components() -> Tuple[List[str], List[str], List[str]]:
+    """Fetches all possible component values from the database using the centralized utility.
+
+    Returns:
+        A tuple containing sorted lists of programs, tags, and KB items.
+    """
     conn = get_db_connection()
     try:
         # One call to the centralized utility function
@@ -81,7 +105,7 @@ def _get_all_components():
 # --- Public Command Functions ---
 # list_anchors() and generate_template_csv() remain the same
 
-def list_anchors():
+def list_anchors() -> None:
     """Lists all ACTIVE semantic anchors and their components."""
     conn = get_db_connection()
     try:
@@ -114,7 +138,7 @@ def list_anchors():
         if conn:
             conn.close()
 
-def generate_template_csv():
+def generate_template_csv() -> None:
     """Prints a CSV template string to standard output."""
     header = ['name', 'description', 'anchor_author', 'programs', 'tags', 'kb_items']
     sample_row = ['Sample AI Anchor', 'A sample description', 'Your Name', 'AI-Gov,Digital-ID', 'Ethics,Policy', 'Some Program Name']
@@ -124,8 +148,12 @@ def generate_template_csv():
     writer.writerow(sample_row)
     print("\n# CSV template printed above. Redirect to a file with '> anchor_template.csv'", file=sys.stderr)
 
-def create_anchors_from_file(file_path: str):
-    """Creates anchors in bulk from a specified CSV file with validation."""
+def create_anchors_from_file(file_path: str) -> None:
+    """Creates anchors in bulk from a specified CSV file with validation.
+
+    Args:
+        file_path: Path to the CSV file containing anchor definitions.
+    """
     print("Starting bulk import with validation...")
     
     # --- REVISED LOGIC ---
@@ -191,7 +219,7 @@ def create_anchors_from_file(file_path: str):
         print(f"❌ An error occurred while processing the file: {e}")
 
 # create_anchor_interactive() remains the same
-def create_anchor_interactive():
+def create_anchor_interactive() -> None:
     """Launches an interactive wizard to create a single semantic anchor."""
     print("Launching interactive anchor creation wizard...")
     
@@ -280,9 +308,9 @@ def create_anchor_interactive():
                 break
             
 
-def delete_anchors_interactive():
-    """
-    Launches an interactive wizard to DEACTIVATE one or more semantic anchors.
+def delete_anchors_interactive() -> None:
+    """Launches an interactive wizard to DEACTIVATE one or more semantic anchors.
+
     This performs a soft delete by setting the 'is_active' flag to 0.
     """
     conn = get_db_connection()

@@ -9,6 +9,8 @@ import re
 from sentence_transformers import SentenceTransformer
 import chromadb
 import psycopg2 # CHANGED: For error handling
+import psycopg2.extensions
+from typing import List, Dict, Any, Optional
 
 # CHANGED: This import is now only used when the script is run standalone for testing.
 from src.management.db_utils import get_db_connection
@@ -28,31 +30,62 @@ BATCH_SIZE = 100
 
 # --- HELPER & SETUP FUNCTIONS (No changes needed here) ---
 
-def setup_logging(): 
+def setup_logging() -> None:
+    """Creates the log directory and clears the log file."""
     os.makedirs(LOG_DIR, exist_ok=True)
     open(LOG_FILE, 'w').close()
 
-def log_message(message, level='INFO'):
+def log_message(message: str, level: str = 'INFO') -> None:
+    """Logs a message to console and file.
+
+    Args:
+        message: Message to log.
+        level: Log level (default: INFO).
+    """
     log_entry = f"{time.strftime('%Y-%m-%d %H:%M:%S')} - {level} - {message}"
     print(log_entry)
     with open(LOG_FILE, 'a', encoding='utf-8') as f:
         f.write(log_entry + '\n')
 
-def slugify(text):
+def slugify(text: Any) -> str:
+    """Creates a URL-friendly slug from text.
+
+    Args:
+        text: Input text.
+
+    Returns:
+        Slugified string.
+    """
     text = str(text).lower().strip()
     text = re.sub(r'[\s-]+', '-', text)
     text = re.sub(r'[^\w-]', '', text)
     return text
 
-def chunk_text(text, chunk_size=350, overlap=50):
+def chunk_text(text: str, chunk_size: int = 350, overlap: int = 50) -> List[str]:
+    """Splits text into overlapping chunks.
+
+    Args:
+        text: Input text.
+        chunk_size: Size of each chunk in words.
+        overlap: Overlap between chunks in words.
+
+    Returns:
+        List of text chunks.
+    """
     words = text.split()
     if not words: return []
     return [' '.join(words[i:i + chunk_size]) for i in range(0, len(words), chunk_size - overlap)]
 
 # CHANGED: Function now uses the passed-in connection object and PostgreSQL syntax.
-def get_unindexed_articles(conn):
+def get_unindexed_articles(conn: psycopg2.extensions.connection) -> List[Dict[str, Any]]:
     """
     Fetches a batch of articles from the database that have not been indexed yet.
+
+    Args:
+        conn: Active database connection.
+
+    Returns:
+        List of dictionaries representing articles.
     """
     with conn.cursor() as cursor:
         # CHANGED: SQL parameter style from ? to %s
@@ -68,8 +101,15 @@ def get_unindexed_articles(conn):
 
 # --- MAIN SCRIPT ---
 # CHANGED: Main logic is wrapped in a function that accepts a connection.
-def main(conn):
-    """Main execution logic for the article indexer."""
+def main(conn: psycopg2.extensions.connection) -> int:
+    """Main execution logic for the article indexer.
+
+    Args:
+        conn: Active database connection.
+
+    Returns:
+        Total number of articles indexed.
+    """
     setup_logging()
     log_message("--- Starting Article Indexing Process ---")
     

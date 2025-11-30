@@ -2,9 +2,17 @@
 import re
 from datetime import datetime
 from src.delivery import config
+from typing import Dict, List, Any
 
-def _format_tag(anchor_name):
-# ... (Keep existing _format_tag and _generate_section_id functions) ...
+def _format_tag(anchor_name: str) -> str:
+    """Formats an anchor name into a short tag (e.g., #PROG:AAC).
+
+    Args:
+        anchor_name: Full anchor name.
+
+    Returns:
+        Formatted tag.
+    """
     if not anchor_name: return ""
     if anchor_name.startswith("http"): return "#REF"
     
@@ -27,13 +35,27 @@ def _format_tag(anchor_name):
     if prefix: return f"#{prefix}:{initials}"
     return f"#{initials}"
 
-def _generate_section_id(title):
-    """Generates a safe, unique ID for the collapsible container."""
+def _generate_section_id(title: str) -> str:
+    """Generates a safe, unique ID for the collapsible container.
+
+    Args:
+        title: Section title.
+
+    Returns:
+        Unique ID string.
+    """
     return re.sub(r'[^a-zA-Z0-9]', '', title).lower()
 
-def render_digest_card(sections_data, total_articles):
+def render_digest_card(sections_data: Dict[str, List[Any]], total_articles: int) -> Dict[str, Any]:
     """
     Generates the Microsoft Teams Adaptive Card JSON with Accordion Sections.
+
+    Args:
+        sections_data: Dictionary mapping section titles to lists of articles.
+        total_articles: Total count of articles processed.
+
+    Returns:
+        Dictionary representing the Adaptive Card JSON.
     """
     
     # 1. Header (unchanged)

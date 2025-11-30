@@ -1,24 +1,25 @@
 # src/delivery/config.py
+from typing import List, Optional, Dict, Any
 
 # --- DASHBOARD SETTINGS ---
 # The link for the "Open Full Dashboard" button
-DASHBOARD_URL = "https://app.powerbi.com/links/iz2soIgITg?ctid=bcfac97a-4f44-44db-ab46-b8d571daddb4&pbi_source=linkShare"
+DASHBOARD_URL: str = "https://app.powerbi.com/links/iz2soIgITg?ctid=bcfac97a-4f44-44db-ab46-b8d571daddb4&pbi_source=linkShare"
 
 # --- SCOPE SETTINGS ---
 # Filter articles by specific anchors (Exact Name Match)
 # Example: ["AI Regulation", "Canada-US Relations"]
-ALLOWED_ANCHORS = None 
+ALLOWED_ANCHORS: Optional[List[str]] = None
 
 # Filter articles by Anchor Type (Prefix Match)
 # Example: ["PROG"] will only include articles linked to a Program.
 # Example: ["PROG", "PROJECT"] excludes general "TAG" matches.
 # Set to None to allow ALL types.
-ALLOWED_ANCHOR_TYPES = ["PROG"]  # <--- NEW SETTING
+ALLOWED_ANCHOR_TYPES: Optional[List[str]] = ["PROG"]  # <--- NEW SETTING
 
 # --- SECTION MAPPING & STYLING ---
 # Define the Category mapping AND the visual style for each section headers
 # Colors: "Attention" (Red), "Good" (Green), "Warning" (Yellow), "Accent" (Blue), "Default" (Black)
-SECTIONS = {
+SECTIONS: Dict[str, Dict[str, Any]] = {
     "🚨 Priority Highlights": {
         "categories": [], # Special case: Uses is_org_highlight flag
         "color": "Default" 
@@ -38,6 +39,6 @@ SECTIONS = {
 }
 
 # --- THRESHOLDS & LIMITS ---
-MIN_SCORE = 0.40
-ITEMS_PER_SECTION = 2
-LOOKBACK_HOURS = 60
+MIN_SCORE: float = 0.40
+ITEMS_PER_SECTION: int = 2
+LOOKBACK_HOURS: int = 60

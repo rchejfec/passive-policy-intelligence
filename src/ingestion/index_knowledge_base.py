@@ -22,6 +22,8 @@ import fitz
 from sentence_transformers import SentenceTransformer
 import chromadb
 import psycopg2 # CHANGED: For error handling
+import psycopg2.extensions
+from typing import List, Dict, Any, Optional
 
 # CHANGED: This import is now only used when the script is run standalone for testing.
 from src.management.db_utils import get_db_connection
@@ -47,33 +49,58 @@ USER_AGENTS = [
 
 # --- HELPER & SETUP FUNCTIONS ---
 
-def slugify(text):
-    """Converts a string into a URL-friendly slug."""
+def slugify(text: Any) -> str:
+    """Converts a string into a URL-friendly slug.
+
+    Args:
+        text: Input text.
+
+    Returns:
+        Slugified text.
+    """
     text = str(text).lower().strip()
     text = re.sub(r'[\s-]+', '-', text)
     text = re.sub(r'[^\w-]', '', text)
     return text
 
-def setup_logging():
+def setup_logging() -> None:
+    """Sets up logging directories and files."""
     os.makedirs(LOG_DIR, exist_ok=True)
     open(LOG_FILE, 'w').close()
     with open(FAILED_URL_LOG, 'w', newline='', encoding='utf-8') as f:
         writer = csv.writer(f)
         writer.writerow(['timestamp', 'url', 'error_message'])
 
-def log_message(message, level='INFO'):
+def log_message(message: str, level: str = 'INFO') -> None:
+    """Logs a message.
+
+    Args:
+        message: Message text.
+        level: Log level.
+    """
     log_entry = f"{time.strftime('%Y-%m-%d %H:%M:%S')} - {level} - {message}"
     print(log_entry)
     with open(LOG_FILE, 'a', encoding='utf-8') as f:
         f.write(log_entry + '\n')
 
-def log_failure(url, error_message):
+def log_failure(url: str, error_message: Any) -> None:
+    """Logs a failure for a URL.
+
+    Args:
+        url: URL that failed.
+        error_message: Error details.
+    """
     timestamp = time.strftime('%Y-%m-%d %H:%M:%S')
     with open(FAILED_URL_LOG, 'a', newline='', encoding='utf-8') as f:
         writer = csv.writer(f)
         writer.writerow([timestamp, url, str(error_message)])
 
-def create_requests_session():
+def create_requests_session() -> requests.Session:
+    """Creates a configured requests session with retries.
+
+    Returns:
+        Configured requests.Session object.
+    """
     session = requests.Session()
     session.headers.update({'User-Agent': random.choice(USER_AGENTS)})
     retry = Retry(total=3, read=3, connect=3, backoff_factor=0.5, status_forcelist=(500, 502, 503, 504))
@@ -82,10 +109,18 @@ def create_requests_session():
     session.mount('https://', adapter)
     return session
 
-def get_text_from_source(session, url, source_type):
+def get_text_from_source(session: requests.Session, url: str, source_type: str) -> Optional[str]:
     """
     Fetches text content based on the source type.
     **FIX #2**: This function now correctly handles 'program_charter' and 'draft' types.
+
+    Args:
+        session: Active requests session.
+        url: URL or path to source.
+        source_type: Type of source ('web', 'pdf', 'draft', etc).
+
+    Returns:
+        Extracted text or None if failed.
     """
     text = None
     try:
@@ -124,15 +159,29 @@ def get_text_from_source(session, url, source_type):
     log_message(f"Successfully retrieved content for {url}.")
     return text
 
-def chunk_text(text, chunk_size=350, overlap=50):
+def chunk_text(text: str, chunk_size: int = 350, overlap: int = 50) -> List[str]:
+    """Chunks text into smaller parts.
+
+    Args:
+        text: Input text.
+        chunk_size: Size of chunks.
+        overlap: Overlap between chunks.
+
+    Returns:
+        List of text chunks.
+    """
     words = text.split()
     if not words: return []
     return [' '.join(words[i:i + chunk_size]) for i in range(0, len(words), chunk_size - overlap)]
 
 # --- REFACTORED MAIN SCRIPT ---
 
-def main(conn):
-    """Main execution logic for the knowledge base indexer."""
+def main(conn: psycopg2.extensions.connection) -> None:
+    """Main execution logic for the knowledge base indexer.
+
+    Args:
+        conn: Active database connection.
+    """
     setup_logging()
     log_message("--- Starting Knowledge Base Indexing Process ---")
     
