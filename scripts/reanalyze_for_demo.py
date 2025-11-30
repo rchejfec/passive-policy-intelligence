@@ -143,23 +143,48 @@ def reset_analyzed_timestamps(conn, months=None, since_date=None, dry_run=False)
     print(f"   ✓ Reset {count:,} analyzed_at timestamps")
 
 
-def run_analysis(conn, dry_run=False):
-    """Run the analysis module to generate new matches."""
+def run_analysis(conn, dry_run=False, max_retries=10):
+    """Run the analysis module to generate new matches with auto-retry on connection loss."""
     print(f"\n🔍 Running semantic analysis...")
 
     if dry_run:
         print("   [DRY RUN] Would run analysis module")
         return
 
-    # Call the existing analyze_articles module
-    # This will process all indexed articles against active anchors (DEMO: only if PROG: deactivated)
-    print("   Starting analyze_articles.main()...")
-    try:
-        analyze_articles.main(conn)
-        print("   ✓ Analysis complete")
-    except Exception as e:
-        print(f"   ❌ Analysis failed: {e}")
-        raise
+    # Auto-retry loop for connection drops
+    for attempt in range(1, max_retries + 1):
+        try:
+            print(f"   Starting analyze_articles.main() (attempt {attempt}/{max_retries})...")
+            analyze_articles.main(conn)
+            print("   ✓ Analysis complete")
+            return  # Success!
+        except (psycopg2.OperationalError, psycopg2.InterfaceError) as e:
+            if "server closed the connection" in str(e) or "connection already closed" in str(e):
+                print(f"   ⚠️  Connection dropped (attempt {attempt}/{max_retries})")
+                if attempt < max_retries:
+                    import time
+                    wait_time = 10
+                    print(f"   ⏳ Waiting {wait_time}s before reconnecting...")
+                    time.sleep(wait_time)
+
+                    # Get fresh connection
+                    try:
+                        conn.close()
+                    except:
+                        pass
+                    conn = get_db_connection()
+                    print("   ✓ Reconnected to database")
+                    continue
+                else:
+                    print(f"   ❌ Max retries reached. Giving up.")
+                    raise
+            else:
+                # Different error, don't retry
+                print(f"   ❌ Analysis failed: {e}")
+                raise
+        except Exception as e:
+            print(f"   ❌ Analysis failed: {e}")
+            raise
 
 
 def get_analysis_results(conn):
@@ -184,6 +209,8 @@ def main():
     parser = argparse.ArgumentParser(description='Re-analyze articles for demo presentation')
     parser.add_argument('--months', type=int, default=3,
                        help='Number of months to analyze (default: 3)')
+    parser.add_argument('--days', type=int,
+                       help='Number of days to analyze (for testing)')
     parser.add_argument('--since', type=str,
                        help='Analyze articles since date (YYYY-MM-DD)')
     parser.add_argument('--dry-run', action='store_true',
@@ -197,12 +224,21 @@ def main():
     print("=" * 70)
     print(f"Mode: {'DRY RUN (preview only)' if args.dry_run else 'EXECUTE'}")
     print(f"Resume: {'Yes (preserving existing links)' if args.resume else 'No (fresh start)'}")
+
+    # Determine time period
     if args.since:
         print(f"Period: Since {args.since}")
         since_date = datetime.strptime(args.since, '%Y-%m-%d').date()
+        months = None
+    elif args.days:
+        cutoff_date = datetime.now() - timedelta(days=args.days)
+        print(f"Period: Last {args.days} days (since {cutoff_date.date()})")
+        since_date = cutoff_date.date()
+        months = None
     else:
         print(f"Period: Last {args.months} months")
         since_date = None
+        months = args.months
     print()
 
     # Connect to database
@@ -220,7 +256,7 @@ def main():
         print(f"✓ Found {demo_count} active DEMO: anchors")
 
         # Get article stats
-        article_stats = get_articles_to_analyze(conn, months=args.months, since_date=since_date)
+        article_stats = get_articles_to_analyze(conn, months=months, since_date=since_date)
         print(f"\n📊 Article Analysis Scope:")
         print(f"   Articles to analyze: {article_stats['count']:,}")
         print(f"   Date range: {article_stats['min_date']} to {article_stats['max_date']}")
@@ -235,7 +271,7 @@ def main():
             clear_existing_demo_links(conn, dry_run=args.dry_run)
 
             # Reset analyzed_at timestamps so articles will be re-analyzed
-            reset_analyzed_timestamps(conn, months=args.months, since_date=since_date, dry_run=args.dry_run)
+            reset_analyzed_timestamps(conn, months=months, since_date=since_date, dry_run=args.dry_run)
         else:
             print("\n⏭️  Resuming from previous run (skipping clear and reset)")
 

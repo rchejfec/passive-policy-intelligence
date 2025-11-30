@@ -31,7 +31,7 @@ TIER1_CATEGORIES = [
     'Academic', 'Advocacy', 'Publication', 'Business Council'
 ]
 TIER2_CATEGORY = 'Government'
-TIER3_CATEGORY = 'News Media'
+TIER3_CATEGORY = 'News & Media'
 
 def load_data_to_process(conn: psycopg2.extensions.connection) -> Tuple[pd.DataFrame, pd.DataFrame]:
     """

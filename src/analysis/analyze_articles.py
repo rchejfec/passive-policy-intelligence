@@ -34,7 +34,7 @@ K_FOR_SIMILARITY = 5
 
 # NEW: Define the threshold and the categories it applies to
 MINIMUM_SIMILARITY_SCORE = 0.25
-CATEGORIES_TO_FILTER = ['News Media', 'Misc. Research']
+CATEGORIES_TO_FILTER = ['News & Media', 'Misc. Research']
 
 # ==============================================================================
 # --- HELPER FUNCTIONS ---
@@ -111,6 +111,11 @@ def load_anchors_with_embeddings(conn: psycopg2.extensions.connection, chroma_co
                     results = chroma_collection.get(where={"source_location": charter_loc}, include=["embeddings"])
                     if results['ids']:
                         embeddings_for_this_anchor.extend([np.array(e) for e in results['embeddings']])
+            elif comp_type == 'chroma_doc':
+                # For HyDE anchors and other ChromaDB documents referenced by ID
+                results = chroma_collection.get(ids=[comp_id], include=["embeddings"])
+                if results['ids']:
+                    embeddings_for_this_anchor.extend([np.array(e) for e in results['embeddings']])
         
         if embeddings_for_this_anchor:
             final_anchor_embeddings[anchor_id] = {

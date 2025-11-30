@@ -98,7 +98,7 @@ def index_to_chromadb(anchors, embeddings, dry_run=False):
         print("   [DRY RUN] Would index the following to ChromaDB:")
         for i, anchor in enumerate(anchors):
             print(f"     - {anchor['name']}: {len(anchor['hyde_document'])} chars")
-        return
+        return []
 
     # Initialize ChromaDB
     client = chromadb.PersistentClient(path=CHROMA_DB_PATH)
@@ -133,6 +133,36 @@ def index_to_chromadb(anchors, embeddings, dry_run=False):
     print(f"   ✓ Indexed {len(ids)} HyDE documents to ChromaDB")
     for doc_id in ids:
         print(f"     - {doc_id}")
+
+    return ids
+
+
+def create_anchor_components(conn, anchor_ids, anchors, chroma_doc_ids, dry_run=False):
+    """Create anchor_components linking semantic anchors to their HyDE documents in ChromaDB."""
+    print(f"\n🔗 Creating anchor_components...")
+
+    if dry_run:
+        print("   [DRY RUN] Would create components linking anchors to HyDE documents:")
+        for i, (anchor_id, anchor) in enumerate(zip(anchor_ids, anchors)):
+            print(f"     - Anchor ID {anchor_id} -> {chroma_doc_ids[i]}")
+        return
+
+    with conn.cursor() as cursor:
+        for i, (anchor_id, anchor) in enumerate(zip(anchor_ids, anchors)):
+            cursor.execute("""
+                INSERT INTO anchor_components
+                    (anchor_id, component_type, component_id)
+                VALUES (%s, %s, %s)
+            """, (
+                anchor_id,
+                'chroma_doc',
+                chroma_doc_ids[i]
+            ))
+            print(f"   ✓ Linked anchor ID {anchor_id} ({anchor['name']}) to {chroma_doc_ids[i]}")
+
+        conn.commit()
+
+    print(f"   ✓ Created {len(anchor_ids)} anchor_components")
 
 
 def deactivate_prog_anchors(conn, dry_run=False):
@@ -257,7 +287,11 @@ def main():
         anchor_ids = create_semantic_anchors(conn, anchors, dry_run=args.dry_run)
 
         # Index to ChromaDB
-        index_to_chromadb(anchors, embeddings, dry_run=args.dry_run)
+        chroma_doc_ids = index_to_chromadb(anchors, embeddings, dry_run=args.dry_run)
+
+        # Create anchor_components linking anchors to their HyDE documents
+        if not args.dry_run:
+            create_anchor_components(conn, anchor_ids, anchors, chroma_doc_ids, dry_run=args.dry_run)
 
         # Optionally deactivate PROG anchors
         if args.deactivate_prog:

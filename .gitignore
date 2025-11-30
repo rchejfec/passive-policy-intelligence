@@ -51,6 +51,9 @@ notebooks/results/
 .DS_Store
 Thumbs.db
 
+# Claude Code (local development notes)
+.claude/
+
 # Node (Portal)
 node_modules/
 dist/

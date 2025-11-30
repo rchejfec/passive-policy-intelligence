@@ -92,9 +92,20 @@ Tier 1 (Premium): Think Tank, AI Research, Research Institute, Non-Profit,
 Tier 2 (Government): Government sources
                      → Dynamic threshold (historical mean per anchor)
 
-Tier 3 (News Media): News Media sources
-                     → Strict threshold (historical mean + std dev per anchor)
+Tier 3 (News & Media): News & Media sources
+                       → Strict threshold (historical mean + std dev per anchor)
 ```
+
+**IMPORTANT NOTES:**
+- **Category Name Standardization (Nov 2025)**: Changed from "News Media" to "News & Media" across all code
+  - Updated in: `enrich_articles.py`, `analyze_articles.py`, `config.py`
+- **HyDE Anchor Support (Nov 2025)**: Added support for ChromaDB-only anchors via `'chroma_doc'` component type
+  - See: `analyze_articles.py` line 183-186
+  - Enables semantic anchors based on hypothetical documents without tag/KB dependencies
+- **Known Issue**: Enrichment is article-based (checks `enrichment_processed_at`), not link-based
+  - Impact: If new anchors are added to already-enriched articles, their links won't be processed
+  - Workaround: Manually reset `enrichment_processed_at` for affected articles
+  - See: `scripts/archive/demo_fixes_2025_11_30/README.md` for details
 
 ---
 

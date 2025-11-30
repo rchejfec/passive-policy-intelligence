@@ -33,7 +33,7 @@ SECTIONS: Dict[str, Dict[str, Any]] = {
         "color": "Default"
     },
     "🗞️ Media & Industry": {
-        "categories": ["News Media", "Publication", "Business Council", "Advocacy", "Podcast", "Blog"],
+        "categories": ["News & Media", "Publication", "Business Council", "Advocacy", "Podcast", "Blog"],
         "color": "Default"
     }
 }
