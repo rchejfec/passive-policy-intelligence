@@ -169,7 +169,7 @@ This repository is a **working prototype (MVP)** submitted for the G7 GovAI Chal
 
 ## 📜 License
 
-Distributed under the MIT License. See `LICENSE` for more information.
+Distributed under the Creative Commons Attribution-NonCommercial 4.0 (CC BY-NC 4.0) License. See `LICENSE` for more information.
 
 ---
 
