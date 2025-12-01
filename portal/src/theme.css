@@ -1,17 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&display=swap');
+
 :root {
   --theme-foreground: #1a1a1a;
-  --theme-background: #f4f4f0;
+  --theme-background: #fafafa;
   --theme-background-alt: #e9e9e5;
   --theme-border: 2px solid #1a1a1a;
-  --theme-shadow: 4px 4px 0px #1a1a1a;
-  --theme-font: "Courier New", Courier, monospace;
+  /* Softer shadow for less visual clutter */
+  --theme-shadow: 4px 4px 0px rgba(0,0,0,0.15); 
+  /* Modern, readable monospace font */
+  --theme-font: "IBM Plex Mono", "Courier New", Courier, monospace;
 }
 
 body {
   background-color: var(--theme-background);
   color: var(--theme-foreground);
   font-family: var(--theme-font);
-  -webkit-font-smoothing: none;
+  -webkit-font-smoothing: antialiased;
+  /* Improved line height for readability */
+  line-height: 1.6;
+}
+
+/* --- Typography & Spacing --- */
+
+/* Constrain width for comfortable reading */
+p, li, h1, h2, h3, h4, h5, h6 {
+  max-width: 70ch;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -21,7 +34,24 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: bold;
 }
 
-/* Card / Container Styling */
+h2 {
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--theme-foreground);
+}
+
+h3 {
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+}
+
+li {
+  margin-bottom: 0.5rem;
+}
+
+/* --- Card / Container Styling --- */
+
 .card, .observablehq-input {
   background: white;
   border: var(--theme-border);
@@ -31,14 +61,28 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 1.5rem;
 }
 
-/* Input Styling */
+/* Special styling for Callout Cards (like the G7 box) to make them pop */
+.card[style*="border-left"] {
+  background: white !important;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+  border: 1px solid #eee;
+  /* Note: The inline style in markdown handles the border-left color */
+}
+
+/* Constrain text inside cards slightly more to account for padding */
+.card p {
+  max-width: 65ch;
+}
+
+/* --- Input Styling --- */
+
 input, select, button {
   font-family: var(--theme-font);
   border: var(--theme-border);
   background: white;
   border-radius: 0;
   padding: 0.5rem;
-  box-shadow: 2px 2px 0px #1a1a1a;
+  box-shadow: 2px 2px 0px rgba(0,0,0,0.15);
 }
 
 input:focus, select:focus, button:focus {
@@ -46,7 +90,8 @@ input:focus, select:focus, button:focus {
   box-shadow: 4px 4px 0px #1a1a1a;
 }
 
-/* Table Styling */
+/* --- Table Styling --- */
+
 table {
   width: 100%;
   border-collapse: collapse;
@@ -56,34 +101,38 @@ table {
 th, td {
   text-align: left;
   padding: 0.75rem;
-  border-bottom: 1px solid #1a1a1a;
+  border-bottom: 1px solid #e0e0e0;
 }
 
 th {
   text-transform: uppercase;
   border-bottom: 2px solid #1a1a1a;
   background-color: var(--theme-background-alt);
+  font-weight: 600;
 }
 
-/* Link Styling */
+/* --- Link Styling --- */
+
 a {
-  color: #0000AA;
+  color: #0056b3;
   text-decoration: underline;
+  text-underline-offset: 3px;
 }
 
 a:hover {
-  background-color: #0000AA;
+  background-color: #0056b3;
   color: white;
   text-decoration: none;
 }
 
-/* Utility */
+/* --- Utility & Observable Overrides --- */
+
 .observablehq--inspect {
   font-family: var(--theme-font) !important;
 }
 
-/* Navigation - basic override attempt */
+/* Navigation sidebar styling */
 #observablehq-sidebar {
-  border-right: var(--theme-border);
-  background-color: var(--theme-background-alt);
+  border-right: 1px solid #e0e0e0;
+  background-color: #fafafa;
 }

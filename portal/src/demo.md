@@ -9,22 +9,23 @@ toc: false
 # Passive Policy Intelligence (PPI)
 
 <div class="card" style="background: #f0f7ff; border-left: 4px solid #0066cc;">
-  <strong>G7 GovAI Grand Challenge Submission</strong><br/>
+  <strong>G7 GovAI Grand Challenge Submission</strong> | 
+  <a href="https://github.com/rchejfec/passive-policy-intelligence" target="_blank">GitHub Repo</a><br/>
+  
   This project addresses <a href="https://impact.canada.ca/en/challenges/g7-govAI" target="_blank">Problem Statement 1: Information Management</a> by automating the daily search, ranking, and archiving of policy-relevant content.
+  <br/><br/>
+  <span style="font-size: 0.9em; color: #444;">
+    By <strong>Ricardo Chejfec</strong>
+  </span>
 </div>
-
----
 
 ## The Problem
 
-Policy analysts manually track dozens of sources—government portals, think tanks, research institutions, media outlets—to stay current on their mandates. This creates two problems:
+Policy analysts manually track dozens of sources (government portals, think tanks, research institutions, media outlets) to stay current on their mandates. This creates two problems:
 
 1. **Time waste**: Hours spent searching for updates that may not exist
 2. **Missed signals**: Critical information buried in high-volume feeds
 
-**This demo** has monitored 50+ sources daily for the past month, ranking content against four hypothetical policy topics. See the [sources page](./sources) for the full list.
-
----
 
 ## The Solution
 
@@ -35,19 +36,21 @@ An automated **passive listener** that ingests, ranks, and archives policy intel
 3. **Filters** using source-aware thresholds to surface relevant over noise
 4. **Delivers** daily updates (Microsoft Teams, Email) and searchable archive (this demo, Microsft Power BI).  
 
-### Design Principles
+**This demo** has monitored 50+ sources daily for the past month, ranking content against four hypothetical policy topics. See the [sources page](./sources) for the full list.
 
-#### Local-First Architecture (Data Sovereignty)
+## Design Principles
+
+### Local-First Architecture (Data Sovereignty)
 The core pipeline runs entirely on user infrastructure using open-source embedding models (sentence-transformers). No external API calls for ranking. No data exfiltration. Content processing stays within the security perimeter—suitable for on-premises or private cloud deployment.
 
 Storage requirements are minimal: only headlines, links, and occasional summaries are retained. Compute costs are low enough to run on a standard VM (~$10-20/month).
 
-#### Explainable Rankings (Not Black Box AI)
+### Explainable Rankings (Not Black Box AI)
 This system does not generate text or make autonomous decisions. It ranks existing content using vector similarity scores (0-1 scale). Every score ties back to a specific semantic anchor. No hallucinations. No hidden logic.
 
 LLM usage is optional and limited to creating semantic anchors during setup (via DSPy framework). The framework abstracts the model layer, allowing users to swap public APIs (OpenAI, Anthropic) for private or local models based on security requirements.
 
-#### Modular & Interoperable
+### Modular & Interoperable
 Components are decoupled:
 - **Ingestion Layer**: Swap RSS for web scraping or JSON feeds
 - **Embedding Models**: Swap sentence-transformers for domain-specific models
@@ -56,7 +59,6 @@ Components are decoupled:
 
 The web portal is built with Observable Framework—a static site generator requiring no backend servers.
 
----
 
 ## How It Works
 
@@ -104,8 +106,6 @@ Not all sources publish at the same volume or relevance. The system applies **ti
 
 **Why this matters**: A think tank report with a 0.25 similarity score surfaces in the digest. A news article needs a 0.40+ score to compete. This ensures relevant research doesn't get buried by daily news cycles.
 
----
-
 ## Interoperability & Deployment
 
 ### Deployment Options
@@ -121,8 +121,6 @@ DSPy framework allows swapping between AI providers:
 - Public APIs (OpenAI, Anthropic) for development
 - Local LLMs (Llama, Mistral) for production
 - Embedding models can be replaced with domain-specific alternatives
-
----
 
 ## Why This Matters for Policy Work
 
