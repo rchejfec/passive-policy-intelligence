@@ -15,13 +15,10 @@
 <link rel="modulepreload" href="./_observablehq/client.857ef40c.js">
 <link rel="modulepreload" href="./_observablehq/runtime.e080113b.js">
 <link rel="modulepreload" href="./_observablehq/stdlib.43270668.js">
-<link rel="modulepreload" href="./_observablehq/stdlib/duckdb.20461150.js">
 <link rel="modulepreload" href="./_npm/d3@7.9.0/e780feca.js">
 <link rel="modulepreload" href="./_npm/htl@0.3.1/72f4716c.js">
 <link rel="modulepreload" href="./_observablehq/stdlib/inputs.7f302853.js">
 <link rel="modulepreload" href="./_npm/apache-arrow@21.1.0/63de76cd.js">
-<link rel="modulepreload" href="./_npm/parquet-wasm@0.7.1/68d81b68.js">
-<link rel="modulepreload" href="./_npm/@duckdb/duckdb-wasm@1.29.0/d1cf3c5a.js">
 <link rel="modulepreload" href="./_npm/isoformat@0.2.1/18cbf477.js">
 <link rel="modulepreload" href="./_npm/d3-array@3.2.4/e93ca09f.js">
 <link rel="modulepreload" href="./_npm/d3-axis@3.0.0/0f2de24d.js">
@@ -66,22 +63,13 @@ import {registerFile} from "./_observablehq/stdlib.43270668.js";
 registerFile("./data/anchors.parquet", {"name":"./data/anchors.parquet","path":"./_file/data/anchors.af4f332a.parquet","lastModified":1764549498646,"size":3827});
 registerFile("./data/sources.parquet", {"name":"./data/sources.parquet","path":"./_file/data/sources.f80f646e.parquet","lastModified":1764549498620,"size":8188});
 
-define({id: "712d4db1", inputs: ["FileAttachment"], outputs: ["DuckDBClient","db"], body: async (FileAttachment) => {
-const {DuckDBClient} = await import("./_observablehq/stdlib/duckdb.20461150.js");
+define({id: "cc61051f", inputs: ["FileAttachment"], outputs: ["sourcesArrow","sources","anchorsArrow","anchors"], body: async (FileAttachment) => {
+// Load sources and anchors directly with Arrow (no DuckDB)
+const sourcesArrow = await FileAttachment("./data/sources.parquet").arrow();
+const sources = Array.from(sourcesArrow).sort((a, b) => a.source_name.localeCompare(b.source_name));
 
-const db = await DuckDBClient.of({
-  sources: FileAttachment("./data/sources.parquet"),
-  anchors: FileAttachment("./data/anchors.parquet")
-});
-return {DuckDBClient,db};
-}});
-
-define({id: "d91c96d0", inputs: ["db"], outputs: ["sourcesArrow","sources","anchorsArrow","anchors"], body: async (db) => {
-const sourcesArrow = await db.query("SELECT * FROM sources ORDER BY source_name");
-const sources = Array.from(sourcesArrow);
-
-const anchorsArrow = await db.query("SELECT * FROM anchors ORDER BY anchor_name");
-const anchors = Array.from(anchorsArrow);
+const anchorsArrow = await FileAttachment("./data/anchors.parquet").arrow();
+const anchors = Array.from(anchorsArrow).sort((a, b) => a.anchor_name.localeCompare(b.anchor_name));
 return {sourcesArrow,sources,anchorsArrow,anchors};
 }});
 
@@ -171,8 +159,7 @@ Inputs.table(sources, {
 <div class="card" style="background: #d1ecf1; border-left: 4px solid #0c5460;">
   <strong>🔍 Transparency Commitment:</strong> This page provides complete disclosure of both the data sources being monitored and the semantic anchors (policy topics) used for ranking. No hidden sources, no opaque ranking criteria. Users control both the "world" of data the system analyzes and the "lens" used to evaluate relevance.
 </div>
-<div class="observablehq observablehq--block"><!--:712d4db1:--></div>
-<div class="observablehq observablehq--block"><!--:d91c96d0:--></div>
+<div class="observablehq observablehq--block"><!--:cc61051f:--></div>
 <h2 id="semantic-anchors-policy-focus-areas" tabindex="-1"><a class="observablehq-header-anchor" href="#semantic-anchors-policy-focus-areas">Semantic Anchors (Policy Focus Areas)</a></h2>
 <div class="card">
   <p>These are the user-defined policy topics that guide the system's ranking. Each anchor represents a specific area of policy interest, defined using the HyDE (Hypothetical Document Embeddings) methodology.</p>

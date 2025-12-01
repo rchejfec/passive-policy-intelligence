@@ -15,12 +15,9 @@
 <link rel="modulepreload" href="./_observablehq/client.857ef40c.js">
 <link rel="modulepreload" href="./_observablehq/runtime.e080113b.js">
 <link rel="modulepreload" href="./_observablehq/stdlib.43270668.js">
-<link rel="modulepreload" href="./_observablehq/stdlib/duckdb.20461150.js">
 <link rel="modulepreload" href="./_npm/htl@0.3.1/72f4716c.js">
 <link rel="modulepreload" href="./_observablehq/stdlib/inputs.7f302853.js">
 <link rel="modulepreload" href="./_npm/apache-arrow@21.1.0/63de76cd.js">
-<link rel="modulepreload" href="./_npm/parquet-wasm@0.7.1/68d81b68.js">
-<link rel="modulepreload" href="./_npm/@duckdb/duckdb-wasm@1.29.0/d1cf3c5a.js">
 <link rel="modulepreload" href="./_npm/isoformat@0.2.1/18cbf477.js">
 <link rel="modulepreload" href="./_npm/tslib@2.8.1/b62a9c4a.js">
 <link rel="modulepreload" href="./_npm/flatbuffers@25.9.23/c82700c2.js">
@@ -31,20 +28,11 @@ import {registerFile} from "./_observablehq/stdlib.43270668.js";
 
 registerFile("./data/morning_paper.parquet", {"name":"./data/morning_paper.parquet","path":"./_file/data/morning_paper.2f997b4a.parquet","lastModified":1764549498161,"size":48138});
 
-define({id: "46135e31", inputs: ["FileAttachment"], outputs: ["DuckDBClient","db"], body: async (FileAttachment) => {
-const {DuckDBClient} = await import("./_observablehq/stdlib/duckdb.20461150.js");
-
-const db = await DuckDBClient.of({
-  articles: FileAttachment("./data/morning_paper.parquet")
-});
-return {DuckDBClient,db};
-}});
-
-define({id: "ceef774a", inputs: ["db"], outputs: ["allDataArrow","allData"], body: async (db) => {
-// Fetch all data first (morning_paper.parquet already has last 7 days)
-const allDataArrow = await db.query(`SELECT * FROM articles ORDER BY created_at DESC`);
-const allData = Array.from(allDataArrow);
-return {allDataArrow,allData};
+define({id: "f377ef4a", inputs: ["FileAttachment"], outputs: ["morningPaperArrow","allData"], body: async (FileAttachment) => {
+// Load morning paper data directly with Arrow (no DuckDB)
+const morningPaperArrow = await FileAttachment("./data/morning_paper.parquet").arrow();
+const allData = Array.from(morningPaperArrow).sort((a, b) => new Date(b.created_at) - new Date(a.created_at));
+return {morningPaperArrow,allData};
 }});
 
 define({id: "3f0c3e76", inputs: ["allData"], outputs: ["anchors","categories"], body: (allData) => {
@@ -187,8 +175,7 @@ Inputs.table(morningPaper, {
 <div class="card" style="background: #fff3cd; border-left: 4px solid #856404;">
   <strong>📊 The Morning Paper:</strong> This view shows articles from the last 7 days, ranked by semantic similarity to your chosen policy focus areas (Semantic Anchors). The system analyzes incoming content daily and highlights the most relevant matches based on tiered thresholds that account for source authority.
 </div>
-<div class="observablehq observablehq--block"><!--:46135e31:--></div>
-<div class="observablehq observablehq--block"><!--:ceef774a:--></div>
+<div class="observablehq observablehq--block"><!--:f377ef4a:--></div>
 <div class="observablehq observablehq--block"><!--:3f0c3e76:--></div>
 <div class="observablehq observablehq--block"><!--:61a0390b:--></div>
 <div class="card">
