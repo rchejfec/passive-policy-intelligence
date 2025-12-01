@@ -8,50 +8,52 @@ toc: false
 
 # The Archive
 
-<div class="card">
-  Full repository search.
+<div class="card" style="background: #d1ecf1; border-left: 4px solid #0c5460;">
+  <strong>🔍 Full Archive Search:</strong> Searchable repository of all analyzed content since June 2024. This demonstrates the system's "evidence base" capability - allowing retrospective analysis of how policy issues evolved over time. Use advanced filters to explore historical matches across sources, time periods, and semantic anchors.
 </div>
 
 ```js
 import {DuckDBClient} from "npm:@observablehq/duckdb";
 
-// 1. Load the lightweight archive file
 const db = await DuckDBClient.of({
-  archive: FileAttachment("data/archive.parquet"),
-  sources: FileAttachment("data/sources.parquet"),
-  anchors: FileAttachment("data/anchors.parquet")
+  archive: FileAttachment("data/archive.parquet")
 });
 ```
 
 ```js
+// Fetch all data
+const allDataArrow = await db.query(`SELECT * FROM archive ORDER BY normalized_score DESC`);
+const allArchiveData = Array.from(allDataArrow);
+```
+
+```js
 // 2. Get filter options from data
-const categoriesData = await db.query("SELECT DISTINCT source_category FROM archive ORDER BY source_category");
-const categories = [null, ...Array.from(categoriesData).map(d => d.source_category)];
-
-const sourcesData = await db.query("SELECT DISTINCT source_name FROM archive ORDER BY source_name");
-const sources = [null, ...Array.from(sourcesData).map(d => d.source_name)];
-
-const anchorsData = await db.query("SELECT DISTINCT anchor_name FROM archive ORDER BY anchor_name");
-const anchors = [null, ...Array.from(anchorsData).map(d => d.anchor_name)];
+const anchors = [null, ...new Set(allArchiveData.map(d => d.anchor_name))].sort((a, b) => {
+  if (a === null) return -1;
+  if (b === null) return 1;
+  return a.localeCompare(b);
+});
+const categories = [null, ...new Set(allArchiveData.map(d => d.source_category))].sort((a, b) => {
+  if (a === null) return -1;
+  if (b === null) return 1;
+  return a.localeCompare(b);
+});
 ```
 
 ```js
 // 3. Filter inputs
+const anchorFilter = Inputs.select(anchors, {label: "Semantic Anchor", format: x => x || "All"});
+const selectedAnchor = Generators.input(anchorFilter);
+
 const categoryFilter = Inputs.select(categories, {label: "Source Type", format: x => x || "All"});
 const selectedCategory = Generators.input(categoryFilter);
-
-const sourceFilter = Inputs.select(sources, {label: "Source", format: x => x || "All"});
-const selectedSource = Generators.input(sourceFilter);
-
-const anchorFilter = Inputs.select(anchors, {label: "Focus Area", format: x => x || "All"});
-const selectedAnchor = Generators.input(anchorFilter);
 
 // Date range filter
 const dateRangeFilter = Inputs.date({label: "From Date", value: null});
 const dateFrom = Generators.input(dateRangeFilter);
 
 // Score range filter
-const scoreRangeFilter = Inputs.range([0, 1], {label: "Min Relevance Score", step: 0.05, value: 0});
+const scoreRangeFilter = Inputs.range([0, 1], {label: "Min Similarity Score (0-1)", step: 0.05, value: 0});
 const minScore = Generators.input(scoreRangeFilter);
 
 // Text search
@@ -60,9 +62,9 @@ const searchTerm = Generators.input(searchFilter);
 
 // Sort options - use simple values, not objects
 const sortFilter = Inputs.select(
-  ["date_desc", "date_asc", "score_desc", "score_asc"],
+  ["score_desc", "score_asc", "date_desc", "date_asc"],
   {
-    value: "date_desc",
+    value: "score_desc",
     label: "Sort By",
     format: (sortType) => {
       if (sortType === "date_desc") return "Newest First";
@@ -80,63 +82,58 @@ const selectedSort = Generators.input(sortFilter);
   <h3 style="margin-top: 0;">Filters</h3>
 
   <div class="grid grid-cols-3" style="gap: 1rem; margin-bottom: 1rem;">
-    <div>${categoryFilter}</div>
-    <div>${sourceFilter}</div>
     <div>${anchorFilter}</div>
-  </div>
-
-  <div class="grid grid-cols-3" style="gap: 1rem; margin-bottom: 1rem;">
+    <div>${categoryFilter}</div>
     <div>${dateRangeFilter}</div>
     <div>${scoreRangeFilter}</div>
     <div>${sortFilter}</div>
+    <div>${searchFilter}</div>
   </div>
-
-  <div>${searchFilter}</div>
 </div>
 
 ```js
-// 4. Build dynamic query with filters
-const whereConditions = [];
+// 4. Apply filters using JavaScript
+let filtered = allArchiveData;
 
-if (selectedCategory) whereConditions.push(`source_category = '${selectedCategory}'`);
-if (selectedSource) whereConditions.push(`source_name = '${selectedSource}'`);
-if (selectedAnchor) whereConditions.push(`anchor_name = '${selectedAnchor}'`);
-if (dateFrom) whereConditions.push(`created_at >= '${dateFrom.toISOString()}'`);
-if (minScore > 0) whereConditions.push(`similarity_score >= ${minScore}`);
-if (searchTerm) whereConditions.push(`LOWER(title) LIKE '%${searchTerm.toLowerCase()}%'`);
-
-const whereClause = whereConditions.length > 0
-  ? `WHERE ${whereConditions.join(' AND ')}`
-  : '';
-
-// Build ORDER BY clause
-let orderByClause;
-switch(selectedSort) {
-  case "date_desc": orderByClause = "created_at DESC"; break;
-  case "date_asc": orderByClause = "created_at ASC"; break;
-  case "score_desc": orderByClause = "similarity_score DESC"; break;
-  case "score_asc": orderByClause = "similarity_score ASC"; break;
+if (selectedCategory) {
+  filtered = filtered.filter(d => d.source_category === selectedCategory);
 }
 
-// Execute query
-const archiveArrow = await db.query(`
-  SELECT
-    article_id,
-    created_at,
-    title,
-    source_name,
-    source_category,
-    anchor_name,
-    similarity_score,
-    link,
-    is_org_highlight,
-    is_anchor_highlight
-  FROM archive
-  ${whereClause}
-  ORDER BY ${orderByClause}
-`);
+if (selectedAnchor) {
+  filtered = filtered.filter(d => d.anchor_name === selectedAnchor);
+}
 
-const results = Array.from(archiveArrow);
+if (dateFrom) {
+  const filterDate = new Date(dateFrom);
+  filtered = filtered.filter(d => new Date(d.created_at) >= filterDate);
+}
+
+if (minScore > 0) {
+  filtered = filtered.filter(d => d.normalized_score >= minScore);
+}
+
+if (searchTerm) {
+  const lowerSearch = searchTerm.toLowerCase();
+  filtered = filtered.filter(d => d.title.toLowerCase().includes(lowerSearch));
+}
+
+// Sort the results
+switch(selectedSort) {
+  case "date_desc":
+    filtered.sort((a, b) => new Date(b.created_at) - new Date(a.created_at));
+    break;
+  case "date_asc":
+    filtered.sort((a, b) => new Date(a.created_at) - new Date(b.created_at));
+    break;
+  case "score_desc":
+    filtered.sort((a, b) => b.normalized_score - a.normalized_score);
+    break;
+  case "score_asc":
+    filtered.sort((a, b) => a.normalized_score - b.normalized_score);
+    break;
+}
+
+const results = filtered;
 ```
 
 ```js
@@ -157,14 +154,14 @@ Inputs.table(results, {
     "title",
     "source_name",
     "anchor_name",
-    "similarity_score"
+    "normalized_score"
   ],
   header: {
     created_at: "Date",
     title: "Headline",
     source_name: "Source",
-    anchor_name: "Focus Area",
-    similarity_score: "Score"
+    anchor_name: "Semantic Anchor",
+    normalized_score: "Score"
   },
   format: {
     created_at: d => new Date(d).toLocaleDateString(),
@@ -172,13 +169,18 @@ Inputs.table(results, {
     title: (t, i, data) => {
       const row = data[i];
       const orgStar = row.is_org_highlight ? "⭐ " : "";
-      const anchorIcon = row.is_anchor_highlight ? "📌 " : "";
-      return htl.html`<a href="${row.link}" target="_blank" style="font-weight:${row.is_org_highlight ? 'bold' : 'normal'};">${orgStar}${anchorIcon}${t}</a>`;
+      return htl.html`<a href="${row.link}" target="_blank" style="font-weight:${row.is_org_highlight ? 'bold' : 'normal'};">${orgStar}${t}</a>`;
     },
 
-    similarity_score: d => d.toFixed(2)
+    normalized_score: d => d.toFixed(2)
   },
   rows: 50,
-  layout: "auto"
+  width: {
+    title: "50%",
+    source_name: "15%",
+    anchor_name: "20%",
+    normalized_score: "8%",
+    created_at: "7%"
+  }
 })
 ```

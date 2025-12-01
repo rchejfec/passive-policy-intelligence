@@ -36,7 +36,7 @@ OUTPUT_DIR = os.path.join(ROOT_DIR, 'portal', 'src', 'data')
 DEFAULT_MORNING_PAPER_DAYS = 7
 
 
-def export_morning_paper(conn: psycopg2.extensions.connection, days: int = DEFAULT_MORNING_PAPER_DAYS) -> int:
+def export_morning_paper(conn: psycopg2.extensions.connection, days: int = DEFAULT_MORNING_PAPER_DAYS, demo_only: bool = False) -> int:
     """
     Export recent articles with their anchor matches for the morning paper view.
 
@@ -50,9 +50,12 @@ def export_morning_paper(conn: psycopg2.extensions.connection, days: int = DEFAU
     Returns:
         int: Number of article-anchor pairs exported
     """
-    print(f"Exporting morning paper data (last {days} days)...")
+    demo_filter = " (DEMO anchors only)" if demo_only else ""
+    print(f"Exporting morning paper data (last {days} days){demo_filter}...")
 
-    query = """
+    demo_condition = "AND sa.name LIKE 'DEMO:%'" if demo_only else ""
+
+    query = f"""
     SELECT
         a.id as article_id,
         a.title,
@@ -64,31 +67,33 @@ def export_morning_paper(conn: psycopg2.extensions.connection, days: int = DEFAU
         sa.id as anchor_id,
         sa.name as anchor_name,
         aal.similarity_score,
+        aal.normalized_score,
         aal.is_anchor_highlight,
         aal.is_org_highlight
     FROM articles a
     JOIN sources s ON a.source_id = s.id
-    JOIN article_anchor_links aal ON a.id = aal.article_id
+    JOIN article_anchor_links_normalized aal ON a.id = aal.article_id
     JOIN semantic_anchors sa ON aal.anchor_id = sa.id
-    WHERE a.created_at >= NOW() - INTERVAL '%s days'
+    WHERE a.created_at >= NOW() - INTERVAL '{days} days'
       AND a.analyzed_at IS NOT NULL
       AND sa.is_active = true
-    ORDER BY a.created_at DESC, aal.similarity_score DESC
+      {demo_condition}
+    ORDER BY aal.normalized_score DESC, a.created_at DESC
     """
 
-    df = pd.read_sql_query(query, conn, params=(days,))
+    df = pd.read_sql_query(query, conn)
 
     output_path = os.path.join(OUTPUT_DIR, 'morning_paper.parquet')
     df.to_parquet(output_path, index=False, engine='pyarrow')
 
     unique_articles = df['article_id'].nunique() if not df.empty else 0
-    print(f"✓ Exported {len(df)} article-anchor pairs ({unique_articles} unique articles)")
+    print(f"[OK] Exported {len(df)} article-anchor pairs ({unique_articles} unique articles)")
     print(f"  File: {output_path}")
 
     return len(df)
 
 
-def export_archive(conn: psycopg2.extensions.connection) -> int:
+def export_archive(conn: psycopg2.extensions.connection, demo_only: bool = False) -> int:
     """
     Export all historical articles with their anchor matches for archive view.
 
@@ -100,9 +105,12 @@ def export_archive(conn: psycopg2.extensions.connection) -> int:
     Returns:
         int: Number of article-anchor pairs exported
     """
-    print("Exporting archive data (all articles)...")
+    demo_filter = " (DEMO anchors only)" if demo_only else ""
+    print(f"Exporting archive data (all articles){demo_filter}...")
 
-    query = """
+    demo_condition = "AND sa.name LIKE 'DEMO:%'" if demo_only else ""
+
+    query = f"""
     SELECT
         a.id as article_id,
         a.title,
@@ -114,15 +122,17 @@ def export_archive(conn: psycopg2.extensions.connection) -> int:
         sa.id as anchor_id,
         sa.name as anchor_name,
         aal.similarity_score,
+        aal.normalized_score,
         aal.is_anchor_highlight,
         aal.is_org_highlight
     FROM articles a
     JOIN sources s ON a.source_id = s.id
-    JOIN article_anchor_links aal ON a.id = aal.article_id
+    JOIN article_anchor_links_normalized aal ON a.id = aal.article_id
     JOIN semantic_anchors sa ON aal.anchor_id = sa.id
     WHERE a.analyzed_at IS NOT NULL
       AND sa.is_active = true
-    ORDER BY a.created_at DESC
+      {demo_condition}
+    ORDER BY aal.normalized_score DESC, a.created_at DESC
     """
 
     df = pd.read_sql_query(query, conn)
@@ -131,7 +141,7 @@ def export_archive(conn: psycopg2.extensions.connection) -> int:
     df.to_parquet(output_path, index=False, engine='pyarrow')
 
     unique_articles = df['article_id'].nunique() if not df.empty else 0
-    print(f"✓ Exported {len(df)} article-anchor pairs ({unique_articles} unique articles)")
+    print(f"[OK] Exported {len(df)} article-anchor pairs ({unique_articles} unique articles)")
     print(f"  File: {output_path}")
 
     return len(df)
@@ -168,13 +178,13 @@ def export_sources(conn: psycopg2.extensions.connection) -> int:
     output_path = os.path.join(OUTPUT_DIR, 'sources.parquet')
     df.to_parquet(output_path, index=False, engine='pyarrow')
 
-    print(f"✓ Exported {len(df)} sources")
+    print(f"[OK] Exported {len(df)} sources")
     print(f"  File: {output_path}")
 
     return len(df)
 
 
-def export_anchors(conn: psycopg2.extensions.connection) -> int:
+def export_anchors(conn: psycopg2.extensions.connection, demo_only: bool = False) -> int:
     """
     Export semantic anchor definitions for UI and filtering.
 
@@ -184,9 +194,12 @@ def export_anchors(conn: psycopg2.extensions.connection) -> int:
     Returns:
         int: Number of anchors exported
     """
-    print("Exporting semantic anchors...")
+    demo_filter = " (DEMO anchors only)" if demo_only else ""
+    print(f"Exporting semantic anchors{demo_filter}...")
 
-    query = """
+    demo_condition = "AND name LIKE 'DEMO:%'" if demo_only else ""
+
+    query = f"""
     SELECT
         id as anchor_id,
         name as anchor_name,
@@ -195,6 +208,7 @@ def export_anchors(conn: psycopg2.extensions.connection) -> int:
         created_at
     FROM semantic_anchors
     WHERE is_active = true
+      {demo_condition}
     ORDER BY name
     """
 
@@ -203,7 +217,7 @@ def export_anchors(conn: psycopg2.extensions.connection) -> int:
     output_path = os.path.join(OUTPUT_DIR, 'anchors.parquet')
     df.to_parquet(output_path, index=False, engine='pyarrow')
 
-    print(f"✓ Exported {len(df)} anchors")
+    print(f"[OK] Exported {len(df)} anchors")
     print(f"  File: {output_path}")
 
     return len(df)
@@ -220,6 +234,11 @@ def main() -> None:
         default=DEFAULT_MORNING_PAPER_DAYS,
         help=f'Days to include in morning paper (default: {DEFAULT_MORNING_PAPER_DAYS})'
     )
+    parser.add_argument(
+        '--demo-only',
+        action='store_true',
+        help='Export only DEMO anchors (filters to anchors starting with "DEMO:")'
+    )
     args = parser.parse_args()
 
     print("=" * 60)
@@ -232,28 +251,28 @@ def main() -> None:
     conn = None
     try:
         conn = get_db_connection()
-        print("✓ Database connection established\n")
+        print("[OK] Database connection established\n")
 
         # Export all data files
-        export_morning_paper(conn, args.days)
+        export_morning_paper(conn, args.days, args.demo_only)
         print()
 
-        export_archive(conn)
+        export_archive(conn, args.demo_only)
         print()
 
         export_sources(conn)
         print()
 
-        export_anchors(conn)
+        export_anchors(conn, args.demo_only)
         print()
 
         print("=" * 60)
-        print("✓ Export completed successfully")
+        print("[OK] Export completed successfully")
         print(f"Output directory: {OUTPUT_DIR}")
         print("=" * 60)
 
     except Exception as e:
-        print(f"\n❌ Export failed: {e}")
+        print(f"\n[ERROR] Export failed: {e}")
         import traceback
         traceback.print_exc()
         sys.exit(1)

@@ -69,3 +69,7 @@ REFACTORING_*.md
 build/
 *.egg-info/
 .eggs/
+
+
+#temp for dev
+application_materials
