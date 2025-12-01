@@ -41,7 +41,7 @@ An automated **passive listener** that ingests, ranks, and archives policy intel
 ## Design Principles
 
 ### Local-First Architecture (Data Sovereignty)
-The core pipeline runs entirely on user infrastructure using open-source embedding models (sentence-transformers). No external API calls for ranking. No data exfiltration. Content processing stays within the security perimeter—suitable for on-premises or private cloud deployment.
+The core pipeline runs entirely on user infrastructure using open-source embedding models (sentence-transformers). No external API calls for ranking. No data exfiltration. Content processing stays within the security perimeter -- suitable for on-premises or private cloud deployment.
 
 Storage requirements are minimal: only headlines, links, and occasional summaries are retained. Compute costs are low enough to run on a standard VM (~$10-20/month).
 
