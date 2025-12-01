@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="generator" content="Observable Framework v1.13.3">
+<title>The Archive | Passive Policy Intelligence - Demo Portal</title>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&amp;display=swap" crossorigin>
+<link rel="preload" as="style" href="./_observablehq/theme-air,near-midnight,alt,wide.db1cdf55.css">
+<link rel="preload" as="style" href="./_observablehq/stdlib/inputs.ea9fd553.css">
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&amp;display=swap" crossorigin>
+<link rel="stylesheet" type="text/css" href="./_observablehq/theme-air,near-midnight,alt,wide.db1cdf55.css">
+<link rel="stylesheet" type="text/css" href="./_observablehq/stdlib/inputs.ea9fd553.css">
+<link rel="modulepreload" href="./_observablehq/client.857ef40c.js">
+<link rel="modulepreload" href="./_observablehq/runtime.e080113b.js">
+<link rel="modulepreload" href="./_observablehq/stdlib.43270668.js">
+<link rel="modulepreload" href="./_observablehq/stdlib/duckdb.20461150.js">
+<link rel="modulepreload" href="./_npm/htl@0.3.1/72f4716c.js">
+<link rel="modulepreload" href="./_observablehq/stdlib/inputs.7f302853.js">
+<link rel="modulepreload" href="./_npm/apache-arrow@21.1.0/63de76cd.js">
+<link rel="modulepreload" href="./_npm/parquet-wasm@0.7.1/68d81b68.js">
+<link rel="modulepreload" href="./_npm/@duckdb/duckdb-wasm@1.29.0/d1cf3c5a.js">
+<link rel="modulepreload" href="./_npm/isoformat@0.2.1/18cbf477.js">
+<link rel="modulepreload" href="./_npm/tslib@2.8.1/b62a9c4a.js">
+<link rel="modulepreload" href="./_npm/flatbuffers@25.9.23/c82700c2.js">
+<script type="module">
+
+import {define} from "./_observablehq/client.857ef40c.js";
+import {registerFile} from "./_observablehq/stdlib.43270668.js";
+
+registerFile("./data/archive.parquet", {"name":"./data/archive.parquet","path":"./_file/data/archive.a3205cc0.parquet","lastModified":1764549498591,"size":154214});
+
+define({id: "4d9a6bbd", inputs: ["FileAttachment"], outputs: ["DuckDBClient","db"], body: async (FileAttachment) => {
+const {DuckDBClient} = await import("./_observablehq/stdlib/duckdb.20461150.js");
+
+const db = await DuckDBClient.of({
+  archive: FileAttachment("./data/archive.parquet")
+});
+return {DuckDBClient,db};
+}});
+
+define({id: "0d959488", inputs: ["db"], outputs: ["allDataArrow","allArchiveData"], body: async (db) => {
+// Fetch all data
+const allDataArrow = await db.query(`SELECT * FROM archive ORDER BY normalized_score DESC`);
+const allArchiveData = Array.from(allDataArrow);
+return {allDataArrow,allArchiveData};
+}});
+
+define({id: "c374fb14", inputs: ["allArchiveData"], outputs: ["anchors","categories"], body: (allArchiveData) => {
+// 2. Get filter options from data
+const anchors = [null, ...new Set(allArchiveData.map(d => d.anchor_name))].sort((a, b) => {
+  if (a === null) return -1;
+  if (b === null) return 1;
+  return a.localeCompare(b);
+});
+const categories = [null, ...new Set(allArchiveData.map(d => d.source_category))].sort((a, b) => {
+  if (a === null) return -1;
+  if (b === null) return 1;
+  return a.localeCompare(b);
+});
+return {anchors,categories};
+}});
+
+define({id: "2f6d3846", inputs: ["Inputs","anchors","Generators","categories"], outputs: ["anchorFilter","selectedAnchor","categoryFilter","selectedCategory","dateRangeFilter","dateFrom","scoreRangeFilter","minScore","searchFilter","searchTerm","sortFilter","selectedSort"], body: (Inputs,anchors,Generators,categories) => {
+// 3. Filter inputs
+const anchorFilter = Inputs.select(anchors, {label: "Semantic Anchor", format: x => x || "All"});
+const selectedAnchor = Generators.input(anchorFilter);
+
+const categoryFilter = Inputs.select(categories, {label: "Source Type", format: x => x || "All"});
+const selectedCategory = Generators.input(categoryFilter);
+
+// Date range filter
+const dateRangeFilter = Inputs.date({label: "From Date", value: null});
+const dateFrom = Generators.input(dateRangeFilter);
+
+// Score range filter
+const scoreRangeFilter = Inputs.range([0, 1], {label: "Min Similarity Score (0-1)", step: 0.05, value: 0});
+const minScore = Generators.input(scoreRangeFilter);
+
+// Text search
+const searchFilter = Inputs.text({label: "Search", placeholder: "Search titles..."});
+const searchTerm = Generators.input(searchFilter);
+
+// Sort options - use simple values, not objects
+const sortFilter = Inputs.select(
+  ["score_desc", "score_asc", "date_desc", "date_asc"],
+  {
+    value: "score_desc",
+    label: "Sort By",
+    format: (sortType) => {
+      if (sortType === "date_desc") return "Newest First";
+      if (sortType === "date_asc") return "Oldest First";
+      if (sortType === "score_desc") return "Highest Score";
+      if (sortType === "score_asc") return "Lowest Score";
+      return sortType;
+    }
+  }
+);
+const selectedSort = Generators.input(sortFilter);
+return {anchorFilter,selectedAnchor,categoryFilter,selectedCategory,dateRangeFilter,dateFrom,scoreRangeFilter,minScore,searchFilter,searchTerm,sortFilter,selectedSort};
+}});
+
+define({id: "3f0637f7", mode: "inline", inputs: ["anchorFilter","display"], body: async (anchorFilter,display) => {
+display(await(
+anchorFilter
+))
+}});
+
+define({id: "52208b75", mode: "inline", inputs: ["categoryFilter","display"], body: async (categoryFilter,display) => {
+display(await(
+categoryFilter
+))
+}});
+
+define({id: "a54182c3", mode: "inline", inputs: ["dateRangeFilter","display"], body: async (dateRangeFilter,display) => {
+display(await(
+dateRangeFilter
+))
+}});
+
+define({id: "a6d1fac6", mode: "inline", inputs: ["scoreRangeFilter","display"], body: async (scoreRangeFilter,display) => {
+display(await(
+scoreRangeFilter
+))
+}});
+
+define({id: "ca33259d", mode: "inline", inputs: ["sortFilter","display"], body: async (sortFilter,display) => {
+display(await(
+sortFilter
+))
+}});
+
+define({id: "7cf5391b", mode: "inline", inputs: ["searchFilter","display"], body: async (searchFilter,display) => {
+display(await(
+searchFilter
+))
+}});
+
+define({id: "260044c8", inputs: ["allArchiveData","selectedCategory","selectedAnchor","dateFrom","minScore","searchTerm","selectedSort"], outputs: ["filtered","results"], body: (allArchiveData,selectedCategory,selectedAnchor,dateFrom,minScore,searchTerm,selectedSort) => {
+// 4. Apply filters using JavaScript
+let filtered = allArchiveData;
+
+if (selectedCategory) {
+  filtered = filtered.filter(d => d.source_category === selectedCategory);
+}
+
+if (selectedAnchor) {
+  filtered = filtered.filter(d => d.anchor_name === selectedAnchor);
+}
+
+if (dateFrom) {
+  const filterDate = new Date(dateFrom);
+  filtered = filtered.filter(d => new Date(d.created_at) >= filterDate);
+}
+
+if (minScore > 0) {
+  filtered = filtered.filter(d => d.normalized_score >= minScore);
+}
+
+if (searchTerm) {
+  const lowerSearch = searchTerm.toLowerCase();
+  filtered = filtered.filter(d => d.title.toLowerCase().includes(lowerSearch));
+}
+
+// Sort the results
+switch(selectedSort) {
+  case "date_desc":
+    filtered.sort((a, b) => new Date(b.created_at) - new Date(a.created_at));
+    break;
+  case "date_asc":
+    filtered.sort((a, b) => new Date(a.created_at) - new Date(b.created_at));
+    break;
+  case "score_desc":
+    filtered.sort((a, b) => b.normalized_score - a.normalized_score);
+    break;
+  case "score_asc":
+    filtered.sort((a, b) => a.normalized_score - b.normalized_score);
+    break;
+}
+
+const results = filtered;
+return {filtered,results};
+}});
+
+define({id: "648f7d2a", inputs: ["results"], outputs: ["resultCount","uniqueArticles"], body: (results) => {
+// Display count
+const resultCount = results.length;
+const uniqueArticles = new Set(results.map(d => d.article_id)).size;
+return {resultCount,uniqueArticles};
+}});
+
+define({id: "ccec991f", mode: "inline", inputs: ["resultCount","display"], body: async (resultCount,display) => {
+display(await(
+resultCount
+))
+}});
+
+define({id: "93619087", mode: "inline", inputs: ["uniqueArticles","display"], body: async (uniqueArticles,display) => {
+display(await(
+uniqueArticles
+))
+}});
+
+define({id: "db22f329", inputs: ["Inputs","results","htl","display"], body: async (Inputs,results,htl,display) => {
+display(await(
+// 5. Render the Results Table
+Inputs.table(results, {
+  columns: [
+    "created_at",
+    "title",
+    "source_name",
+    "anchor_name",
+    "normalized_score"
+  ],
+  header: {
+    created_at: "Date",
+    title: "Headline",
+    source_name: "Source",
+    anchor_name: "Semantic Anchor",
+    normalized_score: "Score"
+  },
+  format: {
+    created_at: d => new Date(d).toLocaleDateString(),
+
+    title: (t, i, data) => {
+      const row = data[i];
+      const orgStar = row.is_org_highlight ? "⭐ " : "";
+      return htl.html`<a href="${row.link}" target="_blank" style="font-weight:${row.is_org_highlight ? 'bold' : 'normal'};">${orgStar}${t}</a>`;
+    },
+
+    normalized_score: d => d.toFixed(2)
+  },
+  rows: 50,
+  width: {
+    title: "50%",
+    source_name: "15%",
+    anchor_name: "20%",
+    normalized_score: "8%",
+    created_at: "7%"
+  }
+})
+))
+}});
+
+</script>
+</head>
+<body>
+<input id="observablehq-sidebar-toggle" type="checkbox" title="Toggle sidebar">
+<label id="observablehq-sidebar-backdrop" for="observablehq-sidebar-toggle"></label>
+<nav id="observablehq-sidebar">
+  <ol>
+    <label id="observablehq-sidebar-close" for="observablehq-sidebar-toggle"></label>
+    <li class="observablehq-link"><a href="./">Passive Policy Intelligence - Demo Portal</a></li>
+  </ol>
+  <ol>
+    <li class="observablehq-link"><a href="./demo">Demo Overview</a></li>
+    <li class="observablehq-link"><a href="./">The Morning Paper</a></li>
+    <li class="observablehq-link observablehq-link-active"><a href="./archive">The Archive</a></li>
+    <li class="observablehq-link"><a href="./sources">Source Transparency</a></li>
+  </ol>
+</nav>
+<script>{const e=document.querySelector("#observablehq-sidebar"),o=document.querySelector("#observablehq-sidebar-toggle"),r=sessionStorage.getItem("observablehq-sidebar");r?o.checked=r==="true":o.indeterminate=!0;for(const t of document.querySelectorAll("#observablehq-sidebar summary")){const s=t.parentElement;switch(sessionStorage.getItem(`observablehq-sidebar:${t.textContent}`)){case"true":s.open=!0;break;case"false":s.classList.contains("observablehq-section-active")||(s.open=!1);break}}addEventListener("beforeunload",()=>sessionStorage.setItem("observablehq-sidebar-scrolly",`${e.scrollTop}`));const a=sessionStorage.getItem("observablehq-sidebar-scrolly");a!=null&&(e.style.cssText="overflow: hidden;",e.scrollTop=+a,e.style.cssText="");}</script>
+<div id="observablehq-center">
+<main id="observablehq-main" class="observablehq">
+<link rel="stylesheet" href="./_file/theme.78c22643.css">
+<h1 id="the-archive" tabindex="-1"><a class="observablehq-header-anchor" href="#the-archive">The Archive</a></h1>
+<div class="card" style="background: #d1ecf1; border-left: 4px solid #0c5460;">
+  <strong>🔍 Full Archive Search:</strong> Searchable repository of all analyzed content since June 2024. This demonstrates the system's "evidence base" capability - allowing retrospective analysis of how policy issues evolved over time. Use advanced filters to explore historical matches across sources, time periods, and semantic anchors.
+</div>
+<div class="observablehq observablehq--block"><!--:4d9a6bbd:--></div>
+<div class="observablehq observablehq--block"><!--:0d959488:--></div>
+<div class="observablehq observablehq--block"><!--:c374fb14:--></div>
+<div class="observablehq observablehq--block"><!--:2f6d3846:--></div>
+<div class="card" style="background: #f8f9fa;">
+  <h3 style="margin-top: 0;">Filters</h3>
+  <div class="grid grid-cols-3" style="gap: 1rem; margin-bottom: 1rem;">
+    <div><observablehq-loading></observablehq-loading><!--:3f0637f7:--></div>
+    <div><observablehq-loading></observablehq-loading><!--:52208b75:--></div>
+    <div><observablehq-loading></observablehq-loading><!--:a54182c3:--></div>
+    <div><observablehq-loading></observablehq-loading><!--:a6d1fac6:--></div>
+    <div><observablehq-loading></observablehq-loading><!--:ca33259d:--></div>
+    <div><observablehq-loading></observablehq-loading><!--:7cf5391b:--></div>
+  </div>
+</div>
+<div class="observablehq observablehq--block"><!--:260044c8:--></div>
+<div class="observablehq observablehq--block"><!--:648f7d2a:--></div>
+<div class="card">
+  <strong><observablehq-loading></observablehq-loading><!--:ccec991f:--> matches</strong> (<observablehq-loading></observablehq-loading><!--:93619087:--> unique articles)
+</div>
+<div class="observablehq observablehq--block"><observablehq-loading></observablehq-loading><!--:db22f329:--></div>
+</main>
+<footer id="observablehq-footer">
+<nav><a rel="prev" href="./demo"><span>Demo Overview</span></a><a rel="next" href="./sources"><span>Source Transparency</span></a></nav>
+<div>G7 GovAI Grand Challenge Demo | Automated Environmental Scanning System</div>
+</footer>
+</div>
+</body>
+</html>

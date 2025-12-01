@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="generator" content="Observable Framework v1.13.3">
+<title>The Morning Paper | Passive Policy Intelligence - Demo Portal</title>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&amp;display=swap" crossorigin>
+<link rel="preload" as="style" href="./_observablehq/theme-air,near-midnight,alt,wide.db1cdf55.css">
+<link rel="preload" as="style" href="./_observablehq/stdlib/inputs.ea9fd553.css">
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&amp;display=swap" crossorigin>
+<link rel="stylesheet" type="text/css" href="./_observablehq/theme-air,near-midnight,alt,wide.db1cdf55.css">
+<link rel="stylesheet" type="text/css" href="./_observablehq/stdlib/inputs.ea9fd553.css">
+<link rel="modulepreload" href="./_observablehq/client.857ef40c.js">
+<link rel="modulepreload" href="./_observablehq/runtime.e080113b.js">
+<link rel="modulepreload" href="./_observablehq/stdlib.43270668.js">
+<link rel="modulepreload" href="./_observablehq/stdlib/duckdb.20461150.js">
+<link rel="modulepreload" href="./_npm/htl@0.3.1/72f4716c.js">
+<link rel="modulepreload" href="./_observablehq/stdlib/inputs.7f302853.js">
+<link rel="modulepreload" href="./_npm/apache-arrow@21.1.0/63de76cd.js">
+<link rel="modulepreload" href="./_npm/parquet-wasm@0.7.1/68d81b68.js">
+<link rel="modulepreload" href="./_npm/@duckdb/duckdb-wasm@1.29.0/d1cf3c5a.js">
+<link rel="modulepreload" href="./_npm/isoformat@0.2.1/18cbf477.js">
+<link rel="modulepreload" href="./_npm/tslib@2.8.1/b62a9c4a.js">
+<link rel="modulepreload" href="./_npm/flatbuffers@25.9.23/c82700c2.js">
+<script type="module">
+
+import {define} from "./_observablehq/client.857ef40c.js";
+import {registerFile} from "./_observablehq/stdlib.43270668.js";
+
+registerFile("./data/morning_paper.parquet", {"name":"./data/morning_paper.parquet","path":"./_file/data/morning_paper.2f997b4a.parquet","lastModified":1764549498161,"size":48138});
+
+define({id: "46135e31", inputs: ["FileAttachment"], outputs: ["DuckDBClient","db"], body: async (FileAttachment) => {
+const {DuckDBClient} = await import("./_observablehq/stdlib/duckdb.20461150.js");
+
+const db = await DuckDBClient.of({
+  articles: FileAttachment("./data/morning_paper.parquet")
+});
+return {DuckDBClient,db};
+}});
+
+define({id: "ceef774a", inputs: ["db"], outputs: ["allDataArrow","allData"], body: async (db) => {
+// Fetch all data first (morning_paper.parquet already has last 7 days)
+const allDataArrow = await db.query(`SELECT * FROM articles ORDER BY created_at DESC`);
+const allData = Array.from(allDataArrow);
+return {allDataArrow,allData};
+}});
+
+define({id: "3f0c3e76", inputs: ["allData"], outputs: ["anchors","categories"], body: (allData) => {
+// Get unique values for filters
+const anchors = [null, ...new Set(allData.map(d => d.anchor_name))].sort((a, b) => {
+  if (a === null) return -1;
+  if (b === null) return 1;
+  return a.localeCompare(b);
+});
+const categories = [null, ...new Set(allData.map(d => d.source_category))].sort((a, b) => {
+  if (a === null) return -1;
+  if (b === null) return 1;
+  return a.localeCompare(b);
+});
+return {anchors,categories};
+}});
+
+define({id: "61a0390b", inputs: ["Inputs","anchors","Generators","categories"], outputs: ["anchorInput","selectedAnchor","categoryInput","selectedCategory"], body: (Inputs,anchors,Generators,categories) => {
+// Filter inputs
+const anchorInput = Inputs.select(anchors, {label: "Semantic Anchor", format: x => x || "All Anchors"});
+const selectedAnchor = Generators.input(anchorInput);
+
+const categoryInput = Inputs.select(categories, {label: "Source Type", format: x => x || "All Sources"});
+const selectedCategory = Generators.input(categoryInput);
+return {anchorInput,selectedAnchor,categoryInput,selectedCategory};
+}});
+
+define({id: "02645cf8", mode: "inline", inputs: ["anchorInput","display"], body: async (anchorInput,display) => {
+display(await(
+anchorInput
+))
+}});
+
+define({id: "c944e0f6", mode: "inline", inputs: ["categoryInput","display"], body: async (categoryInput,display) => {
+display(await(
+categoryInput
+))
+}});
+
+define({id: "4fc554c1", inputs: ["allData","selectedAnchor","selectedCategory"], outputs: ["filtered","morningPaper"], body: (allData,selectedAnchor,selectedCategory) => {
+// Apply filters and sort by relevance (normalized_score)
+let filtered = allData;
+
+if (selectedAnchor) {
+  filtered = filtered.filter(d => d.anchor_name === selectedAnchor);
+}
+
+if (selectedCategory) {
+  filtered = filtered.filter(d => d.source_category === selectedCategory);
+}
+
+// Always sort by normalized score (relevance)
+filtered.sort((a, b) => b.normalized_score - a.normalized_score);
+
+const morningPaper = filtered;
+return {filtered,morningPaper};
+}});
+
+define({id: "0f923c66", inputs: ["morningPaper"], outputs: ["uniqueArticles","avgScore"], body: (morningPaper) => {
+// Stats
+const uniqueArticles = new Set(morningPaper.map(d => d.article_id)).size;
+const avgScore = morningPaper.length > 0
+  ? (morningPaper.reduce((sum, d) => sum + d.normalized_score, 0) / morningPaper.length).toFixed(2)
+  : "0.00";
+return {uniqueArticles,avgScore};
+}});
+
+define({id: "93619087", mode: "inline", inputs: ["uniqueArticles","display"], body: async (uniqueArticles,display) => {
+display(await(
+uniqueArticles
+))
+}});
+
+define({id: "f2a5d10d", mode: "inline", inputs: ["morningPaper","display"], body: async (morningPaper,display) => {
+display(await(
+morningPaper.length
+))
+}});
+
+define({id: "63de3906", mode: "inline", inputs: ["avgScore","display"], body: async (avgScore,display) => {
+display(await(
+avgScore
+))
+}});
+
+define({id: "1f715495", inputs: ["Inputs","morningPaper","htl","display"], body: async (Inputs,morningPaper,htl,display) => {
+display(await(
+Inputs.table(morningPaper, {
+  columns: ["title", "source_name", "anchor_name", "normalized_score", "created_at"],
+  header: {
+    title: "Headline",
+    source_name: "Source",
+    anchor_name: "Semantic Anchor",
+    normalized_score: "Score",
+    created_at: "Date"
+  },
+  format: {
+    title: (t, i) => {
+      const row = morningPaper[i];
+      const star = row.is_org_highlight ? "⭐ " : "";
+      return htl.html`<a href="${row.link}" target="_blank">${star}${t}</a>`;
+    },
+    created_at: d => new Date(d).toLocaleDateString(),
+    normalized_score: d => d.toFixed(2)
+  },
+  rows: 25,
+  width: {
+    title: "50%",
+    source_name: "15%",
+    anchor_name: "20%",
+    normalized_score: "8%",
+    created_at: "7%"
+  }
+})
+))
+}});
+
+</script>
+</head>
+<body>
+<input id="observablehq-sidebar-toggle" type="checkbox" title="Toggle sidebar">
+<label id="observablehq-sidebar-backdrop" for="observablehq-sidebar-toggle"></label>
+<nav id="observablehq-sidebar">
+  <ol>
+    <label id="observablehq-sidebar-close" for="observablehq-sidebar-toggle"></label>
+    <li class="observablehq-link observablehq-link-active"><a href="./">Passive Policy Intelligence - Demo Portal</a></li>
+  </ol>
+  <ol>
+    <li class="observablehq-link"><a href="./demo">Demo Overview</a></li>
+    <li class="observablehq-link observablehq-link-active"><a href="./">The Morning Paper</a></li>
+    <li class="observablehq-link"><a href="./archive">The Archive</a></li>
+    <li class="observablehq-link"><a href="./sources">Source Transparency</a></li>
+  </ol>
+</nav>
+<script>{const e=document.querySelector("#observablehq-sidebar"),o=document.querySelector("#observablehq-sidebar-toggle"),r=sessionStorage.getItem("observablehq-sidebar");r?o.checked=r==="true":o.indeterminate=!0;for(const t of document.querySelectorAll("#observablehq-sidebar summary")){const s=t.parentElement;switch(sessionStorage.getItem(`observablehq-sidebar:${t.textContent}`)){case"true":s.open=!0;break;case"false":s.classList.contains("observablehq-section-active")||(s.open=!1);break}}addEventListener("beforeunload",()=>sessionStorage.setItem("observablehq-sidebar-scrolly",`${e.scrollTop}`));const a=sessionStorage.getItem("observablehq-sidebar-scrolly");a!=null&&(e.style.cssText="overflow: hidden;",e.scrollTop=+a,e.style.cssText="");}</script>
+<div id="observablehq-center">
+<main id="observablehq-main" class="observablehq">
+<link rel="stylesheet" href="./_file/theme.78c22643.css">
+<h1 id="the-morning-paper" tabindex="-1"><a class="observablehq-header-anchor" href="#the-morning-paper">The Morning Paper</a></h1>
+<div class="card" style="background: #fff3cd; border-left: 4px solid #856404;">
+  <strong>📊 The Morning Paper:</strong> This view shows articles from the last 7 days, ranked by semantic similarity to your chosen policy focus areas (Semantic Anchors). The system analyzes incoming content daily and highlights the most relevant matches based on tiered thresholds that account for source authority.
+</div>
+<div class="observablehq observablehq--block"><!--:46135e31:--></div>
+<div class="observablehq observablehq--block"><!--:ceef774a:--></div>
+<div class="observablehq observablehq--block"><!--:3f0c3e76:--></div>
+<div class="observablehq observablehq--block"><!--:61a0390b:--></div>
+<div class="card">
+  <div class="grid grid-cols-2" style="gap: 1rem;">
+    <div><observablehq-loading></observablehq-loading><!--:02645cf8:--></div>
+    <div><observablehq-loading></observablehq-loading><!--:c944e0f6:--></div>
+  </div>
+</div>
+<div class="observablehq observablehq--block"><!--:4fc554c1:--></div>
+<div class="observablehq observablehq--block"><!--:0f923c66:--></div>
+<div class="card" style="background: #f8f9fa; margin-bottom: 1rem;">
+  <div class="grid grid-cols-3" style="gap: 1rem; text-align: center;">
+    <div>
+      <div style="font-size: 2rem; font-weight: bold;"><observablehq-loading></observablehq-loading><!--:93619087:--></div>
+      <div style="color: #666;">Articles</div>
+    </div>
+    <div>
+      <div style="font-size: 2rem; font-weight: bold;"><observablehq-loading></observablehq-loading><!--:f2a5d10d:--></div>
+      <div style="color: #666;">Article-Anchor Pairs</div>
+    </div>
+    <div>
+      <div style="font-size: 2rem; font-weight: bold;"><observablehq-loading></observablehq-loading><!--:63de3906:--></div>
+      <div style="color: #666;">Avg. Relevance Score</div>
+    </div>
+  </div>
+</div>
+<div class="observablehq observablehq--block"><observablehq-loading></observablehq-loading><!--:1f715495:--></div>
+</main>
+<footer id="observablehq-footer">
+<nav><a rel="next" href="./demo"><span>Demo Overview</span></a></nav>
+<div>G7 GovAI Grand Challenge Demo | Automated Environmental Scanning System</div>
+</footer>
+</div>
+</body>
+</html>

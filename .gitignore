@@ -1,0 +1,71 @@
+# Environment & Secrets
+.env
+*.env
+!.env.example
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.venv/
+venv/
+ENV/
+env/
+.python-version
+
+# UV (Python package manager)
+uv.lock
+.uv/
+
+# Data & Databases
+/data/
+data/chroma_db/
+
+# Logs & Output
+logs/
+*.log
+pipeline_execution.log
+output/
+!output/.gitkeep
+
+# User Content (keep templates, ignore generated)
+user_content/drafts_for_indexing/
+user_content/indexed_log.txt
+user_content/*.csv
+user_content/website_tags*
+user_content/program_project_charters/
+
+# Notebooks Results
+notebooks/results/
+
+# IDE & OS
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# Claude Code (local development notes)
+.claude/
+
+# Node (Portal)
+node_modules/
+dist/
+.observablehq/
+.parcel-cache/
+
+# Temporary files
+*.tmp
+commit.txt
+REFACTORING_*.md
+
+# Build artifacts
+build/
+*.egg-info/
+.eggs/

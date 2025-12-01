@@ -1,0 +1,89 @@
+:root {
+  --theme-foreground: #1a1a1a;
+  --theme-background: #f4f4f0;
+  --theme-background-alt: #e9e9e5;
+  --theme-border: 2px solid #1a1a1a;
+  --theme-shadow: 4px 4px 0px #1a1a1a;
+  --theme-font: "Courier New", Courier, monospace;
+}
+
+body {
+  background-color: var(--theme-background);
+  color: var(--theme-foreground);
+  font-family: var(--theme-font);
+  -webkit-font-smoothing: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--theme-font);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: bold;
+}
+
+/* Card / Container Styling */
+.card, .observablehq-input {
+  background: white;
+  border: var(--theme-border);
+  box-shadow: var(--theme-shadow);
+  border-radius: 0 !important; /* Force no border-radius */
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Input Styling */
+input, select, button {
+  font-family: var(--theme-font);
+  border: var(--theme-border);
+  background: white;
+  border-radius: 0;
+  padding: 0.5rem;
+  box-shadow: 2px 2px 0px #1a1a1a;
+}
+
+input:focus, select:focus, button:focus {
+  outline: 2px solid #1a1a1a;
+  box-shadow: 4px 4px 0px #1a1a1a;
+}
+
+/* Table Styling */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+th, td {
+  text-align: left;
+  padding: 0.75rem;
+  border-bottom: 1px solid #1a1a1a;
+}
+
+th {
+  text-transform: uppercase;
+  border-bottom: 2px solid #1a1a1a;
+  background-color: var(--theme-background-alt);
+}
+
+/* Link Styling */
+a {
+  color: #0000AA;
+  text-decoration: underline;
+}
+
+a:hover {
+  background-color: #0000AA;
+  color: white;
+  text-decoration: none;
+}
+
+/* Utility */
+.observablehq--inspect {
+  font-family: var(--theme-font) !important;
+}
+
+/* Navigation - basic override attempt */
+#observablehq-sidebar {
+  border-right: var(--theme-border);
+  background-color: var(--theme-background-alt);
+}

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="generator" content="Observable Framework v1.13.3">
+<title>Source Transparency | Passive Policy Intelligence - Demo Portal</title>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&amp;display=swap" crossorigin>
+<link rel="preload" as="style" href="./_observablehq/theme-air,near-midnight,alt,wide.db1cdf55.css">
+<link rel="preload" as="style" href="./_observablehq/stdlib/inputs.ea9fd553.css">
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&amp;display=swap" crossorigin>
+<link rel="stylesheet" type="text/css" href="./_observablehq/theme-air,near-midnight,alt,wide.db1cdf55.css">
+<link rel="stylesheet" type="text/css" href="./_observablehq/stdlib/inputs.ea9fd553.css">
+<link rel="modulepreload" href="./_observablehq/client.857ef40c.js">
+<link rel="modulepreload" href="./_observablehq/runtime.e080113b.js">
+<link rel="modulepreload" href="./_observablehq/stdlib.43270668.js">
+<link rel="modulepreload" href="./_observablehq/stdlib/duckdb.20461150.js">
+<link rel="modulepreload" href="./_npm/d3@7.9.0/e780feca.js">
+<link rel="modulepreload" href="./_npm/htl@0.3.1/72f4716c.js">
+<link rel="modulepreload" href="./_observablehq/stdlib/inputs.7f302853.js">
+<link rel="modulepreload" href="./_npm/apache-arrow@21.1.0/63de76cd.js">
+<link rel="modulepreload" href="./_npm/parquet-wasm@0.7.1/68d81b68.js">
+<link rel="modulepreload" href="./_npm/@duckdb/duckdb-wasm@1.29.0/d1cf3c5a.js">
+<link rel="modulepreload" href="./_npm/isoformat@0.2.1/18cbf477.js">
+<link rel="modulepreload" href="./_npm/d3-array@3.2.4/e93ca09f.js">
+<link rel="modulepreload" href="./_npm/d3-axis@3.0.0/0f2de24d.js">
+<link rel="modulepreload" href="./_npm/d3-brush@3.0.0/65eb105b.js">
+<link rel="modulepreload" href="./_npm/d3-chord@3.0.1/7ef8fb2e.js">
+<link rel="modulepreload" href="./_npm/d3-color@3.1.0/aeb57b94.js">
+<link rel="modulepreload" href="./_npm/d3-contour@4.0.2/1d2aed74.js">
+<link rel="modulepreload" href="./_npm/d3-delaunay@6.0.4/5ced1d52.js">
+<link rel="modulepreload" href="./_npm/d3-dispatch@3.0.1/9ba9c7f3.js">
+<link rel="modulepreload" href="./_npm/d3-drag@3.0.0/4202580c.js">
+<link rel="modulepreload" href="./_npm/d3-dsv@3.0.1/9cffc2bd.js">
+<link rel="modulepreload" href="./_npm/d3-ease@3.0.1/cdd7e898.js">
+<link rel="modulepreload" href="./_npm/d3-fetch@3.0.1/b4e2ad9a.js">
+<link rel="modulepreload" href="./_npm/d3-force@3.0.0/5e804d15.js">
+<link rel="modulepreload" href="./_npm/d3-format@3.1.0/86074ef6.js">
+<link rel="modulepreload" href="./_npm/d3-geo@3.1.1/40599fb3.js">
+<link rel="modulepreload" href="./_npm/d3-hierarchy@3.1.2/e49e792c.js">
+<link rel="modulepreload" href="./_npm/d3-interpolate@3.0.1/8d1e5425.js">
+<link rel="modulepreload" href="./_npm/d3-path@3.1.0/20d3f133.js">
+<link rel="modulepreload" href="./_npm/d3-polygon@3.0.1/7553081f.js">
+<link rel="modulepreload" href="./_npm/d3-quadtree@3.0.1/0dfd751c.js">
+<link rel="modulepreload" href="./_npm/d3-random@3.0.1/3c90ee06.js">
+<link rel="modulepreload" href="./_npm/d3-scale@4.0.2/843b6a76.js">
+<link rel="modulepreload" href="./_npm/d3-scale-chromatic@3.1.0/ba24c2e7.js">
+<link rel="modulepreload" href="./_npm/d3-selection@3.0.0/4d94e5b7.js">
+<link rel="modulepreload" href="./_npm/d3-shape@3.2.0/6d3a6726.js">
+<link rel="modulepreload" href="./_npm/d3-time@3.1.0/9f03c579.js">
+<link rel="modulepreload" href="./_npm/d3-time-format@4.1.0/07c9626f.js">
+<link rel="modulepreload" href="./_npm/d3-timer@3.0.1/b58a267d.js">
+<link rel="modulepreload" href="./_npm/d3-transition@3.0.1/004da2ac.js">
+<link rel="modulepreload" href="./_npm/d3-zoom@3.0.0/b5786b3f.js">
+<link rel="modulepreload" href="./_npm/tslib@2.8.1/b62a9c4a.js">
+<link rel="modulepreload" href="./_npm/flatbuffers@25.9.23/c82700c2.js">
+<link rel="modulepreload" href="./_npm/internmap@2.0.3/e08981d9.js">
+<link rel="modulepreload" href="./_npm/delaunator@5.0.1/02d43215.js">
+<link rel="modulepreload" href="./_npm/robust-predicates@3.0.2/aa00730b.js">
+<script type="module">
+
+import {define} from "./_observablehq/client.857ef40c.js";
+import {registerFile} from "./_observablehq/stdlib.43270668.js";
+
+registerFile("./data/anchors.parquet", {"name":"./data/anchors.parquet","path":"./_file/data/anchors.af4f332a.parquet","lastModified":1764549498646,"size":3827});
+registerFile("./data/sources.parquet", {"name":"./data/sources.parquet","path":"./_file/data/sources.f80f646e.parquet","lastModified":1764549498620,"size":8188});
+
+define({id: "712d4db1", inputs: ["FileAttachment"], outputs: ["DuckDBClient","db"], body: async (FileAttachment) => {
+const {DuckDBClient} = await import("./_observablehq/stdlib/duckdb.20461150.js");
+
+const db = await DuckDBClient.of({
+  sources: FileAttachment("./data/sources.parquet"),
+  anchors: FileAttachment("./data/anchors.parquet")
+});
+return {DuckDBClient,db};
+}});
+
+define({id: "d91c96d0", inputs: ["db"], outputs: ["sourcesArrow","sources","anchorsArrow","anchors"], body: async (db) => {
+const sourcesArrow = await db.query("SELECT * FROM sources ORDER BY source_name");
+const sources = Array.from(sourcesArrow);
+
+const anchorsArrow = await db.query("SELECT * FROM anchors ORDER BY anchor_name");
+const anchors = Array.from(anchorsArrow);
+return {sourcesArrow,sources,anchorsArrow,anchors};
+}});
+
+define({id: "0fee1285", inputs: ["Inputs","anchors","display"], body: async (Inputs,anchors,display) => {
+display(await(
+Inputs.table(anchors, {
+  columns: [
+    "anchor_name",
+    "anchor_description"
+  ],
+  header: {
+    anchor_name: "Semantic Anchor",
+    anchor_description: "Description"
+  },
+  rows: anchors.length
+})
+))
+}});
+
+define({id: "3f4464eb", inputs: ["d3","sources"], outputs: ["categoryGroups","categorySummary"], body: (d3,sources) => {
+// Calculate category distribution
+const categoryGroups = d3.rollup(sources, v => v.length, d => d.source_category);
+const categorySummary = Array.from(categoryGroups).sort((a, b) => b[1] - a[1]);
+return {categoryGroups,categorySummary};
+}});
+
+define({id: "c751601b", inputs: ["htl","sources","categorySummary"], outputs: ["summaryHtml"], body: (htl,sources,categorySummary) => {
+const summaryHtml = htl.html`<div class="card" style="background: #f8f9fa;">
+  <h3 style="margin-top: 0;">Source Distribution</h3>
+  <p><strong>${sources.length} organizations</strong> monitored across ${categorySummary.length} categories:</p>
+  <ul>
+    ${categorySummary.map(([cat, count]) => htl.html`<li><strong>${cat}:</strong> ${count} sources</li>`)}
+  </ul>
+</div>`;
+return {summaryHtml};
+}});
+
+define({id: "614d0fbb", mode: "inline", inputs: ["summaryHtml","display"], body: async (summaryHtml,display) => {
+display(await(
+summaryHtml
+))
+}});
+
+define({id: "11e932f7", inputs: ["Inputs","sources","htl","display"], body: async (Inputs,sources,htl,display) => {
+display(await(
+Inputs.table(sources, {
+  columns: [
+    "source_name",
+    "source_category",
+    "url"
+  ],
+  header: {
+    source_name: "Organization",
+    source_category: "Category",
+    url: "Website"
+  },
+  format: {
+    url: d => htl.html`<a href="${d}" target="_blank">Link</a>`
+  },
+  rows: sources.length
+})
+))
+}});
+
+</script>
+</head>
+<body>
+<input id="observablehq-sidebar-toggle" type="checkbox" title="Toggle sidebar">
+<label id="observablehq-sidebar-backdrop" for="observablehq-sidebar-toggle"></label>
+<nav id="observablehq-sidebar">
+  <ol>
+    <label id="observablehq-sidebar-close" for="observablehq-sidebar-toggle"></label>
+    <li class="observablehq-link"><a href="./">Passive Policy Intelligence - Demo Portal</a></li>
+  </ol>
+  <ol>
+    <li class="observablehq-link"><a href="./demo">Demo Overview</a></li>
+    <li class="observablehq-link"><a href="./">The Morning Paper</a></li>
+    <li class="observablehq-link"><a href="./archive">The Archive</a></li>
+    <li class="observablehq-link observablehq-link-active"><a href="./sources">Source Transparency</a></li>
+  </ol>
+</nav>
+<script>{const e=document.querySelector("#observablehq-sidebar"),o=document.querySelector("#observablehq-sidebar-toggle"),r=sessionStorage.getItem("observablehq-sidebar");r?o.checked=r==="true":o.indeterminate=!0;for(const t of document.querySelectorAll("#observablehq-sidebar summary")){const s=t.parentElement;switch(sessionStorage.getItem(`observablehq-sidebar:${t.textContent}`)){case"true":s.open=!0;break;case"false":s.classList.contains("observablehq-section-active")||(s.open=!1);break}}addEventListener("beforeunload",()=>sessionStorage.setItem("observablehq-sidebar-scrolly",`${e.scrollTop}`));const a=sessionStorage.getItem("observablehq-sidebar-scrolly");a!=null&&(e.style.cssText="overflow: hidden;",e.scrollTop=+a,e.style.cssText="");}</script>
+<div id="observablehq-center">
+<main id="observablehq-main" class="observablehq">
+<link rel="stylesheet" href="./_file/theme.78c22643.css">
+<h1 id="source-transparency" tabindex="-1"><a class="observablehq-header-anchor" href="#source-transparency">Source Transparency</a></h1>
+<div class="card" style="background: #d1ecf1; border-left: 4px solid #0c5460;">
+  <strong>🔍 Transparency Commitment:</strong> This page provides complete disclosure of both the data sources being monitored and the semantic anchors (policy topics) used for ranking. No hidden sources, no opaque ranking criteria. Users control both the "world" of data the system analyzes and the "lens" used to evaluate relevance.
+</div>
+<div class="observablehq observablehq--block"><!--:712d4db1:--></div>
+<div class="observablehq observablehq--block"><!--:d91c96d0:--></div>
+<h2 id="semantic-anchors-policy-focus-areas" tabindex="-1"><a class="observablehq-header-anchor" href="#semantic-anchors-policy-focus-areas">Semantic Anchors (Policy Focus Areas)</a></h2>
+<div class="card">
+  <p>These are the user-defined policy topics that guide the system's ranking. Each anchor represents a specific area of policy interest, defined using the HyDE (Hypothetical Document Embeddings) methodology.</p>
+</div>
+<div class="observablehq observablehq--block"><observablehq-loading></observablehq-loading><!--:0fee1285:--></div>
+<hr>
+<h2 id="monitored-sources" tabindex="-1"><a class="observablehq-header-anchor" href="#monitored-sources">Monitored Sources</a></h2>
+<div class="observablehq observablehq--block"><!--:3f4464eb:--></div>
+<div class="observablehq observablehq--block"><!--:c751601b:--></div>
+<p><observablehq-loading></observablehq-loading><!--:614d0fbb:--></p>
+<div class="observablehq observablehq--block"><observablehq-loading></observablehq-loading><!--:11e932f7:--></div>
+</main>
+<footer id="observablehq-footer">
+<nav><a rel="prev" href="./archive"><span>The Archive</span></a></nav>
+<div>G7 GovAI Grand Challenge Demo | Automated Environmental Scanning System</div>
+</footer>
+</div>
+</body>
+</html>
