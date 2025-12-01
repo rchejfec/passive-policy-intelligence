@@ -15,9 +15,12 @@
 <link rel="modulepreload" href="./_observablehq/client.857ef40c.js">
 <link rel="modulepreload" href="./_observablehq/runtime.e080113b.js">
 <link rel="modulepreload" href="./_observablehq/stdlib.43270668.js">
+<link rel="modulepreload" href="./_observablehq/stdlib/duckdb.20461150.js">
 <link rel="modulepreload" href="./_npm/htl@0.3.1/72f4716c.js">
 <link rel="modulepreload" href="./_observablehq/stdlib/inputs.7f302853.js">
 <link rel="modulepreload" href="./_npm/apache-arrow@21.1.0/63de76cd.js">
+<link rel="modulepreload" href="./_npm/parquet-wasm@0.7.1/68d81b68.js">
+<link rel="modulepreload" href="./_npm/@duckdb/duckdb-wasm@1.29.0/d1cf3c5a.js">
 <link rel="modulepreload" href="./_npm/isoformat@0.2.1/18cbf477.js">
 <link rel="modulepreload" href="./_npm/tslib@2.8.1/b62a9c4a.js">
 <link rel="modulepreload" href="./_npm/flatbuffers@25.9.23/c82700c2.js">
@@ -28,11 +31,20 @@ import {registerFile} from "./_observablehq/stdlib.43270668.js";
 
 registerFile("./data/archive.parquet", {"name":"./data/archive.parquet","path":"./_file/data/archive.a3205cc0.parquet","lastModified":1764549498591,"size":154214});
 
-define({id: "85547f4b", inputs: ["FileAttachment"], outputs: ["archiveArrow","allArchiveData"], body: async (FileAttachment) => {
-// Load archive data directly with Arrow (no DuckDB)
-const archiveArrow = await FileAttachment("./data/archive.parquet").arrow();
-const allArchiveData = Array.from(archiveArrow).sort((a, b) => b.normalized_score - a.normalized_score);
-return {archiveArrow,allArchiveData};
+define({id: "4d9a6bbd", inputs: ["FileAttachment"], outputs: ["DuckDBClient","db"], body: async (FileAttachment) => {
+const {DuckDBClient} = await import("./_observablehq/stdlib/duckdb.20461150.js");
+
+const db = await DuckDBClient.of({
+  archive: FileAttachment("./data/archive.parquet")
+});
+return {DuckDBClient,db};
+}});
+
+define({id: "0d959488", inputs: ["db"], outputs: ["allDataArrow","allArchiveData"], body: async (db) => {
+// Fetch all data
+const allDataArrow = await db.query(`SELECT * FROM archive ORDER BY normalized_score DESC`);
+const allArchiveData = Array.from(allDataArrow);
+return {allDataArrow,allArchiveData};
 }});
 
 define({id: "c374fb14", inputs: ["allArchiveData"], outputs: ["anchors","categories"], body: (allArchiveData) => {
@@ -256,7 +268,8 @@ Inputs.table(results, {
 <div class="card" style="background: #d1ecf1; border-left: 4px solid #0c5460;">
   <strong>🔍 Full Archive Search:</strong> Searchable repository of all analyzed content since June 2024. This demonstrates the system's "evidence base" capability - allowing retrospective analysis of how policy issues evolved over time. Use advanced filters to explore historical matches across sources, time periods, and semantic anchors.
 </div>
-<div class="observablehq observablehq--block"><!--:85547f4b:--></div>
+<div class="observablehq observablehq--block"><!--:4d9a6bbd:--></div>
+<div class="observablehq observablehq--block"><!--:0d959488:--></div>
 <div class="observablehq observablehq--block"><!--:c374fb14:--></div>
 <div class="observablehq observablehq--block"><!--:2f6d3846:--></div>
 <div class="card" style="background: #f8f9fa;">
