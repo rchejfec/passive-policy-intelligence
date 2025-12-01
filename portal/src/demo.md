@@ -6,112 +6,121 @@ toc: false
 
 <link rel="stylesheet" href="theme.css">
 
-# Automated Environmental Scanning for Passive Policy Intelligence
+# Passive Policy Intelligence (PPI)
 
 <div class="card" style="background: #f0f7ff; border-left: 4px solid #0066cc;">
-  <strong>The Demo Portal</strong><br/>
-  This is a live demonstration of an AI-powered system that helps public servants track policy-relevant research and announcements.
+  <strong>G7 GovAI Grand Challenge Submission</strong><br/>
+  This project addresses <a href="https://impact.canada.ca/en/challenges/g7-govAI" target="_blank">Problem Statement 1: Information Management</a> by automating the daily search, ranking, and archiving of policy-relevant content.
 </div>
 
-#GEM //Missing explanation of the grant/application program (the more pragmatic why)
 ---
 
-## What is this?
+## The Problem
 
-An automated pipeline that acts as a **passive listener** for policy intelligence. It tracks a list of user-defined websites, ranks content against user-defined policy topics, and delivers curated digests via the users prefer choice (Microsoft Teams, email, Power BI, this web portal).
+Policy analysts manually track dozens of sources—government portals, think tanks, research institutions, media outlets—to stay current on their mandates. This creates two problems:
 
-**The Problem:** Public servants may struggle to track critical research and announcements amidst overwhelming information flows. Missing important developments poses risks, while manual searching wastes valuable time.
+1. **Time waste**: Hours spent searching for updates that may not exist
+2. **Missed signals**: Critical information buried in high-volume feeds
 
-**The Solution:** Modern vector embedding technology provides a cost-effective, transparent alternative to expensive market intelligence tools. 
-
-For the past month, this demo has tracked more than 50 websites from government agencies, think tanks, research institutions, and media - matched against four sample semantic anchors covering hypothetical policy mandates or interests. (Learn more)[ sources page] <#GEM>
-
----
-
-## What does it do?
-
-### Core Functions
-
-1. **Automated Ingestion** - Fetches articles daily from a user-defined list of RSS feeds and Google Alerts
-2. **Semantic Ranking** - Calculates relevance scores against a user-defined list of "semantic anchors," or policy mandates and interests
-3. **Smart Highlighting** - Applies tiered thresholds based on sources <gem>
-4. **Multi-Channel Delivery** - Sends digests to Microsoft Teams, stores in searchable archive
-
-### Key Innovations: 
-
-#### Inexpensive, lightweight, and low-risk  
-<#GEM>
-Performs well with small, lightweight, open-source models. Only saves headlines, links and the ocassional short summary. This means no need for external API calls and no or low computing and storage costs. 
-
-Other than in the creation of semantic anchors, where the use of LLMs is optional, this tool doesn't actually rely on chatbots or generates text. Reducing the risk of hallucination and allowing for easier handling of sensitive information. 
-
-#### Hypothetical Document Embeddings (HyDE) for simplified semantic matching 
-
-Instead of matching against phrases or lists of documents relevant to a user or team, we can instead use a hypothetical document, generated specifically to include language that is semantically similar to our target information. In this demo, users setting up a new instance can leverage DSPy to generate a sample anchor summary from a list of phrases, documents, or URLs.  
-
-#### Ranking Over Filtering
-
-Traditional keyword systems either show everything (noise) or filter aggressively (miss edge cases). This system **ranks** all content by relevance while keeping lower-scored items accessible. Users control thresholds and can always "look beyond" top matches.
+**This demo** has monitored 50+ sources daily for the past month, ranking content against four hypothetical policy topics. See the [sources page](./sources) for the full list.
 
 ---
 
-## How does it do it?
+## The Solution
 
-### Technical Architecture
+An automated **passive listener** that ingests, ranks, and archives policy intelligence without manual searching. The system:
+
+1. **Ingests** articles daily from user-defined RSS feeds and Google Alerts
+2. **Ranks** content by semantic similarity to user-defined policy topics ("semantic anchors")
+3. **Filters** using source-aware thresholds to surface relevant over noise
+4. **Delivers** daily updates (Microsoft Teams, Email) and searchable archive (this demo, Microsft Power BI).  
+
+### Design Principles
+
+#### Local-First Architecture (Data Sovereignty)
+The core pipeline runs entirely on user infrastructure using open-source embedding models (sentence-transformers). No external API calls for ranking. No data exfiltration. Content processing stays within the security perimeter—suitable for on-premises or private cloud deployment.
+
+Storage requirements are minimal: only headlines, links, and occasional summaries are retained. Compute costs are low enough to run on a standard VM (~$10-20/month).
+
+#### Explainable Rankings (Not Black Box AI)
+This system does not generate text or make autonomous decisions. It ranks existing content using vector similarity scores (0-1 scale). Every score ties back to a specific semantic anchor. No hallucinations. No hidden logic.
+
+LLM usage is optional and limited to creating semantic anchors during setup (via DSPy framework). The framework abstracts the model layer, allowing users to swap public APIs (OpenAI, Anthropic) for private or local models based on security requirements.
+
+#### Modular & Interoperable
+Components are decoupled:
+- **Ingestion Layer**: Swap RSS for web scraping or JSON feeds
+- **Embedding Models**: Swap sentence-transformers for domain-specific models
+- **Delivery Channels**: Currently Microsoft integration and a web portal, extensible to email, Slack, etc.
+- **Database**: Standard PostgreSQL (government-compatible infrastructure)
+
+The web portal is built with Observable Framework—a static site generator requiring no backend servers.
+
+---
+
+## How It Works
+
+### Technical Pipeline
 
 ```
 RSS Feeds → Ingestion → Vector Embeddings → Semantic Matching → Tiered Filtering → Delivery
     ↓           ↓              ↓                    ↓                  ↓              ↓
-  ~110      PostgreSQL    ChromaDB +         Cosine Similarity    Highlight      Teams +
- Sources      Database    SentenceXfmrs     vs. Anchors (0-1)     Logic         Portal
+  50+       PostgreSQL    ChromaDB +         Cosine Similarity    Source-Aware     Teams +
+ Sources      Database    SentenceXfmrs     vs. Anchors (0-1)     Thresholds      Portal
 ```
 
-### Semantic Anchors (The "Lens")
+### Semantic Anchors (The Ranking Lens)
 
-Users define policy topics of interest using:
-- **HyDE Methodology** - Hypothetical policy briefs that exemplify the topic
-- Based on:
-  - **Representative Documents** - Real-world examples of relevant content (URLs or PDFs)
-  - **Tags Combinations** - Keywords and category markers
+Users define policy topics using **Hypothetical Document Embeddings (HyDE)**:
 
-The system converts these into vector embeddings and calculates semantic similarity with incoming articles.
+Instead of matching against keyword lists or example documents, the system uses a *hypothetical policy brief* that exemplifies the topic. This brief is generated (via DSPy) from:
+- Representative documents (URLs or PDFs)
+- Tag combinations (keywords)
 
-### Tiered Highlighting Logic
+The hypothetical document is written to include language semantically similar to target content, improving matching accuracy over simple keyword or phrase-based systems.
 
-Not all sources are equal. The system applies **source-aware thresholds** to avoid drowning signal in noise:
+**Example**: Instead of searching for "AI governance" or looking for semantic linkages against 10 policy papers, you generate a hypothetical brief that discusses AI governance in the style of your target sources.
 
-- **Tier 1 (Low volume, highly targetted)** - Sources that publish sporadically on topics very likely to be relevant in some way. 
-  - In this demo: Think Tanks, Research, Industry
+The system converts these anchors into vector embeddings and calculates semantic similarity with incoming articles.
+
+### Source-Aware Filtering Logic
+
+Not all sources publish at the same volume or relevance. The system applies **tiered thresholds** to prevent high-volume sources from drowning out authoritative research:
+
+- **Tier 1 (Low-volume, high-relevance sources)**
+  - In this demo: Think tanks, academic research, industry reports
   - Fixed threshold: Score > 0.20
+  - *Rationale*: These sources publish sporadically but are highly targeted to policy topics
 
-- **Tier 2 (Medium volume and targetting)** - Sources that publish frequently on topics that are often relevant.
-  - In this demo: Government Press Releases 
+- **Tier 2 (Medium-volume sources)**
+  - In this demo: Government press releases
   - Relative threshold: Score > Historical Mean
+  - *Rationale*: Frequent publishers with generally relevant content
 
-- **Tier 3 (High volume, not targetted)** - Sources that publish very frequently on a wide range of topics.
-  - In this demo: News & Media
-  - Strict threshold: Score > Mean + 1 Std Dev
+- **Tier 3 (High-volume, broad sources)**
+  - In this demo: News media
+  - Strict threshold: Score > Mean + 1 Standard Deviation
+  - *Rationale*: Extremely high-volume sources need strong semantic matches to avoid overwhelming the digest
 
-**Why this matters:** Most relevant sources get surfaced with lower similarity scores, while high-volume sources require stronger semantic matches. This prevents a single day's news cycle from overwhelming careful research.
+**Why this matters**: A think tank report with a 0.25 similarity score surfaces in the digest. A news article needs a 0.40+ score to compete. This ensures relevant research doesn't get buried by daily news cycles.
 
 ---
 
-## Data Sovereignty & Architecture
+## Interoperability & Deployment
 
-### Local-First Design
+### Deployment Options
 
-- **Core Pipeline:** Runs entirely on user infrastructure (local computer or private cloud VM)
-- **No External API Calls:** Vector embedding and ranking happen locally using open-source models
-- **Data Stays Put:** Sensitive documents never leave the security perimeter
-- **PostgreSQL Database:** Standard government-compatible infrastructure
-- **Observable Framework Portal:** Static site, no backend servers required
+The system runs on user infrastructure (local server or private cloud VM):
+- **On-Premises**: Departmental servers for Protected B data
+- **Private Cloud**: Azure/AWS VMs with data residency controls
+- **Hybrid**: Analysis on-prem, portal hosted publicly (only metadata exposed)
 
-### Optional AI Components
+### Model Abstraction
 
-For semantic anchor definition, users can optionally use AI (via DSPy framework) to synthesize representative documents. The framework **abstracts the model layer**, allowing users to:
-- Swap public APIs (OpenAI, Anthropic) for private/local models
-- Run entirely offline with self-hosted LLMs
-- Ensure even "thinking" processes respect data boundaries
+DSPy framework allows swapping between AI providers:
+- Public APIs (OpenAI, Anthropic) for development
+- Local LLMs (Llama, Mistral) for production
+- Embedding models can be replaced with domain-specific alternatives
 
 ---
 
@@ -119,24 +128,24 @@ For semantic anchor definition, users can optionally use AI (via DSPy framework)
 
 ### Transparency & Human Control
 
-✓ **User-Defined Anchors** - Policy topics are explicit, not hidden in black boxes
-✓ **Traceable Rankings** - Every score ties back to a specific semantic anchor
-✓ **No Hallucinations** - AI ranks existing content, doesn't generate new claims
-✓ **Safety Net** - Lower-ranked items remain accessible for manual review
+✓ **User-Defined Inputs**: Full control over monitored sources and policy topics
+✓ **Traceable Scores**: Every ranking links to a specific semantic anchor and similarity score
+✓ **No Hidden Decisions**: System ranks content, humans decide what to read
+✓ **Safety Net**: Lower-ranked items remain accessible in archive for manual review
 
-### Cost-Effective & Accessible
+### Cost-Effective & Scalable
 
-✓ **Minimal Infrastructure** - Runs on standard low-cost VM (~$10-20/month)
-✓ **Open Source Stack** - PostgreSQL, ChromaDB, Python, Observable Framework
-✓ **Domain Agnostic** - Works for any policy area (health, finance, environment, etc.)
-✓ **Replicable** - Teams deploy isolated instances, no shared platform overhead
+✓ **Minimal Infrastructure**: Runs on low-cost VM (~$10-20/month)
+✓ **Open Source Stack**: No vendor lock-in (PostgreSQL, ChromaDB, Python, Observable)
+✓ **Domain Agnostic**: Works for any policy area (health, finance, environment, etc.)
+✓ **Replicable**: Teams can deploy isolated instances without shared platform overhead
 
-### Evidence-Based Policy
+### Evidence-Based Research
 
-✓ **Searchable Archive** - Track how issues evolved over time
-✓ **Source Diversity** - Monitor 110+ organizations across academia, government, media
-✓ **Retrospective Analysis** - Query historical matches for policy briefs
-✓ **Bias Mitigation** - Source metadata enables algorithmic prioritization of authoritative evidence
+✓ **Searchable Archive**: Track how issues evolved over time
+✓ **Source Diversity**: Monitor across academia, government, media
+✓ **Retrospective Queries**: Search historical matches for policy briefs
+✓ **Bias Transparency**: Source metadata enables algorithmic prioritization of authoritative evidence
 
 ---
 
@@ -155,7 +164,7 @@ For semantic anchor definition, users can optionally use AI (via DSPy framework)
 
   <div class="card" style="text-align: center;">
     <h3>🔍 The Archive</h3>
-    <p>Full repository search with advanced filters (date, score, source, anchor)</p>
+    <p>Full search with advanced filters (date, score, source, anchor)</p>
     <a href="./archive" style="text-decoration: none;">
       <div style="background: #0066cc; color: white; padding: 0.5rem; margin-top: 0.5rem; font-weight: bold;">
         SEARCH ARCHIVE →
@@ -165,7 +174,7 @@ For semantic anchor definition, users can optionally use AI (via DSPy framework)
 
   <div class="card" style="text-align: center;">
     <h3>🔍 Source Transparency</h3>
-    <p>Complete list of monitored organizations and semantic anchors</p>
+    <p>Complete list of monitored websites and semantic anchors</p>
     <a href="./sources" style="text-decoration: none;">
       <div style="background: #0066cc; color: white; padding: 0.5rem; margin-top: 0.5rem; font-weight: bold;">
         VIEW SOURCES →
@@ -178,5 +187,5 @@ For semantic anchor definition, users can optionally use AI (via DSPy framework)
 
 <div class="card" style="background: #fff3cd; border-left: 4px solid #856404; margin-top: 2rem;">
   <strong>📅 G7 GovAI Grand Challenge Demo</strong><br/>
-  Automated Environmental Scanning System | Built with Observable Framework
+  Passive Policy Intelligence | Built with Observable Framework
 </div>
