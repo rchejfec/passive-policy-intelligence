@@ -126,10 +126,10 @@ DSPy framework allows swapping between AI providers:
 
 ### Transparency & Human Control
 
-✓ **User-Defined Inputs**: Full control over monitored sources and policy topics
-✓ **Traceable Scores**: Every ranking links to a specific semantic anchor and similarity score
-✓ **No Hidden Decisions**: System ranks content, humans decide what to read
-✓ **Safety Net**: Lower-ranked items remain accessible in archive for manual review
+- ✓ **User-Defined Inputs**: Full control over monitored sources and policy topics
+- ✓ **Traceable Scores**: Every ranking links to a specific semantic anchor and similarity score
+- ✓ **No Hidden Decisions**: System ranks content, humans decide what to read
+- ✓ **Safety Net**: Lower-ranked items remain accessible in archive for manual review
 
 ### Cost-Effective & Scalable
 
