@@ -1,15 +1,15 @@
 ---
 theme: dashboard
-title: The Archive
+title: Archive
 toc: false
 ---
 
 <link rel="stylesheet" href="theme.css">
 
-# The Archive
+# Archive
 
 <div class="card" style="background: #d1ecf1; border-left: 4px solid #0c5460;">
-  <strong>🔍 Full Archive Search:</strong> Searchable repository of all analyzed content since June 2024. This demonstrates the system's "evidence base" capability - allowing retrospective analysis of how policy issues evolved over time. Use advanced filters to explore historical matches across sources, time periods, and semantic anchors.
+  <strong>🔍 Archive Search:</strong> Searchable repository of all analyzed content since June 2024. This demonstrates the system's "evidence base" capability - allowing retrospective analysis of how policy issues evolved over time. Use advanced filters to explore historical matches across sources, time periods, and semantic anchors.
 </div>
 
 ```js

@@ -1,15 +1,15 @@
 ---
 theme: dashboard
-title: The Morning Paper
+title: Daily Review
 toc: false
 ---
 
 <link rel="stylesheet" href="theme.css">
 
-# The Morning Paper
+# Daily Review
 
 <div class="card" style="background: #fff3cd; border-left: 4px solid #856404;">
-  <strong>📊 The Morning Paper:</strong> This view shows articles from the last 7 days, ranked by semantic similarity to your chosen policy focus areas (Semantic Anchors). The system analyzes incoming content daily and highlights the most relevant matches based on tiered thresholds that account for source authority.
+  <strong>📊 Daily Review:</strong> This view shows articles from the last 7 days, ranked by semantic similarity to your chosen policy focus areas (Semantic Anchors). The system analyzes incoming content daily and highlights the most relevant matches based on tiered thresholds that account for source authority.
 </div>
 
 ```js

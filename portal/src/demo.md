@@ -153,7 +153,7 @@ DSPy framework allows swapping between AI providers:
 
 <div class="grid grid-cols-3" style="gap: 1rem; margin-top: 1rem;">
   <div class="card" style="text-align: center;">
-    <h3>📊 The Morning Paper</h3>
+    <h3>📊 Daily Review</h3>
     <p>Recent 7-day digest showing top-ranked articles across all semantic anchors</p>
     <a href="./index" style="text-decoration: none;">
       <div style="background: #0066cc; color: white; padding: 0.5rem; margin-top: 0.5rem; font-weight: bold;">
@@ -163,7 +163,7 @@ DSPy framework allows swapping between AI providers:
   </div>
 
   <div class="card" style="text-align: center;">
-    <h3>🔍 The Archive</h3>
+    <h3>🔍 Archive</h3>
     <p>Full search with advanced filters (date, score, source, anchor)</p>
     <a href="./archive" style="text-decoration: none;">
       <div style="background: #0066cc; color: white; padding: 0.5rem; margin-top: 0.5rem; font-weight: bold;">
@@ -173,7 +173,7 @@ DSPy framework allows swapping between AI providers:
   </div>
 
   <div class="card" style="text-align: center;">
-    <h3>🔍 Source Transparency</h3>
+    <h3>🔍 Sources</h3>
     <p>Complete list of monitored websites and semantic anchors</p>
     <a href="./sources" style="text-decoration: none;">
       <div style="background: #0066cc; color: white; padding: 0.5rem; margin-top: 0.5rem; font-weight: bold;">

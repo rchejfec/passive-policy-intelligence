@@ -1,12 +1,12 @@
 ---
 theme: dashboard
-title: Source Transparency
+title: Sources
 toc: false
 ---
 
 <link rel="stylesheet" href="theme.css">
 
-# Source Transparency
+# Sources
 
 <div class="card" style="background: #d1ecf1; border-left: 4px solid #0c5460;">
   <strong>🔍 Transparency Commitment:</strong> This page provides complete disclosure of both the data sources being monitored and the semantic anchors (policy topics) used for ranking. No hidden sources, no opaque ranking criteria. Users control both the "world" of data the system analyzes and the "lens" used to evaluate relevance.
@@ -33,21 +33,22 @@ const anchors = Array.from(anchorsArrow);
 
 <div class="card">
   <p>These are the user-defined policy topics that guide the system's ranking. Each anchor represents a specific area of policy interest, defined using the HyDE (Hypothetical Document Embeddings) methodology.</p>
+  <p style="margin-bottom: 0;"><strong>How it works:</strong> Instead of keyword matching, the system uses hypothetical policy briefs that exemplify each topic. Content is ranked by semantic similarity to these reference documents.</p>
 </div>
 
 ```js
-Inputs.table(anchors, {
-  columns: [
-    "anchor_name",
-    "anchor_description"
-  ],
-  header: {
-    anchor_name: "Semantic Anchor",
-    anchor_description: "Description"
-  },
-  rows: anchors.length
-})
+// Display anchors as cards with descriptions
+const anchorsDisplay = htl.html`<div>
+  ${anchors.map(anchor => htl.html`
+    <div class="card" style="margin-bottom: 1rem; background: #f8f9fa;">
+      <h3 style="margin-top: 0; color: #0066cc;">${anchor.anchor_name.replace('DEMO: ', '')}</h3>
+      <p style="margin: 0; color: #666;">${anchor.anchor_description || 'No description available'}</p>
+    </div>
+  `)}
+</div>`;
 ```
+
+${anchorsDisplay}
 
 ---
 
