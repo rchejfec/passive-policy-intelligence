@@ -5,9 +5,9 @@
   "private": true,
   "scripts": {
     "dev": "observable preview",
-    "build": "observable build --base /passive-policy-intelligence/",
+    "build": "observable build",
     "clean": "observable clean"
-    },
+  },
   "devDependencies": {
     "@observablehq/framework": "latest"
   }
