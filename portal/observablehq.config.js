@@ -2,9 +2,9 @@ export default {
   title: "Passive Policy Intelligence - Demo Portal",
   pages: [
     {name: "Demo Overview", path: "/demo"},
-    {name: "The Morning Paper", path: "/index"},
-    {name: "The Archive", path: "/archive"},
-    {name: "Source Transparency", path: "/sources"}
+    {name: "Daily Review", path: "/index"},
+    {name: "Archive", path: "/archive"},
+    {name: "Source", path: "/sources"}
   ],
   base: "/passive-policy-intelligence",
   toc: false,
