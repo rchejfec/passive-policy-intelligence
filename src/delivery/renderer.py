@@ -5,7 +5,10 @@ from src.delivery import config
 from typing import Dict, List, Any
 
 def _format_tag(anchor_name: str) -> str:
-    """Formats an anchor name into a short tag (e.g., #PROG:AAC).
+    """Formats an anchor name into a short tag.
+
+    For DEMO anchors: uses fixed mapping for G7 GovAI Challenge
+    For other anchors: uses the original format (e.g., #PROG:AAC)
 
     Args:
         anchor_name: Full anchor name.
@@ -15,7 +18,20 @@ def _format_tag(anchor_name: str) -> str:
     """
     if not anchor_name: return ""
     if anchor_name.startswith("http"): return "#REF"
-    
+
+    # Fixed mapping for DEMO anchors
+    DEMO_TAG_MAP = {
+        "DEMO: Housing Affordability & Supply": "#Housing",
+        "DEMO: AI Governance & Public Sector Deployment": "#AIPolicy",
+        "DEMO: Agricultural Resilience & Food Security": "#AgFood",
+        "DEMO: Sustainable Transportation Infrastructure": "#Transportation"
+    }
+
+    # Check if it's a DEMO anchor with exact match
+    if anchor_name in DEMO_TAG_MAP:
+        return DEMO_TAG_MAP[anchor_name]
+
+    # Original logic for non-DEMO anchors
     if ":" in anchor_name:
         parts = anchor_name.split(":", 1)
         prefix = parts[0].strip().upper()
@@ -26,7 +42,7 @@ def _format_tag(anchor_name: str) -> str:
 
     clean_body = re.sub(r'[^a-zA-Z0-9\s\-]', '', body)
     words = re.split(r'[\s\-]+', clean_body)
-    
+
     if len(words) == 1 and len(words[0]) < 10:
         initials = words[0]
     else:
@@ -58,19 +74,26 @@ def render_digest_card(sections_data: Dict[str, List[Any]], total_articles: int)
         Dictionary representing the Adaptive Card JSON.
     """
     
-    # 1. Header (unchanged)
+    # 1. Header - DEMO MODE: Passive Policy Intelligence branding
     card_body = [
         {
             "type": "TextBlock",
             "size": "Large",
             "weight": "Bolder",
-            "text": "☕ Daily Intelligence Briefing"
+            "text": "📊 Passive Policy Intelligence (PPI)"
+        },
+        {
+            "type": "TextBlock",
+            "size": "Medium",
+            "weight": "Bolder",
+            "text": "Daily Policy Digest",
+            "spacing": "None"
         },
         {
             "type": "TextBlock",
             "size": "Small",
             "isSubtle": True,
-            "text": f"{datetime.now().strftime('%B %d, %Y')} | {total_articles} Articles Processed",
+            "text": f"{datetime.now().strftime('%B %d, %Y')} | {total_articles} Articles Processed | G7 GovAI Challenge Demo",
             "spacing": "None"
         }
     ]
@@ -131,7 +154,12 @@ def render_digest_card(sections_data: Dict[str, List[Any]], total_articles: int)
         elif articles:
             # Loop through articles only if content exists
             for article in articles:
-                short_tags = [_format_tag(a) for a in article.anchors[:3]]
+                # DEMO MODE: Only show tags for DEMO anchors where is_anchor_highlight=True
+                demo_anchors = [
+                    a for a in article.anchors
+                    if a.upper().startswith("DEMO:") and article.anchor_highlights.get(a, False)
+                ]
+                short_tags = [_format_tag(a) for a in demo_anchors[:3]]
                 tag_str = " ".join(short_tags)
                 
                 # STACKED LAYOUT CONTAINER
@@ -197,23 +225,23 @@ def render_digest_card(sections_data: Dict[str, List[Any]], total_articles: int)
         card_body.append(section_container)
 
 
-    # 3. Footer / Actions (unchanged)
+    # 3. Footer / Actions - DEMO MODE: Link to web portal
     card_body.append({
         "type": "ActionSet",
         "spacing": "Large",
         "actions": [
             {
                 "type": "Action.OpenUrl",
-                "title": "📊 Open Full Dashboard",
+                "title": "🔍 View Full Archive & Demo",
                 "url": config.DASHBOARD_URL,
                 "style": "positive"
             }
         ]
     })
-    
+
     card_body.append({
         "type": "TextBlock",
-        "text": "This briefing was generated automatically by the AI Daily Digest Pipeline.",
+        "text": "🏛️ G7 GovAI Grand Challenge Demo | Automated Policy Intelligence System",
         "isSubtle": True,
         "size": "Small",
         "horizontalAlignment": "Center",

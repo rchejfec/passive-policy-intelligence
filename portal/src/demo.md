@@ -126,24 +126,24 @@ DSPy framework allows swapping between AI providers:
 
 ### Transparency & Human Control
 
-- ✓ **User-Defined Inputs**: Full control over monitored sources and policy topics
-- ✓ **Traceable Scores**: Every ranking links to a specific semantic anchor and similarity score
-- ✓ **No Hidden Decisions**: System ranks content, humans decide what to read
-- ✓ **Safety Net**: Lower-ranked items remain accessible in archive for manual review
+- **User-Defined Inputs**: Full control over monitored sources and policy topics
+- **Traceable Scores**: Every ranking links to a specific semantic anchor and similarity score
+- **No Hidden Decisions**: System ranks content, humans decide what to read
+- **Safety Net**: Lower-ranked items remain accessible in archive for manual review
 
 ### Cost-Effective & Scalable
 
-✓ **Minimal Infrastructure**: Runs on low-cost VM (~$10-20/month)
-✓ **Open Source Stack**: No vendor lock-in (PostgreSQL, ChromaDB, Python, Observable)
-✓ **Domain Agnostic**: Works for any policy area (health, finance, environment, etc.)
-✓ **Replicable**: Teams can deploy isolated instances without shared platform overhead
+- **Minimal Infrastructure**: Runs on low-cost VM (~$10-20/month)
+- **Open Source Stack**: No vendor lock-in (PostgreSQL, ChromaDB, Python, Observable)
+- **Domain Agnostic**: Works for any policy area (health, finance, environment, etc.)
+- **Replicable**: Teams can deploy isolated instances without shared platform overhead
 
 ### Evidence-Based Research
 
-✓ **Searchable Archive**: Track how issues evolved over time
-✓ **Source Diversity**: Monitor across academia, government, media
-✓ **Retrospective Queries**: Search historical matches for policy briefs
-✓ **Bias Transparency**: Source metadata enables algorithmic prioritization of authoritative evidence
+- **Searchable Archive**: Track how issues evolved over time
+- **Source Diversity**: Monitor across academia, government, media
+- **Retrospective Queries**: Search historical matches for policy briefs
+- **Bias Transparency**: Source metadata enables algorithmic prioritization of authoritative evidence
 
 ---
 

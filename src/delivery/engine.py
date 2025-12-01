@@ -8,6 +8,13 @@ from dataclasses import dataclass, field
 from typing import List, Dict, Any, Optional
 import psycopg2.extensions
 
+# Fix Windows console encoding for Unicode characters
+if sys.platform == 'win32':
+    import codecs
+    if hasattr(sys.stdout, 'buffer'):
+        sys.stdout = codecs.getwriter('utf-8')(sys.stdout.buffer, 'strict')
+        sys.stderr = codecs.getwriter('utf-8')(sys.stderr.buffer, 'strict')
+
 sys.path.append(os.path.join(os.path.dirname(__file__), '..', '..'))
 from src.management.db_utils import get_db_connection
 from src.delivery import config, renderer
@@ -22,6 +29,7 @@ class Article:
     score: float
     is_highlight: bool
     anchors: List[str] = field(default_factory=list)
+    anchor_highlights: Dict[str, bool] = field(default_factory=dict)  # Maps anchor_name -> is_anchor_highlight
 
 def should_run() -> bool:
     """Ensures the digest only sends in the morning.
@@ -45,19 +53,20 @@ def fetch_candidates(conn: psycopg2.extensions.connection) -> pd.DataFrame:
         DataFrame containing candidate articles.
     """
     print("Fetching candidate articles...")
-    # Fetch all potential matches first (Highlights OR Score > Min)
+    # Fetch all potential matches first (Highlights OR Score > Min OR is_anchor_highlight)
     sql = f"""
-        SELECT 
+        SELECT
             a.id, a.title, a.link, src.name as source_name, src.category,
-            aal.similarity_score, a.is_org_highlight, sa.name as anchor_name
+            aal.similarity_score, a.is_org_highlight, sa.name as anchor_name,
+            aal.is_anchor_highlight
         FROM articles a
         JOIN article_anchor_links aal ON a.id = aal.article_id
         JOIN sources src ON a.source_id = src.id
         JOIN semantic_anchors sa ON aal.anchor_id = sa.id
-        WHERE 
+        WHERE
             a.created_at > NOW() - INTERVAL '{config.LOOKBACK_HOURS} HOURS'
             AND a.newsletter_sent_at IS NULL
-            AND (a.is_org_highlight = TRUE OR aal.similarity_score >= {config.MIN_SCORE})
+            AND (a.is_org_highlight = TRUE OR aal.is_anchor_highlight = TRUE OR aal.similarity_score >= {config.MIN_SCORE})
     """
     df = pd.read_sql_query(sql, conn)
     return df
@@ -72,7 +81,7 @@ def process_articles(df: pd.DataFrame) -> List[Article]:
         List of Article objects.
     """
     if df.empty: return []
-    
+
     articles_map = {}
     for _, row in df.iterrows():
         aid = row['id']
@@ -82,11 +91,14 @@ def process_articles(df: pd.DataFrame) -> List[Article]:
                 source_name=row['source_name'], source_category=row['category'],
                 score=row['similarity_score'], is_highlight=row['is_org_highlight']
             )
-        
+
         anchor = row['anchor_name']
         if anchor not in articles_map[aid].anchors:
             articles_map[aid].anchors.append(anchor)
-            
+
+        # Track which anchors are highlights for this article
+        articles_map[aid].anchor_highlights[anchor] = row['is_anchor_highlight']
+
         if row['similarity_score'] > articles_map[aid].score:
             articles_map[aid].score = row['similarity_score']
 
@@ -198,7 +210,8 @@ def main(conn: psycopg2.extensions.connection) -> None:
     Args:
         conn: Database connection.
     """
-    print("--- Starting Digest Delivery Engine ---")
+    print("--- Starting Digest Delivery Engine (DEMO MODE) ---")
+    print("--- Passive Policy Intelligence (PPI) | G7 GovAI Challenge ---")
     
     if not should_run(): return
 
@@ -213,7 +226,7 @@ def main(conn: psycopg2.extensions.connection) -> None:
     filtered_articles = filter_by_scope(all_articles)
     
     if not filtered_articles:
-        print("Articles found, but none matched the configured Scope (PROG/Allowed list).")
+        print("Articles found, but none matched the configured Scope (DEMO semantic anchors).")
         return
 
     final_sections = select_content(filtered_articles)
@@ -234,11 +247,12 @@ def main(conn: psycopg2.extensions.connection) -> None:
     try:
         response = requests.post(webhook_url, json=card_payload)
         response.raise_for_status()
-        print("✅ Digest sent to Teams successfully.")
+        print("✅ Policy Digest sent to Teams successfully (DEMO MODE).")
         mark_as_sent(conn, final_sections)
     except Exception as e:
         print(f"❌ Failed to send digest: {e}")
-        print(response.text)
+        if 'response' in locals():
+            print(response.text)
 
 if __name__ == "__main__":
     conn = get_db_connection()

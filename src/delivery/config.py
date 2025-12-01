@@ -3,7 +3,8 @@ from typing import List, Optional, Dict, Any
 
 # --- DASHBOARD SETTINGS ---
 # The link for the "Open Full Dashboard" button
-DASHBOARD_URL: str = "https://app.powerbi.com/links/iz2soIgITg?ctid=bcfac97a-4f44-44db-ab46-b8d571daddb4&pbi_source=linkShare"
+# DEMO MODE: Points to the Observable Framework web portal
+DASHBOARD_URL: str = "https://rchejfec.github.io/passive-policy-intelligence/"
 
 # --- SCOPE SETTINGS ---
 # Filter articles by specific anchors (Exact Name Match)
@@ -11,10 +12,11 @@ DASHBOARD_URL: str = "https://app.powerbi.com/links/iz2soIgITg?ctid=bcfac97a-4f4
 ALLOWED_ANCHORS: Optional[List[str]] = None
 
 # Filter articles by Anchor Type (Prefix Match)
+# Example: ["DEMO"] for G7 GovAI Challenge demo semantic anchors
 # Example: ["PROG"] will only include articles linked to a Program.
 # Example: ["PROG", "PROJECT"] excludes general "TAG" matches.
 # Set to None to allow ALL types.
-ALLOWED_ANCHOR_TYPES: Optional[List[str]] = ["PROG"]  # <--- NEW SETTING
+ALLOWED_ANCHOR_TYPES: Optional[List[str]] = ["DEMO"]  # <--- DEMO MODE: Using DEMO semantic anchors
 
 # --- SECTION MAPPING & STYLING ---
 # Define the Category mapping AND the visual style for each section headers
