@@ -16,7 +16,7 @@ toc: false
 import {DuckDBClient} from "npm:@observablehq/duckdb";
 
 const db = await DuckDBClient.of({
-  articles: FileAttachment("data/morning_paper.parquet")
+  articles: FileAttachment("data/morning_paper.parquet").parquet()
 });
 ```
 
