@@ -69,7 +69,7 @@ REFACTORING_*.md
 build/
 *.egg-info/
 .eggs/
+portal/dist.nojekyll
 
-
-#temp for dev
-application_materials
+# Application-specific
+application_materials/

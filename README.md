@@ -39,7 +39,7 @@ Searchable archive for deep research.
 </tr>
 </table>
 
-**Live Demo**: [View the web portal](https://your-demo-url.github.io)
+**Live Demo**: [View the web portal](https://rchejfec.github.io/passive-policy-intelligence/)
 
 ## 🏗️ Architecture
 
