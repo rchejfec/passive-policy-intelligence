@@ -1,0 +1,22 @@
+[
+  {
+    "name": "Test Anchor 1",
+    "description": "A test anchor from a text source.",
+    "inputs": [
+      {
+        "type": "text",
+        "value": "This is a direct text input for testing the anchor creation process. It should be embedded directly."
+      }
+    ]
+  },
+  {
+    "name": "Test Anchor 2",
+    "description": "A test anchor from a dummy URL.",
+    "inputs": [
+      {
+        "type": "url",
+        "value": "example.com"
+      }
+    ]
+  }
+]
