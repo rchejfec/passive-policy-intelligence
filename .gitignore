@@ -64,6 +64,7 @@ dist/
 *.tmp
 commit.txt
 REFACTORING_*.md
+SESSION_NOTES.md
 
 # Build artifacts
 build/
