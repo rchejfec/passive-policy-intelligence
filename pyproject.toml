@@ -38,6 +38,7 @@ dependencies = [
     "chromadb",
     "sentence-transformers",
     "torch",
+    "dspy",
 
     # Data Ingestion & Scraping
     "beautifulsoup4",
