@@ -165,7 +165,6 @@ def export_sources(conn: psycopg2.extensions.connection) -> int:
         name as source_name,
         category as source_category,
         site_url as url,
-        bias_lean,
         tags,
         is_active
     FROM sources

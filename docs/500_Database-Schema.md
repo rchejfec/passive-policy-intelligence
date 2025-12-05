@@ -20,7 +20,6 @@ Stores a master list of all organizations and websites being monitored.
 | `ga_feed_url` | `TEXT` | | The Google Alerts-generated RSS feed URL. |
 | `category` | `TEXT` | | The category of the source (e.g., 'Think Tank', 'News Media'). |
 | `tags` | `TEXT` | | Comma-separated tags related to the source. |
-| `bias_lean` | `TEXT` | | Notes on the source's political bias or leaning. |
 | `notes` | `TEXT` | | General-purpose notes about the source. |
 | `is_active` | `BOOLEAN` | `DEFAULT true` | Flag to indicate if the source should be actively fetched. |
 | `last_fetched` | `TIMESTAMP` | | Timestamp of the last successful fetch attempt. |
@@ -113,30 +112,3 @@ Stores the output of the analysis engine, connecting articles to anchors.
 | `linked_at` | `TIMESTAMP` | `DEFAULT CURRENT_TIMESTAMP` | Timestamp when the link was created. |
 | `is_anchor_highlight`| `BOOLEAN` | | Flag set by the enrichment engine based on Champion V4 logic. |
 | `is_org_highlight` | `BOOLEAN` | | Flag set by the enrichment engine based on Champion V4 logic. |
-
-## Delivery Layer Tables
-
-These tables support the "push" delivery features of the application.
-
-### `subscribers`
-
-Stores a list of users who can receive email digests.
-
-| Column Name | Data Type | Constraints | Description |
-|---|---|---|---|
-| `id` | `SERIAL` | `PRIMARY KEY` | Unique identifier for the subscriber. |
-| `email` | `TEXT` | `NOT NULL, UNIQUE` | The subscriber's unique email address. |
-| `name` | `TEXT` | | The subscriber's name. |
-| `created_at` | `TIMESTAMP` | `DEFAULT CURRENT_TIMESTAMP` | Timestamp when the subscriber was added. |
-
-### `subscriptions`
-
-Defines the many-to-many relationship between subscribers and the anchors they are subscribed to.
-
-| Column Name | Data Type | Constraints | Description |
-|---|---|---|---|
-| `id` | `SERIAL` | `PRIMARY KEY` | Unique identifier for the subscription. |
-| `subscriber_id` | `INTEGER` | `NOT NULL, FOREIGN KEY` | Links to the `subscribers` table. |
-| `anchor_id` | `INTEGER` | `NOT NULL, FOREIGN KEY` | Links to the `semantic_anchors` table. |
-| `created_at` | `TIMESTAMP` | `DEFAULT CURRENT_TIMESTAMP`| Timestamp when the subscription was created. |
-| `(subscriber_id, anchor_id)` | | `UNIQUE` | Ensures a subscriber can only subscribe to an anchor once. |

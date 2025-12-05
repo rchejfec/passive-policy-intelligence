@@ -1,175 +1,253 @@
-# Passive Policy Intelligence (PPI)
+# Automated Scanning for Policy Intelligence (ASPI)
 
-An automated environmental scanning pipeline for the public sector.
+An automated environmental scanning pipeline for policy intelligence.
 
-## 🏛️ G7 GovAI Grand Challenge Submission
+> This project is a submission to Canada's [G7 GovAI Grand Challenge](https://www.canada.ca/en/government/system/digital-government/digital-government-innovations/responsible-use-ai/ai-grand-challenge.html) (Problem Statement 1: Information Management).
+>
+> **Live Demo**: [view the web portal](https://rchejfec.github.io/passive-policy-intelligence/)
 
-**Problem Statement 1: Information Management**
+## Overview
 
-Policy analysts manually track dozens of sources to stay current on their mandates. This wastes time and risks missing critical updates buried in high-volume feeds.
+ASPI automates the discovery, ranking, and delivery of relevant content from diverse sources. The system:
 
-**Passive Policy Intelligence (PPI)** is a "passive listener" that automates the ingestion, ranking, and archiving of policy intelligence. It replaces manual web trawling with a self-hosted pipeline that:
+- **Ingests** articles from RSS feeds of government publications, media and research outlets
+- **Ranks** content using semantic similarity to user-defined topics
+- **Delivers** insights through configurable channels (web portal, Teams, email)
 
-- **Ingests** articles daily from government, media, and think-tank sources
-- **Ranks** content against user-defined "Semantic Anchors" (policy topics)
-- **Delivers** via Microsoft Teams (daily digest) and web portal (searchable archive)
 
-## 🔒 Data Sovereignty
+## Key feature: Semantic Anchors with HyDE
 
-This system is designed for **Local-First / Sovereign Compute**:
+Traditional content filtering relies on keyword matching or manual curation. This system uses **Semantic Anchors** -- policy topics defined through Hypothetical Document Embeddings (HyDE):
 
-- **No External AI APIs**: Core pipeline runs entirely on local embedding models (sentence-transformers)
-- **No Data Exfiltration**: Content processing happens within your secure environment (on-prem or private cloud)
-- **Audit Trail**: Every article, score, and decision is archived in a local PostgreSQL database
+1. User provides representative documents or phrases for a topic (e.g., "AI governance")
+2. System generates a hypothetical policy brief that exemplifies the topic
+3. Incoming articles are scored against this embedding using local sentence-transformers
+4. Results are filtered using source-aware thresholds to balance signal and noise
 
-## 📸 See It In Action
+This approach improves precision without requiring large training datasets or external AI APIs.
 
-<table>
-<tr>
-<td width="50%">
-<strong>The Daily Digest (MS Teams)</strong><br/>
-<img src="docs/images/teams_digest.png" width="400"><br/>
-Delivers ranked intelligence to where you work.
-</td>
-<td width="50%">
-<strong>The Research Archive (Web Portal)</strong><br/>
-<img src="docs/images/dashboard_preview.png" width="400"><br/>
-Searchable archive for deep research.
-</td>
-</tr>
-</table>
+## Architecture
 
-**Live Demo**: [View the web portal](https://rchejfec.github.io/passive-policy-intelligence/)
-
-## 🏗️ Architecture
-
-The system is built as a modular pipeline, designed to run on low-cost infrastructure (e.g., Azure B1s VM or local server).
+The system is built as a modular pipeline suitable for self-hosted deployment:
 
 ```mermaid
 graph LR
-    A[Ingestion Layer] -->|Raw Text| B[Vector Analysis]
-    B -->|Similarity Scores| C[Enrichment & Ranking]
-    C -->|Ranked Items| D[Delivery Engine]
-    D -->|Teams/Email| E[User]
-    C -->|Archive| F[PostgreSQL DB]
+    A[Ingestion] -->|RSS/Feeds| B[Vector Analysis]
+    B -->|Similarity Scores| C[Enrichment]
+    C -->|Ranked Items| D[Delivery]
+    D -->|Portal/Teams| E[User]
+    C -->|Archive| F[PostgreSQL]
 ```
 
-### 1. Ingestion Layer (`src/ingestion`)
+### Components
 
-- **Dataset Agnostic**: Users configure their own source lists (RSS, JSON, web scraping)
-- **Deduplication**: Prevents noise by ensuring only new content is processed
+**Ingestion Layer** ([src/ingestion](src/ingestion))
+- RSS feed monitoring with deduplication
+- Extensible to other data sources (APIs, web scraping)
 
-### 2. Analysis Layer (`src/analysis`)
+**Analysis Layer** ([src/analysis](src/analysis))
+- Local embedding generation (sentence-transformers)
+- Semantic similarity calculation against anchors
+- Source-aware filtering (tiered thresholds by source type)
 
-- **Semantic Anchors**: Users define policy topics using **Hypothetical Document Embeddings (HyDE)**
-  - Instead of keyword lists or example documents, the system uses hypothetical policy briefs generated from representative documents and tags
-  - Improves matching accuracy by including language semantically similar to target content
-- **Vector Embeddings**: Uses sentence-transformers (local) to calculate semantic similarity (0-1 scale)
-- **Source-Aware Filtering**: Tiered thresholds prevent high-volume sources from drowning out authoritative research
-  - Low-volume sources (think tanks): Score > 0.20
-  - Medium-volume (government): Score > Historical Mean
-  - High-volume (news): Score > Mean + 1 Std Dev
+**Delivery Layer** ([src/delivery](src/delivery))
+- Web portal (Observable Framework + DuckDB-WASM)
+- Microsoft Teams integration (Adaptive Cards)
+- Extensible to Slack, email, or custom endpoints
 
-### 3. Delivery Engine (`src/delivery`)
+**Data Storage**
+- PostgreSQL for relational data and audit trail
+- ChromaDB for vector embeddings
 
-- **Modular Output**: Decoupled from analysis. Currently supports Microsoft Teams (Adaptive Cards), extensible to email or Slack
-- **Digest Generation**: Runs on schedule (e.g., 7:00 AM) to deliver a concise "Morning Paper"
+## Data Sovereignty
 
-## 🚀 Getting Started
+The pipeline is designed for secure, on-premises deployment:
+
+- **No external AI APIs**: Embedding models run locally
+- **No data exfiltration**: All processing occurs within your environment
+- **Full audit trail**: Every article and score is logged in PostgreSQL
+- **Transparent rankings**: Scores are traceable with no black-box decisions
+
+## Getting Started
 
 ### Prerequisites
 
 - Python 3.10+
-- PostgreSQL 14+ (or Docker container)
-- Optional: Microsoft Teams Webhook URL (for notifications)
+- PostgreSQL 14+ (or any PostgreSQL-compatible database)
 
 ### Installation
 
-**Clone the Repository**
+**1. Clone and install dependencies**
+
+This project uses [UV](https://docs.astral.sh/uv/) for dependency management:
 
 ```bash
-git clone https://github.com/your-org/passive-policy-intelligence.git
+git clone https://github.com/rchejfec/passive-policy-intelligence.git
 cd passive-policy-intelligence
+
+# Install UV if needed
+curl -LsSf https://astral.sh/uv/install.sh | sh  # macOS/Linux
+# or: powershell -c "irm https://astral.sh/uv/install.ps1 | iex"  # Windows
+
+# Install dependencies
+uv sync
+source .venv/bin/activate  # macOS/Linux
+# or: .venv\Scripts\activate  # Windows
 ```
 
-**Set Up Environment**
+**2. Configure database**
 
-```bash
-python -m venv venv
-source venv/bin/activate  # or venv\Scripts\activate on Windows
-pip install -r requirements.txt
-```
-
-**Configure Environment Variables**
-
-Copy `.env.example` to `.env` and configure your database credentials and optional Webhook URLs.
+Copy `.env.example` to `.env` and set your PostgreSQL connection string:
 
 ```bash
 cp .env.example .env
 ```
 
-**Initialize Database**
+Edit `.env`:
+```
+DATABASE_URL=postgresql://user:password@localhost:5432/ppi
+```
 
-Run the setup script to create the schema and seed initial data.
+For the demo, PostgreSQL was used on Azure Database for PostgreSQL. To use a different database (e.g., SQLite for testing), you would need to modify the connection logic in `src/management/db_utils.py`.
+
+**3. Initialize database**
 
 ```bash
 python scripts/setup/setup_database.py
 ```
 
-### Usage (CLI)
+This creates the schema and seeds data sources.
 
-The project includes a TUI (Terminal User Interface) for easy management.
+### Running the Pipeline
+
+**Execute the full pipeline:**
 
 ```bash
-python manage.py
+python test_orchestrator.py
 ```
 
-- **Manage Sources**: Add/Remove RSS feeds
-- **Manage Anchors**: Create new Semantic Anchors for your policy topics
-- **Run Pipeline**: Manually trigger ingestion and analysis
+This runs all stages: ingestion → indexing → analysis → enrichment → delivery.
 
-## 🔑 Key Features
+For the demo, a wrapper script (`run_pipeline.ps1` / `run_pipeline.sh`) adds Teams notifications. You can customize this for your environment.
 
-### Hypothetical Document Embeddings (HyDE)
+**Manage semantic anchors and sources:**
 
-Instead of matching against keyword lists or example documents, users define policy topics using *hypothetical policy briefs* that exemplify the topic. These are generated (via DSPy framework) from:
-- Representative documents (URLs or PDFs)
-- Tag combinations (keywords)
+```bash
+python manage.py anchors list       # View configured topics
+python manage.py anchors create     # Add a new topic (interactive)
+python manage.py sources list       # View RSS sources
+```
 
-**Example**: Instead of searching for "AI governance" or uploading 10 policy papers, you generate a hypothetical brief that discusses AI governance in the style of your target sources.
+**View results:**
 
-### Interoperability & Model Abstraction
+The web portal source is in `portal/`. After running the pipeline, parquet files are exported to `portal/src/data/`. Build and deploy:
 
-- **DSPy Framework**: Allows swapping between AI providers (OpenAI, Anthropic, local LLMs)
-- **Modular Components**: Ingestion, embedding, and delivery layers are decoupled
-- **Deployment Flexibility**: On-premises, private cloud, or hybrid configurations
+```bash
+cd portal
+npm install
+npm run build
+npm run deploy  # Or serve locally with: npm run dev
+```
 
-### Explainable Rankings
+## Configuration
 
-- System ranks content (0-1 scale), doesn't generate text or make autonomous decisions
-- Every score ties back to a specific semantic anchor
-- No hallucinations, no hidden logic
-- Lower-ranked items remain accessible for manual review
+### Adding RSS Sources
 
-## 🛠️ Current Status
+Sources are managed in the PostgreSQL `sources` table. Use the management CLI:
 
-This repository is a **working prototype (MVP)** submitted for the G7 GovAI Challenge.
+```bash
+python manage.py sources add --name "Example Think Tank" --url "https://example.org/feed.xml"
+```
 
-**Completed:**
-- [x] Core Pipeline (Ingestion → Vector Store → DB)
-- [x] Semantic Anchor Management (HyDE methodology)
-- [x] Microsoft Teams Integration
-- [x] Web Portal (Observable Framework)
-- [x] Source-Aware Filtering Logic
+Or directly edit the database.
 
-**Future Enhancements:**
-- [ ] Multi-User Access: RBAC for team-based anchor management
-- [ ] Additional Delivery Channels: Email (SMTP), Slack
-- [ ] Enhanced Analytics: Trend analysis and topic clustering
+### Creating Semantic Anchors
 
-## 📜 License
+Anchors can be created through:
+1. **Interactive CLI**: `python manage.py anchors create`
+2. **Bulk import**: `python manage.py anchors import --file anchors.csv`
+3. **HyDE generation**: Use `scripts/batch_create_anchors.py` with DSPy for hypothetical document generation
 
-Distributed under the Creative Commons Attribution-NonCommercial 4.0 (CC BY-NC 4.0) License. See `LICENSE` for more information.
+For the demo, anchor generation used OpenAI's API through DSPy. To swap providers, configure DSPy to use a different LLM (Anthropic, local models, etc.) in the generation scripts.
+
+### Delivery Channels
+
+The delivery engine supports multiple outputs:
+
+- **Web Portal**: Static Observable Framework site (see `portal/`)
+- **Microsoft Teams**: Configure `TEAMS_WEBHOOK_URL` in `.env`
+- **Email**: Extensible via SMTP (not yet implemented)
+
+For the demo, Teams delivery was used. To add Slack, extend `src/delivery/engine.py` with a Slack webhook adapter.
+
+## Technical Details
+
+**Embedding Model**: `all-MiniLM-L6-v2` (384-dim, ~80MB)
+- Fast inference on CPU
+- Swappable via sentence-transformers API
+
+**Source-Aware Filtering**:
+- Think tanks / research: Score > 0.20 (fixed threshold)
+- Government: Score > Historical Mean (dynamic)
+- News media: Score > Mean + 1 Std Dev (strict)
+
+This prevents high-volume sources from dominating results while surfacing relevant research.
+
+**DSPy Integration**: Used for HyDE anchor generation. Supports multiple LLM backends (OpenAI, Anthropic, local models).
+
+## Project Structure
+
+```
+.
+├── src/
+│   ├── ingestion/     # RSS fetching, article indexing
+│   ├── analysis/      # Semantic similarity, enrichment
+│   ├── delivery/      # Teams, portal export
+│   └── management/    # CLI tools, database utilities
+├── scripts/           # Setup, maintenance, data export
+├── portal/            # Observable Framework web portal
+├── docs/              # Additional documentation
+└── test_orchestrator.py  # Main pipeline entrypoint
+```
+
+## Documentation
+
+- **[docs/200_Architecture.md](docs/200_Architecture.md)** - Detailed technical architecture
+- **[docs/300_Think-Tank-Portal.md](docs/300_Think-Tank-Portal.md)** - Web portal design
+- **[docs/500_Database-Schema.md](docs/500_Database-Schema.md)** - Database schema reference
+- **[CONTRIBUTING.md](CONTRIBUTING.md)** - Development setup and guidelines
+
+## Deployment Considerations
+
+The demo runs on an Azure B1s VM (1 vCPU, 1GB RAM, ~$10/month). Key considerations:
+
+- **Scheduling**: Use cron (Linux) or Task Scheduler (Windows) to run `test_orchestrator.py` daily
+- **Memory**: PyTorch and sentence-transformers require ~1.5GB during embedding generation
+- **Storage**: ChromaDB grows with corpus size (~1GB per 10k articles indexed)
+
+For production, consider:
+- Separating ChromaDB to persistent storage
+- Using connection pooling for PostgreSQL
+- Implementing rate limiting for RSS feeds
+- Adding log rotation
+
+## License
+
+This project is licensed under the **Creative Commons Attribution-NonCommercial 4.0 International License (CC BY-NC 4.0)**. See [LICENSE](LICENSE) for details.
+
+## Citation
+
+If you use this work, please cite:
+
+```
+Passive Policy Intelligence: Automated Environmental Scanning for Policy Work
+Developed for the G7 GovAI Grand Challenge 2025
+https://github.com/rchejfec/passive-policy-intelligence
+```
+
+## Contact
+
+For questions or collaboration inquiries related to this project, please open an issue on GitHub.
 
 ---
 

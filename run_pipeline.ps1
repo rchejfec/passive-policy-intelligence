@@ -89,19 +89,29 @@ function Send-TeamsNotification {
     Invoke-RestMethod -Uri $webhookUrl -Method Post -Body $utf8Bytes -ContentType "application/json; charset=utf-8"
 }
 
-# 5. Run the Orchestrator
+# 5. Run the Orchestrator (with automatic DEMO-only export)
 Write-Host "=================================================="
-Write-Host "Starting Pipeline Run: $(Get-Date)"
+Write-Host "DEMO UPDATE: Starting Pipeline Run"
+Write-Host "=================================================="
+Write-Host "This will update ONLY DEMO anchors for the public site"
+Write-Host "Started: $(Get-Date)"
+Write-Host ""
 
 python test_orchestrator.py
 $exitCode = $LASTEXITCODE
 
+Write-Host ""
 if ($exitCode -eq 0) {
-    Write-Host "SUCCESS: Pipeline finished at $(Get-Date)"
-    Send-TeamsNotification -Status "Success" -Color "00FF00" -Message "✅ The AI Digest Pipeline completed successfully."
+    Write-Host "SUCCESS: Demo data update completed at $(Get-Date)"
+    Write-Host ""
+    Write-Host "Next steps:"
+    Write-Host "  1. Review exported files in portal\src\data\"
+    Write-Host "  2. Build portal: cd portal && npm run build"
+    Write-Host "  3. Deploy when ready: npm run deploy"
+    Send-TeamsNotification -Status "Success" -Color "00FF00" -Message "✅ The DEMO Digest Pipeline completed successfully."
 } else {
     Write-Host "FAILURE: Pipeline crashed at $(Get-Date) with exit code $exitCode"
-    Send-TeamsNotification -Status "Failure" -Color "FF0000" -Message "❌ The AI Digest Pipeline crashed. Check logs."
+    Send-TeamsNotification -Status "Failure" -Color "FF0000" -Message "❌ The DEMO Digest Pipeline crashed. Check logs."
 }
 
 Write-Host "=================================================="

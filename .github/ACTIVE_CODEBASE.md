@@ -1,15 +1,17 @@
 # Active Codebase Reference
 
-**Last Updated:** 2025-10-12
+**Last Updated:** 2025-12-05
 
-This document maps the **currently active, production-ready code** in the AI Daily Digest pipeline. Use this as your reference for understanding what's actually being used vs. what's archived/legacy.
+This document maps the **currently active code** in the Passive Policy Intelligence pipeline.
+
+> **Note:** This repository is configured for **DEMO mode** - it exports only DEMO anchors to the public website while using the full production database.
 
 ---
 
 ## Daily Production Pipeline
 
 ### Main Orchestrator
-**`test_orchestrator.py`** - Runs the complete daily pipeline
+**`test_orchestrator.py`** - Runs the complete pipeline
 
 **Pipeline Stages:**
 ```
@@ -17,14 +19,19 @@ This document maps the **currently active, production-ready code** in the AI Dai
 2. Article Indexer  → src/ingestion/index_articles.py
 3. Article Analyzer → src/analysis/analyze_articles.py
 4. Article Enricher → src/analysis/enrich_articles.py
-5. Data Export      → scripts/export_to_parquet.py
+5. Data Export      → scripts/export_to_parquet.py (--demo-only flag)
 6. Teams Delivery   → src/delivery/engine.py
 ```
 
 **How to Run:**
-```bash
-python test_orchestrator.py
+```powershell
+.\run_pipeline.ps1  # Windows
 ```
+```bash
+./run_pipeline.sh   # macOS/Linux
+```
+
+These scripts run `test_orchestrator.py` and automatically export only DEMO data for the public website.
 
 ---
 
@@ -344,5 +351,6 @@ All legacy code has been moved to the `archive/` directory:
 
 ---
 
-*This document reflects the codebase as of 2025-10-12*
-*For historical context, see: [archive/README.md](archive/README.md)*
+*This document reflects the codebase as of 2025-12-05*
+*For setup instructions, see: [README.md](README.md)*
+*For operations guide, see: [docs/OPERATIONS.md](docs/OPERATIONS.md)*

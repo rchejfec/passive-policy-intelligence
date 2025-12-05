@@ -43,7 +43,6 @@ CREATE TABLE IF NOT EXISTS sources (
     ga_feed_url TEXT,
     category TEXT,
     tags TEXT,
-    bias_lean TEXT,
     notes TEXT,
     is_active BOOLEAN DEFAULT true,
     last_fetched TIMESTAMP
@@ -131,28 +130,31 @@ CREATE TABLE IF NOT EXISTS article_anchor_links (
 );
 """
 
-### --- Delivery Layer Blueprint Tables --- ###
+### --- Optional: Delivery Layer Tables (Not used in demo) --- ###
 
-CREATE_SUBSCRIBERS_TABLE = """
-CREATE TABLE IF NOT EXISTS subscribers (
-    id SERIAL PRIMARY KEY,
-    email TEXT NOT NULL UNIQUE,
-    name TEXT,
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-);
-"""
+# These tables support email digest distribution features but are not required
+# for the core pipeline functionality. Commented out by default.
 
-CREATE_SUBSCRIPTIONS_TABLE = """
-CREATE TABLE IF NOT EXISTS subscriptions (
-    id SERIAL PRIMARY KEY,
-    subscriber_id INTEGER NOT NULL,
-    anchor_id INTEGER NOT NULL,
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    FOREIGN KEY (subscriber_id) REFERENCES subscribers (id) ON DELETE CASCADE,
-    FOREIGN KEY (anchor_id) REFERENCES semantic_anchors (id) ON DELETE CASCADE,
-    UNIQUE(subscriber_id, anchor_id)
-);
-"""
+# CREATE_SUBSCRIBERS_TABLE = """
+# CREATE TABLE IF NOT EXISTS subscribers (
+#     id SERIAL PRIMARY KEY,
+#     email TEXT NOT NULL UNIQUE,
+#     name TEXT,
+#     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+# );
+# """
+
+# CREATE_SUBSCRIPTIONS_TABLE = """
+# CREATE TABLE IF NOT EXISTS subscriptions (
+#     id SERIAL PRIMARY KEY,
+#     subscriber_id INTEGER NOT NULL,
+#     anchor_id INTEGER NOT NULL,
+#     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+#     FOREIGN KEY (subscriber_id) REFERENCES subscribers (id) ON DELETE CASCADE,
+#     FOREIGN KEY (anchor_id) REFERENCES semantic_anchors (id) ON DELETE CASCADE,
+#     UNIQUE(subscriber_id, anchor_id)
+# );
+# """
 
 # REMOVED: SQLite-specific helper functions (add_column_if_not_exists, _recreate_article_anchor_links_without_cascade)
 # are no longer needed for a direct PostgreSQL setup.
@@ -180,8 +182,9 @@ def update_schema(conn):
     cursor.execute(CREATE_ARTICLE_ANCHOR_LINKS_TABLE)
 
     # Delivery Layer Tables
-    cursor.execute(CREATE_SUBSCRIBERS_TABLE)
-    cursor.execute(CREATE_SUBSCRIPTIONS_TABLE)
+    # Subscribers and subscriptions tables commented out (optional feature)
+    # cursor.execute(CREATE_SUBSCRIBERS_TABLE)
+    # cursor.execute(CREATE_SUBSCRIPTIONS_TABLE)
     
     conn.commit()
     cursor.close()
@@ -212,8 +215,8 @@ def populate_sources_from_csv(conn):
         
         # CHANGED: Parameter style from '?' to '%s' for psycopg2
         insert_query = """
-            INSERT INTO sources (name, site_url, feed_url, social_feed_url, ga_feed_url, category, tags, bias_lean, notes)
-            VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s)
+            INSERT INTO sources (name, site_url, feed_url, social_feed_url, ga_feed_url, category, tags, notes)
+            VALUES (%s, %s, %s, %s, %s, %s, %s, %s)
         """
         cursor.executemany(insert_query, sources_to_add)
 

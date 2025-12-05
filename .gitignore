@@ -62,6 +62,7 @@ dist/
 
 # Temporary files
 *.tmp
+*.bak
 commit.txt
 REFACTORING_*.md
 SESSION_NOTES.md

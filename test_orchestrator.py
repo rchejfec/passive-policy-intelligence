@@ -72,10 +72,11 @@ def run_pipeline() -> None:
         conn.commit()
 
         # Export data to parquet files for portal (after successful commit)
-        print("\n--- STEP: Running Data Export ---")
+        # DEMO MODE: Export only DEMO anchors to keep public website isolated
+        print("\n--- STEP: Running Data Export (DEMO-only mode) ---")
         import subprocess
         export_script = os.path.join(SCRIPT_DIR, 'scripts', 'export_to_parquet.py')
-        result = subprocess.run([sys.executable, export_script], capture_output=True, text=True)
+        result = subprocess.run([sys.executable, export_script, '--demo-only'], capture_output=True, text=True)
         if result.returncode != 0:
             print(f"WARNING: Data export failed: {result.stderr}")
             print("Pipeline completed but portal data may not be updated.")
