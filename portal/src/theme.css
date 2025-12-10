@@ -34,11 +34,20 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: bold;
 }
 
+/* Disable header link behavior */
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+  color: inherit;
+  text-decoration: none;
+  pointer-events: none;
+  cursor: default;
+}
+
 h2 {
   margin-top: 3rem;
   margin-bottom: 1rem;
   padding-bottom: 0.5rem;
   border-bottom: 2px solid var(--theme-foreground);
+  max-width: 50ch;
 }
 
 h3 {
@@ -135,4 +144,26 @@ a:hover {
 #observablehq-sidebar {
   border-right: 1px solid #e0e0e0;
   background-color: #fafafa;
+}
+
+/* Center main content more by adding padding and constraining width */
+#observablehq-main {
+  padding-left: 6rem !important;
+  padding-right: 9rem !important;
+  max-width: 1400px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+/* Default: Full width for all cards, grids, tables, and inputs */
+.card,
+.grid,
+table,
+.observablehq-input {
+  max-width: 100%;
+}
+
+/* Constrained width for overview/content cards */
+.card-narrow {
+  max-width: 60%;
 }

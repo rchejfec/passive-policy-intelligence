@@ -9,7 +9,7 @@ toc: false
 # Daily Review
 
 <div class="card" style="background: #fff3cd; border-left: 4px solid #856404;">
-  <strong>📊 Daily Review:</strong> This view shows articles from the last 7 days, ranked by semantic similarity to your chosen policy focus areas (Semantic Anchors). The system analyzes incoming content daily and highlights the most relevant matches based on tiered thresholds that account for source authority.
+  <strong>📊 Daily Review:</strong> This view shows articles from the last 3 days, ranked by semantic similarity to your chosen policy focus areas (semantic anchors). The system analyzes incoming content daily and highlights the most relevant matches based on tiered thresholds that account for source relevance.
 </div>
 
 ```js
@@ -21,8 +21,13 @@ const db = await DuckDBClient.of({
 ```
 
 ```js
-// Fetch all data first (morning_paper.parquet already has last 7 days)
-const allDataArrow = await db.query(`SELECT * FROM articles ORDER BY created_at DESC`);
+// Fetch data from last 3 days (72 hours)
+const cutoffDate = new Date(Date.now() - 72 * 60 * 60 * 1000).toISOString();
+const allDataArrow = await db.query(`
+  SELECT * FROM articles
+  WHERE created_at >= '${cutoffDate}'
+  ORDER BY created_at DESC
+`);
 const allData = Array.from(allDataArrow);
 ```
 
