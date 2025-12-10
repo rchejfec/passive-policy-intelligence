@@ -1,4 +1,4 @@
-# Automated Scanning for Policy Intelligence (ASPI)
+# Passive Policy Intelligence (PPI)
 
 An automated environmental scanning pipeline for policy intelligence.
 
@@ -8,12 +8,11 @@ An automated environmental scanning pipeline for policy intelligence.
 
 ## Overview
 
-ASPI automates the discovery, ranking, and delivery of relevant content from diverse sources. The system:
+PPI automates the discovery, ranking, and delivery of relevant content from diverse sources. The system:
 
 - **Ingests** articles from RSS feeds of government publications, media and research outlets
 - **Ranks** content using semantic similarity to user-defined topics
 - **Delivers** insights through configurable channels (web portal, Teams, email)
-
 
 ## Key feature: Semantic Anchors with HyDE
 
@@ -58,6 +57,13 @@ graph LR
 **Data Storage**
 - PostgreSQL for relational data and audit trail
 - ChromaDB for vector embeddings
+
+### Delivery Layer 
+
+Teams Digest |  Power BI Archive
+---------------- | -------------
+![](docs/images/screenshot_teams.png) | ![](docs/images/screenshot_powerbi.png)
+
 
 ## Data Sovereignty
 
