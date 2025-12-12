@@ -146,13 +146,11 @@ a:hover {
   background-color: #fafafa;
 }
 
-/* Center main content more by adding padding and constraining width */
+/* Main content area */
 #observablehq-main {
-  padding-left: 6rem !important;
-  padding-right: 9rem !important;
-  max-width: 1400px !important;
-  margin-left: auto !important;
-  margin-right: auto !important;
+  /* Using default Observable layout */
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
 
 /* Default: Full width for all cards, grids, tables, and inputs */
