@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-02-02T14:38:31Z",
+  "updated_at": "2026-02-03T15:28:29Z",
   "headlines": [
     {
       "title": "The new Canada Groceries and Essentials Benefit",
@@ -44,6 +44,13 @@
       "category": "Policy Advocacy"
     },
     {
+      "title": "Spreading the Benefits: A Targeted Tax Credit Is Needed to Expand Retirement Plan Coverage in Canada’s Private Sector",
+      "source": "C.D. Howe Institute",
+      "score": 0.5431518,
+      "url": "https://cdhowe.org/publication/spreading-the-benefits-a-targeted-tax-credit-is-needed-to-expand-retirement-plan-coverage-in-canadas-private-sector/",
+      "category": "Think Tank"
+    },
+    {
       "title": "Race to export beyond U.S. picks up as tariff squeeze grips Canada",
       "source": "CBC Saskatchewan",
       "score": 0.5316817,
@@ -51,25 +58,18 @@
       "category": "News & Media"
     },
     {
+      "title": "A step in the right direction: The new Canada Groceries and Essentials Benefit in context",
+      "source": "Maytree",
+      "score": 0.5301731,
+      "url": "https://www.google.com/url?rct=j&sa=t&url=https://maytree.com/publications/a-step-in-the-right-direction-the-new-canada-groceries-and-essentials-benefit-in-context/&ct=ga&cd=CAIyGWU0YjBkODRjYmZkZWVjMmY6Y2E6ZW46Q0E&usg=AOvVaw1Pf56QZTT9WFhml9S9AyXx",
+      "category": "Think Tank"
+    },
+    {
       "title": "Build more homes—but don’t lock Canada into higher emissions",
       "source": "C.D. Howe Institute",
       "score": 0.5262603,
       "url": "https://cdhowe.org/publication/build-more-homes-but-dont-lock-canada-into-higher-emissions/",
       "category": "Think Tank"
-    },
-    {
-      "title": "Canada Highlights the First Investment Under the Buy Canadian Policy",
-      "source": "GovCan - National News",
-      "score": 0.52411896,
-      "url": "https://www.canada.ca/en/housing-infrastructure-communities/news/2026/01/canada-highlights-the-first-investment-under-the-buy-canadian-policy0.html",
-      "category": "Government"
-    },
-    {
-      "title": "Stimulating regional growth and innovation: Government support to enhance Atelier d’usinage Côté & Audet’s competitiveness",
-      "source": "GovCan - National News",
-      "score": 0.5217913,
-      "url": "https://www.canada.ca/en/economic-development-quebec-regions/news/2026/01/stimulating-regional-growth-and-innovation-government-support-to-enhance-atelier-dusinage-cote--audets-competitiveness.html",
-      "category": "Government"
     }
   ]
 }
