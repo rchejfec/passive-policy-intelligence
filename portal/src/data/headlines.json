@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-02-05T13:53:04Z",
+  "updated_at": "2026-02-06T14:06:31Z",
   "headlines": [
     {
       "title": "Pursuing Sustainability: Global Commodity Trends and Canada - Signal49 Research",
@@ -7,6 +7,13 @@
       "score": 0.5724471,
       "url": "https://www.google.com/url?rct=j&sa=t&url=https://www.conferenceboard.ca/product/pursuing-sustainability-global-commodity-trends-and-canada/&ct=ga&cd=CAIyGTg3Yzc0YzkzZGM0MThmMDE6Y2E6ZW46Q0E&usg=AOvVaw1peKoDhmAtc6hldqFIDXJW",
       "category": "Business & Industry Advocacy"
+    },
+    {
+      "title": "The Canadian Standard of Living, Productivity and Innovation: Core Productivity Drivers and ...",
+      "source": "CIGI",
+      "score": 0.56738186,
+      "url": "https://www.google.com/url?rct=j&sa=t&url=https://www.cigionline.org/events/he-canadian-standard-of-living-productivity-and-innovation-core-productivity-drivers-and-diagnostics/&ct=ga&cd=CAIyGWZmZmMwYWJmNzRiZDQwODk6Y2E6ZW46Q0E&usg=AOvVaw0clnnxby8IDn88_lQA1YYY",
+      "category": "Think Tank"
     },
     {
       "title": "AI, Innovation, and the Productivity Crisis in Canada Explained by a Nobel Prize–Winning Economist",
@@ -28,13 +35,6 @@
       "score": 0.5443574,
       "url": "https://www.google.com/url?rct=j&sa=t&url=https://www.conferenceboard.ca/trending-insights/ai/&ct=ga&cd=CAIyGTg3Yzc0YzkzZGM0MThmMDE6Y2E6ZW46Q0E&usg=AOvVaw16oWpiOEOKi0NRrla8pPQ2",
       "category": "Business & Industry Advocacy"
-    },
-    {
-      "title": "Spreading the Benefits: A Targeted Tax Credit Is Needed to Expand Retirement Plan Coverage in Canada’s Private Sector",
-      "source": "C.D. Howe Institute",
-      "score": 0.5431518,
-      "url": "https://cdhowe.org/publication/spreading-the-benefits-a-targeted-tax-credit-is-needed-to-expand-retirement-plan-coverage-in-canadas-private-sector/",
-      "category": "Think Tank"
     },
     {
       "title": "City floats plan to speed up construction of affordable housing",
@@ -65,10 +65,10 @@
       "category": "Government"
     },
     {
-      "title": "A step in the right direction: The new Canada Groceries and Essentials Benefit in context",
-      "source": "Maytree",
-      "score": 0.5301731,
-      "url": "https://www.google.com/url?rct=j&sa=t&url=https://maytree.com/publications/a-step-in-the-right-direction-the-new-canada-groceries-and-essentials-benefit-in-context/&ct=ga&cd=CAIyGWU0YjBkODRjYmZkZWVjMmY6Y2E6ZW46Q0E&usg=AOvVaw1Pf56QZTT9WFhml9S9AyXx",
+      "title": "Public and Private Sector Job Growth Across Canada, 2015–2024 - Fraser Institute",
+      "source": "Fraser Institute",
+      "score": 0.5308545,
+      "url": "https://www.google.com/url?rct=j&sa=t&url=https://www.fraserinstitute.org/studies/public-and-private-sector-job-growth-across-canada-2015-2024&ct=ga&cd=CAIyGzllODBhNzEzODg2Nzg3ZTA6Y2E6ZW46Q0E6Ug&usg=AOvVaw33taiAUpruq9CB8caa1MHb",
       "category": "Think Tank"
     }
   ]
