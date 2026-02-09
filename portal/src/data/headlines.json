@@ -1,74 +1,74 @@
 {
-  "updated_at": "2026-02-06T14:06:31Z",
+  "updated_at": "2026-02-09T14:58:15Z",
   "headlines": [
     {
-      "title": "Pursuing Sustainability: Global Commodity Trends and Canada - Signal49 Research",
-      "source": "Conference Board of Canada",
-      "score": 0.5724471,
-      "url": "https://www.google.com/url?rct=j&sa=t&url=https://www.conferenceboard.ca/product/pursuing-sustainability-global-commodity-trends-and-canada/&ct=ga&cd=CAIyGTg3Yzc0YzkzZGM0MThmMDE6Y2E6ZW46Q0E&usg=AOvVaw1peKoDhmAtc6hldqFIDXJW",
-      "category": "Business & Industry Advocacy"
-    },
-    {
-      "title": "The Canadian Standard of Living, Productivity and Innovation: Core Productivity Drivers and ...",
-      "source": "CIGI",
-      "score": 0.56738186,
-      "url": "https://www.google.com/url?rct=j&sa=t&url=https://www.cigionline.org/events/he-canadian-standard-of-living-productivity-and-innovation-core-productivity-drivers-and-diagnostics/&ct=ga&cd=CAIyGWZmZmMwYWJmNzRiZDQwODk6Y2E6ZW46Q0E&usg=AOvVaw0clnnxby8IDn88_lQA1YYY",
-      "category": "Think Tank"
-    },
-    {
-      "title": "AI, Innovation, and the Productivity Crisis in Canada Explained by a Nobel Prize–Winning Economist",
-      "source": "C.D. Howe Institute",
-      "score": 0.5626162,
-      "url": "https://www.google.com/url?rct=j&sa=t&url=https://cdhowe.org/publication/ai-innovation-and-the-productivity-crisisa-in-canada-explained-by-a-nobel-prize-winning-economist/&ct=ga&cd=CAIyGTBiN2Q5ZDE3MTY2MzQ5YWM6Y2E6ZW46Q0E&usg=AOvVaw34IQcSpprzhXZWZOq1pq11",
-      "category": "Think Tank"
-    },
-    {
-      "title": "Study finds Canada could unlock major economic gains through stronger competition",
+      "title": "New national research partnership to improve Canada’s productivity receives inaugural grant",
       "source": "GovCan - National News",
-      "score": 0.5580753,
-      "url": "https://www.canada.ca/en/competition-bureau/news/2026/02/study-finds-canada-could-unlock-major-economic-gains-through-stronger-competition.html",
+      "score": 0.582082,
+      "url": "https://www.canada.ca/en/social-sciences-humanities-research/news/2026/02/new-national-research-partnership-to-improve-canadas-productivity-receives-inaugural-grant.html",
       "category": "Government"
     },
     {
-      "title": "Artificial Intelligence - Signal49 Research - Conference Board of Canada",
-      "source": "Conference Board of Canada",
-      "score": 0.5443574,
-      "url": "https://www.google.com/url?rct=j&sa=t&url=https://www.conferenceboard.ca/trending-insights/ai/&ct=ga&cd=CAIyGTg3Yzc0YzkzZGM0MThmMDE6Y2E6ZW46Q0E&usg=AOvVaw16oWpiOEOKi0NRrla8pPQ2",
-      "category": "Business & Industry Advocacy"
-    },
-    {
-      "title": "City floats plan to speed up construction of affordable housing",
-      "source": "CBC Ottawa",
-      "score": 0.54265624,
-      "url": "https://www.cbc.ca/news/canada/ottawa/councillors-consider-using-debt-to-finance-some-affordable-housing-projects-9.7072692?cmp=rss",
-      "category": "News & Media"
-    },
-    {
-      "title": "Changes to income supports for people with disabilities 'cruel,' says Sask. NDP",
-      "source": "CBC Saskatchewan",
-      "score": 0.5358752,
-      "url": "https://www.cbc.ca/news/canada/saskatchewan/assured-income-disability-benefit-said-changes-9.7072795?cmp=rss",
-      "category": "News & Media"
-    },
-    {
-      "title": "Backgrounder: Study on the Economic Benefits of Pro-Competitive Reforms in Canada",
-      "source": "GovCan - National News",
-      "score": 0.53578043,
-      "url": "https://www.canada.ca/en/competition-bureau/news/2026/02/backgrounder-study-on-the-economic-benefits-of-pro-competitive-reforms-in-canada.html",
+      "title": "Improving access to training for the skilled trades apprentices helping to build Canada strong",
+      "source": "GovCan - ESDC",
+      "score": 0.5748085,
+      "url": "https://www.canada.ca/en/employment-social-development/news/2026/02/improving-access-to-training-for-the-skilled-trades-apprentices-helping-to-build-canada-strong.html",
       "category": "Government"
     },
     {
-      "title": "Technical briefing on new strategy to transform Canada’s auto industry",
+      "title": "Strengthening Atlantic Canada’s defence capabilities in New Brunswick through Vimy Forge accelerator program",
+      "source": "GovCan - National News",
+      "score": 0.55014217,
+      "url": "https://www.canada.ca/en/atlantic-canada-opportunities/news/2026/02/strengthening-atlantic-canadas-defence-capabilities-in-new-brunswick-through-vimy-forge-accelerator-program.html",
+      "category": "Government"
+    },
+    {
+      "title": "Minister Joly highlights the Government of Canada’s new Auto Strategy",
       "source": "GovCan - ISED",
-      "score": 0.5315114,
-      "url": "https://www.canada.ca/en/innovation-science-economic-development/news/2026/02/technical-briefing-on-new-strategy-to-transform-canadas-auto-industry.html",
+      "score": 0.54880273,
+      "url": "https://www.canada.ca/en/innovation-science-economic-development/news/2026/02/minister-joly-highlights-the-government-of-canadas-new-auto-strategy.html",
       "category": "Government"
     },
     {
-      "title": "Public and Private Sector Job Growth Across Canada, 2015–2024 - Fraser Institute",
+      "title": "From promise to reality: scaling innovative housing in Canada",
+      "source": "C.D. Howe Institute",
+      "score": 0.5370031,
+      "url": "https://cdhowe.org/publication/from-promise-to-reality-scaling-innovative-housing-in-canada/",
+      "category": "Think Tank"
+    },
+    {
+      "title": "Canada’s digital and AI governance must account for geopolitics: André Côté and Peter Copeland for Inside Policy Talks",
+      "source": "Macdonald-Laurier Institute",
+      "score": 0.52305484,
+      "url": "https://macdonaldlaurier.ca/canadas-digital-and-ai-governance-must-account-for-geopolitics-andre-cote-and-peter-copeland-for-inside-policy-talks/",
+      "category": "Think Tank"
+    },
+    {
+      "title": "Ministers Hodgson, MacKinnon and Dabrusin to highlight Canada’s new strategy and announce funding to transform our auto industry",
+      "source": "GovCan - National News",
+      "score": 0.52238536,
+      "url": "https://www.canada.ca/en/natural-resources-canada/news/2026/02/ministers-hodgson-mackinnon-and-dabrusin-to-highlight-canadas-new-strategy-and-announce-funding-to-transform-our-auto-industry.html",
+      "category": "Government"
+    },
+    {
+      "title": "Minister Sidhu highlights plan to transform Canada’s auto industry in Brampton",
+      "source": "GovCan - National News",
+      "score": 0.505727,
+      "url": "https://www.canada.ca/en/global-affairs/news/2026/02/minister-sidhu-highlights-plan-to-transform-canadas-auto-industry-in-brampton.html",
+      "category": "Government"
+    },
+    {
+      "title": "Ottawa hypes investment but stokes consumption",
+      "source": "C.D. Howe Institute",
+      "score": 0.47657907,
+      "url": "https://cdhowe.org/publication/ottawa-hypes-investment-but-stokes-consumption/",
+      "category": "Think Tank"
+    },
+    {
+      "title": "Canada should modernize approach to senior benefits",
       "source": "Fraser Institute",
-      "score": 0.5308545,
-      "url": "https://www.google.com/url?rct=j&sa=t&url=https://www.fraserinstitute.org/studies/public-and-private-sector-job-growth-across-canada-2015-2024&ct=ga&cd=CAIyGzllODBhNzEzODg2Nzg3ZTA6Y2E6ZW46Q0E6Ug&usg=AOvVaw33taiAUpruq9CB8caa1MHb",
+      "score": 0.47100863,
+      "url": "https://www.fraserinstitute.org/commentary/canada-should-modernize-approach-senior-benefits",
       "category": "Think Tank"
     }
   ]
