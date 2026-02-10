@@ -1,6 +1,20 @@
 {
-  "updated_at": "2026-02-09T14:58:15Z",
+  "updated_at": "2026-02-10T14:46:27Z",
   "headlines": [
+    {
+      "title": "Innovation Challenge Paper No. 4: The Road to Global Best: Making Commercialization Happen",
+      "source": "Conference Board of Canada",
+      "score": 0.66281486,
+      "url": "https://www.google.com/url?rct=j&sa=t&url=https://www.conferenceboard.ca/product/innovation-challenge-paper-no-4-the-road-to-global-best-making-commercialization-happen/&ct=ga&cd=CAIyGTg3Yzc0YzkzZGM0MThmMDE6Y2E6ZW46Q0E&usg=AOvVaw0Gd6GRjvwGhsh-2tUF9Czl",
+      "category": "Business & Industry Advocacy"
+    },
+    {
+      "title": "Preparing Canada's infrastructure for a changing climate",
+      "source": "Canadian Climate Institute",
+      "score": 0.5971437,
+      "url": "https://www.google.com/url?rct=j&sa=t&url=https://climateinstitute.ca/reports/prepare-or-repair-canada-infrastructure/&ct=ga&cd=CAIyGWQyZDllYzljYzNiODY2OTM6Y2E6ZW46Q0E&usg=AOvVaw0ks9Kv4eaPyAyuDkfT5k-J",
+      "category": "Think Tank"
+    },
     {
       "title": "New national research partnership to improve Canada’s productivity receives inaugural grant",
       "source": "GovCan - National News",
@@ -13,6 +27,20 @@
       "source": "GovCan - ESDC",
       "score": 0.5748085,
       "url": "https://www.canada.ca/en/employment-social-development/news/2026/02/improving-access-to-training-for-the-skilled-trades-apprentices-helping-to-build-canada-strong.html",
+      "category": "Government"
+    },
+    {
+      "title": "Help shape Canada’s housing and infrastructure future: Board of Directors opportunities available",
+      "source": "GovCan - National News",
+      "score": 0.55596215,
+      "url": "https://www.canada.ca/en/housing-infrastructure-communities/news/2026/02/help-shape-canadas-housing-and-infrastructure-future-board-of-directors-opportunities-available.html",
+      "category": "Government"
+    },
+    {
+      "title": "Government of Canada is helping to protect, build and transform the auto industry",
+      "source": "GovCan - FedDev Ontario",
+      "score": 0.55439484,
+      "url": "https://www.canada.ca/en/economic-development-southern-ontario/news/2026/02/government-of-canada-is-helping-to-protect-build-and-transform-the-auto-industry.html",
       "category": "Government"
     },
     {
@@ -37,39 +65,11 @@
       "category": "Think Tank"
     },
     {
-      "title": "Canada’s digital and AI governance must account for geopolitics: André Côté and Peter Copeland for Inside Policy Talks",
-      "source": "Macdonald-Laurier Institute",
-      "score": 0.52305484,
-      "url": "https://macdonaldlaurier.ca/canadas-digital-and-ai-governance-must-account-for-geopolitics-andre-cote-and-peter-copeland-for-inside-policy-talks/",
-      "category": "Think Tank"
-    },
-    {
-      "title": "Ministers Hodgson, MacKinnon and Dabrusin to highlight Canada’s new strategy and announce funding to transform our auto industry",
-      "source": "GovCan - National News",
-      "score": 0.52238536,
-      "url": "https://www.canada.ca/en/natural-resources-canada/news/2026/02/ministers-hodgson-mackinnon-and-dabrusin-to-highlight-canadas-new-strategy-and-announce-funding-to-transform-our-auto-industry.html",
-      "category": "Government"
-    },
-    {
-      "title": "Minister Sidhu highlights plan to transform Canada’s auto industry in Brampton",
-      "source": "GovCan - National News",
-      "score": 0.505727,
-      "url": "https://www.canada.ca/en/global-affairs/news/2026/02/minister-sidhu-highlights-plan-to-transform-canadas-auto-industry-in-brampton.html",
-      "category": "Government"
-    },
-    {
-      "title": "Ottawa hypes investment but stokes consumption",
-      "source": "C.D. Howe Institute",
-      "score": 0.47657907,
-      "url": "https://cdhowe.org/publication/ottawa-hypes-investment-but-stokes-consumption/",
-      "category": "Think Tank"
-    },
-    {
-      "title": "Canada should modernize approach to senior benefits",
-      "source": "Fraser Institute",
-      "score": 0.47100863,
-      "url": "https://www.fraserinstitute.org/commentary/canada-should-modernize-approach-senior-benefits",
-      "category": "Think Tank"
+      "title": "Quebec Budget 2016 - Signal49 Research",
+      "source": "Conference Board of Canada",
+      "score": 0.53265524,
+      "url": "https://www.google.com/url?rct=j&sa=t&url=https://www.conferenceboard.ca/product/quebec-budget-2016/&ct=ga&cd=CAIyGTg3Yzc0YzkzZGM0MThmMDE6Y2E6ZW46Q0E&usg=AOvVaw1z_6mucZDf6RSQfQinTMx9",
+      "category": "Business & Industry Advocacy"
     }
   ]
 }
