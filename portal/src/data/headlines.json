@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-02-10T14:46:27Z",
+  "updated_at": "2026-02-11T14:15:53Z",
   "headlines": [
     {
       "title": "Innovation Challenge Paper No. 4: The Road to Global Best: Making Commercialization Happen",
@@ -44,6 +44,13 @@
       "category": "Government"
     },
     {
+      "title": "Debt-Fuelled Consumption Belies Ottawa’s Brave Talk of Transformation",
+      "source": "C.D. Howe Institute",
+      "score": 0.55363697,
+      "url": "https://cdhowe.org/publication/debt-fuelled-consumption-belies-ottawas-brave-talk-of-transformation/",
+      "category": "Think Tank"
+    },
+    {
       "title": "Strengthening Atlantic Canada’s defence capabilities in New Brunswick through Vimy Forge accelerator program",
       "source": "GovCan - National News",
       "score": 0.55014217,
@@ -63,13 +70,6 @@
       "score": 0.5370031,
       "url": "https://cdhowe.org/publication/from-promise-to-reality-scaling-innovative-housing-in-canada/",
       "category": "Think Tank"
-    },
-    {
-      "title": "Quebec Budget 2016 - Signal49 Research",
-      "source": "Conference Board of Canada",
-      "score": 0.53265524,
-      "url": "https://www.google.com/url?rct=j&sa=t&url=https://www.conferenceboard.ca/product/quebec-budget-2016/&ct=ga&cd=CAIyGTg3Yzc0YzkzZGM0MThmMDE6Y2E6ZW46Q0E&usg=AOvVaw1z_6mucZDf6RSQfQinTMx9",
-      "category": "Business & Industry Advocacy"
     }
   ]
 }
