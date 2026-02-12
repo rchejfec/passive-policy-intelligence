@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-02-11T14:15:53Z",
+  "updated_at": "2026-02-12T13:52:06Z",
   "headlines": [
     {
       "title": "Innovation Challenge Paper No. 4: The Road to Global Best: Making Commercialization Happen",
@@ -16,18 +16,11 @@
       "category": "Think Tank"
     },
     {
-      "title": "New national research partnership to improve Canada’s productivity receives inaugural grant",
-      "source": "GovCan - National News",
-      "score": 0.582082,
-      "url": "https://www.canada.ca/en/social-sciences-humanities-research/news/2026/02/new-national-research-partnership-to-improve-canadas-productivity-receives-inaugural-grant.html",
-      "category": "Government"
-    },
-    {
-      "title": "Improving access to training for the skilled trades apprentices helping to build Canada strong",
-      "source": "GovCan - ESDC",
-      "score": 0.5748085,
-      "url": "https://www.canada.ca/en/employment-social-development/news/2026/02/improving-access-to-training-for-the-skilled-trades-apprentices-helping-to-build-canada-strong.html",
-      "category": "Government"
+      "title": "Canadian Industrial Profile: Engineering—2019 - Signal49 Research",
+      "source": "Conference Board of Canada",
+      "score": 0.5803876,
+      "url": "https://www.google.com/url?rct=j&sa=t&url=https://www.conferenceboard.ca/product/canadian-industrial-profile-engineering-2019/&ct=ga&cd=CAIyGTg3Yzc0YzkzZGM0MThmMDE6Y2E6ZW46Q0E&usg=AOvVaw3SWucAFmSQ-ZibIFeJlaJC",
+      "category": "Business & Industry Advocacy"
     },
     {
       "title": "Help shape Canada’s housing and infrastructure future: Board of Directors opportunities available",
@@ -51,25 +44,32 @@
       "category": "Think Tank"
     },
     {
-      "title": "Strengthening Atlantic Canada’s defence capabilities in New Brunswick through Vimy Forge accelerator program",
-      "source": "GovCan - National News",
-      "score": 0.55014217,
-      "url": "https://www.canada.ca/en/atlantic-canada-opportunities/news/2026/02/strengthening-atlantic-canadas-defence-capabilities-in-new-brunswick-through-vimy-forge-accelerator-program.html",
-      "category": "Government"
-    },
-    {
-      "title": "Minister Joly highlights the Government of Canada’s new Auto Strategy",
-      "source": "GovCan - ISED",
-      "score": 0.54880273,
-      "url": "https://www.canada.ca/en/innovation-science-economic-development/news/2026/02/minister-joly-highlights-the-government-of-canadas-new-auto-strategy.html",
-      "category": "Government"
-    },
-    {
-      "title": "From promise to reality: scaling innovative housing in Canada",
+      "title": "The Missing Pillar of Canada’s AI Strategy: Data Supply Chains",
       "source": "C.D. Howe Institute",
-      "score": 0.5370031,
-      "url": "https://cdhowe.org/publication/from-promise-to-reality-scaling-innovative-housing-in-canada/",
+      "score": 0.55194503,
+      "url": "https://cdhowe.org/publication/the-missing-pillar-of-canadas-ai-strategy-data-supply-chains/",
       "category": "Think Tank"
+    },
+    {
+      "title": "Quebec to launch portal to help those waiting for subsidized housing find homes",
+      "source": "CBC Ottawa",
+      "score": 0.5470951,
+      "url": "https://www.cbc.ca/player/play/9.7085459?cmp=rss",
+      "category": "News & Media"
+    },
+    {
+      "title": "By Employers, for Employers: Tips for Recruiting International Talent - Signal49 Research",
+      "source": "Conference Board of Canada",
+      "score": 0.5387148,
+      "url": "https://www.google.com/url?rct=j&sa=t&url=https://www.conferenceboard.ca/product/tips-for-recruiting-international-talent_2023/&ct=ga&cd=CAIyGTg3Yzc0YzkzZGM0MThmMDE6Y2E6ZW46Q0E&usg=AOvVaw14fbtXL5jbwe2kmVXCn_5S",
+      "category": "Business & Industry Advocacy"
+    },
+    {
+      "title": "Quebec Budget 2016 - Signal49 Research",
+      "source": "Conference Board of Canada",
+      "score": 0.53265524,
+      "url": "https://www.google.com/url?rct=j&sa=t&url=https://www.conferenceboard.ca/product/quebec-budget-2016/&ct=ga&cd=CAIyGTg3Yzc0YzkzZGM0MThmMDE6Y2E6ZW46Q0E&usg=AOvVaw1z_6mucZDf6RSQfQinTMx9",
+      "category": "Business & Industry Advocacy"
     }
   ]
 }
