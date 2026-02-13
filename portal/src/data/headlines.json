@@ -1,20 +1,6 @@
 {
-  "updated_at": "2026-02-12T13:52:06Z",
+  "updated_at": "2026-02-13T14:14:14Z",
   "headlines": [
-    {
-      "title": "Innovation Challenge Paper No. 4: The Road to Global Best: Making Commercialization Happen",
-      "source": "Conference Board of Canada",
-      "score": 0.66281486,
-      "url": "https://www.google.com/url?rct=j&sa=t&url=https://www.conferenceboard.ca/product/innovation-challenge-paper-no-4-the-road-to-global-best-making-commercialization-happen/&ct=ga&cd=CAIyGTg3Yzc0YzkzZGM0MThmMDE6Y2E6ZW46Q0E&usg=AOvVaw0Gd6GRjvwGhsh-2tUF9Czl",
-      "category": "Business & Industry Advocacy"
-    },
-    {
-      "title": "Preparing Canada's infrastructure for a changing climate",
-      "source": "Canadian Climate Institute",
-      "score": 0.5971437,
-      "url": "https://www.google.com/url?rct=j&sa=t&url=https://climateinstitute.ca/reports/prepare-or-repair-canada-infrastructure/&ct=ga&cd=CAIyGWQyZDllYzljYzNiODY2OTM6Y2E6ZW46Q0E&usg=AOvVaw0ks9Kv4eaPyAyuDkfT5k-J",
-      "category": "Think Tank"
-    },
     {
       "title": "Canadian Industrial Profile: Engineering—2019 - Signal49 Research",
       "source": "Conference Board of Canada",
@@ -23,18 +9,11 @@
       "category": "Business & Industry Advocacy"
     },
     {
-      "title": "Help shape Canada’s housing and infrastructure future: Board of Directors opportunities available",
-      "source": "GovCan - National News",
-      "score": 0.55596215,
-      "url": "https://www.canada.ca/en/housing-infrastructure-communities/news/2026/02/help-shape-canadas-housing-and-infrastructure-future-board-of-directors-opportunities-available.html",
-      "category": "Government"
-    },
-    {
-      "title": "Government of Canada is helping to protect, build and transform the auto industry",
-      "source": "GovCan - FedDev Ontario",
-      "score": 0.55439484,
-      "url": "https://www.canada.ca/en/economic-development-southern-ontario/news/2026/02/government-of-canada-is-helping-to-protect-build-and-transform-the-auto-industry.html",
-      "category": "Government"
+      "title": "Canada aims to fix industrial carbon pricing. Here's how to make it work",
+      "source": "Canadian Climate Institute",
+      "score": 0.57879984,
+      "url": "https://www.google.com/url?rct=j&sa=t&url=https://climateinstitute.ca/canada-aims-to-fix-industrial-carbon-pricing-how-to-make-it-work/&ct=ga&cd=CAIyGWQyZDllYzljYzNiODY2OTM6Y2E6ZW46Q0E&usg=AOvVaw0ppSlXmZG7L5-xmaXsXqZo",
+      "category": "Think Tank"
     },
     {
       "title": "Debt-Fuelled Consumption Belies Ottawa’s Brave Talk of Transformation",
@@ -48,6 +27,13 @@
       "source": "C.D. Howe Institute",
       "score": 0.55194503,
       "url": "https://cdhowe.org/publication/the-missing-pillar-of-canadas-ai-strategy-data-supply-chains/",
+      "category": "Think Tank"
+    },
+    {
+      "title": "The Missing Pillar of Canada's AI Strategy: Data Supply Chains - C.D. Howe Institute",
+      "source": "C.D. Howe Institute",
+      "score": 0.55136603,
+      "url": "https://www.google.com/url?rct=j&sa=t&url=https://cdhowe.org/publication/the-missing-pillar-of-canadas-ai-strategy-data-supply-chains/&ct=ga&cd=CAIyGTBiN2Q5ZDE3MTY2MzQ5YWM6Y2E6ZW46Q0E&usg=AOvVaw001z_NLRPEdGU-0HPfCHZ-",
       "category": "Think Tank"
     },
     {
@@ -65,11 +51,25 @@
       "category": "Business & Industry Advocacy"
     },
     {
-      "title": "Quebec Budget 2016 - Signal49 Research",
+      "title": "Legislation Passes to Deliver New Canada Groceries and Essentials Benefit",
+      "source": "GovCan - National News",
+      "score": 0.5363771,
+      "url": "https://www.canada.ca/en/department-finance/news/2026/02/legislation-passes-to-deliver-new-canada-groceries-and-essentials-benefit.html",
+      "category": "Government"
+    },
+    {
+      "title": "Canada's Five-Year International Trade Outlook—August 2025 - Signal49 Research",
       "source": "Conference Board of Canada",
-      "score": 0.53265524,
-      "url": "https://www.google.com/url?rct=j&sa=t&url=https://www.conferenceboard.ca/product/quebec-budget-2016/&ct=ga&cd=CAIyGTg3Yzc0YzkzZGM0MThmMDE6Y2E6ZW46Q0E&usg=AOvVaw1z_6mucZDf6RSQfQinTMx9",
+      "score": 0.5334203,
+      "url": "https://www.google.com/url?rct=j&sa=t&url=https://www.conferenceboard.ca/product/canadas-five-year-international-trade-outlook_aug2025/&ct=ga&cd=CAIyGTg3Yzc0YzkzZGM0MThmMDE6Y2E6ZW46Q0E&usg=AOvVaw3WOqHlywuE_V0yDMDgIyZB",
       "category": "Business & Industry Advocacy"
+    },
+    {
+      "title": "Data Supply Chains Are a Missing Link in Canada’s AI Strategy",
+      "source": "C.D. Howe Institute",
+      "score": 0.5300512,
+      "url": "https://cdhowe.org/publication/data-supply-chains-are-a-missing-link-in-canadas-ai-strategy/",
+      "category": "Think Tank"
     }
   ]
 }
