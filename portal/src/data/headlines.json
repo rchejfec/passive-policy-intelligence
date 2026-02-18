@@ -1,11 +1,18 @@
 {
-  "updated_at": "2026-02-17T17:19:50Z",
+  "updated_at": "2026-02-18T14:05:25Z",
   "headlines": [
     {
       "title": "Canada's Pathways Toward Global Innovation Success: Report of the Leaders' Panel on ...",
       "source": "Conference Board of Canada",
       "score": 0.67200273,
       "url": "https://www.google.com/url?rct=j&sa=t&url=https://www.conferenceboard.ca/product/canadas-pathways-toward-global-innovation-success-report-of-the-leaders-panel-on-innovation-based-commerce/&ct=ga&cd=CAIyGTg3Yzc0YzkzZGM0MThmMDE6Y2E6ZW46Q0E&usg=AOvVaw1xT3iS3f9mYY2N4X9XDwjZ",
+      "category": "Business & Industry Advocacy"
+    },
+    {
+      "title": "Clean Slate: How Canada Can Spur Growth by Procuring From its Own Cleantech Startups",
+      "source": "Conference Board of Canada",
+      "score": 0.6344985,
+      "url": "https://www.google.com/url?rct=j&sa=t&url=https://www.conferenceboard.ca/product/clean-slate_october2020/&ct=ga&cd=CAIyGTg3Yzc0YzkzZGM0MThmMDE6Y2E6ZW46Q0E&usg=AOvVaw147PhVK30qGXV6ClsVU1Po",
       "category": "Business & Industry Advocacy"
     },
     {
@@ -16,11 +23,32 @@
       "category": "Government"
     },
     {
+      "title": "Government of Canada helping to strengthen industries and businesses in southern Alberta",
+      "source": "GovCan - National News",
+      "score": 0.60052866,
+      "url": "https://www.canada.ca/en/prairies-economic-development/news/2026/02/government-of-canada-helping-to-strengthen-industries-and-businesses-in-southern-alberta.html",
+      "category": "Government"
+    },
+    {
+      "title": "Breaking the Barriers to Housing Supply in Canada: Regulatory, Financial, and Structural ...",
+      "source": "C.D. Howe Institute",
+      "score": 0.58961827,
+      "url": "https://www.google.com/url?rct=j&sa=t&url=https://cdhowe.org/publication/breaking-the-barriers-to-housing-supply-in-canada-regulatory-financial-and-structural-constraints-and-policy-solutions/&ct=ga&cd=CAIyGTBiN2Q5ZDE3MTY2MzQ5YWM6Y2E6ZW46Q0E&usg=AOvVaw1hxJlQVOMplOv3dfj4GgJj",
+      "category": "Think Tank"
+    },
+    {
       "title": "Breaking the Barriers to Housing Supply in Canada: Regulatory, Financial, and Structural Constraints and Policy Solutions",
       "source": "C.D. Howe Institute",
       "score": 0.57661456,
       "url": "https://cdhowe.org/publication/breaking-the-barriers-to-housing-supply-in-canada-regulatory-financial-and-structural-constraints-and-policy-solutions/",
       "category": "Think Tank"
+    },
+    {
+      "title": "Minister Hajdu announces actions to grow and protect workers",
+      "source": "GovCan - ESDC",
+      "score": 0.5643328,
+      "url": "https://www.canada.ca/en/employment-social-development/news/2026/02/minister-hajdu-announces-actions-to-grow-and-protect-workers.html",
+      "category": "Government"
     },
     {
       "title": "Curves Ahead: Canada's Two-Year Business Investment Outlook - Signal49 Research",
@@ -30,45 +58,17 @@
       "category": "Business & Industry Advocacy"
     },
     {
+      "title": "Time for a wartime industrial strategy in Canada - CCPA",
+      "source": "Policy Alternatives",
+      "score": 0.56136566,
+      "url": "https://www.google.com/url?rct=j&sa=t&url=https://www.policyalternatives.ca/news-research/time-for-a-wartime-industrial-strategy-in-canada/&ct=ga&cd=CAIyG2QyY2EwMGU1ODI1YTM3YTU6Y2E6ZW46Q0E6Ug&usg=AOvVaw3koa1SYRxdwWLy8ujhGKpA",
+      "category": "Think Tank"
+    },
+    {
       "title": "Performance and Potential 1999-2000: Sustaining the Canadian Way - Signal49 Research",
       "source": "Conference Board of Canada",
       "score": 0.5605764,
       "url": "https://www.google.com/url?rct=j&sa=t&url=https://www.conferenceboard.ca/product/performance-and-potential-1999-2000-sustaining-the-canadian-way/&ct=ga&cd=CAIyGTg3Yzc0YzkzZGM0MThmMDE6Y2E6ZW46Q0E&usg=AOvVaw1YgxPaggNVr_3jFLtIdf9-",
-      "category": "Business & Industry Advocacy"
-    },
-    {
-      "title": "Financing and Regulatory Frameworks Are Constraining Canada’s Housing Supply",
-      "source": "C.D. Howe Institute",
-      "score": 0.5595296,
-      "url": "https://cdhowe.org/publication/financing-and-regulatory-frameworks-are-constraining-canadas-housing-supply/",
-      "category": "Think Tank"
-    },
-    {
-      "title": "Canadian Outlook Economic Forecast: Autumn 2011 - Signal49 Research",
-      "source": "Conference Board of Canada",
-      "score": 0.5261452,
-      "url": "https://www.google.com/url?rct=j&sa=t&url=https://www.conferenceboard.ca/product/canadian-outlook-economic-forecast-autumn-2011/&ct=ga&cd=CAIyGTg3Yzc0YzkzZGM0MThmMDE6Y2E6ZW46Q0E&usg=AOvVaw1-2a4XF6R1ruxLSpqxB50y",
-      "category": "Business & Industry Advocacy"
-    },
-    {
-      "title": "Ontario Expanding Support for Road Safety Initiatives",
-      "source": "Ontario Newsroom",
-      "score": 0.5248142,
-      "url": "https://news.ontario.ca/en/release/1007045/ontario_expanding_support_for_road_safety_initiatives",
-      "category": "Government"
-    },
-    {
-      "title": "Homebuilding slowdown threatens to negate any affordability gains",
-      "source": "Fraser Institute",
-      "score": 0.51703364,
-      "url": "https://www.fraserinstitute.org/commentary/homebuilding-slowdown-threatens-negate-any-affordability-gains",
-      "category": "Think Tank"
-    },
-    {
-      "title": "Press Archive - Page 11 of 18 - Signal49 Research",
-      "source": "Conference Board of Canada",
-      "score": 0.51395947,
-      "url": "https://www.google.com/url?rct=j&sa=t&url=https://www.conferenceboard.ca/press/page/11/&ct=ga&cd=CAIyGTg3Yzc0YzkzZGM0MThmMDE6Y2E6ZW46Q0E&usg=AOvVaw36cGmvVnCnkIC9Hz9i5qcc",
       "category": "Business & Industry Advocacy"
     }
   ]
