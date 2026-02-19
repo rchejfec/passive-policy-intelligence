@@ -1,6 +1,13 @@
 {
-  "updated_at": "2026-02-18T14:05:25Z",
+  "updated_at": "2026-02-19T19:04:35Z",
   "headlines": [
+    {
+      "title": "Solid Fundamentals Will Boost Canada's Industries: Canada's Two-Year Industry Trends Outlook",
+      "source": "Conference Board of Canada",
+      "score": 0.6766082,
+      "url": "https://www.google.com/url?rct=j&sa=t&url=https://www.conferenceboard.ca/product/solid-fundamentals-will-boost-canadas-industries-canadas-two-year-industry-trends-outlook/&ct=ga&cd=CAIyGTg3Yzc0YzkzZGM0MThmMDE6Y2E6ZW46Q0E&usg=AOvVaw1QSPsy9f7e1KxcfORAwlwL",
+      "category": "Business & Industry Advocacy"
+    },
     {
       "title": "Canada's Pathways Toward Global Innovation Success: Report of the Leaders' Panel on ...",
       "source": "Conference Board of Canada",
@@ -14,13 +21,6 @@
       "score": 0.6344985,
       "url": "https://www.google.com/url?rct=j&sa=t&url=https://www.conferenceboard.ca/product/clean-slate_october2020/&ct=ga&cd=CAIyGTg3Yzc0YzkzZGM0MThmMDE6Y2E6ZW46Q0E&usg=AOvVaw147PhVK30qGXV6ClsVU1Po",
       "category": "Business & Industry Advocacy"
-    },
-    {
-      "title": "Minister Tim Hodgson   Keynote Address: “The Business of Building: Canada’s Mission” Financial Post and Calgary Economic Development Event Calgary, Alberta",
-      "source": "GovCan - National News",
-      "score": 0.606423,
-      "url": "https://www.canada.ca/en/natural-resources-canada/news/2026/02/minister-tim-hodgson-keynote-address-the-business-of-building-canadas-mission-financial-post-and-calgary-economic-development-event-calgary-alberta.html",
-      "category": "Government"
     },
     {
       "title": "Government of Canada helping to strengthen industries and businesses in southern Alberta",
@@ -37,6 +37,20 @@
       "category": "Think Tank"
     },
     {
+      "title": "Four key sectors in Canada’s clean economy have potential ‘projects of national interest’ ready to be prioritized: report",
+      "source": "Clean Energy Canada",
+      "score": 0.58666587,
+      "url": "https://cleanenergycanada.org/four-key-sectors-in-canadas-clean-economy-have-potential-projects-of-national-interest-ready-to-be-prioritized-report/",
+      "category": "Policy Advocacy"
+    },
+    {
+      "title": "Minister Hajdu highlights new Canada Groceries and Essentials Benefit",
+      "source": "GovCan - ESDC",
+      "score": 0.5806632,
+      "url": "https://www.canada.ca/en/employment-social-development/news/2026/02/minister-hajdu-highlights-new-canada-groceries-and-essentials-benefit.html",
+      "category": "Government"
+    },
+    {
       "title": "Breaking the Barriers to Housing Supply in Canada: Regulatory, Financial, and Structural Constraints and Policy Solutions",
       "source": "C.D. Howe Institute",
       "score": 0.57661456,
@@ -44,32 +58,18 @@
       "category": "Think Tank"
     },
     {
-      "title": "Minister Hajdu announces actions to grow and protect workers",
-      "source": "GovCan - ESDC",
-      "score": 0.5643328,
-      "url": "https://www.canada.ca/en/employment-social-development/news/2026/02/minister-hajdu-announces-actions-to-grow-and-protect-workers.html",
+      "title": "Government of Canada supports the modernization of three sugar bushes for a sustainable future",
+      "source": "GovCan - National News",
+      "score": 0.5698739,
+      "url": "https://www.canada.ca/en/atlantic-canada-opportunities/news/2026/02/government-of-canada-supports-the-modernization-of-three-sugar-bushes-for-a-sustainable-future.html",
       "category": "Government"
     },
     {
-      "title": "Curves Ahead: Canada's Two-Year Business Investment Outlook - Signal49 Research",
-      "source": "Conference Board of Canada",
-      "score": 0.56156695,
-      "url": "https://www.google.com/url?rct=j&sa=t&url=https://www.conferenceboard.ca/product/curves-ahead-canadas-two-year-business-investment-outlook/&ct=ga&cd=CAIyGTg3Yzc0YzkzZGM0MThmMDE6Y2E6ZW46Q0E&usg=AOvVaw3AGa6x-na0B3T71IYMxPof",
-      "category": "Business & Industry Advocacy"
-    },
-    {
-      "title": "Time for a wartime industrial strategy in Canada - CCPA",
-      "source": "Policy Alternatives",
-      "score": 0.56136566,
-      "url": "https://www.google.com/url?rct=j&sa=t&url=https://www.policyalternatives.ca/news-research/time-for-a-wartime-industrial-strategy-in-canada/&ct=ga&cd=CAIyG2QyY2EwMGU1ODI1YTM3YTU6Y2E6ZW46Q0E6Ug&usg=AOvVaw3koa1SYRxdwWLy8ujhGKpA",
+      "title": "Building Future Success: Growing Canada’s agricultural sector",
+      "source": "Canada West Foundation",
+      "score": 0.5648846,
+      "url": "https://cwf.ca/research/publications/report-canada-agricultural-sector/",
       "category": "Think Tank"
-    },
-    {
-      "title": "Performance and Potential 1999-2000: Sustaining the Canadian Way - Signal49 Research",
-      "source": "Conference Board of Canada",
-      "score": 0.5605764,
-      "url": "https://www.google.com/url?rct=j&sa=t&url=https://www.conferenceboard.ca/product/performance-and-potential-1999-2000-sustaining-the-canadian-way/&ct=ga&cd=CAIyGTg3Yzc0YzkzZGM0MThmMDE6Y2E6ZW46Q0E&usg=AOvVaw1YgxPaggNVr_3jFLtIdf9-",
-      "category": "Business & Industry Advocacy"
     }
   ]
 }
