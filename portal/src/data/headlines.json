@@ -1,18 +1,11 @@
 {
-  "updated_at": "2026-02-19T19:04:35Z",
+  "updated_at": "2026-02-20T14:17:56Z",
   "headlines": [
     {
       "title": "Solid Fundamentals Will Boost Canada's Industries: Canada's Two-Year Industry Trends Outlook",
       "source": "Conference Board of Canada",
       "score": 0.6766082,
       "url": "https://www.google.com/url?rct=j&sa=t&url=https://www.conferenceboard.ca/product/solid-fundamentals-will-boost-canadas-industries-canadas-two-year-industry-trends-outlook/&ct=ga&cd=CAIyGTg3Yzc0YzkzZGM0MThmMDE6Y2E6ZW46Q0E&usg=AOvVaw1QSPsy9f7e1KxcfORAwlwL",
-      "category": "Business & Industry Advocacy"
-    },
-    {
-      "title": "Canada's Pathways Toward Global Innovation Success: Report of the Leaders' Panel on ...",
-      "source": "Conference Board of Canada",
-      "score": 0.67200273,
-      "url": "https://www.google.com/url?rct=j&sa=t&url=https://www.conferenceboard.ca/product/canadas-pathways-toward-global-innovation-success-report-of-the-leaders-panel-on-innovation-based-commerce/&ct=ga&cd=CAIyGTg3Yzc0YzkzZGM0MThmMDE6Y2E6ZW46Q0E&usg=AOvVaw1xT3iS3f9mYY2N4X9XDwjZ",
       "category": "Business & Industry Advocacy"
     },
     {
@@ -51,13 +44,6 @@
       "category": "Government"
     },
     {
-      "title": "Breaking the Barriers to Housing Supply in Canada: Regulatory, Financial, and Structural Constraints and Policy Solutions",
-      "source": "C.D. Howe Institute",
-      "score": 0.57661456,
-      "url": "https://cdhowe.org/publication/breaking-the-barriers-to-housing-supply-in-canada-regulatory-financial-and-structural-constraints-and-policy-solutions/",
-      "category": "Think Tank"
-    },
-    {
       "title": "Government of Canada supports the modernization of three sugar bushes for a sustainable future",
       "source": "GovCan - National News",
       "score": 0.5698739,
@@ -69,6 +55,20 @@
       "source": "Canada West Foundation",
       "score": 0.5648846,
       "url": "https://cwf.ca/research/publications/report-canada-agricultural-sector/",
+      "category": "Think Tank"
+    },
+    {
+      "title": "Minister Hajdu announces actions to grow and protect workers",
+      "source": "GovCan - ESDC",
+      "score": 0.5643328,
+      "url": "https://www.canada.ca/en/employment-social-development/news/2026/02/minister-hajdu-announces-actions-to-grow-and-protect-workers.html",
+      "category": "Government"
+    },
+    {
+      "title": "Time for a wartime industrial strategy in Canada - CCPA",
+      "source": "Policy Alternatives",
+      "score": 0.56136566,
+      "url": "https://www.google.com/url?rct=j&sa=t&url=https://www.policyalternatives.ca/news-research/time-for-a-wartime-industrial-strategy-in-canada/&ct=ga&cd=CAIyG2QyY2EwMGU1ODI1YTM3YTU6Y2E6ZW46Q0E6Ug&usg=AOvVaw3koa1SYRxdwWLy8ujhGKpA",
       "category": "Think Tank"
     }
   ]
