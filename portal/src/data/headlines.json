@@ -1,75 +1,75 @@
 {
-  "updated_at": "2026-02-20T14:17:56Z",
+  "updated_at": "2026-02-23T13:57:33Z",
   "headlines": [
     {
-      "title": "Solid Fundamentals Will Boost Canada's Industries: Canada's Two-Year Industry Trends Outlook",
-      "source": "Conference Board of Canada",
-      "score": 0.6766082,
-      "url": "https://www.google.com/url?rct=j&sa=t&url=https://www.conferenceboard.ca/product/solid-fundamentals-will-boost-canadas-industries-canadas-two-year-industry-trends-outlook/&ct=ga&cd=CAIyGTg3Yzc0YzkzZGM0MThmMDE6Y2E6ZW46Q0E&usg=AOvVaw1QSPsy9f7e1KxcfORAwlwL",
-      "category": "Business & Industry Advocacy"
-    },
-    {
-      "title": "Clean Slate: How Canada Can Spur Growth by Procuring From its Own Cleantech Startups",
-      "source": "Conference Board of Canada",
-      "score": 0.6344985,
-      "url": "https://www.google.com/url?rct=j&sa=t&url=https://www.conferenceboard.ca/product/clean-slate_october2020/&ct=ga&cd=CAIyGTg3Yzc0YzkzZGM0MThmMDE6Y2E6ZW46Q0E&usg=AOvVaw147PhVK30qGXV6ClsVU1Po",
-      "category": "Business & Industry Advocacy"
-    },
-    {
-      "title": "Government of Canada helping to strengthen industries and businesses in southern Alberta",
+      "title": "Backgrounder: PacifiCan invests in defence innovation and capacity building in B.C. to strengthen Canada’s security",
       "source": "GovCan - National News",
-      "score": 0.60052866,
-      "url": "https://www.canada.ca/en/prairies-economic-development/news/2026/02/government-of-canada-helping-to-strengthen-industries-and-businesses-in-southern-alberta.html",
+      "score": 0.54118884,
+      "url": "https://www.canada.ca/en/pacific-economic-development/news/2026/02/backgrounder-pacifican-invests-in-defence-innovation-and-capacity-building-in-bc-to-strengthen-canadas-security.html",
       "category": "Government"
     },
     {
-      "title": "Breaking the Barriers to Housing Supply in Canada: Regulatory, Financial, and Structural ...",
+      "title": "PacifiCan invests in defence innovation and capacity building in B.C. to strengthen Canada’s security",
+      "source": "GovCan - National News",
+      "score": 0.531238,
+      "url": "https://www.canada.ca/en/pacific-economic-development/news/2026/02/pacifican-invests-in-defence-innovation-and-capacity-building-in-bc-to-strengthen-canadas-security.html",
+      "category": "Government"
+    },
+    {
+      "title": "Canada advances Defence Industrial Strategy to strengthen security, sovereignty and prosperity",
+      "source": "GovCan - National News",
+      "score": 0.5167366,
+      "url": "https://www.canada.ca/en/global-affairs/news/2026/02/canada-advances-defence-industrial-strategy-to-strengthen-security-sovereignty-and-prosperity.html",
+      "category": "Government"
+    },
+    {
+      "title": "New outreach model aims to centralize homeless and addictions services",
+      "source": "CBC Ottawa",
+      "score": 0.5123009,
+      "url": "https://www.cbc.ca/news/canada/ottawa/new-outreach-model-aims-to-centralize-homeless-and-addictions-services-in-the-city-9.7099796?cmp=rss",
+      "category": "News & Media"
+    },
+    {
+      "title": "Minister Solomon concludes successful visit to Republic of India, strengthening ties to advance new partnerships in AI and digital innovation",
+      "source": "GovCan - ISED",
+      "score": 0.51121503,
+      "url": "https://www.canada.ca/en/innovation-science-economic-development/news/2026/02/minister-solomon-concludes-successful-visit-to-republic-of-india-strengthening-ties-to-advance-new-partnerships-in-ai-and-digital-innovation.html",
+      "category": "Government"
+    },
+    {
+      "title": "New Government of Canada funding to expand employment opportunities for official language minority communities in the Eastern Townships",
+      "source": "GovCan - ESDC",
+      "score": 0.5091759,
+      "url": "https://www.canada.ca/en/employment-social-development/news/2026/02/new-government-of-canada-funding-to-expand-employment-opportunities-for-official-language-minority-communities-in-the-eastern-townships.html",
+      "category": "Government"
+    },
+    {
+      "title": "Falling Shelter Costs Hide a Growing Renter-Owner Divide",
       "source": "C.D. Howe Institute",
-      "score": 0.58961827,
-      "url": "https://www.google.com/url?rct=j&sa=t&url=https://cdhowe.org/publication/breaking-the-barriers-to-housing-supply-in-canada-regulatory-financial-and-structural-constraints-and-policy-solutions/&ct=ga&cd=CAIyGTBiN2Q5ZDE3MTY2MzQ5YWM6Y2E6ZW46Q0E&usg=AOvVaw1hxJlQVOMplOv3dfj4GgJj",
+      "score": 0.5034196,
+      "url": "https://cdhowe.org/publication/shelter-inflation-falls-but-supply-constraints-threaten-a-rebound/",
       "category": "Think Tank"
     },
     {
-      "title": "Four key sectors in Canada’s clean economy have potential ‘projects of national interest’ ready to be prioritized: report",
-      "source": "Clean Energy Canada",
-      "score": 0.58666587,
-      "url": "https://cleanenergycanada.org/four-key-sectors-in-canadas-clean-economy-have-potential-projects-of-national-interest-ready-to-be-prioritized-report/",
-      "category": "Policy Advocacy"
-    },
-    {
-      "title": "Minister Hajdu highlights new Canada Groceries and Essentials Benefit",
-      "source": "GovCan - ESDC",
-      "score": 0.5806632,
-      "url": "https://www.canada.ca/en/employment-social-development/news/2026/02/minister-hajdu-highlights-new-canada-groceries-and-essentials-benefit.html",
-      "category": "Government"
-    },
-    {
-      "title": "Government of Canada supports the modernization of three sugar bushes for a sustainable future",
+      "title": "Strengthening Atlantic Canada’s defence capabilities in Lunenburg",
       "source": "GovCan - National News",
-      "score": 0.5698739,
-      "url": "https://www.canada.ca/en/atlantic-canada-opportunities/news/2026/02/government-of-canada-supports-the-modernization-of-three-sugar-bushes-for-a-sustainable-future.html",
+      "score": 0.4984563,
+      "url": "https://www.canada.ca/en/atlantic-canada-opportunities/news/2026/02/strengthening-atlantic-canadas-defence-capabilities-in-lunenburg.html",
       "category": "Government"
     },
     {
-      "title": "Building Future Success: Growing Canada’s agricultural sector",
-      "source": "Canada West Foundation",
-      "score": 0.5648846,
-      "url": "https://cwf.ca/research/publications/report-canada-agricultural-sector/",
-      "category": "Think Tank"
-    },
-    {
-      "title": "Minister Hajdu announces actions to grow and protect workers",
-      "source": "GovCan - ESDC",
-      "score": 0.5643328,
-      "url": "https://www.canada.ca/en/employment-social-development/news/2026/02/minister-hajdu-announces-actions-to-grow-and-protect-workers.html",
+      "title": "Government of Canada invests in bolstering pan-Canadian aerial wildfire firefighting capacity",
+      "source": "GovCan - National News",
+      "score": 0.48665306,
+      "url": "https://www.canada.ca/en/public-safety-canada/news/2026/02/government-of-canada-invests-in-bolstering-pan-canadian-aerial-wildfire-firefighting-capacity.html",
       "category": "Government"
     },
     {
-      "title": "Time for a wartime industrial strategy in Canada - CCPA",
-      "source": "Policy Alternatives",
-      "score": 0.56136566,
-      "url": "https://www.google.com/url?rct=j&sa=t&url=https://www.policyalternatives.ca/news-research/time-for-a-wartime-industrial-strategy-in-canada/&ct=ga&cd=CAIyG2QyY2EwMGU1ODI1YTM3YTU6Y2E6ZW46Q0E6Ug&usg=AOvVaw3koa1SYRxdwWLy8ujhGKpA",
-      "category": "Think Tank"
+      "title": "Morning Update: AI concerns in Tumbler Ridge",
+      "source": "Globe and Mail - Canada",
+      "score": 0.4775841,
+      "url": "https://www.theglobeandmail.com/canada/article-morning-update-ai-concerns-in-tumbler-ridge/",
+      "category": "News & Media"
     }
   ]
 }
