@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-02-23T13:57:33Z",
+  "updated_at": "2026-02-25T18:14:51Z",
   "headlines": [
     {
       "title": "Backgrounder: PacifiCan invests in defence innovation and capacity building in B.C. to strengthen Canada’s security",
@@ -9,10 +9,38 @@
       "category": "Government"
     },
     {
+      "title": "OP- ED | Why Canada needs a new national agriculture strategy",
+      "source": "Canada West Foundation",
+      "score": 0.5382443,
+      "url": "https://cwf.ca/research/publications/op-ed-why-canada-needs-a-new-national-agriculture-strategy/",
+      "category": "Think Tank"
+    },
+    {
+      "title": "NEWS RELEASE - Fraser Institute",
+      "source": "Fraser Institute",
+      "score": 0.53617924,
+      "url": "https://www.google.com/url?rct=j&sa=t&url=https://www.fraserinstitute.org/sites/default/files/2026-02/ford-vs-ford-fiscal-rhetoric-vs-outcomes-in-ontario-under-doug-ford-newsrelease.pdf&ct=ga&cd=CAIyGzllODBhNzEzODg2Nzg3ZTA6Y2E6ZW46Q0E6Ug&usg=AOvVaw1juyJPoxdAOhNsjn_j9XEw",
+      "category": "Think Tank"
+    },
+    {
       "title": "PacifiCan invests in defence innovation and capacity building in B.C. to strengthen Canada’s security",
       "source": "GovCan - National News",
       "score": 0.531238,
       "url": "https://www.canada.ca/en/pacific-economic-development/news/2026/02/pacifican-invests-in-defence-innovation-and-capacity-building-in-bc-to-strengthen-canadas-security.html",
+      "category": "Government"
+    },
+    {
+      "title": "With yet another global EV-focused agreement, Canada is rapidly realizing its new auto strategy",
+      "source": "Clean Energy Canada",
+      "score": 0.5301707,
+      "url": "https://cleanenergycanada.org/with-yet-another-global-ev-focused-agreement-canada-is-rapidly-realizing-its-new-auto-strategy/",
+      "category": "Policy Advocacy"
+    },
+    {
+      "title": "Ontario Advancing Innovation in the Life Sciences",
+      "source": "Ontario Newsroom",
+      "score": 0.5172072,
+      "url": "https://news.ontario.ca/en/release/1007088/ontario_advancing_innovation_in_the_life_sciences",
       "category": "Government"
     },
     {
@@ -30,46 +58,18 @@
       "category": "News & Media"
     },
     {
+      "title": "Government of Canada launches $500 million in support for retooling Canada’s forest sector",
+      "source": "GovCan - National News",
+      "score": 0.5121005,
+      "url": "https://www.canada.ca/en/natural-resources-canada/news/2026/02/government-of-canada-launches-500-million-in-support-for-retooling-canadas-forest-sector.html",
+      "category": "Government"
+    },
+    {
       "title": "Minister Solomon concludes successful visit to Republic of India, strengthening ties to advance new partnerships in AI and digital innovation",
       "source": "GovCan - ISED",
       "score": 0.51121503,
       "url": "https://www.canada.ca/en/innovation-science-economic-development/news/2026/02/minister-solomon-concludes-successful-visit-to-republic-of-india-strengthening-ties-to-advance-new-partnerships-in-ai-and-digital-innovation.html",
       "category": "Government"
-    },
-    {
-      "title": "New Government of Canada funding to expand employment opportunities for official language minority communities in the Eastern Townships",
-      "source": "GovCan - ESDC",
-      "score": 0.5091759,
-      "url": "https://www.canada.ca/en/employment-social-development/news/2026/02/new-government-of-canada-funding-to-expand-employment-opportunities-for-official-language-minority-communities-in-the-eastern-townships.html",
-      "category": "Government"
-    },
-    {
-      "title": "Falling Shelter Costs Hide a Growing Renter-Owner Divide",
-      "source": "C.D. Howe Institute",
-      "score": 0.5034196,
-      "url": "https://cdhowe.org/publication/shelter-inflation-falls-but-supply-constraints-threaten-a-rebound/",
-      "category": "Think Tank"
-    },
-    {
-      "title": "Strengthening Atlantic Canada’s defence capabilities in Lunenburg",
-      "source": "GovCan - National News",
-      "score": 0.4984563,
-      "url": "https://www.canada.ca/en/atlantic-canada-opportunities/news/2026/02/strengthening-atlantic-canadas-defence-capabilities-in-lunenburg.html",
-      "category": "Government"
-    },
-    {
-      "title": "Government of Canada invests in bolstering pan-Canadian aerial wildfire firefighting capacity",
-      "source": "GovCan - National News",
-      "score": 0.48665306,
-      "url": "https://www.canada.ca/en/public-safety-canada/news/2026/02/government-of-canada-invests-in-bolstering-pan-canadian-aerial-wildfire-firefighting-capacity.html",
-      "category": "Government"
-    },
-    {
-      "title": "Morning Update: AI concerns in Tumbler Ridge",
-      "source": "Globe and Mail - Canada",
-      "score": 0.4775841,
-      "url": "https://www.theglobeandmail.com/canada/article-morning-update-ai-concerns-in-tumbler-ridge/",
-      "category": "News & Media"
     }
   ]
 }
