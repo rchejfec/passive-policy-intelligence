@@ -1,74 +1,74 @@
 {
-  "updated_at": "2026-02-25T18:14:51Z",
+  "updated_at": "2026-03-02T18:51:23Z",
   "headlines": [
     {
-      "title": "Backgrounder: PacifiCan invests in defence innovation and capacity building in B.C. to strengthen Canada’s security",
-      "source": "GovCan - National News",
-      "score": 0.54118884,
-      "url": "https://www.canada.ca/en/pacific-economic-development/news/2026/02/backgrounder-pacifican-invests-in-defence-innovation-and-capacity-building-in-bc-to-strengthen-canadas-security.html",
+      "title": "Government of Canada fuels growth for Black and equity-deserving entrepreneurs",
+      "source": "GovCan - FedDev Ontario",
+      "score": 0.56248295,
+      "url": "https://www.canada.ca/en/economic-development-southern-ontario/news/2026/02/government-of-canada-fuels-growth-for-black-and-equity-deserving-entrepreneurs.html",
       "category": "Government"
     },
     {
-      "title": "OP- ED | Why Canada needs a new national agriculture strategy",
-      "source": "Canada West Foundation",
-      "score": 0.5382443,
-      "url": "https://cwf.ca/research/publications/op-ed-why-canada-needs-a-new-national-agriculture-strategy/",
+      "title": "Targeted GST Reform is More Effective Than Broad Elimination on Essentials",
+      "source": "C.D. Howe Institute",
+      "score": 0.5392044,
+      "url": "https://cdhowe.org/publication/targeted-gst-reform-is-more-effective-than-broad-elimination-on-essentials/",
       "category": "Think Tank"
     },
     {
-      "title": "NEWS RELEASE - Fraser Institute",
-      "source": "Fraser Institute",
-      "score": 0.53617924,
-      "url": "https://www.google.com/url?rct=j&sa=t&url=https://www.fraserinstitute.org/sites/default/files/2026-02/ford-vs-ford-fiscal-rhetoric-vs-outcomes-in-ontario-under-doug-ford-newsrelease.pdf&ct=ga&cd=CAIyGzllODBhNzEzODg2Nzg3ZTA6Y2E6ZW46Q0E6Ug&usg=AOvVaw1juyJPoxdAOhNsjn_j9XEw",
-      "category": "Think Tank"
-    },
-    {
-      "title": "PacifiCan invests in defence innovation and capacity building in B.C. to strengthen Canada’s security",
-      "source": "GovCan - National News",
-      "score": 0.531238,
-      "url": "https://www.canada.ca/en/pacific-economic-development/news/2026/02/pacifican-invests-in-defence-innovation-and-capacity-building-in-bc-to-strengthen-canadas-security.html",
-      "category": "Government"
-    },
-    {
-      "title": "With yet another global EV-focused agreement, Canada is rapidly realizing its new auto strategy",
-      "source": "Clean Energy Canada",
-      "score": 0.5301707,
-      "url": "https://cleanenergycanada.org/with-yet-another-global-ev-focused-agreement-canada-is-rapidly-realizing-its-new-auto-strategy/",
-      "category": "Policy Advocacy"
-    },
-    {
-      "title": "Ontario Advancing Innovation in the Life Sciences",
+      "title": "Ontario Celebrates Homegrown Innovation with  Prestigious Polanyi Prize",
       "source": "Ontario Newsroom",
-      "score": 0.5172072,
-      "url": "https://news.ontario.ca/en/release/1007088/ontario_advancing_innovation_in_the_life_sciences",
+      "score": 0.5342531,
+      "url": "https://news.ontario.ca/en/release/1007106/ontario_celebrates_homegrown_innovation_with_prestigious_polanyi_prize",
       "category": "Government"
     },
     {
-      "title": "Canada advances Defence Industrial Strategy to strengthen security, sovereignty and prosperity",
+      "title": "Government of Canada to announce investments to strengthen key sectors and businesses in B.C.’s Southern Interior",
       "source": "GovCan - National News",
-      "score": 0.5167366,
-      "url": "https://www.canada.ca/en/global-affairs/news/2026/02/canada-advances-defence-industrial-strategy-to-strengthen-security-sovereignty-and-prosperity.html",
+      "score": 0.5330575,
+      "url": "https://www.canada.ca/en/pacific-economic-development/news/2026/02/government-of-canada-to-announce-investments-to-strengthen-key-sectors-and-businesses-in-bcs-southern-interior.html",
       "category": "Government"
     },
     {
-      "title": "New outreach model aims to centralize homeless and addictions services",
-      "source": "CBC Ottawa",
-      "score": 0.5123009,
-      "url": "https://www.cbc.ca/news/canada/ottawa/new-outreach-model-aims-to-centralize-homeless-and-addictions-services-in-the-city-9.7099796?cmp=rss",
+      "title": "When should AI companies alert police? What the Tumbler Ridge tragedy reveals about regulating AI",
+      "source": "CBC Top Stories",
+      "score": 0.53098136,
+      "url": "https://www.cbc.ca/news/canada/british-columbia/ai-implications-tumbler-ridge-bc-mass-shooting-explainer-9.7110251?cmp=rss",
       "category": "News & Media"
     },
     {
-      "title": "Government of Canada launches $500 million in support for retooling Canada’s forest sector",
-      "source": "GovCan - National News",
-      "score": 0.5121005,
-      "url": "https://www.canada.ca/en/natural-resources-canada/news/2026/02/government-of-canada-launches-500-million-in-support-for-retooling-canadas-forest-sector.html",
+      "title": "OP-ED | Canada’s trade diversification challenge: navigating a monumental shift",
+      "source": "Canada West Foundation",
+      "score": 0.52905875,
+      "url": "https://cwf.ca/research/publications/opinion-canada-trade-diversification/",
+      "category": "Think Tank"
+    },
+    {
+      "title": "Housing affordability crisis spreading to cities such as Montreal and Halifax, CMHC says",
+      "source": "Globe and Mail - Canada",
+      "score": 0.51140094,
+      "url": "https://www.theglobeandmail.com/business/article-housing-affordability-cmhc-real-estate-ottawa-montreal-halifax/",
+      "category": "News & Media"
+    },
+    {
+      "title": "Canada’s Defence Industrial Strategy to strengthen security, create prosperity, and reinforce strategic autonomy",
+      "source": "GovCan - FedDev Ontario",
+      "score": 0.50370324,
+      "url": "https://www.canada.ca/en/economic-development-southern-ontario/news/2026/02/canadas-defence-industrial-strategy-to-strengthen-security-create-prosperity-and-reinforce-strategic-autonomy.html",
       "category": "Government"
     },
     {
-      "title": "Minister Solomon concludes successful visit to Republic of India, strengthening ties to advance new partnerships in AI and digital innovation",
-      "source": "GovCan - ISED",
-      "score": 0.51121503,
-      "url": "https://www.canada.ca/en/innovation-science-economic-development/news/2026/02/minister-solomon-concludes-successful-visit-to-republic-of-india-strengthening-ties-to-advance-new-partnerships-in-ai-and-digital-innovation.html",
+      "title": "FWL 58 | Western Canada’s Workforce 2026: Construction demand and shifting skillsets",
+      "source": "Canada West Foundation",
+      "score": 0.5013766,
+      "url": "https://cwf.ca/research/publications/western-canada-workforce-construction/",
+      "category": "Think Tank"
+    },
+    {
+      "title": "Ontario Supporting $250 Million Investment to Expand Life-Saving Medical Isotope Production at Bruce Power",
+      "source": "Ontario Newsroom",
+      "score": 0.500503,
+      "url": "https://news.ontario.ca/en/release/1007100/ontario_supporting_250_million_investment_to_expand_life_saving_medical_isotope_production_at_bruce_power",
       "category": "Government"
     }
   ]
