@@ -1,12 +1,40 @@
 {
-  "updated_at": "2026-03-02T18:51:23Z",
+  "updated_at": "2026-03-03T17:52:03Z",
   "headlines": [
+    {
+      "title": "Government of Canada strengthening industries and businesses in B.C.’s Southern Interior",
+      "source": "GovCan - National News",
+      "score": 0.57563215,
+      "url": "https://www.canada.ca/en/pacific-economic-development/news/2026/03/government-of-canada-strengthening-industries-and-businesses-in-bcs-southern-interior.html",
+      "category": "Government"
+    },
+    {
+      "title": "Backgrounder: Government of Canada strengthening industries and businesses in B.C.'s Southern Interior",
+      "source": "GovCan - National News",
+      "score": 0.5712442,
+      "url": "https://www.canada.ca/en/pacific-economic-development/news/2026/03/backgrounder-government-of-canada-strengthening-industries-and-businesses-in-bcs-southern-interior.html",
+      "category": "Government"
+    },
+    {
+      "title": "Minister Hajdu actions national coordinated plan to address workforce challenges in the mining and mineral industries",
+      "source": "GovCan - ESDC",
+      "score": 0.5673154,
+      "url": "https://www.canada.ca/en/employment-social-development/news/2026/03/minister-hajdu-actions-national-coordinated-plan-to-address-workforce-challenges-in-the-mining-and-mineral-industries.html",
+      "category": "Government"
+    },
     {
       "title": "Government of Canada fuels growth for Black and equity-deserving entrepreneurs",
       "source": "GovCan - FedDev Ontario",
       "score": 0.56248295,
       "url": "https://www.canada.ca/en/economic-development-southern-ontario/news/2026/02/government-of-canada-fuels-growth-for-black-and-equity-deserving-entrepreneurs.html",
       "category": "Government"
+    },
+    {
+      "title": "“Big Bang” Tax Reform: Unleashing Growth in the Canadian Economy",
+      "source": "C.D. Howe Institute",
+      "score": 0.5406704,
+      "url": "https://cdhowe.org/publication/big-bang-tax-reform-unleashing-growth-in-the-canadian-economy/",
+      "category": "Think Tank"
     },
     {
       "title": "Targeted GST Reform is More Effective Than Broad Elimination on Essentials",
@@ -42,34 +70,6 @@
       "score": 0.52905875,
       "url": "https://cwf.ca/research/publications/opinion-canada-trade-diversification/",
       "category": "Think Tank"
-    },
-    {
-      "title": "Housing affordability crisis spreading to cities such as Montreal and Halifax, CMHC says",
-      "source": "Globe and Mail - Canada",
-      "score": 0.51140094,
-      "url": "https://www.theglobeandmail.com/business/article-housing-affordability-cmhc-real-estate-ottawa-montreal-halifax/",
-      "category": "News & Media"
-    },
-    {
-      "title": "Canada’s Defence Industrial Strategy to strengthen security, create prosperity, and reinforce strategic autonomy",
-      "source": "GovCan - FedDev Ontario",
-      "score": 0.50370324,
-      "url": "https://www.canada.ca/en/economic-development-southern-ontario/news/2026/02/canadas-defence-industrial-strategy-to-strengthen-security-create-prosperity-and-reinforce-strategic-autonomy.html",
-      "category": "Government"
-    },
-    {
-      "title": "FWL 58 | Western Canada’s Workforce 2026: Construction demand and shifting skillsets",
-      "source": "Canada West Foundation",
-      "score": 0.5013766,
-      "url": "https://cwf.ca/research/publications/western-canada-workforce-construction/",
-      "category": "Think Tank"
-    },
-    {
-      "title": "Ontario Supporting $250 Million Investment to Expand Life-Saving Medical Isotope Production at Bruce Power",
-      "source": "Ontario Newsroom",
-      "score": 0.500503,
-      "url": "https://news.ontario.ca/en/release/1007100/ontario_supporting_250_million_investment_to_expand_life_saving_medical_isotope_production_at_bruce_power",
-      "category": "Government"
     }
   ]
 }
