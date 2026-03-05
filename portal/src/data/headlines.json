@@ -1,6 +1,27 @@
 {
-  "updated_at": "2026-03-03T17:52:03Z",
+  "updated_at": "2026-03-05T16:19:29Z",
   "headlines": [
+    {
+      "title": "Government of Canada boosts manufacturing innovation in the Kootenays",
+      "source": "GovCan - National News",
+      "score": 0.62478966,
+      "url": "https://www.canada.ca/en/pacific-economic-development/news/2026/03/government-of-canada-boosts-manufacturing-innovation-in-the-kootenays.html",
+      "category": "Government"
+    },
+    {
+      "title": "Canada secures renewed market access with China to boost exports and strengthen economic collaboration",
+      "source": "GovCan - National News",
+      "score": 0.5943158,
+      "url": "https://www.canada.ca/en/global-affairs/news/2026/03/canada-secures-renewed-market-access-with-china-to-boost-exports-and-strengthen-economic-collaboration.html",
+      "category": "Government"
+    },
+    {
+      "title": "Government of Canada announces support to help a New Brunswick company modernize, compete, and reach new markets",
+      "source": "GovCan - National News",
+      "score": 0.5826161,
+      "url": "https://www.canada.ca/en/atlantic-canada-opportunities/news/2026/03/government-of-canada-announces-support-to-help-a-new-brunswick-company-modernize-compete-and-reach-new-markets.html",
+      "category": "Government"
+    },
     {
       "title": "Government of Canada strengthening industries and businesses in B.C.’s Southern Interior",
       "source": "GovCan - National News",
@@ -23,10 +44,17 @@
       "category": "Government"
     },
     {
-      "title": "Government of Canada fuels growth for Black and equity-deserving entrepreneurs",
-      "source": "GovCan - FedDev Ontario",
-      "score": 0.56248295,
-      "url": "https://www.canada.ca/en/economic-development-southern-ontario/news/2026/02/government-of-canada-fuels-growth-for-black-and-equity-deserving-entrepreneurs.html",
+      "title": "Government of Canada launches calls for proposals for the $5 billion Trade Diversification Corridors Fund and the $1 billion Arctic Infrastructure Fund",
+      "source": "GovCan - National News",
+      "score": 0.5577544,
+      "url": "https://www.canada.ca/en/transport-canada/news/2026/03/government-of-canada-launches-calls-for-proposals-for-the-5-billion-trade-diversification-corridors-fund-and-the-1-billion-arctic-infrastructure-fund.html",
+      "category": "Government"
+    },
+    {
+      "title": "Governments of Canada and Quebec invest to encourage producers to adopt more sustainable practices",
+      "source": "GovCan - National News",
+      "score": 0.54227376,
+      "url": "https://www.canada.ca/en/agriculture-agri-food/news/2026/03/governments-of-canada-and-quebec-invest-to-encourage-producers-to-adopt-more-sustainable-practices.html",
       "category": "Government"
     },
     {
@@ -37,39 +65,11 @@
       "category": "Think Tank"
     },
     {
-      "title": "Targeted GST Reform is More Effective Than Broad Elimination on Essentials",
-      "source": "C.D. Howe Institute",
-      "score": 0.5392044,
-      "url": "https://cdhowe.org/publication/targeted-gst-reform-is-more-effective-than-broad-elimination-on-essentials/",
-      "category": "Think Tank"
-    },
-    {
-      "title": "Ontario Celebrates Homegrown Innovation with  Prestigious Polanyi Prize",
+      "title": "Ontario Secures Groundbreaking National Energy Corridor Agreement",
       "source": "Ontario Newsroom",
-      "score": 0.5342531,
-      "url": "https://news.ontario.ca/en/release/1007106/ontario_celebrates_homegrown_innovation_with_prestigious_polanyi_prize",
+      "score": 0.5274767,
+      "url": "https://news.ontario.ca/en/release/1007115/ontario_secures_groundbreaking_national_energy_corridor_agreement",
       "category": "Government"
-    },
-    {
-      "title": "Government of Canada to announce investments to strengthen key sectors and businesses in B.C.’s Southern Interior",
-      "source": "GovCan - National News",
-      "score": 0.5330575,
-      "url": "https://www.canada.ca/en/pacific-economic-development/news/2026/02/government-of-canada-to-announce-investments-to-strengthen-key-sectors-and-businesses-in-bcs-southern-interior.html",
-      "category": "Government"
-    },
-    {
-      "title": "When should AI companies alert police? What the Tumbler Ridge tragedy reveals about regulating AI",
-      "source": "CBC Top Stories",
-      "score": 0.53098136,
-      "url": "https://www.cbc.ca/news/canada/british-columbia/ai-implications-tumbler-ridge-bc-mass-shooting-explainer-9.7110251?cmp=rss",
-      "category": "News & Media"
-    },
-    {
-      "title": "OP-ED | Canada’s trade diversification challenge: navigating a monumental shift",
-      "source": "Canada West Foundation",
-      "score": 0.52905875,
-      "url": "https://cwf.ca/research/publications/opinion-canada-trade-diversification/",
-      "category": "Think Tank"
     }
   ]
 }
