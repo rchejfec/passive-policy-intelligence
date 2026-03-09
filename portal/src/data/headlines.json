@@ -1,74 +1,74 @@
 {
-  "updated_at": "2026-03-05T16:19:29Z",
+  "updated_at": "2026-03-09T15:31:48Z",
   "headlines": [
     {
-      "title": "Government of Canada boosts manufacturing innovation in the Kootenays",
-      "source": "GovCan - National News",
-      "score": 0.62478966,
-      "url": "https://www.canada.ca/en/pacific-economic-development/news/2026/03/government-of-canada-boosts-manufacturing-innovation-in-the-kootenays.html",
-      "category": "Government"
-    },
-    {
-      "title": "Canada secures renewed market access with China to boost exports and strengthen economic collaboration",
-      "source": "GovCan - National News",
-      "score": 0.5943158,
-      "url": "https://www.canada.ca/en/global-affairs/news/2026/03/canada-secures-renewed-market-access-with-china-to-boost-exports-and-strengthen-economic-collaboration.html",
-      "category": "Government"
-    },
-    {
-      "title": "Government of Canada announces support to help a New Brunswick company modernize, compete, and reach new markets",
-      "source": "GovCan - National News",
-      "score": 0.5826161,
-      "url": "https://www.canada.ca/en/atlantic-canada-opportunities/news/2026/03/government-of-canada-announces-support-to-help-a-new-brunswick-company-modernize-compete-and-reach-new-markets.html",
-      "category": "Government"
-    },
-    {
-      "title": "Government of Canada strengthening industries and businesses in B.C.’s Southern Interior",
-      "source": "GovCan - National News",
-      "score": 0.57563215,
-      "url": "https://www.canada.ca/en/pacific-economic-development/news/2026/03/government-of-canada-strengthening-industries-and-businesses-in-bcs-southern-interior.html",
-      "category": "Government"
-    },
-    {
-      "title": "Backgrounder: Government of Canada strengthening industries and businesses in B.C.'s Southern Interior",
-      "source": "GovCan - National News",
-      "score": 0.5712442,
-      "url": "https://www.canada.ca/en/pacific-economic-development/news/2026/03/backgrounder-government-of-canada-strengthening-industries-and-businesses-in-bcs-southern-interior.html",
-      "category": "Government"
-    },
-    {
-      "title": "Minister Hajdu actions national coordinated plan to address workforce challenges in the mining and mineral industries",
+      "title": "Government of Canada announces significant investment to strengthen workforce development across key economic sectors",
       "source": "GovCan - ESDC",
-      "score": 0.5673154,
-      "url": "https://www.canada.ca/en/employment-social-development/news/2026/03/minister-hajdu-actions-national-coordinated-plan-to-address-workforce-challenges-in-the-mining-and-mineral-industries.html",
+      "score": 0.65644187,
+      "url": "https://www.canada.ca/en/employment-social-development/news/2026/03/government-of-canada-announces-significant-investment-to-strengthen-workforce-development-across-key-economic-sectors.html",
       "category": "Government"
     },
     {
-      "title": "Government of Canada launches calls for proposals for the $5 billion Trade Diversification Corridors Fund and the $1 billion Arctic Infrastructure Fund",
+      "title": "Government of Canada invests in new technologies to support Windsor manufacturer",
       "source": "GovCan - National News",
-      "score": 0.5577544,
-      "url": "https://www.canada.ca/en/transport-canada/news/2026/03/government-of-canada-launches-calls-for-proposals-for-the-5-billion-trade-diversification-corridors-fund-and-the-1-billion-arctic-infrastructure-fund.html",
+      "score": 0.5956008,
+      "url": "https://www.canada.ca/en/department-finance/news/2026/03/government-of-canada-invests-in-new-technologies-to-support-windsor-manufacturer.html",
       "category": "Government"
     },
     {
-      "title": "Governments of Canada and Quebec invest to encourage producers to adopt more sustainable practices",
-      "source": "GovCan - National News",
-      "score": 0.54227376,
-      "url": "https://www.canada.ca/en/agriculture-agri-food/news/2026/03/governments-of-canada-and-quebec-invest-to-encourage-producers-to-adopt-more-sustainable-practices.html",
+      "title": "Secretary of State Belanger highlights the new Canada Groceries and Essentials Benefit",
+      "source": "GovCan - ISED",
+      "score": 0.5904601,
+      "url": "https://www.canada.ca/en/innovation-science-economic-development/news/2026/03/secretary-of-state-belanger-highlights-the-new-canada-groceries-and-essentials-benefit.html",
       "category": "Government"
     },
     {
-      "title": "“Big Bang” Tax Reform: Unleashing Growth in the Canadian Economy",
+      "title": "Canada needs big-bang tax reform, not more tax tweaks",
       "source": "C.D. Howe Institute",
-      "score": 0.5406704,
-      "url": "https://cdhowe.org/publication/big-bang-tax-reform-unleashing-growth-in-the-canadian-economy/",
+      "score": 0.5857904,
+      "url": "https://cdhowe.org/publication/canada-needs-big-bang-tax-reform-not-more-tax-tweaks/",
       "category": "Think Tank"
     },
     {
-      "title": "Ontario Secures Groundbreaking National Energy Corridor Agreement",
-      "source": "Ontario Newsroom",
-      "score": 0.5274767,
-      "url": "https://news.ontario.ca/en/release/1007115/ontario_secures_groundbreaking_national_energy_corridor_agreement",
+      "title": "Governments of Canada and British Columbia partner to support tariff-impacted workers and strengthen the workforce",
+      "source": "GovCan - ESDC",
+      "score": 0.5728354,
+      "url": "https://www.canada.ca/en/employment-social-development/news/2026/03/governments-of-canada-and-british-columbia-partner-to-support-tariff-impacted-workers-and-strengthen-the-workforce.html",
+      "category": "Government"
+    },
+    {
+      "title": "Watch out for AI-generated government impersonators",
+      "source": "GovCan - National News",
+      "score": 0.57245284,
+      "url": "https://www.canada.ca/en/competition-bureau/news/2026/03/watch-out-for-ai-generated-government-impersonators.html",
+      "category": "Government"
+    },
+    {
+      "title": "Improving equitable access to sexual and reproductive health services across the country",
+      "source": "GovCan - National News",
+      "score": 0.5681734,
+      "url": "https://www.canada.ca/en/health-canada/news/2026/03/improving-equitable-access-to-sexual-and-reproductive-health-services-across-the-country0.html",
+      "category": "Government"
+    },
+    {
+      "title": "Government of Canada to announce new investments to strengthen defence industrial capacity under Canada’s Defence Industrial Strategy",
+      "source": "GovCan - ISED",
+      "score": 0.53362876,
+      "url": "https://www.canada.ca/en/innovation-science-economic-development/news/2026/03/government-of-canada-to-announce-new-investments-to-strengthen-defence-industrial-capacity-under-canadas-defence-industrial-strategy.html",
+      "category": "Government"
+    },
+    {
+      "title": "Will Canada govern AI for the public good?",
+      "source": "Policy Alternatives",
+      "score": 0.53107965,
+      "url": "https://www.policyalternatives.ca/news-research/will-canada-govern-ai-for-the-public-good/",
+      "category": "Think Tank"
+    },
+    {
+      "title": "Government of Canada to announce investment to strengthen workforce development across key economic sector",
+      "source": "GovCan - ESDC",
+      "score": 0.5161388,
+      "url": "https://www.canada.ca/en/employment-social-development/news/2026/03/government-of-canada-to-announce-investment-to-strengthen-workforce-development-across-key-economic-sector.html",
       "category": "Government"
     }
   ]
