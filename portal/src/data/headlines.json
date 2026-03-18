@@ -1,74 +1,74 @@
 {
-  "updated_at": "2026-03-09T15:31:48Z",
+  "updated_at": "2026-03-18T15:32:06Z",
   "headlines": [
     {
-      "title": "Government of Canada announces significant investment to strengthen workforce development across key economic sectors",
-      "source": "GovCan - ESDC",
-      "score": 0.65644187,
-      "url": "https://www.canada.ca/en/employment-social-development/news/2026/03/government-of-canada-announces-significant-investment-to-strengthen-workforce-development-across-key-economic-sectors.html",
-      "category": "Government"
-    },
-    {
-      "title": "Government of Canada invests in new technologies to support Windsor manufacturer",
+      "title": "Minister Champagne welcomes Canada Growth Fund investment in Québec clean-technology fertilizer company",
       "source": "GovCan - National News",
-      "score": 0.5956008,
-      "url": "https://www.canada.ca/en/department-finance/news/2026/03/government-of-canada-invests-in-new-technologies-to-support-windsor-manufacturer.html",
+      "score": 0.6083885,
+      "url": "https://www.canada.ca/en/department-finance/news/2026/03/minister-champagne-welcomes-canada-growth-fund-investment-in-quebec-clean-technology-fertilizer-company.html",
       "category": "Government"
     },
     {
-      "title": "Secretary of State Belanger highlights the new Canada Groceries and Essentials Benefit",
-      "source": "GovCan - ISED",
-      "score": 0.5904601,
-      "url": "https://www.canada.ca/en/innovation-science-economic-development/news/2026/03/secretary-of-state-belanger-highlights-the-new-canada-groceries-and-essentials-benefit.html",
+      "title": "Lofty goals, real constraints: Canada's Defence Industrial Strategy: Jonathan Berkshire ...",
+      "source": "Macdonald-Laurier Institute",
+      "score": 0.58823025,
+      "url": "https://www.google.com/url?rct=j&sa=t&url=https://macdonaldlaurier.ca/lofty-goals-real-constraints-canadas-defence-industrial-strategy-jonathan-berkshire-miller-and-balkan-devlen-for-inside-policy/&ct=ga&cd=CAIyGTc1NGZlZWJmYWZmMGRlYTY6Y2E6ZW46Q0E&usg=AOvVaw3OTxQv3NHysO_aIA95sjQw",
+      "category": "Think Tank"
+    },
+    {
+      "title": "Government of Canada announces investments to help tariff-impacted businesses in Alberta adapt and grow",
+      "source": "GovCan - National News",
+      "score": 0.5881793,
+      "url": "https://www.canada.ca/en/prairies-economic-development/news/2026/03/government-of-canada-announces-investments-to-help-tariff-impacted-businesses-in-alberta-adapt-and-grow.html",
       "category": "Government"
     },
     {
-      "title": "Canada needs big-bang tax reform, not more tax tweaks",
+      "title": "Secretary of State Long highlights recent measures to make life more affordable for Canadians",
+      "source": "GovCan - National News",
+      "score": 0.5785701,
+      "url": "https://www.canada.ca/en/department-finance/news/2026/03/secretary-of-state-long-highlights-recent-measures-to-make-life-more-affordable-for-canadians.html",
+      "category": "Government"
+    },
+    {
+      "title": "Governments of Canada and Ontario partner to support workers impacted by tariffs and global market shifts",
+      "source": "GovCan - ESDC",
+      "score": 0.57820714,
+      "url": "https://www.canada.ca/en/employment-social-development/news/2026/03/governments-of-canada-and-ontario-partner-to-support-workers-impacted-by-tariffs-and-global-market-shifts.html",
+      "category": "Government"
+    },
+    {
+      "title": "A Tax Plan to Ignite the Economy",
       "source": "C.D. Howe Institute",
-      "score": 0.5857904,
-      "url": "https://cdhowe.org/publication/canada-needs-big-bang-tax-reform-not-more-tax-tweaks/",
+      "score": 0.5702049,
+      "url": "https://cdhowe.org/publication/a-tax-plan-to-ignite-the-economy/",
       "category": "Think Tank"
     },
     {
-      "title": "Governments of Canada and British Columbia partner to support tariff-impacted workers and strengthen the workforce",
+      "title": "Workforce training in Quebec: Governments of Canada and Quebec announce funding for sustainable jobs",
       "source": "GovCan - ESDC",
-      "score": 0.5728354,
-      "url": "https://www.canada.ca/en/employment-social-development/news/2026/03/governments-of-canada-and-british-columbia-partner-to-support-tariff-impacted-workers-and-strengthen-the-workforce.html",
+      "score": 0.5466238,
+      "url": "https://www.canada.ca/en/employment-social-development/news/2026/03/workforce-training-in-quebec-governments-of-canada-and-quebec-announce-funding-for-sustainable-jobs.html",
       "category": "Government"
     },
     {
-      "title": "Watch out for AI-generated government impersonators",
-      "source": "GovCan - National News",
-      "score": 0.57245284,
-      "url": "https://www.canada.ca/en/competition-bureau/news/2026/03/watch-out-for-ai-generated-government-impersonators.html",
-      "category": "Government"
-    },
-    {
-      "title": "Improving equitable access to sexual and reproductive health services across the country",
-      "source": "GovCan - National News",
-      "score": 0.5681734,
-      "url": "https://www.canada.ca/en/health-canada/news/2026/03/improving-equitable-access-to-sexual-and-reproductive-health-services-across-the-country0.html",
-      "category": "Government"
-    },
-    {
-      "title": "Government of Canada to announce new investments to strengthen defence industrial capacity under Canada’s Defence Industrial Strategy",
-      "source": "GovCan - ISED",
-      "score": 0.53362876,
-      "url": "https://www.canada.ca/en/innovation-science-economic-development/news/2026/03/government-of-canada-to-announce-new-investments-to-strengthen-defence-industrial-capacity-under-canadas-defence-industrial-strategy.html",
-      "category": "Government"
-    },
-    {
-      "title": "Will Canada govern AI for the public good?",
-      "source": "Policy Alternatives",
-      "score": 0.53107965,
-      "url": "https://www.policyalternatives.ca/news-research/will-canada-govern-ai-for-the-public-good/",
+      "title": "Want More Innovation? Increase Pressure, Not Support",
+      "source": "C.D. Howe Institute",
+      "score": 0.5426958,
+      "url": "https://cdhowe.org/publication/want-more-innovation-increase-pressure-not-support/",
       "category": "Think Tank"
     },
     {
-      "title": "Government of Canada to announce investment to strengthen workforce development across key economic sector",
+      "title": "Government of Canada extends Work-Sharing temporary flexibilities to help employers and workers avoid mass layoffs",
       "source": "GovCan - ESDC",
-      "score": 0.5161388,
-      "url": "https://www.canada.ca/en/employment-social-development/news/2026/03/government-of-canada-to-announce-investment-to-strengthen-workforce-development-across-key-economic-sector.html",
+      "score": 0.53709954,
+      "url": "https://www.canada.ca/en/employment-social-development/news/2026/03/government-of-canada-extends-work-sharing-temporary-flexibilities-to-help-employers-and-workers-avoid-mass-layoffs.html",
+      "category": "Government"
+    },
+    {
+      "title": "Government of Canada creates new Tripartite Advisory Council for Labour Policy",
+      "source": "GovCan - ESDC",
+      "score": 0.5353935,
+      "url": "https://www.canada.ca/en/employment-social-development/news/2026/03/government-of-canada-creates-new-tripartite-advisory-council-for-labour-policy.html",
       "category": "Government"
     }
   ]
