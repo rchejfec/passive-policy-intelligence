@@ -1,74 +1,74 @@
 {
-  "updated_at": "2026-03-18T15:32:06Z",
+  "updated_at": "2026-03-24T13:38:13Z",
   "headlines": [
     {
-      "title": "Minister Champagne welcomes Canada Growth Fund investment in Québec clean-technology fertilizer company",
+      "title": "New Task Force to enhance Canada’s competitiveness and improve access to innovative medicines",
       "source": "GovCan - National News",
-      "score": 0.6083885,
-      "url": "https://www.canada.ca/en/department-finance/news/2026/03/minister-champagne-welcomes-canada-growth-fund-investment-in-quebec-clean-technology-fertilizer-company.html",
+      "score": 0.58880115,
+      "url": "https://www.canada.ca/en/health-canada/news/2026/03/new-task-force-to-enhance-canadas-competitiveness-and-improve-access-to-innovative-medicines.html",
       "category": "Government"
     },
     {
-      "title": "Lofty goals, real constraints: Canada's Defence Industrial Strategy: Jonathan Berkshire ...",
+      "title": "How to Boost Canada’s Economy by $79 Billion | Jack Mintz Explains",
+      "source": "C.D. Howe Institute",
+      "score": 0.5727545,
+      "url": "https://cdhowe.org/publication/how-to-boost-canadas-economy-by-79-billion-jack-mintz-explains-2/",
+      "category": "Think Tank"
+    },
+    {
+      "title": "How to Boost Canada’s Economy by $79 Billion | Jack Mintz Explains",
+      "source": "C.D. Howe Institute",
+      "score": 0.5720038,
+      "url": "https://cdhowe.org/publication/how-to-boost-canadas-economy-by-79-billion-jack-mintz-explains/",
+      "category": "Think Tank"
+    },
+    {
+      "title": "Government of Canada is helping to protect, build and transform the auto industry",
+      "source": "GovCan - FedDev Ontario",
+      "score": 0.54478985,
+      "url": "https://www.canada.ca/en/economic-development-southern-ontario/news/2026/03/government-of-canada-is-helping-to-protect-build-and-transform-the-auto-industry.html",
+      "category": "Government"
+    },
+    {
+      "title": "Government of Canada extending Employment Insurance temporary measures to ensure critical income support continues for workers impacted by tariffs",
+      "source": "GovCan - ESDC",
+      "score": 0.54070497,
+      "url": "https://www.canada.ca/en/employment-social-development/news/2026/03/government-of-canada-extending-employment-insurance-temporary-measures-to-ensure-critical-income-support-continues-for-workers-impacted-by-tariffs.html",
+      "category": "Government"
+    },
+    {
+      "title": "Kicking away the ladder: The true cost of changes to the Ontario Student Assistance Program",
+      "source": "Policy Alternatives",
+      "score": 0.5401901,
+      "url": "https://www.policyalternatives.ca/news-research/kicking-away-the-ladder-the-true-cost-of-changes-to-the-ontario-student-assistance-program/",
+      "category": "Think Tank"
+    },
+    {
+      "title": "Building Stronger Communities in Toronto",
+      "source": "GovCan - National News",
+      "score": 0.5395209,
+      "url": "https://www.canada.ca/en/housing-infrastructure-communities/news/2026/03/building-stronger-communities-in-toronto.html",
+      "category": "Government"
+    },
+    {
+      "title": "Building slower, paying more – What Regina reveals about Canada’s housing crisis: Milton Friesen for Inside Policy",
       "source": "Macdonald-Laurier Institute",
-      "score": 0.58823025,
-      "url": "https://www.google.com/url?rct=j&sa=t&url=https://macdonaldlaurier.ca/lofty-goals-real-constraints-canadas-defence-industrial-strategy-jonathan-berkshire-miller-and-balkan-devlen-for-inside-policy/&ct=ga&cd=CAIyGTc1NGZlZWJmYWZmMGRlYTY6Y2E6ZW46Q0E&usg=AOvVaw3OTxQv3NHysO_aIA95sjQw",
+      "score": 0.53843445,
+      "url": "https://macdonaldlaurier.ca/building-slower-paying-more-what-regina-reveals-about-canadas-housing-crisis-milton-friesen-for-inside-policy/",
       "category": "Think Tank"
     },
     {
-      "title": "Government of Canada announces investments to help tariff-impacted businesses in Alberta adapt and grow",
-      "source": "GovCan - National News",
-      "score": 0.5881793,
-      "url": "https://www.canada.ca/en/prairies-economic-development/news/2026/03/government-of-canada-announces-investments-to-help-tariff-impacted-businesses-in-alberta-adapt-and-grow.html",
-      "category": "Government"
-    },
-    {
-      "title": "Secretary of State Long highlights recent measures to make life more affordable for Canadians",
-      "source": "GovCan - National News",
-      "score": 0.5785701,
-      "url": "https://www.canada.ca/en/department-finance/news/2026/03/secretary-of-state-long-highlights-recent-measures-to-make-life-more-affordable-for-canadians.html",
-      "category": "Government"
-    },
-    {
-      "title": "Governments of Canada and Ontario partner to support workers impacted by tariffs and global market shifts",
-      "source": "GovCan - ESDC",
-      "score": 0.57820714,
-      "url": "https://www.canada.ca/en/employment-social-development/news/2026/03/governments-of-canada-and-ontario-partner-to-support-workers-impacted-by-tariffs-and-global-market-shifts.html",
-      "category": "Government"
-    },
-    {
-      "title": "A Tax Plan to Ignite the Economy",
-      "source": "C.D. Howe Institute",
-      "score": 0.5702049,
-      "url": "https://cdhowe.org/publication/a-tax-plan-to-ignite-the-economy/",
+      "title": "Policy uncertainty continues to hold back Canada’s mining potential",
+      "source": "Fraser Institute",
+      "score": 0.5198051,
+      "url": "https://www.fraserinstitute.org/commentary/policy-uncertainty-continues-hold-back-canadas-mining-potential",
       "category": "Think Tank"
     },
     {
-      "title": "Workforce training in Quebec: Governments of Canada and Quebec announce funding for sustainable jobs",
-      "source": "GovCan - ESDC",
-      "score": 0.5466238,
-      "url": "https://www.canada.ca/en/employment-social-development/news/2026/03/workforce-training-in-quebec-governments-of-canada-and-quebec-announce-funding-for-sustainable-jobs.html",
-      "category": "Government"
-    },
-    {
-      "title": "Want More Innovation? Increase Pressure, Not Support",
-      "source": "C.D. Howe Institute",
-      "score": 0.5426958,
-      "url": "https://cdhowe.org/publication/want-more-innovation-increase-pressure-not-support/",
-      "category": "Think Tank"
-    },
-    {
-      "title": "Government of Canada extends Work-Sharing temporary flexibilities to help employers and workers avoid mass layoffs",
-      "source": "GovCan - ESDC",
-      "score": 0.53709954,
-      "url": "https://www.canada.ca/en/employment-social-development/news/2026/03/government-of-canada-extends-work-sharing-temporary-flexibilities-to-help-employers-and-workers-avoid-mass-layoffs.html",
-      "category": "Government"
-    },
-    {
-      "title": "Government of Canada creates new Tripartite Advisory Council for Labour Policy",
-      "source": "GovCan - ESDC",
-      "score": 0.5353935,
-      "url": "https://www.canada.ca/en/employment-social-development/news/2026/03/government-of-canada-creates-new-tripartite-advisory-council-for-labour-policy.html",
+      "title": "Canada advances Defence Industrial Strategy to strengthen security, sovereignty and prosperity",
+      "source": "GovCan - ISED",
+      "score": 0.5194988,
+      "url": "https://www.canada.ca/en/innovation-science-economic-development/news/2026/03/canada-advances-defence-industrial-strategy-to-strengthen-security-sovereignty-and-prosperity0.html",
       "category": "Government"
     }
   ]
