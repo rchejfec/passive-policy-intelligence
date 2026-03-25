@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-03-24T13:38:13Z",
+  "updated_at": "2026-03-25T14:14:40Z",
   "headlines": [
     {
       "title": "New Task Force to enhance Canada’s competitiveness and improve access to innovative medicines",
@@ -21,6 +21,13 @@
       "score": 0.5720038,
       "url": "https://cdhowe.org/publication/how-to-boost-canadas-economy-by-79-billion-jack-mintz-explains/",
       "category": "Think Tank"
+    },
+    {
+      "title": "Federal government and Transdev Canada invest in electric transit future",
+      "source": "GovCan - National News",
+      "score": 0.5644596,
+      "url": "https://www.canada.ca/en/housing-infrastructure-communities/news/2026/03/federal-government-and-transdev-canada-invest-in-electric-transit-future.html",
+      "category": "Government"
     },
     {
       "title": "Government of Canada is helping to protect, build and transform the auto industry",
@@ -58,18 +65,11 @@
       "category": "Think Tank"
     },
     {
-      "title": "Policy uncertainty continues to hold back Canada’s mining potential",
-      "source": "Fraser Institute",
-      "score": 0.5198051,
-      "url": "https://www.fraserinstitute.org/commentary/policy-uncertainty-continues-hold-back-canadas-mining-potential",
-      "category": "Think Tank"
-    },
-    {
-      "title": "Canada advances Defence Industrial Strategy to strengthen security, sovereignty and prosperity",
-      "source": "GovCan - ISED",
-      "score": 0.5194988,
-      "url": "https://www.canada.ca/en/innovation-science-economic-development/news/2026/03/canada-advances-defence-industrial-strategy-to-strengthen-security-sovereignty-and-prosperity0.html",
-      "category": "Government"
+      "title": "City affordable housing proposal waives requirement for affordable housing",
+      "source": "CBC Ottawa",
+      "score": 0.52841556,
+      "url": "https://www.cbc.ca/news/canada/ottawa/city-affordable-housing-proposal-waives-requirement-for-affordable-housing-9.7140759?cmp=rss",
+      "category": "News & Media"
     }
   ]
 }
