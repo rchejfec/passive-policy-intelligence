@@ -1,6 +1,20 @@
 {
-  "updated_at": "2026-03-31T15:04:53Z",
+  "updated_at": "2026-04-02T15:12:36Z",
   "headlines": [
+    {
+      "title": "Defining AI’s guardrails: a PwC-Vector Fireside Chat on Responsible AI",
+      "source": "Vector Institute",
+      "score": 0.61138827,
+      "url": "https://vectorinstitute.ai/defining-ais-guardrails-a-pwc-vector-fireside-chat-on-responsible-ai/",
+      "category": "AI & Tech Research"
+    },
+    {
+      "title": "World-leading AI Trust and Safety Experts Publish Major Paper on Managing AI Risks in the journal Science",
+      "source": "Vector Institute",
+      "score": 0.6023331,
+      "url": "https://vectorinstitute.ai/world-leading-ai-trust-and-safety-experts-publish-major-paper-on-managing-ai-risks-in-the-journal-science/",
+      "category": "AI & Tech Research"
+    },
     {
       "title": "Backgrounder: Canada invests in energy innovation to become a clean energy superpower",
       "source": "GovCan - National News",
@@ -14,6 +28,27 @@
       "score": 0.5986196,
       "url": "https://www.canada.ca/en/natural-resources-canada/news/2026/03/canada-invests-in-energy-innovation-to-become-a-clean-energy-superpower.html",
       "category": "Government"
+    },
+    {
+      "title": "Fairness in Machine Learning: The Principles of Governance",
+      "source": "Vector Institute",
+      "score": 0.5963278,
+      "url": "https://vectorinstitute.ai/fairness-in-machine-learning-the-principles-of-governance/",
+      "category": "AI & Tech Research"
+    },
+    {
+      "title": "Remarks by Secretary of State (International Development) Randeep Sarai to announce funding for Grand Challenges Canada",
+      "source": "GovCan - National News",
+      "score": 0.5949404,
+      "url": "https://www.canada.ca/en/global-affairs/news/2026/04/remarks-by-secretary-of-state-international-development-randeep-sarai-to-announce-funding-for-grand-challenges-canada.html",
+      "category": "Government"
+    },
+    {
+      "title": "Responsible AI in Action: How Vector Institute Partnerships Drive Ethical Innovation",
+      "source": "Vector Institute",
+      "score": 0.57462585,
+      "url": "https://vectorinstitute.ai/responsible-ai-in-action-how-vector-institute-partnerships-drive-ethical-innovation/",
+      "category": "AI & Tech Research"
     },
     {
       "title": "Governments of Canada and Saskatchewan partner to protect tariff-impacted workers and strengthen the workforce",
@@ -30,45 +65,10 @@
       "category": "Government"
     },
     {
-      "title": "Ontario Introducing Legislation to Improve Transit and Build More Homes",
-      "source": "Ontario Newsroom",
-      "score": 0.56266683,
-      "url": "https://news.ontario.ca/en/release/1007229/ontario_introducing_legislation_to_improve_transit_and_build_more_homes",
-      "category": "Government"
-    },
-    {
-      "title": "US Manufacturing and Services Surplus with Canada Shrank Ahead of 2026 CUSMA Review",
-      "source": "C.D. Howe Institute",
-      "score": 0.54394394,
-      "url": "https://cdhowe.org/publication/us-canada-trade-surpluses-shrink-ahead-of-2026-cusma-review/",
-      "category": "Think Tank"
-    },
-    {
-      "title": "How energy efficiency can fix Canada's housing affordability crisis - Policy Options",
-      "source": "IRPP",
-      "score": 0.5434712,
-      "url": "https://www.google.com/url?rct=j&sa=t&url=https://policyoptions.irpp.org/2026/03/logement-abordable-climat-canada-efficacite-energetique/&ct=ga&cd=CAIyGWJjYTQ5YjEyNDI4YzliZjA6Y2E6ZW46Q0E&usg=AOvVaw1sl3I85ewAcd_lxHTjKeoQ",
-      "category": "Think Tank"
-    },
-    {
-      "title": "Concerns raised about council-approved rebuild plan for Swansea Mews",
-      "source": "CBC Toronto",
-      "score": 0.54176426,
-      "url": "https://www.cbc.ca/news/canada/toronto/swansea-mews-rebuild-approved-9.7147696?cmp=rss",
-      "category": "News & Media"
-    },
-    {
-      "title": "Energy upgrades top Yukon government’s $1B wish list for Ottawa",
-      "source": "CBC North",
-      "score": 0.5417006,
-      "url": "https://www.cbc.ca/news/canada/north/yukon-government-billion-dollar-wish-list-9.7143338?cmp=rss",
-      "category": "News & Media"
-    },
-    {
-      "title": "Details of the Canada-Ontario Partnership to Build",
-      "source": "Ontario Newsroom",
-      "score": 0.53088474,
-      "url": "https://news.ontario.ca/en/backgrounder/1007226/details_of_the_canada_ontario_partnership_to_build",
+      "title": "Federal government strengthens support to address homelessness",
+      "source": "GovCan - National News",
+      "score": 0.56407386,
+      "url": "https://www.canada.ca/en/housing-infrastructure-communities/news/2026/04/federal-government-strengthens-support-to-address-homelessness.html",
       "category": "Government"
     }
   ]
