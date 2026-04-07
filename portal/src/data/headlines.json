@@ -1,74 +1,74 @@
 {
-  "updated_at": "2026-04-02T15:12:36Z",
+  "updated_at": "2026-04-07T16:57:34Z",
   "headlines": [
     {
-      "title": "Defining AI’s guardrails: a PwC-Vector Fireside Chat on Responsible AI",
-      "source": "Vector Institute",
-      "score": 0.61138827,
-      "url": "https://vectorinstitute.ai/defining-ais-guardrails-a-pwc-vector-fireside-chat-on-responsible-ai/",
-      "category": "AI & Tech Research"
+      "title": "Canada needs a nation-building roadmap, not just ambition",
+      "source": "C.D. Howe Institute",
+      "score": 0.6324072,
+      "url": "https://cdhowe.org/publication/canada-needs-a-nation-building-roadmap-not-just-ambition/",
+      "category": "Think Tank"
     },
     {
-      "title": "World-leading AI Trust and Safety Experts Publish Major Paper on Managing AI Risks in the journal Science",
-      "source": "Vector Institute",
-      "score": 0.6023331,
-      "url": "https://vectorinstitute.ai/world-leading-ai-trust-and-safety-experts-publish-major-paper-on-managing-ai-risks-in-the-journal-science/",
-      "category": "AI & Tech Research"
-    },
-    {
-      "title": "Backgrounder: Canada invests in energy innovation to become a clean energy superpower",
+      "title": "Backgrounder: Government of Canada announces funding to help build Brandon economy",
       "source": "GovCan - National News",
-      "score": 0.6010423,
-      "url": "https://www.canada.ca/en/natural-resources-canada/news/2026/03/backgrounder-canada-invests-in-energy-innovation-to-become-a-clean-energy-superpower.html",
+      "score": 0.59277904,
+      "url": "https://www.canada.ca/en/prairies-economic-development/news/2026/04/backgrounder-government-of-canada-announces-funding-to-help-build-brandon-economy.html",
       "category": "Government"
     },
     {
-      "title": "Canada invests in energy innovation to become a clean energy superpower",
+      "title": "Government extends excise duty relief, provides direct support to Canadian breweries, distilleries and wine makers",
       "source": "GovCan - National News",
-      "score": 0.5986196,
-      "url": "https://www.canada.ca/en/natural-resources-canada/news/2026/03/canada-invests-in-energy-innovation-to-become-a-clean-energy-superpower.html",
+      "score": 0.5703776,
+      "url": "https://www.canada.ca/en/veterans-affairs-canada/news/2026/04/government-extends-excise-duty-relief-provides-direct-support-to-canadian-breweries-distilleries-and-wine-makers.html",
       "category": "Government"
     },
     {
-      "title": "Fairness in Machine Learning: The Principles of Governance",
-      "source": "Vector Institute",
-      "score": 0.5963278,
-      "url": "https://vectorinstitute.ai/fairness-in-machine-learning-the-principles-of-governance/",
-      "category": "AI & Tech Research"
-    },
-    {
-      "title": "Remarks by Secretary of State (International Development) Randeep Sarai to announce funding for Grand Challenges Canada",
+      "title": "Government of Canada announces funding to help build Brandon economy",
       "source": "GovCan - National News",
-      "score": 0.5949404,
-      "url": "https://www.canada.ca/en/global-affairs/news/2026/04/remarks-by-secretary-of-state-international-development-randeep-sarai-to-announce-funding-for-grand-challenges-canada.html",
+      "score": 0.56182414,
+      "url": "https://www.canada.ca/en/prairies-economic-development/news/2026/04/government-of-canada-announces-funding-to-help-build-brandon-economy.html",
       "category": "Government"
     },
     {
-      "title": "Responsible AI in Action: How Vector Institute Partnerships Drive Ethical Innovation",
-      "source": "Vector Institute",
-      "score": 0.57462585,
-      "url": "https://vectorinstitute.ai/responsible-ai-in-action-how-vector-institute-partnerships-drive-ethical-innovation/",
-      "category": "AI & Tech Research"
-    },
-    {
-      "title": "Governments of Canada and Saskatchewan partner to protect tariff-impacted workers and strengthen the workforce",
-      "source": "GovCan - ESDC",
-      "score": 0.57398206,
-      "url": "https://www.canada.ca/en/employment-social-development/news/2026/03/governments-of-canada-and-saskatchewan-partner-to-protect-tariff-impacted-workers-and-strengthen-the-workforce0.html",
+      "title": "Building Canada strong by investing in Regina’s South Trunk Wastewater Upgrade",
+      "source": "GovCan - National News",
+      "score": 0.5360654,
+      "url": "https://www.canada.ca/en/housing-infrastructure-communities/news/2026/04/building-canada-strong-by-investing-in-reginas-south-trunk-wastewater-upgrade.html",
       "category": "Government"
     },
     {
-      "title": "Government of Canada to announce major investments in AI and aerospace innovation in British Columbia",
+      "title": "Building Canada strong by investing in wastewater, stormwater, and water system expansion for Northeast St. Albert, Alberta",
       "source": "GovCan - National News",
-      "score": 0.57036614,
-      "url": "https://www.canada.ca/en/pacific-economic-development/news/2026/03/government-of-canada-to-announce-major-investments-in-ai-and-aerospace-innovation-in-british-columbia.html",
+      "score": 0.52530724,
+      "url": "https://www.canada.ca/en/housing-infrastructure-communities/news/2026/04/building-canada-strong-by-investing-in-wastewater-stormwater-and-water-system-expansion-for-northeast-st-albert-alberta.html",
       "category": "Government"
     },
     {
-      "title": "Federal government strengthens support to address homelessness",
+      "title": "Government of Canada announces $127 million investment in Aspect Biosystems and Providence Health Care to bolster the Canadian biomanufacturing and life sciences ecosystem",
+      "source": "GovCan - ISED",
+      "score": 0.524747,
+      "url": "https://www.canada.ca/en/innovation-science-economic-development/news/2026/04/government-of-canada-announces-127-million-investment-in-aspect-biosystems-and-providence-health-care-to-bolster-the-canadian-biomanufacturing-and-.html",
+      "category": "Government"
+    },
+    {
+      "title": "Building Canada strong by investing in the Windsor Street Exchange Redevelopment Project in Halifax",
       "source": "GovCan - National News",
-      "score": 0.56407386,
-      "url": "https://www.canada.ca/en/housing-infrastructure-communities/news/2026/04/federal-government-strengthens-support-to-address-homelessness.html",
+      "score": 0.52319026,
+      "url": "https://www.canada.ca/en/housing-infrastructure-communities/news/2026/04/building-canada-strong-by-investing-in-the-windsor-street-exchange-redevelopment-project-in-halifax.html",
+      "category": "Government"
+    },
+    {
+      "title": "Ontario municipalities say they're at ‘critical’ point, call on province to fill $4B funding gap",
+      "source": "CBC Ottawa",
+      "score": 0.5102938,
+      "url": "https://www.cbc.ca/news/canada/toronto/ontario-municipalities-funding-gap-9.7150596?cmp=rss",
+      "category": "News & Media"
+    },
+    {
+      "title": "Building Canada strong by investing in water and wastewater infrastructure to support housing in Iqaluit",
+      "source": "GovCan - National News",
+      "score": 0.5096599,
+      "url": "https://www.canada.ca/en/housing-infrastructure-communities/news/2026/04/building-canada-strong-by-investing-in-water-and-wastewater-infrastructure-to-support-housing-in-iqaluit.html",
       "category": "Government"
     }
   ]
