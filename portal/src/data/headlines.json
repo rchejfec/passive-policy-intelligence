@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-04-07T16:57:34Z",
+  "updated_at": "2026-04-08T15:59:49Z",
   "headlines": [
     {
       "title": "Canada needs a nation-building roadmap, not just ambition",
@@ -30,6 +30,13 @@
       "category": "Government"
     },
     {
+      "title": "Government of Canada invests in low-carbon agrichemicals to advance sustainability in agriculture",
+      "source": "GovCan - National News",
+      "score": 0.5363309,
+      "url": "https://www.canada.ca/en/agriculture-agri-food/news/2026/04/government-of-canada-invests-in-low-carbon-agrichemicals-to-advance-sustainability-in-agriculture.html",
+      "category": "Government"
+    },
+    {
       "title": "Building Canada strong by investing in Regina’s South Trunk Wastewater Upgrade",
       "source": "GovCan - National News",
       "score": 0.5360654,
@@ -51,24 +58,17 @@
       "category": "Government"
     },
     {
+      "title": "Building Canada strong by investing in the Whistle Bend Neighbourhood Active Transportation Connector in Whitehorse",
+      "source": "GovCan - National News",
+      "score": 0.5245935,
+      "url": "https://www.canada.ca/en/housing-infrastructure-communities/news/2026/04/building-canada-strong-by-investing-in-the-whistle-bend-neighbourhood-active-transportation-connector-in-whitehorse.html",
+      "category": "Government"
+    },
+    {
       "title": "Building Canada strong by investing in the Windsor Street Exchange Redevelopment Project in Halifax",
       "source": "GovCan - National News",
       "score": 0.52319026,
       "url": "https://www.canada.ca/en/housing-infrastructure-communities/news/2026/04/building-canada-strong-by-investing-in-the-windsor-street-exchange-redevelopment-project-in-halifax.html",
-      "category": "Government"
-    },
-    {
-      "title": "Ontario municipalities say they're at ‘critical’ point, call on province to fill $4B funding gap",
-      "source": "CBC Ottawa",
-      "score": 0.5102938,
-      "url": "https://www.cbc.ca/news/canada/toronto/ontario-municipalities-funding-gap-9.7150596?cmp=rss",
-      "category": "News & Media"
-    },
-    {
-      "title": "Building Canada strong by investing in water and wastewater infrastructure to support housing in Iqaluit",
-      "source": "GovCan - National News",
-      "score": 0.5096599,
-      "url": "https://www.canada.ca/en/housing-infrastructure-communities/news/2026/04/building-canada-strong-by-investing-in-water-and-wastewater-infrastructure-to-support-housing-in-iqaluit.html",
       "category": "Government"
     }
   ]
