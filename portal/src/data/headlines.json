@@ -1,74 +1,74 @@
 {
-  "updated_at": "2026-04-09T19:19:52Z",
+  "updated_at": "2026-04-13T14:48:24Z",
   "headlines": [
     {
-      "title": "Canada needs a nation-building roadmap, not just ambition",
-      "source": "C.D. Howe Institute",
-      "score": 0.6324072,
-      "url": "https://cdhowe.org/publication/canada-needs-a-nation-building-roadmap-not-just-ambition/",
-      "category": "Think Tank"
-    },
-    {
-      "title": "Backgrounder: Government of Canada announces funding to help build Brandon economy",
+      "title": "Canada and Quebec sign bilateral agreement for projects under the Rural Transit Solutions Fund",
       "source": "GovCan - National News",
-      "score": 0.59277904,
-      "url": "https://www.canada.ca/en/prairies-economic-development/news/2026/04/backgrounder-government-of-canada-announces-funding-to-help-build-brandon-economy.html",
+      "score": 0.58740556,
+      "url": "https://www.canada.ca/en/housing-infrastructure-communities/news/2026/04/canada-and-quebec-sign-bilateral-agreement-for-projects-under-the-rural-transit-solutions-fund.html",
       "category": "Government"
     },
     {
-      "title": "From Hype to Output: How AI Investment Translates to Real Productivity Gains",
-      "source": "C.D. Howe Institute",
-      "score": 0.5830613,
-      "url": "https://cdhowe.org/publication/from-hype-to-output-how-ai-investment-translates-to-real-productivity-gains/",
-      "category": "Think Tank"
-    },
-    {
-      "title": "Government of Canada announces support to help Yarmouth companies modernize, compete, and reach new markets",
+      "title": "Government of Canada announces additional investment to support the Canadian Critical Drug Initiative",
       "source": "GovCan - National News",
-      "score": 0.5788057,
-      "url": "https://www.canada.ca/en/atlantic-canada-opportunities/news/2026/04/government-of-canada-announces-support-to-help-yarmouth-companies-modernize-compete-and-reach-new-markets.html",
+      "score": 0.5814447,
+      "url": "https://www.canada.ca/en/prairies-economic-development/news/2026/04/government-of-canada-announces-additional-investment-to-support-the-canadian-critical-drug-initiative.html",
       "category": "Government"
     },
     {
-      "title": "Government extends excise duty relief, provides direct support to Canadian breweries, distilleries and wine makers",
-      "source": "GovCan - National News",
-      "score": 0.5703776,
-      "url": "https://www.canada.ca/en/veterans-affairs-canada/news/2026/04/government-extends-excise-duty-relief-provides-direct-support-to-canadian-breweries-distilleries-and-wine-makers.html",
+      "title": "Government of Canada creating 175,000 jobs and skills-building opportunities for youth in Canada this year",
+      "source": "GovCan - ESDC",
+      "score": 0.56611437,
+      "url": "https://www.canada.ca/en/employment-social-development/news/2026/04/government-of-canada-creating-175000-jobs-and-skills-building-opportunities-for-youth-in-canada-this-year.html",
       "category": "Government"
     },
     {
-      "title": "Why Canada Isn’t Seeing Gains from AI Yet ft. Economists Rosalie Wyonch and Daniel Schwanen",
-      "source": "C.D. Howe Institute",
-      "score": 0.567107,
-      "url": "https://cdhowe.org/publication/why-canada-isnt-seeing-gains-from-ai-yet-ft-economists-rosalie-wyonch-and-daniel-schwanen-2/",
-      "category": "Think Tank"
-    },
-    {
-      "title": "Why Canada Isn’t Seeing Gains from AI Yet ft. Economists Rosalie Wyonch and Daniel Schwanen",
-      "source": "C.D. Howe Institute",
-      "score": 0.56315625,
-      "url": "https://cdhowe.org/publication/why-canada-isnt-seeing-gains-from-ai-yet-ft-economists-rosalie-wyonch-and-daniel-schwanen/",
-      "category": "Think Tank"
-    },
-    {
-      "title": "Government of Canada announces funding to help build Brandon economy",
+      "title": "Minister Champagne welcomes Canada Growth Fund investment to support the construction of Nouveau Monde Graphite’s flagship Matawinie Mine",
       "source": "GovCan - National News",
-      "score": 0.56182414,
-      "url": "https://www.canada.ca/en/prairies-economic-development/news/2026/04/government-of-canada-announces-funding-to-help-build-brandon-economy.html",
+      "score": 0.54300654,
+      "url": "https://www.canada.ca/en/department-finance/news/2026/04/minister-champagne-welcomes-canada-growth-fund-investment-support-construction-nouveau-monde-graphites-flagship-matawinie.html",
       "category": "Government"
     },
     {
-      "title": "AI Is Starting to Trend in Canada. Why Isn’t Productivity?",
+      "title": "To Realize AI’s Potential, Canada Must Set Competition Policy on the Right Course",
       "source": "C.D. Howe Institute",
-      "score": 0.5585927,
-      "url": "https://cdhowe.org/publication/ai-is-starting-to-trend-in-canada-why-isnt-productivity/",
+      "score": 0.54029775,
+      "url": "https://cdhowe.org/publication/to-realize-ais-potential-canada-must-set-competition-policy-on-the-right-course/",
       "category": "Think Tank"
     },
     {
-      "title": "A Better Way to Assess Major Projects",
-      "source": "C.D. Howe Institute",
-      "score": 0.55543154,
-      "url": "https://cdhowe.org/publication/a-better-way-to-assess-major-projects/",
+      "title": "Mining gains and manufacturing losses underscore futility of industrial policy",
+      "source": "Fraser Institute",
+      "score": 0.53940785,
+      "url": "https://www.fraserinstitute.org/commentary/mining-gains-and-manufacturing-losses-underscore-futility-industrial-policy",
+      "category": "Think Tank"
+    },
+    {
+      "title": "Pressure ramps up on Ford government to address rising cost of living",
+      "source": "CBC Canada",
+      "score": 0.5313985,
+      "url": "https://www.cbc.ca/news/canada/toronto/ontario-ford-cost-of-living-affordability-9.7157646?cmp=rss",
+      "category": "News & Media"
+    },
+    {
+      "title": "The Great Digital Disconnect: AI Deregulation Versus Public Trust",
+      "source": "CIGI",
+      "score": 0.5108775,
+      "url": "https://cigionlineorg.substack.com/p/the-great-digital-disconnect-ai-deregulation",
+      "category": "Think Tank"
+    },
+    {
+      "title": "The Government of Canada invests in programs that have a proven track record of delivering positive employment outcomes for young people.",
+      "source": "GovCan - ESDC",
+      "score": 0.48438826,
+      "url": "https://www.canada.ca/en/employment-social-development/news/2026/04/the-government-of-canada-invests-in-programs-that-have-a-proven-track-record-of-delivering-positive-employment-outcomes-for-young-people.html",
+      "category": "Government"
+    },
+    {
+      "title": "Canada can’t be an energy superpower if it keeps doubling down on U.S. oil exports: Heather Exner-Pirot in The Hub",
+      "source": "Macdonald-Laurier Institute",
+      "score": 0.46676102,
+      "url": "https://macdonaldlaurier.ca/canada-cant-be-an-energy-superpower-if-it-keeps-doubling-down-on-u-s-oil-exports-heather-exner-pirot-in-the-hub/",
       "category": "Think Tank"
     }
   ]
