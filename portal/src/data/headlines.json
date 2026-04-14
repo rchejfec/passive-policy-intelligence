@@ -1,6 +1,13 @@
 {
-  "updated_at": "2026-04-13T14:48:24Z",
+  "updated_at": "2026-04-14T15:37:05Z",
   "headlines": [
+    {
+      "title": "The missing work of co-ordination in Canada's skills ecosystem - Policy Options",
+      "source": "IRPP",
+      "score": 0.6395824,
+      "url": "https://www.google.com/url?rct=j&sa=t&url=https://policyoptions.irpp.org/2026/04/skills-system-canada/&ct=ga&cd=CAIyGWJjYTQ5YjEyNDI4YzliZjA6Y2E6ZW46Q0E&usg=AOvVaw2_z0I0TvaJwe5XVVXCrIYN",
+      "category": "Think Tank"
+    },
     {
       "title": "Canada and Quebec sign bilateral agreement for projects under the Rural Transit Solutions Fund",
       "source": "GovCan - National News",
@@ -44,6 +51,13 @@
       "category": "Think Tank"
     },
     {
+      "title": "Ford government spent billions on housing initiatives yet homebuilding has declined",
+      "source": "Fraser Institute",
+      "score": 0.5373107,
+      "url": "https://www.fraserinstitute.org/commentary/ford-government-spent-billions-housing-initiatives-yet-homebuilding-has-declined",
+      "category": "Think Tank"
+    },
+    {
       "title": "Pressure ramps up on Ford government to address rising cost of living",
       "source": "CBC Canada",
       "score": 0.5313985,
@@ -51,25 +65,11 @@
       "category": "News & Media"
     },
     {
-      "title": "The Great Digital Disconnect: AI Deregulation Versus Public Trust",
-      "source": "CIGI",
-      "score": 0.5108775,
-      "url": "https://cigionlineorg.substack.com/p/the-great-digital-disconnect-ai-deregulation",
-      "category": "Think Tank"
-    },
-    {
-      "title": "The Government of Canada invests in programs that have a proven track record of delivering positive employment outcomes for young people.",
-      "source": "GovCan - ESDC",
-      "score": 0.48438826,
-      "url": "https://www.canada.ca/en/employment-social-development/news/2026/04/the-government-of-canada-invests-in-programs-that-have-a-proven-track-record-of-delivering-positive-employment-outcomes-for-young-people.html",
+      "title": "Canada and Saskatchewan invest in water and wastewater infrastructure to support more housing across the province",
+      "source": "GovCan - National News",
+      "score": 0.51090837,
+      "url": "https://www.canada.ca/en/housing-infrastructure-communities/news/2026/04/canada-and-saskatchewan-invest-in-water-and-wastewater-infrastructure-to-support-more-housing-across-the-province.html",
       "category": "Government"
-    },
-    {
-      "title": "Canada can’t be an energy superpower if it keeps doubling down on U.S. oil exports: Heather Exner-Pirot in The Hub",
-      "source": "Macdonald-Laurier Institute",
-      "score": 0.46676102,
-      "url": "https://macdonaldlaurier.ca/canada-cant-be-an-energy-superpower-if-it-keeps-doubling-down-on-u-s-oil-exports-heather-exner-pirot-in-the-hub/",
-      "category": "Think Tank"
     }
   ]
 }
