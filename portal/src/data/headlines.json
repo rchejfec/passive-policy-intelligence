@@ -1,11 +1,18 @@
 {
-  "updated_at": "2026-04-14T15:37:05Z",
+  "updated_at": "2026-04-15T16:57:47Z",
   "headlines": [
     {
       "title": "The missing work of co-ordination in Canada's skills ecosystem - Policy Options",
       "source": "IRPP",
       "score": 0.6395824,
       "url": "https://www.google.com/url?rct=j&sa=t&url=https://policyoptions.irpp.org/2026/04/skills-system-canada/&ct=ga&cd=CAIyGWJjYTQ5YjEyNDI4YzliZjA6Y2E6ZW46Q0E&usg=AOvVaw2_z0I0TvaJwe5XVVXCrIYN",
+      "category": "Think Tank"
+    },
+    {
+      "title": "Chipping In: A Canadian Guide for Maintaining Competition in AI",
+      "source": "C.D. Howe Institute",
+      "score": 0.5945866,
+      "url": "https://cdhowe.org/publication/chipping-in-a-canadian-guide-for-maintaining-competition-in-ai/",
       "category": "Think Tank"
     },
     {
@@ -27,6 +34,13 @@
       "source": "GovCan - ESDC",
       "score": 0.56611437,
       "url": "https://www.canada.ca/en/employment-social-development/news/2026/04/government-of-canada-creating-175000-jobs-and-skills-building-opportunities-for-youth-in-canada-this-year.html",
+      "category": "Government"
+    },
+    {
+      "title": "Government of Canada invests in Francophone and bilingual digital health innovation",
+      "source": "GovCan - FedDev Ontario",
+      "score": 0.56398094,
+      "url": "https://www.canada.ca/en/economic-development-southern-ontario/news/2026/04/government-of-canada-invests-in-francophone-and-bilingual-digital-health-innovation.html",
       "category": "Government"
     },
     {
@@ -56,20 +70,6 @@
       "score": 0.5373107,
       "url": "https://www.fraserinstitute.org/commentary/ford-government-spent-billions-housing-initiatives-yet-homebuilding-has-declined",
       "category": "Think Tank"
-    },
-    {
-      "title": "Pressure ramps up on Ford government to address rising cost of living",
-      "source": "CBC Canada",
-      "score": 0.5313985,
-      "url": "https://www.cbc.ca/news/canada/toronto/ontario-ford-cost-of-living-affordability-9.7157646?cmp=rss",
-      "category": "News & Media"
-    },
-    {
-      "title": "Canada and Saskatchewan invest in water and wastewater infrastructure to support more housing across the province",
-      "source": "GovCan - National News",
-      "score": 0.51090837,
-      "url": "https://www.canada.ca/en/housing-infrastructure-communities/news/2026/04/canada-and-saskatchewan-invest-in-water-and-wastewater-infrastructure-to-support-more-housing-across-the-province.html",
-      "category": "Government"
     }
   ]
 }
