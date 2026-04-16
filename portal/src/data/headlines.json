@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-04-15T16:57:47Z",
+  "updated_at": "2026-04-16T15:58:39Z",
   "headlines": [
     {
       "title": "The missing work of co-ordination in Canada's skills ecosystem - Policy Options",
@@ -16,27 +16,6 @@
       "category": "Think Tank"
     },
     {
-      "title": "Canada and Quebec sign bilateral agreement for projects under the Rural Transit Solutions Fund",
-      "source": "GovCan - National News",
-      "score": 0.58740556,
-      "url": "https://www.canada.ca/en/housing-infrastructure-communities/news/2026/04/canada-and-quebec-sign-bilateral-agreement-for-projects-under-the-rural-transit-solutions-fund.html",
-      "category": "Government"
-    },
-    {
-      "title": "Government of Canada announces additional investment to support the Canadian Critical Drug Initiative",
-      "source": "GovCan - National News",
-      "score": 0.5814447,
-      "url": "https://www.canada.ca/en/prairies-economic-development/news/2026/04/government-of-canada-announces-additional-investment-to-support-the-canadian-critical-drug-initiative.html",
-      "category": "Government"
-    },
-    {
-      "title": "Government of Canada creating 175,000 jobs and skills-building opportunities for youth in Canada this year",
-      "source": "GovCan - ESDC",
-      "score": 0.56611437,
-      "url": "https://www.canada.ca/en/employment-social-development/news/2026/04/government-of-canada-creating-175000-jobs-and-skills-building-opportunities-for-youth-in-canada-this-year.html",
-      "category": "Government"
-    },
-    {
       "title": "Government of Canada invests in Francophone and bilingual digital health innovation",
       "source": "GovCan - FedDev Ontario",
       "score": 0.56398094,
@@ -44,32 +23,53 @@
       "category": "Government"
     },
     {
-      "title": "Minister Champagne welcomes Canada Growth Fund investment to support the construction of Nouveau Monde Graphite’s flagship Matawinie Mine",
-      "source": "GovCan - National News",
-      "score": 0.54300654,
-      "url": "https://www.canada.ca/en/department-finance/news/2026/04/minister-champagne-welcomes-canada-growth-fund-investment-support-construction-nouveau-monde-graphites-flagship-matawinie.html",
-      "category": "Government"
-    },
-    {
-      "title": "To Realize AI’s Potential, Canada Must Set Competition Policy on the Right Course",
-      "source": "C.D. Howe Institute",
-      "score": 0.54029775,
-      "url": "https://cdhowe.org/publication/to-realize-ais-potential-canada-must-set-competition-policy-on-the-right-course/",
-      "category": "Think Tank"
-    },
-    {
-      "title": "Mining gains and manufacturing losses underscore futility of industrial policy",
-      "source": "Fraser Institute",
-      "score": 0.53940785,
-      "url": "https://www.fraserinstitute.org/commentary/mining-gains-and-manufacturing-losses-underscore-futility-industrial-policy",
-      "category": "Think Tank"
-    },
-    {
       "title": "Ford government spent billions on housing initiatives yet homebuilding has declined",
       "source": "Fraser Institute",
       "score": 0.5373107,
       "url": "https://www.fraserinstitute.org/commentary/ford-government-spent-billions-housing-initiatives-yet-homebuilding-has-declined",
       "category": "Think Tank"
+    },
+    {
+      "title": "Navigating turbulence – A more effective path to Canada’s economic diversification: George Abonyi and David Abonyi for Inside Policy",
+      "source": "Macdonald-Laurier Institute",
+      "score": 0.5243362,
+      "url": "https://macdonaldlaurier.ca/navigating-turbulence-a-more-effective-path-to-canadas-economic-diversification-george-abonyi-and-david-abonyi-for-inside-policy/",
+      "category": "Think Tank"
+    },
+    {
+      "title": "Canada launches national initiative to build large-scale AI supercomputing capacity",
+      "source": "GovCan - ISED",
+      "score": 0.5182229,
+      "url": "https://www.canada.ca/en/innovation-science-economic-development/news/2026/04/canada-launches-national-initiative-to-build-large-scale-ai-supercomputing-capacity.html",
+      "category": "Government"
+    },
+    {
+      "title": "Bridging the AI Policy Gap: Perspectives from Canada’s Builders",
+      "source": "CIGI",
+      "score": 0.51443756,
+      "url": "https://cigionlineorg.substack.com/p/bridging-the-ai-policy-gap-perspectives",
+      "category": "Think Tank"
+    },
+    {
+      "title": "Ontario housing will remain unaffordable without real reforms",
+      "source": "Fraser Institute",
+      "score": 0.5112772,
+      "url": "https://www.fraserinstitute.org/commentary/ontario-housing-will-remain-unaffordable-without-real-reforms",
+      "category": "Think Tank"
+    },
+    {
+      "title": "Canada and Saskatchewan invest in water and wastewater infrastructure to support more housing across the province",
+      "source": "GovCan - National News",
+      "score": 0.51090837,
+      "url": "https://www.canada.ca/en/housing-infrastructure-communities/news/2026/04/canada-and-saskatchewan-invest-in-water-and-wastewater-infrastructure-to-support-more-housing-across-the-province.html",
+      "category": "Government"
+    },
+    {
+      "title": "Government of Canada supports the expansion of Sai Krishna Foods in Cap‑Pelé",
+      "source": "GovCan - National News",
+      "score": 0.50761986,
+      "url": "https://www.canada.ca/en/atlantic-canada-opportunities/news/2026/04/government-of-canada-supports-the-expansion-of-sai-krishna-foods-in-cappele.html",
+      "category": "Government"
     }
   ]
 }
