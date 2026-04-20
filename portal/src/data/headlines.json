@@ -1,74 +1,74 @@
 {
-  "updated_at": "2026-04-16T15:58:39Z",
+  "updated_at": "2026-04-20T15:38:46Z",
   "headlines": [
     {
-      "title": "The missing work of co-ordination in Canada's skills ecosystem - Policy Options",
-      "source": "IRPP",
-      "score": 0.6395824,
-      "url": "https://www.google.com/url?rct=j&sa=t&url=https://policyoptions.irpp.org/2026/04/skills-system-canada/&ct=ga&cd=CAIyGWJjYTQ5YjEyNDI4YzliZjA6Y2E6ZW46Q0E&usg=AOvVaw2_z0I0TvaJwe5XVVXCrIYN",
-      "category": "Think Tank"
+      "title": "Government of Canada helping Edmonton-area businesses modernize operations and increase sales",
+      "source": "GovCan - National News",
+      "score": 0.58924097,
+      "url": "https://www.canada.ca/en/prairies-economic-development/news/2026/04/government-of-canada-helping-edmonton-area-businesses-modernize-operations-and-increase-sales.html",
+      "category": "Government"
     },
     {
-      "title": "Chipping In: A Canadian Guide for Maintaining Competition in AI",
+      "title": "Can Canada accelerate its global trade diversification?",
       "source": "C.D. Howe Institute",
-      "score": 0.5945866,
-      "url": "https://cdhowe.org/publication/chipping-in-a-canadian-guide-for-maintaining-competition-in-ai/",
+      "score": 0.5669101,
+      "url": "https://cdhowe.org/publication/can-canada-accelerate-its-global-trade-diversification/",
       "category": "Think Tank"
     },
     {
-      "title": "Government of Canada invests in Francophone and bilingual digital health innovation",
-      "source": "GovCan - FedDev Ontario",
-      "score": 0.56398094,
-      "url": "https://www.canada.ca/en/economic-development-southern-ontario/news/2026/04/government-of-canada-invests-in-francophone-and-bilingual-digital-health-innovation.html",
+      "title": "Is a global food crisis looming?",
+      "source": "CBC Top Stories",
+      "score": 0.55411595,
+      "url": "https://www.cbc.ca/radio/frontburner/is-a-global-food-crisis-looming-9.7169743?cmp=rss",
+      "category": "News & Media"
+    },
+    {
+      "title": "Ontario Budget 2026: A Capability Assessment",
+      "source": "C.D. Howe Institute",
+      "score": 0.5379003,
+      "url": "https://cdhowe.org/publication/ontario-budget-2026-a-capability-assessment/",
+      "category": "Think Tank"
+    },
+    {
+      "title": "Toronto tenants launch new citywide union amid ongoing rent crisis and affordability concerns",
+      "source": "CBC Toronto",
+      "score": 0.52690226,
+      "url": "https://www.cbc.ca/news/canada/toronto/toronto-tenants-union-9.7166868?cmp=rss",
+      "category": "News & Media"
+    },
+    {
+      "title": "Governments of Canada and Northwest Territories partner to help workers adapt to changing global economy",
+      "source": "GovCan - ESDC",
+      "score": 0.5155892,
+      "url": "https://www.canada.ca/en/employment-social-development/news/2026/04/governments-of-canada-and-northwest-territories-partner-to-help-workers-adapt-to-changing-global-economy.html",
       "category": "Government"
     },
     {
-      "title": "Ford government spent billions on housing initiatives yet homebuilding has declined",
-      "source": "Fraser Institute",
-      "score": 0.5373107,
-      "url": "https://www.fraserinstitute.org/commentary/ford-government-spent-billions-housing-initiatives-yet-homebuilding-has-declined",
-      "category": "Think Tank"
-    },
-    {
-      "title": "Navigating turbulence – A more effective path to Canada’s economic diversification: George Abonyi and David Abonyi for Inside Policy",
-      "source": "Macdonald-Laurier Institute",
-      "score": 0.5243362,
-      "url": "https://macdonaldlaurier.ca/navigating-turbulence-a-more-effective-path-to-canadas-economic-diversification-george-abonyi-and-david-abonyi-for-inside-policy/",
-      "category": "Think Tank"
-    },
-    {
-      "title": "Canada launches national initiative to build large-scale AI supercomputing capacity",
-      "source": "GovCan - ISED",
-      "score": 0.5182229,
-      "url": "https://www.canada.ca/en/innovation-science-economic-development/news/2026/04/canada-launches-national-initiative-to-build-large-scale-ai-supercomputing-capacity.html",
-      "category": "Government"
-    },
-    {
-      "title": "Bridging the AI Policy Gap: Perspectives from Canada’s Builders",
-      "source": "CIGI",
-      "score": 0.51443756,
-      "url": "https://cigionlineorg.substack.com/p/bridging-the-ai-policy-gap-perspectives",
-      "category": "Think Tank"
-    },
-    {
-      "title": "Ontario housing will remain unaffordable without real reforms",
-      "source": "Fraser Institute",
-      "score": 0.5112772,
-      "url": "https://www.fraserinstitute.org/commentary/ontario-housing-will-remain-unaffordable-without-real-reforms",
-      "category": "Think Tank"
-    },
-    {
-      "title": "Canada and Saskatchewan invest in water and wastewater infrastructure to support more housing across the province",
+      "title": "Backgrounder: Government of Canada strengthens business growth in Delta and Richmond",
       "source": "GovCan - National News",
-      "score": 0.51090837,
-      "url": "https://www.canada.ca/en/housing-infrastructure-communities/news/2026/04/canada-and-saskatchewan-invest-in-water-and-wastewater-infrastructure-to-support-more-housing-across-the-province.html",
+      "score": 0.49982607,
+      "url": "https://www.canada.ca/en/pacific-economic-development/news/2026/04/backgrounder-government-of-canada-strengthens-business-growth-in-delta-and-richmond.html",
       "category": "Government"
     },
     {
-      "title": "Government of Canada supports the expansion of Sai Krishna Foods in Cap‑Pelé",
-      "source": "GovCan - National News",
-      "score": 0.50761986,
-      "url": "https://www.canada.ca/en/atlantic-canada-opportunities/news/2026/04/government-of-canada-supports-the-expansion-of-sai-krishna-foods-in-cappele.html",
+      "title": "Unequal Access: Making Sense of EI Eligibility Rules and How to Improve Them",
+      "source": "C.D. Howe Institute",
+      "score": 0.49657232,
+      "url": "https://www.google.com/url?rct=j&sa=t&url=https://cdhowe.org/wp-content/uploads/2024/04/Commentary_450.pdf&ct=ga&cd=CAIyGTBiN2Q5ZDE3MTY2MzQ5YWM6Y2E6ZW46Q0E&usg=AOvVaw0BajghftArnKEoIDPzG5jG",
+      "category": "Think Tank"
+    },
+    {
+      "title": "Backgrounder: Consultation document for Building Canada Strong for All - Powered by Canada’s Workers",
+      "source": "GovCan - ESDC",
+      "score": 0.49247053,
+      "url": "https://www.canada.ca/en/employment-social-development/news/2026/04/backgrounder-consultation-document-for-building-canada-strong-for-all---powered-by-canadas-workers.html",
+      "category": "Government"
+    },
+    {
+      "title": "Ontario Launches New Program to Strengthen Electricity Grid and Reduce Costs for Consumers",
+      "source": "Ontario Newsroom",
+      "score": 0.491339,
+      "url": "https://news.ontario.ca/en/release/1007313/ontario_launches_new_program_to_strengthen_electricity_grid_and_reduce_costs_for_consumers",
       "category": "Government"
     }
   ]
