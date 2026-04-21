@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-04-20T15:38:46Z",
+  "updated_at": "2026-04-21T22:54:32Z",
   "headlines": [
     {
       "title": "Government of Canada helping Edmonton-area businesses modernize operations and increase sales",
@@ -7,6 +7,13 @@
       "score": 0.58924097,
       "url": "https://www.canada.ca/en/prairies-economic-development/news/2026/04/government-of-canada-helping-edmonton-area-businesses-modernize-operations-and-increase-sales.html",
       "category": "Government"
+    },
+    {
+      "title": "Artificial Intelligence Is Already Reshaping Canada’s Economy. Policy Must Catch Up",
+      "source": "C.D. Howe Institute",
+      "score": 0.5794722,
+      "url": "https://cdhowe.org/publication/artificial-intelligence-is-already-reshaping-canadas-economy-policy-must-catch-up/",
+      "category": "Think Tank"
     },
     {
       "title": "Can Canada accelerate its global trade diversification?",
@@ -37,6 +44,20 @@
       "category": "News & Media"
     },
     {
+      "title": "AI Adoption in Canada Could Reach 48% by 2036 – But Productivity Gains Modest Compared to G7 Peers",
+      "source": "C.D. Howe Institute",
+      "score": 0.52408546,
+      "url": "https://cdhowe.org/publication/ai-adoption-in-canada-could-reach-48-by-2036-but-productivity-gains-modest-compared-to-g7-peers/",
+      "category": "Think Tank"
+    },
+    {
+      "title": "New Funding to Launch Canada-Europe Collaboration on Transformative Technologies",
+      "source": "Queen's CIDP",
+      "score": 0.51921,
+      "url": "https://www.queensu.ca/cidp/new-funding-launch-canada-europe-collaboration-transformative-technologies",
+      "category": "Academic Research"
+    },
+    {
       "title": "Governments of Canada and Northwest Territories partner to help workers adapt to changing global economy",
       "source": "GovCan - ESDC",
       "score": 0.5155892,
@@ -44,31 +65,10 @@
       "category": "Government"
     },
     {
-      "title": "Backgrounder: Government of Canada strengthens business growth in Delta and Richmond",
-      "source": "GovCan - National News",
-      "score": 0.49982607,
-      "url": "https://www.canada.ca/en/pacific-economic-development/news/2026/04/backgrounder-government-of-canada-strengthens-business-growth-in-delta-and-richmond.html",
-      "category": "Government"
-    },
-    {
-      "title": "Unequal Access: Making Sense of EI Eligibility Rules and How to Improve Them",
-      "source": "C.D. Howe Institute",
-      "score": 0.49657232,
-      "url": "https://www.google.com/url?rct=j&sa=t&url=https://cdhowe.org/wp-content/uploads/2024/04/Commentary_450.pdf&ct=ga&cd=CAIyGTBiN2Q5ZDE3MTY2MzQ5YWM6Y2E6ZW46Q0E&usg=AOvVaw0BajghftArnKEoIDPzG5jG",
-      "category": "Think Tank"
-    },
-    {
-      "title": "Backgrounder: Consultation document for Building Canada Strong for All - Powered by Canada’s Workers",
-      "source": "GovCan - ESDC",
-      "score": 0.49247053,
-      "url": "https://www.canada.ca/en/employment-social-development/news/2026/04/backgrounder-consultation-document-for-building-canada-strong-for-all---powered-by-canadas-workers.html",
-      "category": "Government"
-    },
-    {
-      "title": "Ontario Launches New Program to Strengthen Electricity Grid and Reduce Costs for Consumers",
+      "title": "Canada, Ontario and Mississauga invest in public transit infrastructure",
       "source": "Ontario Newsroom",
-      "score": 0.491339,
-      "url": "https://news.ontario.ca/en/release/1007313/ontario_launches_new_program_to_strengthen_electricity_grid_and_reduce_costs_for_consumers",
+      "score": 0.5104789,
+      "url": "https://news.ontario.ca/en/release/1007331/canada_ontario_and_mississauga_invest_in_public_transit_infrastructure",
       "category": "Government"
     }
   ]
