@@ -1,6 +1,13 @@
 {
-  "updated_at": "2026-04-21T22:54:32Z",
+  "updated_at": "2026-04-22T13:03:08Z",
   "headlines": [
+    {
+      "title": "Innovation sovereignty needs ecosystems, not isolation - Policy Options",
+      "source": "IRPP",
+      "score": 0.6369118,
+      "url": "https://www.google.com/url?rct=j&sa=t&url=https://policyoptions.irpp.org/2026/04/innovation-ecosystems-canada/&ct=ga&cd=CAIyGWJjYTQ5YjEyNDI4YzliZjA6Y2E6ZW46Q0E&usg=AOvVaw1dw2jCEk8AsfbAzP9gCWIy",
+      "category": "Think Tank"
+    },
     {
       "title": "Government of Canada helping Edmonton-area businesses modernize operations and increase sales",
       "source": "GovCan - National News",
@@ -37,6 +44,13 @@
       "category": "Think Tank"
     },
     {
+      "title": "AI Adoption in Canada Could Reach 48% by 2036 - But Productivity Gains Modest ...",
+      "source": "C.D. Howe Institute",
+      "score": 0.5340849,
+      "url": "https://www.google.com/url?rct=j&sa=t&url=https://cdhowe.org/publication/ai-adoption-in-canada-could-reach-48-by-2036-but-productivity-gains-modest-compared-to-g7-peers/&ct=ga&cd=CAIyGTBiN2Q5ZDE3MTY2MzQ5YWM6Y2E6ZW46Q0E&usg=AOvVaw1IhaB0cuwQxvE_F81bEmUA",
+      "category": "Think Tank"
+    },
+    {
       "title": "Toronto tenants launch new citywide union amid ongoing rent crisis and affordability concerns",
       "source": "CBC Toronto",
       "score": 0.52690226,
@@ -56,20 +70,6 @@
       "score": 0.51921,
       "url": "https://www.queensu.ca/cidp/new-funding-launch-canada-europe-collaboration-transformative-technologies",
       "category": "Academic Research"
-    },
-    {
-      "title": "Governments of Canada and Northwest Territories partner to help workers adapt to changing global economy",
-      "source": "GovCan - ESDC",
-      "score": 0.5155892,
-      "url": "https://www.canada.ca/en/employment-social-development/news/2026/04/governments-of-canada-and-northwest-territories-partner-to-help-workers-adapt-to-changing-global-economy.html",
-      "category": "Government"
-    },
-    {
-      "title": "Canada, Ontario and Mississauga invest in public transit infrastructure",
-      "source": "Ontario Newsroom",
-      "score": 0.5104789,
-      "url": "https://news.ontario.ca/en/release/1007331/canada_ontario_and_mississauga_invest_in_public_transit_infrastructure",
-      "category": "Government"
     }
   ]
 }
