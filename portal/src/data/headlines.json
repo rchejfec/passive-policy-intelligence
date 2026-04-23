@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-04-22T13:03:08Z",
+  "updated_at": "2026-04-23T17:28:06Z",
   "headlines": [
     {
       "title": "Innovation sovereignty needs ecosystems, not isolation - Policy Options",
@@ -9,11 +9,11 @@
       "category": "Think Tank"
     },
     {
-      "title": "Government of Canada helping Edmonton-area businesses modernize operations and increase sales",
-      "source": "GovCan - National News",
-      "score": 0.58924097,
-      "url": "https://www.canada.ca/en/prairies-economic-development/news/2026/04/government-of-canada-helping-edmonton-area-businesses-modernize-operations-and-increase-sales.html",
-      "category": "Government"
+      "title": "Beyond snapshots: The patterns of long-term poverty in Canada - Maytree",
+      "source": "Maytree",
+      "score": 0.6024819,
+      "url": "https://www.google.com/url?rct=j&sa=t&url=https://maytree.com/publications/beyond-snapshots-the-patterns-of-long-term-poverty-in-canada/&ct=ga&cd=CAIyGWU0YjBkODRjYmZkZWVjMmY6Y2E6ZW46Q0E&usg=AOvVaw22VYB-sa0avO9MSfoV647q",
+      "category": "Think Tank"
     },
     {
       "title": "Artificial Intelligence Is Already Reshaping Canada’s Economy. Policy Must Catch Up",
@@ -23,25 +23,32 @@
       "category": "Think Tank"
     },
     {
-      "title": "Can Canada accelerate its global trade diversification?",
-      "source": "C.D. Howe Institute",
-      "score": 0.5669101,
-      "url": "https://cdhowe.org/publication/can-canada-accelerate-its-global-trade-diversification/",
-      "category": "Think Tank"
+      "title": "Ontario Building More Supportive and Emergency Housing in Thunder Bay",
+      "source": "Ontario Newsroom",
+      "score": 0.55089164,
+      "url": "https://news.ontario.ca/en/release/1007342/ontario_building_more_supportive_and_emergency_housing_in_thunder_bay",
+      "category": "Government"
     },
     {
-      "title": "Is a global food crisis looming?",
-      "source": "CBC Top Stories",
-      "score": 0.55411595,
-      "url": "https://www.cbc.ca/radio/frontburner/is-a-global-food-crisis-looming-9.7169743?cmp=rss",
+      "title": "Federal agency boosts number of affordable units it's helping with in Ottawa",
+      "source": "CBC Ottawa",
+      "score": 0.5508243,
+      "url": "https://www.cbc.ca/news/canada/ottawa/canada-ottawa-homes-construction-spending-plan-affordable-9.7173763?cmp=rss",
       "category": "News & Media"
     },
     {
-      "title": "Ontario Budget 2026: A Capability Assessment",
-      "source": "C.D. Howe Institute",
-      "score": 0.5379003,
-      "url": "https://cdhowe.org/publication/ontario-budget-2026-a-capability-assessment/",
+      "title": "'Eat the rich' policy proposals won't help Canadian workers | Fraser Institute",
+      "source": "Fraser Institute",
+      "score": 0.5407999,
+      "url": "https://www.google.com/url?rct=j&sa=t&url=https://www.fraserinstitute.org/commentary/eat-rich-policy-proposals-wont-help-canadian-workers&ct=ga&cd=CAIyGzllODBhNzEzODg2Nzg3ZTA6Y2E6ZW46Q0E6Ug&usg=AOvVaw114lNovA8vMyQ2DGLaMXxf",
       "category": "Think Tank"
+    },
+    {
+      "title": "Province Introducing Legislation to Protect and Strengthen Ontario’s Agri-Food Sector",
+      "source": "Ontario Newsroom",
+      "score": 0.5370591,
+      "url": "https://news.ontario.ca/en/release/1007338/province_introducing_legislation_to_protect_and_strengthen_ontarios_agri_food_sector",
+      "category": "Government"
     },
     {
       "title": "AI Adoption in Canada Could Reach 48% by 2036 - But Productivity Gains Modest ...",
@@ -49,13 +56,6 @@
       "score": 0.5340849,
       "url": "https://www.google.com/url?rct=j&sa=t&url=https://cdhowe.org/publication/ai-adoption-in-canada-could-reach-48-by-2036-but-productivity-gains-modest-compared-to-g7-peers/&ct=ga&cd=CAIyGTBiN2Q5ZDE3MTY2MzQ5YWM6Y2E6ZW46Q0E&usg=AOvVaw1IhaB0cuwQxvE_F81bEmUA",
       "category": "Think Tank"
-    },
-    {
-      "title": "Toronto tenants launch new citywide union amid ongoing rent crisis and affordability concerns",
-      "source": "CBC Toronto",
-      "score": 0.52690226,
-      "url": "https://www.cbc.ca/news/canada/toronto/toronto-tenants-union-9.7166868?cmp=rss",
-      "category": "News & Media"
     },
     {
       "title": "AI Adoption in Canada Could Reach 48% by 2036 – But Productivity Gains Modest Compared to G7 Peers",
