@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-04-23T17:28:06Z",
+  "updated_at": "2026-04-24T18:33:07Z",
   "headlines": [
     {
       "title": "Innovation sovereignty needs ecosystems, not isolation - Policy Options",
@@ -16,10 +16,38 @@
       "category": "Think Tank"
     },
     {
-      "title": "Artificial Intelligence Is Already Reshaping Canada’s Economy. Policy Must Catch Up",
+      "title": "Advancing Indigenous Healthy Homes - Canadian Climate Institute",
+      "source": "Canadian Climate Institute",
+      "score": 0.58941305,
+      "url": "https://www.google.com/url?rct=j&sa=t&url=https://climateinstitute.ca/events/advancing-indigenous-healthy-homes/&ct=ga&cd=CAIyGWQyZDllYzljYzNiODY2OTM6Y2E6ZW46Q0E&usg=AOvVaw2gSJjMwq7vYwWoPoNR-G2u",
+      "category": "Think Tank"
+    },
+    {
+      "title": "Delivering on Funding for Urban, Rural and Northern Indigenous Housing",
+      "source": "GovCan - National News",
+      "score": 0.57249117,
+      "url": "https://www.canada.ca/en/housing-infrastructure-communities/news/2026/04/delivering-on-funding-for-urban-rural-and-northern-indigenous-housing.html",
+      "category": "Government"
+    },
+    {
+      "title": "Global carbon markets are Canada's next clean energy advantage",
+      "source": "Canadian Climate Institute",
+      "score": 0.5648955,
+      "url": "https://www.google.com/url?rct=j&sa=t&url=https://climateinstitute.ca/global-carbon-markets-canada-next-clean-energy-advantage/&ct=ga&cd=CAIyGWQyZDllYzljYzNiODY2OTM6Y2E6ZW46Q0E&usg=AOvVaw2DhfVnxe439t9-LhveE5N5",
+      "category": "Think Tank"
+    },
+    {
+      "title": "Governments of Canada and Prince Edward Island partner to support tariff-impacted workers and strengthen the workforce",
+      "source": "GovCan - ESDC",
+      "score": 0.5548597,
+      "url": "https://www.canada.ca/en/employment-social-development/news/2026/04/governments-of-canada-and-prince-edward-island-partner-to-support-tariff-impacted-workers-and-strengthen-the-workforce.html",
+      "category": "Government"
+    },
+    {
+      "title": "Stop Ignoring Fiscal Reality: Rising Debt and Weak Growth Put Canada at Risk",
       "source": "C.D. Howe Institute",
-      "score": 0.5794722,
-      "url": "https://cdhowe.org/publication/artificial-intelligence-is-already-reshaping-canadas-economy-policy-must-catch-up/",
+      "score": 0.55347717,
+      "url": "https://www.google.com/url?rct=j&sa=t&url=https://cdhowe.org/publication/stop-ignoring-fiscal-reality-rising-debt-and-weak-growth-put-canada-at-risk/&ct=ga&cd=CAIyGTBiN2Q5ZDE3MTY2MzQ5YWM6Y2E6ZW46Q0E&usg=AOvVaw01YBuSeqt-AzaaozSL11rp",
       "category": "Think Tank"
     },
     {
@@ -37,39 +65,11 @@
       "category": "News & Media"
     },
     {
-      "title": "'Eat the rich' policy proposals won't help Canadian workers | Fraser Institute",
-      "source": "Fraser Institute",
-      "score": 0.5407999,
-      "url": "https://www.google.com/url?rct=j&sa=t&url=https://www.fraserinstitute.org/commentary/eat-rich-policy-proposals-wont-help-canadian-workers&ct=ga&cd=CAIyGzllODBhNzEzODg2Nzg3ZTA6Y2E6ZW46Q0E6Ug&usg=AOvVaw114lNovA8vMyQ2DGLaMXxf",
+      "title": "Build Canada’s homes? Ottawa should hand the hammer to the experts: Tsur Somerville for Inside Policy",
+      "source": "Macdonald-Laurier Institute",
+      "score": 0.54318607,
+      "url": "https://macdonaldlaurier.ca/build-canadas-homes-ottawa-should-hand-the-hammer-to-the-experts-tsur-somerville-for-inside-policy/",
       "category": "Think Tank"
-    },
-    {
-      "title": "Province Introducing Legislation to Protect and Strengthen Ontario’s Agri-Food Sector",
-      "source": "Ontario Newsroom",
-      "score": 0.5370591,
-      "url": "https://news.ontario.ca/en/release/1007338/province_introducing_legislation_to_protect_and_strengthen_ontarios_agri_food_sector",
-      "category": "Government"
-    },
-    {
-      "title": "AI Adoption in Canada Could Reach 48% by 2036 - But Productivity Gains Modest ...",
-      "source": "C.D. Howe Institute",
-      "score": 0.5340849,
-      "url": "https://www.google.com/url?rct=j&sa=t&url=https://cdhowe.org/publication/ai-adoption-in-canada-could-reach-48-by-2036-but-productivity-gains-modest-compared-to-g7-peers/&ct=ga&cd=CAIyGTBiN2Q5ZDE3MTY2MzQ5YWM6Y2E6ZW46Q0E&usg=AOvVaw1IhaB0cuwQxvE_F81bEmUA",
-      "category": "Think Tank"
-    },
-    {
-      "title": "AI Adoption in Canada Could Reach 48% by 2036 – But Productivity Gains Modest Compared to G7 Peers",
-      "source": "C.D. Howe Institute",
-      "score": 0.52408546,
-      "url": "https://cdhowe.org/publication/ai-adoption-in-canada-could-reach-48-by-2036-but-productivity-gains-modest-compared-to-g7-peers/",
-      "category": "Think Tank"
-    },
-    {
-      "title": "New Funding to Launch Canada-Europe Collaboration on Transformative Technologies",
-      "source": "Queen's CIDP",
-      "score": 0.51921,
-      "url": "https://www.queensu.ca/cidp/new-funding-launch-canada-europe-collaboration-transformative-technologies",
-      "category": "Academic Research"
     }
   ]
 }
