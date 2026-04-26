@@ -1,19 +1,12 @@
 {
-  "updated_at": "2026-04-24T18:33:07Z",
+  "updated_at": "2026-04-26T14:43:06Z",
   "headlines": [
     {
-      "title": "Innovation sovereignty needs ecosystems, not isolation - Policy Options",
-      "source": "IRPP",
-      "score": 0.6369118,
-      "url": "https://www.google.com/url?rct=j&sa=t&url=https://policyoptions.irpp.org/2026/04/innovation-ecosystems-canada/&ct=ga&cd=CAIyGWJjYTQ5YjEyNDI4YzliZjA6Y2E6ZW46Q0E&usg=AOvVaw1dw2jCEk8AsfbAzP9gCWIy",
-      "category": "Think Tank"
-    },
-    {
-      "title": "Beyond snapshots: The patterns of long-term poverty in Canada - Maytree",
-      "source": "Maytree",
-      "score": 0.6024819,
-      "url": "https://www.google.com/url?rct=j&sa=t&url=https://maytree.com/publications/beyond-snapshots-the-patterns-of-long-term-poverty-in-canada/&ct=ga&cd=CAIyGWU0YjBkODRjYmZkZWVjMmY6Y2E6ZW46Q0E&usg=AOvVaw22VYB-sa0avO9MSfoV647q",
-      "category": "Think Tank"
+      "title": "Minister Anandasangaree in Iqaluit to highlight recent measures to make life more affordable for Canadians",
+      "source": "GovCan - National News",
+      "score": 0.59228426,
+      "url": "https://www.canada.ca/en/public-safety-canada/news/2026/04/minister-anandasangaree-in-iqaluit-to-highlight-recent-measures-to-make-life-more-affordable-for-canadians.html",
+      "category": "Government"
     },
     {
       "title": "Advancing Indigenous Healthy Homes - Canadian Climate Institute",
@@ -51,24 +44,31 @@
       "category": "Think Tank"
     },
     {
-      "title": "Ontario Building More Supportive and Emergency Housing in Thunder Bay",
-      "source": "Ontario Newsroom",
-      "score": 0.55089164,
-      "url": "https://news.ontario.ca/en/release/1007342/ontario_building_more_supportive_and_emergency_housing_in_thunder_bay",
-      "category": "Government"
-    },
-    {
-      "title": "Federal agency boosts number of affordable units it's helping with in Ottawa",
-      "source": "CBC Ottawa",
-      "score": 0.5508243,
-      "url": "https://www.cbc.ca/news/canada/ottawa/canada-ottawa-homes-construction-spending-plan-affordable-9.7173763?cmp=rss",
-      "category": "News & Media"
-    },
-    {
       "title": "Build Canada’s homes? Ottawa should hand the hammer to the experts: Tsur Somerville for Inside Policy",
       "source": "Macdonald-Laurier Institute",
       "score": 0.54318607,
       "url": "https://macdonaldlaurier.ca/build-canadas-homes-ottawa-should-hand-the-hammer-to-the-experts-tsur-somerville-for-inside-policy/",
+      "category": "Think Tank"
+    },
+    {
+      "title": "Government of Canada strengthening our economy and military readiness through new defence investments in Saskatchewan",
+      "source": "GovCan - National News",
+      "score": 0.53218925,
+      "url": "https://www.canada.ca/en/prairies-economic-development/news/2026/04/government-of-canada-strengthening-our-economy-and-military-readiness-through-new-defence-investments-in-saskatchewan.html",
+      "category": "Government"
+    },
+    {
+      "title": "Getting the job done on bolstering Canada’s defence requires difficult financial decisions",
+      "source": "C.D. Howe Institute",
+      "score": 0.53158134,
+      "url": "https://cdhowe.org/publication/getting-the-job-done-on-bolstering-canadas-defence-requires-difficult-financial-decisions/",
+      "category": "Think Tank"
+    },
+    {
+      "title": "Governing Sustainable Al Data Centre Growth in Canada",
+      "source": "CIGI",
+      "score": 0.5280538,
+      "url": "https://www.google.com/url?rct=j&sa=t&url=https://www.cigionline.org/publications/governing-sustainable-al-data-centre-growth-in-canada/&ct=ga&cd=CAIyGWZmZmMwYWJmNzRiZDQwODk6Y2E6ZW46Q0E&usg=AOvVaw2oSjDpPxC-f6KFruExRtZB",
       "category": "Think Tank"
     }
   ]
