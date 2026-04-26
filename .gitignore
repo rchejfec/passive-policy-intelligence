@@ -37,6 +37,7 @@ output/
 user_content/drafts_for_indexing/
 user_content/indexed_log.txt
 user_content/*.csv
+!user_content/ConsolidatedRSSFeeds.csv
 user_content/website_tags*
 user_content/program_project_charters/
 
