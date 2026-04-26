@@ -1,0 +1,35 @@
+name: Archive RSS Links
+
+on:
+  schedule:
+    - cron: "0 13 * * *"  # 9am Eastern (UTC-4 summer)
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  archive:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install feedparser requests
+
+      - name: Run archiver
+        run: python scripts/archive_rss_links.py
+
+      - name: Commit archive
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add archive/rss_archive.csv
+          git diff --cached --quiet || git commit -m "Archive RSS links: $(date -u '+%Y-%m-%d')"
+          git push
