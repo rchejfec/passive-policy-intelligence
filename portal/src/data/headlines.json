@@ -1,75 +1,75 @@
 {
-  "updated_at": "2026-04-26T14:43:06Z",
+  "updated_at": "2026-05-07T21:54:07Z",
   "headlines": [
     {
-      "title": "Minister Anandasangaree in Iqaluit to highlight recent measures to make life more affordable for Canadians",
-      "source": "GovCan - National News",
-      "score": 0.59228426,
-      "url": "https://www.canada.ca/en/public-safety-canada/news/2026/04/minister-anandasangaree-in-iqaluit-to-highlight-recent-measures-to-make-life-more-affordable-for-canadians.html",
+      "title": "Minister Joly highlights major investments in college-led applied research from Spring Economic Update 2026: Canada Strong for All",
+      "source": "GovCan - ISED",
+      "score": 0.59881866,
+      "url": "https://www.canada.ca/en/innovation-science-economic-development/news/2026/05/minister-joly-highlights-major-investments-in-college-led-applied-research-from-spring-economic-update-2026-canada-strong-for-all.html",
       "category": "Government"
     },
     {
-      "title": "Advancing Indigenous Healthy Homes - Canadian Climate Institute",
-      "source": "Canadian Climate Institute",
-      "score": 0.58941305,
-      "url": "https://www.google.com/url?rct=j&sa=t&url=https://climateinstitute.ca/events/advancing-indigenous-healthy-homes/&ct=ga&cd=CAIyGWQyZDllYzljYzNiODY2OTM6Y2E6ZW46Q0E&usg=AOvVaw2gSJjMwq7vYwWoPoNR-G2u",
+      "title": "AI Canada: Building a sovereign public computing infrastructure - Policy Options",
+      "source": "IRPP",
+      "score": 0.5924814,
+      "url": "https://www.google.com/url?rct=j&sa=t&url=https://policyoptions.irpp.org/2026/04/ai-public-infrastructure/&ct=ga&cd=CAIyGWJjYTQ5YjEyNDI4YzliZjA6Y2E6ZW46Q0E&usg=AOvVaw0qiqbCZh8mivsBcjHvL8-G",
       "category": "Think Tank"
     },
     {
-      "title": "Delivering on Funding for Urban, Rural and Northern Indigenous Housing",
-      "source": "GovCan - National News",
-      "score": 0.57249117,
-      "url": "https://www.canada.ca/en/housing-infrastructure-communities/news/2026/04/delivering-on-funding-for-urban-rural-and-northern-indigenous-housing.html",
+      "title": "Ontario Helping Connect More Students With Rewarding Careers in the Skilled Trades",
+      "source": "Ontario Newsroom",
+      "score": 0.530114,
+      "url": "https://news.ontario.ca/en/release/1007400/ontario_helping_connect_more_students_with_rewarding_careers_in_the_skilled_trades",
       "category": "Government"
     },
     {
-      "title": "Global carbon markets are Canada's next clean energy advantage",
-      "source": "Canadian Climate Institute",
-      "score": 0.5648955,
-      "url": "https://www.google.com/url?rct=j&sa=t&url=https://climateinstitute.ca/global-carbon-markets-canada-next-clean-energy-advantage/&ct=ga&cd=CAIyGWQyZDllYzljYzNiODY2OTM6Y2E6ZW46Q0E&usg=AOvVaw2DhfVnxe439t9-LhveE5N5",
-      "category": "Think Tank"
-    },
-    {
-      "title": "Governments of Canada and Prince Edward Island partner to support tariff-impacted workers and strengthen the workforce",
-      "source": "GovCan - ESDC",
-      "score": 0.5548597,
-      "url": "https://www.canada.ca/en/employment-social-development/news/2026/04/governments-of-canada-and-prince-edward-island-partner-to-support-tariff-impacted-workers-and-strengthen-the-workforce.html",
-      "category": "Government"
-    },
-    {
-      "title": "Stop Ignoring Fiscal Reality: Rising Debt and Weak Growth Put Canada at Risk",
+      "title": "Canada’s Growth Outlook Is Resetting – Policy Expectations Should Too",
       "source": "C.D. Howe Institute",
-      "score": 0.55347717,
-      "url": "https://www.google.com/url?rct=j&sa=t&url=https://cdhowe.org/publication/stop-ignoring-fiscal-reality-rising-debt-and-weak-growth-put-canada-at-risk/&ct=ga&cd=CAIyGTBiN2Q5ZDE3MTY2MzQ5YWM6Y2E6ZW46Q0E&usg=AOvVaw01YBuSeqt-AzaaozSL11rp",
+      "score": 0.5281885,
+      "url": "https://cdhowe.org/publication/canadas-growth-outlook-is-resetting-policy-expectations-should-too/",
       "category": "Think Tank"
     },
     {
-      "title": "Build Canada’s homes? Ottawa should hand the hammer to the experts: Tsur Somerville for Inside Policy",
-      "source": "Macdonald-Laurier Institute",
-      "score": 0.54318607,
-      "url": "https://macdonaldlaurier.ca/build-canadas-homes-ottawa-should-hand-the-hammer-to-the-experts-tsur-somerville-for-inside-policy/",
-      "category": "Think Tank"
-    },
-    {
-      "title": "Government of Canada strengthening our economy and military readiness through new defence investments in Saskatchewan",
+      "title": "Minister Champagne introduces second piece of legislation to implement Budget 2025: Canada Strong",
       "source": "GovCan - National News",
-      "score": 0.53218925,
-      "url": "https://www.canada.ca/en/prairies-economic-development/news/2026/04/government-of-canada-strengthening-our-economy-and-military-readiness-through-new-defence-investments-in-saskatchewan.html",
+      "score": 0.52787375,
+      "url": "https://www.canada.ca/en/department-finance/news/2026/05/minister-champagne-introduces-second-piece-of-legislation-to-implement-budget-2025-canada-strong.html",
       "category": "Government"
     },
     {
-      "title": "Getting the job done on bolstering Canada’s defence requires difficult financial decisions",
+      "title": "The Government of Canada invests in infrastructure for youth homelessness",
+      "source": "GovCan - National News",
+      "score": 0.5274163,
+      "url": "https://www.canada.ca/en/housing-infrastructure-communities/news/2026/05/the-government-of-canada-invests-in-infrastructure-for-youth-homelessness.html",
+      "category": "Government"
+    },
+    {
+      "title": "Meeting the Challenge of Rising Homelessness in Toronto - C.D. Howe Institute",
       "source": "C.D. Howe Institute",
-      "score": 0.53158134,
-      "url": "https://cdhowe.org/publication/getting-the-job-done-on-bolstering-canadas-defence-requires-difficult-financial-decisions/",
+      "score": 0.52506346,
+      "url": "https://www.google.com/url?rct=j&sa=t&url=https://cdhowe.org/events/meeting-the-challenge-of-rising-homelessness-in-toronto/&ct=ga&cd=CAIyGTBiN2Q5ZDE3MTY2MzQ5YWM6Y2E6ZW46Q0E&usg=AOvVaw12T7vBgLDuiGgfCjALcPB3",
       "category": "Think Tank"
     },
     {
-      "title": "Governing Sustainable Al Data Centre Growth in Canada",
-      "source": "CIGI",
-      "score": 0.5280538,
-      "url": "https://www.google.com/url?rct=j&sa=t&url=https://www.cigionline.org/publications/governing-sustainable-al-data-centre-growth-in-canada/&ct=ga&cd=CAIyGWZmZmMwYWJmNzRiZDQwODk6Y2E6ZW46Q0E&usg=AOvVaw2oSjDpPxC-f6KFruExRtZB",
+      "title": "Make AI policy about contribution, not just protection",
+      "source": "IRPP",
+      "score": 0.521985,
+      "url": "https://www.google.com/url?rct=j&sa=t&url=https://policyoptions.irpp.org/2026/05/ai-contribution-policy/&ct=ga&cd=CAIyGWJjYTQ5YjEyNDI4YzliZjA6Y2E6ZW46Q0E&usg=AOvVaw0aDtExDl3fBbPwSk6nuVcH",
       "category": "Think Tank"
+    },
+    {
+      "title": "Canada’s Energy Strategy Must Look Beyond Current Market Disruption",
+      "source": "C.D. Howe Institute",
+      "score": 0.5164745,
+      "url": "https://cdhowe.org/publication/canadas-energy-strategy-must-look-beyond-current-market-disruption/",
+      "category": "Think Tank"
+    },
+    {
+      "title": "Government of Canada announces a new $1 billion Business Development Bank of Canada program and $500 million in additional funding for the Regional Tariff Response Initiative",
+      "source": "GovCan - National News",
+      "score": 0.5106479,
+      "url": "https://www.canada.ca/en/innovation-science-economic-development/news/2026/05/government-of-canada-announces-a-new-1-billion-business-development-bank-of-canada-program-and-500-million-in-additional-funding-for-the-regional-t0.html",
+      "category": "Government"
     }
   ]
 }
