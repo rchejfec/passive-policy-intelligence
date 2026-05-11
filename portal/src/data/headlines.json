@@ -1,74 +1,74 @@
 {
-  "updated_at": "2026-05-07T21:54:07Z",
+  "updated_at": "2026-05-11T14:34:37Z",
   "headlines": [
     {
-      "title": "Minister Joly highlights major investments in college-led applied research from Spring Economic Update 2026: Canada Strong for All",
-      "source": "GovCan - ISED",
-      "score": 0.59881866,
-      "url": "https://www.canada.ca/en/innovation-science-economic-development/news/2026/05/minister-joly-highlights-major-investments-in-college-led-applied-research-from-spring-economic-update-2026-canada-strong-for-all.html",
-      "category": "Government"
-    },
-    {
-      "title": "AI Canada: Building a sovereign public computing infrastructure - Policy Options",
-      "source": "IRPP",
-      "score": 0.5924814,
-      "url": "https://www.google.com/url?rct=j&sa=t&url=https://policyoptions.irpp.org/2026/04/ai-public-infrastructure/&ct=ga&cd=CAIyGWJjYTQ5YjEyNDI4YzliZjA6Y2E6ZW46Q0E&usg=AOvVaw0qiqbCZh8mivsBcjHvL8-G",
+      "title": "The Canadian Standard of Living, Productivity and Innovation: Canada's Prosperity ...",
+      "source": "CIGI",
+      "score": 0.65747255,
+      "url": "https://www.google.com/url?rct=j&sa=t&url=https://www.cigionline.org/events/the-canadian-standard-of-living-productivity-and-innovation-canadas-prosperity-depends-on-turning-innovation-into-productivity/&ct=ga&cd=CAIyGWZmZmMwYWJmNzRiZDQwODk6Y2E6ZW46Q0E&usg=AOvVaw38pt7p-e5GoVlnUFCg3jH9",
       "category": "Think Tank"
     },
     {
-      "title": "Ontario Helping Connect More Students With Rewarding Careers in the Skilled Trades",
+      "title": "Government of Canada to announce federal support to accelerate clean technology innovation in Canadian agriculture",
+      "source": "GovCan - National News",
+      "score": 0.63264847,
+      "url": "https://www.canada.ca/en/agriculture-agri-food/news/2026/05/government-of-canada-to-announce-federal-support-to-accelerate-clean-technology-innovation-in-canadian-agriculture.html",
+      "category": "Government"
+    },
+    {
+      "title": "Government of Canada to announce investments to strengthen B.C. tech sector and help businesses grow",
+      "source": "GovCan - National News",
+      "score": 0.60892224,
+      "url": "https://www.canada.ca/en/pacific-economic-development/news/2026/05/government-of-canada-to-announce-investments-to-strengthen-bc-tech-sector-and-help-businesses-grow.html",
+      "category": "Government"
+    },
+    {
+      "title": "Government of Canada invests $30 million in six not-for-profit organizations to help accelerate clean technology innovation across Canadian agriculture",
+      "source": "GovCan - National News",
+      "score": 0.58515257,
+      "url": "https://www.canada.ca/en/agriculture-agri-food/news/2026/05/government-of-canada-invests-30-million-in-six-not-for-profit-organizations-to-help-accelerate-clean-technology-innovation-across-canadian-agriculture.html",
+      "category": "Government"
+    },
+    {
+      "title": "In Montreal, Minister Anandasangaree highlights investments in combatting crime from Spring Economic Update 2026",
+      "source": "GovCan - National News",
+      "score": 0.5465882,
+      "url": "https://www.canada.ca/en/public-safety-canada/news/2026/05/in-montreal-minister-anandasangaree-highlights-investments-in-combatting-crime-from-spring-economic-update-2026.html",
+      "category": "Government"
+    },
+    {
+      "title": "Building the workforce needed to deliver more homes in Etobicoke, Ontario",
+      "source": "GovCan - ESDC",
+      "score": 0.5411958,
+      "url": "https://www.canada.ca/en/employment-social-development/news/2026/05/building-the-workforce-needed-to-deliver-more-homes-in-etobicoke-ontario.html",
+      "category": "Government"
+    },
+    {
+      "title": "Québec solidaire weighing priorities, including wealth tax and public grocery stores",
+      "source": "Globe and Mail - Canada",
+      "score": 0.5298779,
+      "url": "https://www.theglobeandmail.com/politics/article-quebec-solidaire-weighing-priorities-including-wealth-tax-and-public/",
+      "category": "News & Media"
+    },
+    {
+      "title": "Canada announces new international migration capacity-building projects",
+      "source": "GovCan - IRCC",
+      "score": 0.5270408,
+      "url": "https://www.canada.ca/en/immigration-refugees-citizenship/news/2026/05/canada-announces-new-international-migration-capacity-building-projects.html",
+      "category": "Government"
+    },
+    {
+      "title": "Canada’s new government to simplify and accelerate Canada’s regulatory process",
+      "source": "GovCan - National News",
+      "score": 0.5051169,
+      "url": "https://www.canada.ca/en/one-canadian-economy/news/2026/05/canadas-new-government-to-simplify-and-accelerate-canadas-regulatory-process.html",
+      "category": "Government"
+    },
+    {
+      "title": "Ontario Investing More Than $14 Million for Housing-Enabling Infrastructure in Lanark and Frontenac Counties",
       "source": "Ontario Newsroom",
-      "score": 0.530114,
-      "url": "https://news.ontario.ca/en/release/1007400/ontario_helping_connect_more_students_with_rewarding_careers_in_the_skilled_trades",
-      "category": "Government"
-    },
-    {
-      "title": "Canada’s Growth Outlook Is Resetting – Policy Expectations Should Too",
-      "source": "C.D. Howe Institute",
-      "score": 0.5281885,
-      "url": "https://cdhowe.org/publication/canadas-growth-outlook-is-resetting-policy-expectations-should-too/",
-      "category": "Think Tank"
-    },
-    {
-      "title": "Minister Champagne introduces second piece of legislation to implement Budget 2025: Canada Strong",
-      "source": "GovCan - National News",
-      "score": 0.52787375,
-      "url": "https://www.canada.ca/en/department-finance/news/2026/05/minister-champagne-introduces-second-piece-of-legislation-to-implement-budget-2025-canada-strong.html",
-      "category": "Government"
-    },
-    {
-      "title": "The Government of Canada invests in infrastructure for youth homelessness",
-      "source": "GovCan - National News",
-      "score": 0.5274163,
-      "url": "https://www.canada.ca/en/housing-infrastructure-communities/news/2026/05/the-government-of-canada-invests-in-infrastructure-for-youth-homelessness.html",
-      "category": "Government"
-    },
-    {
-      "title": "Meeting the Challenge of Rising Homelessness in Toronto - C.D. Howe Institute",
-      "source": "C.D. Howe Institute",
-      "score": 0.52506346,
-      "url": "https://www.google.com/url?rct=j&sa=t&url=https://cdhowe.org/events/meeting-the-challenge-of-rising-homelessness-in-toronto/&ct=ga&cd=CAIyGTBiN2Q5ZDE3MTY2MzQ5YWM6Y2E6ZW46Q0E&usg=AOvVaw12T7vBgLDuiGgfCjALcPB3",
-      "category": "Think Tank"
-    },
-    {
-      "title": "Make AI policy about contribution, not just protection",
-      "source": "IRPP",
-      "score": 0.521985,
-      "url": "https://www.google.com/url?rct=j&sa=t&url=https://policyoptions.irpp.org/2026/05/ai-contribution-policy/&ct=ga&cd=CAIyGWJjYTQ5YjEyNDI4YzliZjA6Y2E6ZW46Q0E&usg=AOvVaw0aDtExDl3fBbPwSk6nuVcH",
-      "category": "Think Tank"
-    },
-    {
-      "title": "Canada’s Energy Strategy Must Look Beyond Current Market Disruption",
-      "source": "C.D. Howe Institute",
-      "score": 0.5164745,
-      "url": "https://cdhowe.org/publication/canadas-energy-strategy-must-look-beyond-current-market-disruption/",
-      "category": "Think Tank"
-    },
-    {
-      "title": "Government of Canada announces a new $1 billion Business Development Bank of Canada program and $500 million in additional funding for the Regional Tariff Response Initiative",
-      "source": "GovCan - National News",
-      "score": 0.5106479,
-      "url": "https://www.canada.ca/en/innovation-science-economic-development/news/2026/05/government-of-canada-announces-a-new-1-billion-business-development-bank-of-canada-program-and-500-million-in-additional-funding-for-the-regional-t0.html",
+      "score": 0.50317633,
+      "url": "https://news.ontario.ca/en/release/1007425/ontario_investing_more_than_14_million_for_housing_enabling_infrastructure_in_lanark_and_frontenac_counties",
       "category": "Government"
     }
   ]
