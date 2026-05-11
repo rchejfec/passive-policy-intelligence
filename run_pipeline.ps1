@@ -90,13 +90,20 @@ function Send-TeamsNotification {
     } | ConvertTo-Json -Depth 10
 
     # Send the request
-    $webhookUrl = $env:TEAMS_WEBHOOK_URL
+    $webhookUrl = $env:TEAMS_WEBHOOK_URL_DEV
     # Convert to UTF-8 bytes to properly handle emojis
     $utf8Bytes = [System.Text.Encoding]::UTF8.GetBytes($jsonPayload)
     Invoke-RestMethod -Uri $webhookUrl -Method Post -Body $utf8Bytes -ContentType "application/json; charset=utf-8"
 }
 
-# 5. Run the Orchestrator (with automatic DEMO-only export)
+# 5. Pull latest archive from GitHub before running
+Write-Host "Pulling latest archive from GitHub..."
+git pull origin main --quiet
+if ($LASTEXITCODE -ne 0) {
+    Write-Host "WARNING: git pull failed — running with local archive copy."
+}
+
+# 6. Run the Orchestrator (with automatic DEMO-only export)
 Write-Host "=================================================="
 Write-Host "DEMO UPDATE: Starting Pipeline Run"
 Write-Host "=================================================="
@@ -124,8 +131,8 @@ if ($exitCode -eq 0) {
         if ($gitStatus) {
             Write-Host "Changes detected in portal/src/data/"
 
-            # Stage parquet files
-            git add portal/src/data/*.parquet
+            # Stage parquet files and headlines JSON
+            git add portal/src/data/*.parquet portal/src/data/headlines.json
 
             # Commit with timestamp
             $commitMessage = "Update data: $(Get-Date -Format 'yyyy-MM-dd HH:mm')"

@@ -66,10 +66,14 @@ EOF
 )
 
     # Send the request
-    curl -H "Content-Type: application/json" -d "$json_payload" "$TEAMS_WEBHOOK_URL"
+    curl -H "Content-Type: application/json" -d "$json_payload" "$TEAMS_WEBHOOK_URL_DEV"
 }
 
-# 5. Run the Orchestrator
+# 5. Pull latest archive from GitHub before running
+echo "Pulling latest archive from GitHub..."
+git pull origin main --quiet || echo "WARNING: git pull failed — running with local archive copy."
+
+# 6. Run the Orchestrator
 echo "=================================================="
 echo "Starting Pipeline Run: $(date)"
 
