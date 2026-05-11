@@ -16,6 +16,7 @@ if ROOT_DIR not in sys.path:
 # We will import the script modules here as we refactor them
 # from src.ingestion import index_knowledge_base
 from src.ingestion import rss_fetcher
+from src.ingestion import archive_ingestor
 from src.ingestion import index_articles
 from src.analysis import analyze_articles
 from src.analysis import enrich_articles
@@ -54,6 +55,9 @@ def run_pipeline() -> None:
         print("\n--- STEP: Running RSS Fetcher ---")
         metrics['articles_fetched'] = rss_fetcher.main(conn) or 0
 
+        print("\n--- STEP: Running Archive Ingestor ---")
+        metrics['articles_fetched'] += archive_ingestor.main(conn) or 0
+
         print("\n--- STEP: Running Article Indexer ---")
         index_articles.main(conn)
 
@@ -82,6 +86,15 @@ def run_pipeline() -> None:
             print("Pipeline completed but portal data may not be updated.")
         else:
             print(result.stdout)
+
+        # NEW: Export Headlines JSON for ppkb-site integration
+        print("\n--- STEP: Running Headlines Export (JSON) ---")
+        export_headlines_script = os.path.join(SCRIPT_DIR, 'scripts', 'export_headlines.py')
+        result_headlines = subprocess.run([sys.executable, export_headlines_script], capture_output=True, text=True)
+        if result_headlines.returncode != 0:
+            print(f"WARNING: Headlines export failed: {result_headlines.stderr}")
+        else:
+            print(result_headlines.stdout)
 
         status = 'SUCCESS'
         print("ORCHESTRATOR: Transaction committed successfully.")
