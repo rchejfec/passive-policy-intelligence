@@ -1,13 +1,6 @@
 {
-  "updated_at": "2026-05-11T14:34:37Z",
+  "updated_at": "2026-05-13T17:58:12Z",
   "headlines": [
-    {
-      "title": "The Canadian Standard of Living, Productivity and Innovation: Canada's Prosperity ...",
-      "source": "CIGI",
-      "score": 0.65747255,
-      "url": "https://www.google.com/url?rct=j&sa=t&url=https://www.cigionline.org/events/the-canadian-standard-of-living-productivity-and-innovation-canadas-prosperity-depends-on-turning-innovation-into-productivity/&ct=ga&cd=CAIyGWZmZmMwYWJmNzRiZDQwODk6Y2E6ZW46Q0E&usg=AOvVaw38pt7p-e5GoVlnUFCg3jH9",
-      "category": "Think Tank"
-    },
     {
       "title": "Government of Canada to announce federal support to accelerate clean technology innovation in Canadian agriculture",
       "source": "GovCan - National News",
@@ -23,6 +16,20 @@
       "category": "Government"
     },
     {
+      "title": "Governments of Canada and Nova Scotia partner to support employers, industry and workers impacted by tariffs and global market shifts",
+      "source": "GovCan - ESDC",
+      "score": 0.5995702,
+      "url": "https://www.canada.ca/en/employment-social-development/news/2026/05/governments-of-canada-and-nova-scotia-partner-to-support-employers-industry-and-workers-impacted-by-tariffs-and-global-market-shifts.html",
+      "category": "Government"
+    },
+    {
+      "title": "Canada's Prosperity Depends on Turning Innovation into Productivity",
+      "source": "CIGI",
+      "score": 0.59451616,
+      "url": "https://www.google.com/url?rct=j&sa=t&url=https://www.cigionline.org/events/canadas-prosperity-depends-on-turning-innovation-into-productivity/&ct=ga&cd=CAIyGWZmZmMwYWJmNzRiZDQwODk6Y2E6ZW46Q0E&usg=AOvVaw2dXpcaV_DL6xoqAbYe-mL2",
+      "category": "Think Tank"
+    },
+    {
       "title": "Government of Canada invests $30 million in six not-for-profit organizations to help accelerate clean technology innovation across Canadian agriculture",
       "source": "GovCan - National News",
       "score": 0.58515257,
@@ -30,46 +37,39 @@
       "category": "Government"
     },
     {
-      "title": "In Montreal, Minister Anandasangaree highlights investments in combatting crime from Spring Economic Update 2026",
+      "title": "Unlocking Canada's $1.8 Trillion Growth Opportunity - C.D. Howe Institute",
+      "source": "C.D. Howe Institute",
+      "score": 0.58417773,
+      "url": "https://www.google.com/url?rct=j&sa=t&url=https://cdhowe.org/events/unlocking-canadas-1-8-trillion-growth-opportunity/&ct=ga&cd=CAIyGTBiN2Q5ZDE3MTY2MzQ5YWM6Y2E6ZW46Q0E&usg=AOvVaw3j9PYnM_ywn4SirtAdYY1w",
+      "category": "Think Tank"
+    },
+    {
+      "title": "Accelerating commercialization and adoption of AI and quantum technologies in British Columbia",
       "source": "GovCan - National News",
-      "score": 0.5465882,
-      "url": "https://www.canada.ca/en/public-safety-canada/news/2026/05/in-montreal-minister-anandasangaree-highlights-investments-in-combatting-crime-from-spring-economic-update-2026.html",
+      "score": 0.57962394,
+      "url": "https://www.canada.ca/en/pacific-economic-development/news/2026/05/accelerating-commercialization-and-adoption-of-ai-and-quantum-technologies-in-british-columbia.html",
       "category": "Government"
     },
     {
-      "title": "Building the workforce needed to deliver more homes in Etobicoke, Ontario",
-      "source": "GovCan - ESDC",
-      "score": 0.5411958,
-      "url": "https://www.canada.ca/en/employment-social-development/news/2026/05/building-the-workforce-needed-to-deliver-more-homes-in-etobicoke-ontario.html",
-      "category": "Government"
-    },
-    {
-      "title": "Québec solidaire weighing priorities, including wealth tax and public grocery stores",
-      "source": "Globe and Mail - Canada",
-      "score": 0.5298779,
-      "url": "https://www.theglobeandmail.com/politics/article-quebec-solidaire-weighing-priorities-including-wealth-tax-and-public/",
-      "category": "News & Media"
-    },
-    {
-      "title": "Canada announces new international migration capacity-building projects",
-      "source": "GovCan - IRCC",
-      "score": 0.5270408,
-      "url": "https://www.canada.ca/en/immigration-refugees-citizenship/news/2026/05/canada-announces-new-international-migration-capacity-building-projects.html",
-      "category": "Government"
-    },
-    {
-      "title": "Canada’s new government to simplify and accelerate Canada’s regulatory process",
+      "title": "Supporting the growth of Canada's creative industries in global markets",
       "source": "GovCan - National News",
-      "score": 0.5051169,
-      "url": "https://www.canada.ca/en/one-canadian-economy/news/2026/05/canadas-new-government-to-simplify-and-accelerate-canadas-regulatory-process.html",
+      "score": 0.5734636,
+      "url": "https://www.canada.ca/en/canadian-heritage/news/2026/05/supporting-the-growth-of-canadas-creative-industries-in-global-markets.html",
       "category": "Government"
     },
     {
-      "title": "Ontario Investing More Than $14 Million for Housing-Enabling Infrastructure in Lanark and Frontenac Counties",
-      "source": "Ontario Newsroom",
-      "score": 0.50317633,
-      "url": "https://news.ontario.ca/en/release/1007425/ontario_investing_more_than_14_million_for_housing_enabling_infrastructure_in_lanark_and_frontenac_counties",
+      "title": "Backgrounder-Accelerating commercialization and adoption of AI and quantum technologies in British Columbia",
+      "source": "GovCan - National News",
+      "score": 0.570174,
+      "url": "https://www.canada.ca/en/pacific-economic-development/news/2026/05/backgrounder-accelerating-commercialization-and-adoption-of-ai-and-quantum-technologies-in-british-columbia.html",
       "category": "Government"
+    },
+    {
+      "title": "10 ways for Canada to seize the moment - Public Policy Forum",
+      "source": "Public Policy Forum",
+      "score": 0.5602273,
+      "url": "https://www.google.com/url?rct=j&sa=t&url=https://ppforum.ca/ppf-media/10-ways-for-canada-to-seize-the-moment/&ct=ga&cd=CAIyGzE5NGMzMGMyNWQwYzA4NmY6Y2E6ZW46Q0E6Ug&usg=AOvVaw2DocEvbXwDr68uUtlOjMPz",
+      "category": "Think Tank"
     }
   ]
 }
