@@ -1,20 +1,6 @@
 {
-  "updated_at": "2026-05-13T17:58:12Z",
+  "updated_at": "2026-05-14T13:56:20Z",
   "headlines": [
-    {
-      "title": "Government of Canada to announce federal support to accelerate clean technology innovation in Canadian agriculture",
-      "source": "GovCan - National News",
-      "score": 0.63264847,
-      "url": "https://www.canada.ca/en/agriculture-agri-food/news/2026/05/government-of-canada-to-announce-federal-support-to-accelerate-clean-technology-innovation-in-canadian-agriculture.html",
-      "category": "Government"
-    },
-    {
-      "title": "Government of Canada to announce investments to strengthen B.C. tech sector and help businesses grow",
-      "source": "GovCan - National News",
-      "score": 0.60892224,
-      "url": "https://www.canada.ca/en/pacific-economic-development/news/2026/05/government-of-canada-to-announce-investments-to-strengthen-bc-tech-sector-and-help-businesses-grow.html",
-      "category": "Government"
-    },
     {
       "title": "Governments of Canada and Nova Scotia partner to support employers, industry and workers impacted by tariffs and global market shifts",
       "source": "GovCan - ESDC",
@@ -28,13 +14,6 @@
       "score": 0.59451616,
       "url": "https://www.google.com/url?rct=j&sa=t&url=https://www.cigionline.org/events/canadas-prosperity-depends-on-turning-innovation-into-productivity/&ct=ga&cd=CAIyGWZmZmMwYWJmNzRiZDQwODk6Y2E6ZW46Q0E&usg=AOvVaw2dXpcaV_DL6xoqAbYe-mL2",
       "category": "Think Tank"
-    },
-    {
-      "title": "Government of Canada invests $30 million in six not-for-profit organizations to help accelerate clean technology innovation across Canadian agriculture",
-      "source": "GovCan - National News",
-      "score": 0.58515257,
-      "url": "https://www.canada.ca/en/agriculture-agri-food/news/2026/05/government-of-canada-invests-30-million-in-six-not-for-profit-organizations-to-help-accelerate-clean-technology-innovation-across-canadian-agriculture.html",
-      "category": "Government"
     },
     {
       "title": "Unlocking Canada's $1.8 Trillion Growth Opportunity - C.D. Howe Institute",
@@ -70,6 +49,27 @@
       "score": 0.5602273,
       "url": "https://www.google.com/url?rct=j&sa=t&url=https://ppforum.ca/ppf-media/10-ways-for-canada-to-seize-the-moment/&ct=ga&cd=CAIyGzE5NGMzMGMyNWQwYzA4NmY6Y2E6ZW46Q0E6Ug&usg=AOvVaw2DocEvbXwDr68uUtlOjMPz",
       "category": "Think Tank"
+    },
+    {
+      "title": "Government of Canada investing in defence innovation and manufacturing in Alberta",
+      "source": "GovCan - National News",
+      "score": 0.55501574,
+      "url": "https://www.canada.ca/en/prairies-economic-development/news/2026/05/government-of-canada-investing-in-defence-innovation-and-manufacturing-in-alberta.html",
+      "category": "Government"
+    },
+    {
+      "title": "Government of Canada supports 44 Canadian companies using AI to transform industries and create jobs",
+      "source": "GovCan - ISED",
+      "score": 0.54795265,
+      "url": "https://www.canada.ca/en/innovation-science-economic-development/news/2026/05/government-of-canada-supports-44-canadian-companies-using-ai-to-transform-industries-and-create-jobs.html",
+      "category": "Government"
+    },
+    {
+      "title": "In Winnipeg, Minister Anandasangaree highlights investments in combatting crime from Spring Economic Update 2026",
+      "source": "GovCan - National News",
+      "score": 0.5477214,
+      "url": "https://www.canada.ca/en/public-safety-canada/news/2026/05/in-winnipeg-minister-anandasangaree-highlights-investments-in-combatting-crime-from-spring-economic-update-2026.html",
+      "category": "Government"
     }
   ]
 }
