@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-14T13:56:20Z",
+  "updated_at": "2026-05-15T15:09:50Z",
   "headlines": [
     {
       "title": "Governments of Canada and Nova Scotia partner to support employers, industry and workers impacted by tariffs and global market shifts",
@@ -16,11 +16,11 @@
       "category": "Think Tank"
     },
     {
-      "title": "Unlocking Canada's $1.8 Trillion Growth Opportunity - C.D. Howe Institute",
-      "source": "C.D. Howe Institute",
-      "score": 0.58417773,
-      "url": "https://www.google.com/url?rct=j&sa=t&url=https://cdhowe.org/events/unlocking-canadas-1-8-trillion-growth-opportunity/&ct=ga&cd=CAIyGTBiN2Q5ZDE3MTY2MzQ5YWM6Y2E6ZW46Q0E&usg=AOvVaw3j9PYnM_ywn4SirtAdYY1w",
-      "category": "Think Tank"
+      "title": "Government of Canada enhances manufacturing resilience and competitiveness in British Columbia",
+      "source": "GovCan - National News",
+      "score": 0.58254296,
+      "url": "https://www.canada.ca/en/pacific-economic-development/news/2026/05/government-of-canada-enhances-manufacturing-resilience-and-competitiveness-in-british-columbia.html",
+      "category": "Government"
     },
     {
       "title": "Accelerating commercialization and adoption of AI and quantum technologies in British Columbia",
@@ -37,10 +37,24 @@
       "category": "Government"
     },
     {
+      "title": "Ottawa begins consultations on strategy to double Canada’s grid capacity by 2050",
+      "source": "Globe and Mail - Canada",
+      "score": 0.57139564,
+      "url": "https://www.theglobeandmail.com/business/article-ottawa-canada-grid-capacity-expansion-electricity-strategy-2050/",
+      "category": "News & Media"
+    },
+    {
       "title": "Backgrounder-Accelerating commercialization and adoption of AI and quantum technologies in British Columbia",
       "source": "GovCan - National News",
       "score": 0.570174,
       "url": "https://www.canada.ca/en/pacific-economic-development/news/2026/05/backgrounder-accelerating-commercialization-and-adoption-of-ai-and-quantum-technologies-in-british-columbia.html",
+      "category": "Government"
+    },
+    {
+      "title": "Government of Canada to support growth, innovation and manufacturing competitiveness in Windsor-Essex",
+      "source": "GovCan - FedDev Ontario",
+      "score": 0.5607564,
+      "url": "https://www.canada.ca/en/economic-development-southern-ontario/news/2026/05/government-of-canada-to-support-growth-innovation-and-manufacturing-competitiveness-in-windsor-essex.html",
       "category": "Government"
     },
     {
@@ -55,20 +69,6 @@
       "source": "GovCan - National News",
       "score": 0.55501574,
       "url": "https://www.canada.ca/en/prairies-economic-development/news/2026/05/government-of-canada-investing-in-defence-innovation-and-manufacturing-in-alberta.html",
-      "category": "Government"
-    },
-    {
-      "title": "Government of Canada supports 44 Canadian companies using AI to transform industries and create jobs",
-      "source": "GovCan - ISED",
-      "score": 0.54795265,
-      "url": "https://www.canada.ca/en/innovation-science-economic-development/news/2026/05/government-of-canada-supports-44-canadian-companies-using-ai-to-transform-industries-and-create-jobs.html",
-      "category": "Government"
-    },
-    {
-      "title": "In Winnipeg, Minister Anandasangaree highlights investments in combatting crime from Spring Economic Update 2026",
-      "source": "GovCan - National News",
-      "score": 0.5477214,
-      "url": "https://www.canada.ca/en/public-safety-canada/news/2026/05/in-winnipeg-minister-anandasangaree-highlights-investments-in-combatting-crime-from-spring-economic-update-2026.html",
       "category": "Government"
     }
   ]
