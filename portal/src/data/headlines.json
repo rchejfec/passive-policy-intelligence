@@ -1,74 +1,74 @@
 {
-  "updated_at": "2026-05-15T15:09:50Z",
+  "updated_at": "2026-05-20T17:16:23Z",
   "headlines": [
     {
-      "title": "Governments of Canada and Nova Scotia partner to support employers, industry and workers impacted by tariffs and global market shifts",
-      "source": "GovCan - ESDC",
-      "score": 0.5995702,
-      "url": "https://www.canada.ca/en/employment-social-development/news/2026/05/governments-of-canada-and-nova-scotia-partner-to-support-employers-industry-and-workers-impacted-by-tariffs-and-global-market-shifts.html",
+      "title": "The Government of Canada provides nearly $490,000 to expand innovation for a resilient northern economy",
+      "source": "GovCan - National News",
+      "score": 0.6821552,
+      "url": "https://www.canada.ca/en/northern-economic-development/news/2026/05/the-government-of-canada-provides-nearly-490000-to-expand-innovation-for-a-resilient-northern-economy.html",
       "category": "Government"
     },
     {
-      "title": "Canada's Prosperity Depends on Turning Innovation into Productivity",
-      "source": "CIGI",
-      "score": 0.59451616,
-      "url": "https://www.google.com/url?rct=j&sa=t&url=https://www.cigionline.org/events/canadas-prosperity-depends-on-turning-innovation-into-productivity/&ct=ga&cd=CAIyGWZmZmMwYWJmNzRiZDQwODk6Y2E6ZW46Q0E&usg=AOvVaw2dXpcaV_DL6xoqAbYe-mL2",
+      "title": "Backgrounder: The Government of Canada invests nearly $490,000 to expand innovation for a resilient northern economy",
+      "source": "GovCan - National News",
+      "score": 0.58601004,
+      "url": "https://www.canada.ca/en/northern-economic-development/news/2026/05/backgrounder-the-government-of-canada-invests-nearly-490000-to-expand-innovation-for-a-resilient-northern-economy.html",
+      "category": "Government"
+    },
+    {
+      "title": "The Government of Canada continues to invest in the growth of Saskatchewan’s creative industries in global markets",
+      "source": "GovCan - National News",
+      "score": 0.57287,
+      "url": "https://www.canada.ca/en/canadian-heritage/news/2026/05/the-government-of-canada-continues-to-invest-in-the-growth-of-saskatchewans-creative-industries-in-global-markets.html",
+      "category": "Government"
+    },
+    {
+      "title": "Backgrounder: Government of Canada announces support for artificial intelligence innovation and commercialization in Alberta",
+      "source": "GovCan - National News",
+      "score": 0.5644447,
+      "url": "https://www.canada.ca/en/prairies-economic-development/news/2026/05/backgrounder-government-of-canada-announces-support-for-artificial-intelligence-innovation-and-commercialization-in-alberta0.html",
+      "category": "Government"
+    },
+    {
+      "title": "Government of Canada announces support for artificial intelligence innovation and commercialization in Alberta",
+      "source": "GovCan - National News",
+      "score": 0.56065345,
+      "url": "https://www.canada.ca/en/prairies-economic-development/news/2026/05/government-of-canada-announces-support-for-artificial-intelligence-innovation-and-commercialization-in-alberta0.html",
+      "category": "Government"
+    },
+    {
+      "title": "Artificial Intelligence: The Way Forward for Canada - C.D. Howe Institute",
+      "source": "C.D. Howe Institute",
+      "score": 0.54690063,
+      "url": "https://www.google.com/url?rct=j&sa=t&url=https://cdhowe.org/events/artificial-intelligence-the-way-forward-for-canada/&ct=ga&cd=CAIyGTBiN2Q5ZDE3MTY2MzQ5YWM6Y2E6ZW46Q0E&usg=AOvVaw3K3mX94WsyTRkKoaxSZ0M_",
       "category": "Think Tank"
     },
     {
-      "title": "Government of Canada enhances manufacturing resilience and competitiveness in British Columbia",
-      "source": "GovCan - National News",
-      "score": 0.58254296,
-      "url": "https://www.canada.ca/en/pacific-economic-development/news/2026/05/government-of-canada-enhances-manufacturing-resilience-and-competitiveness-in-british-columbia.html",
-      "category": "Government"
+      "title": "Media release Archives - Page 36 of 36 - Clean Energy Canada",
+      "source": "Clean Energy Canada",
+      "score": 0.5349874,
+      "url": "https://www.google.com/url?rct=j&sa=t&url=https://cleanenergycanada.org/category/media-releases/page/36/&ct=ga&cd=CAIyGWJlMzg5YzNjZTZkM2NhNzU6Y2E6ZW46Q0E&usg=AOvVaw0OnXYjbj4rXolZnknu8Vn8",
+      "category": "Policy Advocacy"
     },
     {
-      "title": "Accelerating commercialization and adoption of AI and quantum technologies in British Columbia",
-      "source": "GovCan - National News",
-      "score": 0.57962394,
-      "url": "https://www.canada.ca/en/pacific-economic-development/news/2026/05/accelerating-commercialization-and-adoption-of-ai-and-quantum-technologies-in-british-columbia.html",
-      "category": "Government"
+      "title": "Globalization gutted Canada’s manufacturing. Here’s how we make things ourselves again: Fen Osler Hampson and Tim Sargent in the Globe and Mail",
+      "source": "Macdonald-Laurier Institute",
+      "score": 0.52041245,
+      "url": "https://macdonaldlaurier.ca/globalization-gutted-canadas-manufacturing-heres-how-we-make-things-ourselves-again-fen-osler-hampson-and-tim-sargent-in-the-globe-and-mail/",
+      "category": "Think Tank"
     },
     {
-      "title": "Supporting the growth of Canada's creative industries in global markets",
-      "source": "GovCan - National News",
-      "score": 0.5734636,
-      "url": "https://www.canada.ca/en/canadian-heritage/news/2026/05/supporting-the-growth-of-canadas-creative-industries-in-global-markets.html",
-      "category": "Government"
+      "title": "Canada’s Tariff Problem Made in Canada",
+      "source": "C.D. Howe Institute",
+      "score": 0.51550424,
+      "url": "https://cdhowe.org/publication/canadas-tariff-problem-made-in-canada/",
+      "category": "Think Tank"
     },
     {
-      "title": "Ottawa begins consultations on strategy to double Canada’s grid capacity by 2050",
-      "source": "Globe and Mail - Canada",
-      "score": 0.57139564,
-      "url": "https://www.theglobeandmail.com/business/article-ottawa-canada-grid-capacity-expansion-electricity-strategy-2050/",
-      "category": "News & Media"
-    },
-    {
-      "title": "Backgrounder-Accelerating commercialization and adoption of AI and quantum technologies in British Columbia",
-      "source": "GovCan - National News",
-      "score": 0.570174,
-      "url": "https://www.canada.ca/en/pacific-economic-development/news/2026/05/backgrounder-accelerating-commercialization-and-adoption-of-ai-and-quantum-technologies-in-british-columbia.html",
-      "category": "Government"
-    },
-    {
-      "title": "Government of Canada to support growth, innovation and manufacturing competitiveness in Windsor-Essex",
+      "title": "Government of Canada investment helps strengthen Canada’s defence capabilities",
       "source": "GovCan - FedDev Ontario",
-      "score": 0.5607564,
-      "url": "https://www.canada.ca/en/economic-development-southern-ontario/news/2026/05/government-of-canada-to-support-growth-innovation-and-manufacturing-competitiveness-in-windsor-essex.html",
-      "category": "Government"
-    },
-    {
-      "title": "10 ways for Canada to seize the moment - Public Policy Forum",
-      "source": "Public Policy Forum",
-      "score": 0.5602273,
-      "url": "https://www.google.com/url?rct=j&sa=t&url=https://ppforum.ca/ppf-media/10-ways-for-canada-to-seize-the-moment/&ct=ga&cd=CAIyGzE5NGMzMGMyNWQwYzA4NmY6Y2E6ZW46Q0E6Ug&usg=AOvVaw2DocEvbXwDr68uUtlOjMPz",
-      "category": "Think Tank"
-    },
-    {
-      "title": "Government of Canada investing in defence innovation and manufacturing in Alberta",
-      "source": "GovCan - National News",
-      "score": 0.55501574,
-      "url": "https://www.canada.ca/en/prairies-economic-development/news/2026/05/government-of-canada-investing-in-defence-innovation-and-manufacturing-in-alberta.html",
+      "score": 0.5144946,
+      "url": "https://www.canada.ca/en/economic-development-southern-ontario/news/2026/05/government-of-canada-investment-helps-strengthen-canadas-defence-capabilities.html",
       "category": "Government"
     }
   ]
