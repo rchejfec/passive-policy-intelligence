@@ -1,75 +1,75 @@
 {
-  "updated_at": "2026-05-20T17:16:23Z",
+  "updated_at": "2026-05-28T15:25:32Z",
   "headlines": [
     {
-      "title": "The Government of Canada provides nearly $490,000 to expand innovation for a resilient northern economy",
+      "title": "Backgrounder: Canada is strengthening defence, sovereignty, and industrial capacity through investments and partnerships",
       "source": "GovCan - National News",
-      "score": 0.6821552,
-      "url": "https://www.canada.ca/en/northern-economic-development/news/2026/05/the-government-of-canada-provides-nearly-490000-to-expand-innovation-for-a-resilient-northern-economy.html",
+      "score": 0.63175046,
+      "url": "https://www.canada.ca/en/defence-investment-agency/news/2026/05/backgrounder-canada-is-strengthening-defence-sovereignty-and-industrial-capacity-through-investments-and-partnerships.html",
       "category": "Government"
     },
     {
-      "title": "Backgrounder: The Government of Canada invests nearly $490,000 to expand innovation for a resilient northern economy",
-      "source": "GovCan - National News",
-      "score": 0.58601004,
-      "url": "https://www.canada.ca/en/northern-economic-development/news/2026/05/backgrounder-the-government-of-canada-invests-nearly-490000-to-expand-innovation-for-a-resilient-northern-economy.html",
+      "title": "Governments of Canada and New Brunswick partner to support tariff-impacted workers and strengthen the workforce",
+      "source": "GovCan - ESDC",
+      "score": 0.5938976,
+      "url": "https://www.canada.ca/en/employment-social-development/news/2026/05/governments-of-canada-and-new-brunswick-partner-to-support-tariff-impacted-workers-and-strengthen-the-workforce0.html",
       "category": "Government"
     },
     {
-      "title": "The Government of Canada continues to invest in the growth of Saskatchewan’s creative industries in global markets",
-      "source": "GovCan - National News",
-      "score": 0.57287,
-      "url": "https://www.canada.ca/en/canadian-heritage/news/2026/05/the-government-of-canada-continues-to-invest-in-the-growth-of-saskatchewans-creative-industries-in-global-markets.html",
-      "category": "Government"
-    },
-    {
-      "title": "Backgrounder: Government of Canada announces support for artificial intelligence innovation and commercialization in Alberta",
-      "source": "GovCan - National News",
-      "score": 0.5644447,
-      "url": "https://www.canada.ca/en/prairies-economic-development/news/2026/05/backgrounder-government-of-canada-announces-support-for-artificial-intelligence-innovation-and-commercialization-in-alberta0.html",
-      "category": "Government"
-    },
-    {
-      "title": "Government of Canada announces support for artificial intelligence innovation and commercialization in Alberta",
-      "source": "GovCan - National News",
-      "score": 0.56065345,
-      "url": "https://www.canada.ca/en/prairies-economic-development/news/2026/05/government-of-canada-announces-support-for-artificial-intelligence-innovation-and-commercialization-in-alberta0.html",
-      "category": "Government"
-    },
-    {
-      "title": "Artificial Intelligence: The Way Forward for Canada - C.D. Howe Institute",
-      "source": "C.D. Howe Institute",
-      "score": 0.54690063,
-      "url": "https://www.google.com/url?rct=j&sa=t&url=https://cdhowe.org/events/artificial-intelligence-the-way-forward-for-canada/&ct=ga&cd=CAIyGTBiN2Q5ZDE3MTY2MzQ5YWM6Y2E6ZW46Q0E&usg=AOvVaw3K3mX94WsyTRkKoaxSZ0M_",
+      "title": "Government's AI misuse exposes Ontarians to unnecessary risk and cost | Fraser Institute",
+      "source": "Fraser Institute",
+      "score": 0.59302306,
+      "url": "https://www.google.com/url?rct=j&sa=t&url=https://www.fraserinstitute.org/commentary/governments-ai-misuse-exposes-ontarians-unnecessary-risk-and-cost&ct=ga&cd=CAIyGzllODBhNzEzODg2Nzg3ZTA6Y2E6ZW46Q0E6Ug&usg=AOvVaw3guF3EydiuBGnNtfVZAGwr",
       "category": "Think Tank"
     },
     {
-      "title": "Media release Archives - Page 36 of 36 - Clean Energy Canada",
+      "title": "Government of Canada support to help businesses across the Greater Toronto Area adapt, compete and increase resiliency",
+      "source": "GovCan - FedDev Ontario",
+      "score": 0.5738721,
+      "url": "https://www.canada.ca/en/economic-development-southern-ontario/news/2026/05/government-of-canada-support-to-help-businesses-across-the-greater-toronto-area-adapt-compete-and-increase-resiliency.html",
+      "category": "Government"
+    },
+    {
+      "title": "Minister Valdez and Secretary of State Belanger highlight measures to support Saskatchewan brewers, distillers and winemakers",
+      "source": "GovCan - ISED",
+      "score": 0.566365,
+      "url": "https://www.canada.ca/en/innovation-science-economic-development/news/2026/05/minister-valdez-and-secretary-of-state-belanger-highlight-measures-to-support-saskatchewan-brewers-distillers-and-winemakers.html",
+      "category": "Government"
+    },
+    {
+      "title": "Putting commitment into action: How social protections can make Canada strong for all",
+      "source": "Maytree",
+      "score": 0.5641457,
+      "url": "https://www.google.com/url?rct=j&sa=t&url=https://maytree.com/publications/putting-commitment-into-action-how-social-protections-can-make-canada-strong-for-all/&ct=ga&cd=CAIyGWU0YjBkODRjYmZkZWVjMmY6Y2E6ZW46Q0E&usg=AOvVaw1LkgG8RAIJRhxYUSVxOIwK",
+      "category": "Think Tank"
+    },
+    {
+      "title": "Government of Canada announces support to help a Mount Pearl business modernize, compete, and reach new markets",
+      "source": "GovCan - National News",
+      "score": 0.561577,
+      "url": "https://www.canada.ca/en/atlantic-canada-opportunities/news/2026/05/government-of-canada-announces-support-to-help-a-mount-pearl-business-modernize-compete-and-reach-new-markets.html",
+      "category": "Government"
+    },
+    {
+      "title": "Amid Canada’s massive housing and infrastructure build-out, a few changes can limit climate impact at little or no cost: report",
       "source": "Clean Energy Canada",
-      "score": 0.5349874,
-      "url": "https://www.google.com/url?rct=j&sa=t&url=https://cleanenergycanada.org/category/media-releases/page/36/&ct=ga&cd=CAIyGWJlMzg5YzNjZTZkM2NhNzU6Y2E6ZW46Q0E&usg=AOvVaw0OnXYjbj4rXolZnknu8Vn8",
+      "score": 0.56051576,
+      "url": "https://cleanenergycanada.org/amid-canadas-massive-housing-and-infrastructure-build-out-a-few-changes-can-limit-climate-impact-at-little-or-no-cost-report/",
       "category": "Policy Advocacy"
     },
     {
-      "title": "Globalization gutted Canada’s manufacturing. Here’s how we make things ourselves again: Fen Osler Hampson and Tim Sargent in the Globe and Mail",
-      "source": "Macdonald-Laurier Institute",
-      "score": 0.52041245,
-      "url": "https://macdonaldlaurier.ca/globalization-gutted-canadas-manufacturing-heres-how-we-make-things-ourselves-again-fen-osler-hampson-and-tim-sargent-in-the-globe-and-mail/",
-      "category": "Think Tank"
-    },
-    {
-      "title": "Canada’s Tariff Problem Made in Canada",
-      "source": "C.D. Howe Institute",
-      "score": 0.51550424,
-      "url": "https://cdhowe.org/publication/canadas-tariff-problem-made-in-canada/",
-      "category": "Think Tank"
-    },
-    {
-      "title": "Government of Canada investment helps strengthen Canada’s defence capabilities",
-      "source": "GovCan - FedDev Ontario",
-      "score": 0.5144946,
-      "url": "https://www.canada.ca/en/economic-development-southern-ontario/news/2026/05/government-of-canada-investment-helps-strengthen-canadas-defence-capabilities.html",
+      "title": "State of the Canadian Space Sector Report 2025: Strength and Growth of Canada’s Space Economy",
+      "source": "GovCan - National News",
+      "score": 0.5576451,
+      "url": "https://www.canada.ca/en/space-agency/news/2026/05/state-of-the-canadian-space-sector-report-2025-strength-and-growth-of-canadas-space-economy.html",
       "category": "Government"
+    },
+    {
+      "title": "Children's privacy is now critical infrastructure in the AI era - Policy Options",
+      "source": "IRPP",
+      "score": 0.5494834,
+      "url": "https://www.google.com/url?rct=j&sa=t&url=https://policyoptions.irpp.org/2026/05/children-privacy-ai-infrastructure-canada/&ct=ga&cd=CAIyGWJjYTQ5YjEyNDI4YzliZjA6Y2E6ZW46Q0E&usg=AOvVaw0JDlqRb6meyqAUmeAotC2L",
+      "category": "Think Tank"
     }
   ]
 }
