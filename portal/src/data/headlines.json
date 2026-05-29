@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-28T15:25:32Z",
+  "updated_at": "2026-05-29T17:01:15Z",
   "headlines": [
     {
       "title": "Backgrounder: Canada is strengthening defence, sovereignty, and industrial capacity through investments and partnerships",
@@ -28,6 +28,13 @@
       "score": 0.5738721,
       "url": "https://www.canada.ca/en/economic-development-southern-ontario/news/2026/05/government-of-canada-support-to-help-businesses-across-the-greater-toronto-area-adapt-compete-and-increase-resiliency.html",
       "category": "Government"
+    },
+    {
+      "title": "Recent Capital Investment Not a Signal that Canada's Business Investment Emergency Is Over",
+      "source": "Fraser Institute",
+      "score": 0.57108223,
+      "url": "https://www.google.com/url?rct=j&sa=t&url=https://www.fraserinstitute.org/studies/recent-capital-investment-not-signal-canadas-business-investment-emergency-is-over&ct=ga&cd=CAIyGzllODBhNzEzODg2Nzg3ZTA6Y2E6ZW46Q0E6Ug&usg=AOvVaw14X9yPIHlq2cLYHtL_4VGY",
+      "category": "Think Tank"
     },
     {
       "title": "Minister Valdez and Secretary of State Belanger highlight measures to support Saskatchewan brewers, distillers and winemakers",
@@ -63,13 +70,6 @@
       "score": 0.5576451,
       "url": "https://www.canada.ca/en/space-agency/news/2026/05/state-of-the-canadian-space-sector-report-2025-strength-and-growth-of-canadas-space-economy.html",
       "category": "Government"
-    },
-    {
-      "title": "Children's privacy is now critical infrastructure in the AI era - Policy Options",
-      "source": "IRPP",
-      "score": 0.5494834,
-      "url": "https://www.google.com/url?rct=j&sa=t&url=https://policyoptions.irpp.org/2026/05/children-privacy-ai-infrastructure-canada/&ct=ga&cd=CAIyGWJjYTQ5YjEyNDI4YzliZjA6Y2E6ZW46Q0E&usg=AOvVaw0JDlqRb6meyqAUmeAotC2L",
-      "category": "Think Tank"
     }
   ]
 }
