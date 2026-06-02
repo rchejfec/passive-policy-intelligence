@@ -1,75 +1,75 @@
 {
-  "updated_at": "2026-05-29T17:01:15Z",
+  "updated_at": "2026-06-02T12:41:06Z",
   "headlines": [
     {
-      "title": "Backgrounder: Canada is strengthening defence, sovereignty, and industrial capacity through investments and partnerships",
-      "source": "GovCan - National News",
-      "score": 0.63175046,
-      "url": "https://www.canada.ca/en/defence-investment-agency/news/2026/05/backgrounder-canada-is-strengthening-defence-sovereignty-and-industrial-capacity-through-investments-and-partnerships.html",
-      "category": "Government"
+      "title": "Draft federal AI strategy aims to scale up adoption, offer literacy training by 2031",
+      "source": "CBC Ottawa",
+      "score": 0.5701479,
+      "url": "https://www.cbc.ca/news/politics/federal-artificial-intelligence-strategy-9.7216576?cmp=rss",
+      "category": "News & Media"
     },
     {
-      "title": "Governments of Canada and New Brunswick partner to support tariff-impacted workers and strengthen the workforce",
-      "source": "GovCan - ESDC",
-      "score": 0.5938976,
-      "url": "https://www.canada.ca/en/employment-social-development/news/2026/05/governments-of-canada-and-new-brunswick-partner-to-support-tariff-impacted-workers-and-strengthen-the-workforce0.html",
-      "category": "Government"
-    },
-    {
-      "title": "Government's AI misuse exposes Ontarians to unnecessary risk and cost | Fraser Institute",
-      "source": "Fraser Institute",
-      "score": 0.59302306,
-      "url": "https://www.google.com/url?rct=j&sa=t&url=https://www.fraserinstitute.org/commentary/governments-ai-misuse-exposes-ontarians-unnecessary-risk-and-cost&ct=ga&cd=CAIyGzllODBhNzEzODg2Nzg3ZTA6Y2E6ZW46Q0E6Ug&usg=AOvVaw3guF3EydiuBGnNtfVZAGwr",
-      "category": "Think Tank"
-    },
-    {
-      "title": "Government of Canada support to help businesses across the Greater Toronto Area adapt, compete and increase resiliency",
-      "source": "GovCan - FedDev Ontario",
-      "score": 0.5738721,
-      "url": "https://www.canada.ca/en/economic-development-southern-ontario/news/2026/05/government-of-canada-support-to-help-businesses-across-the-greater-toronto-area-adapt-compete-and-increase-resiliency.html",
-      "category": "Government"
-    },
-    {
-      "title": "Recent Capital Investment Not a Signal that Canada's Business Investment Emergency Is Over",
-      "source": "Fraser Institute",
-      "score": 0.57108223,
-      "url": "https://www.google.com/url?rct=j&sa=t&url=https://www.fraserinstitute.org/studies/recent-capital-investment-not-signal-canadas-business-investment-emergency-is-over&ct=ga&cd=CAIyGzllODBhNzEzODg2Nzg3ZTA6Y2E6ZW46Q0E6Ug&usg=AOvVaw14X9yPIHlq2cLYHtL_4VGY",
-      "category": "Think Tank"
-    },
-    {
-      "title": "Minister Valdez and Secretary of State Belanger highlight measures to support Saskatchewan brewers, distillers and winemakers",
+      "title": "Canada advances priorities on artificial intelligence, quantum technologies and digital innovation at the 2026 G7 Digital Ministers’ Meeting",
       "source": "GovCan - ISED",
-      "score": 0.566365,
-      "url": "https://www.canada.ca/en/innovation-science-economic-development/news/2026/05/minister-valdez-and-secretary-of-state-belanger-highlight-measures-to-support-saskatchewan-brewers-distillers-and-winemakers.html",
+      "score": 0.5658483,
+      "url": "https://www.canada.ca/en/innovation-science-economic-development/news/2026/05/canada-advances-priorities-on-artificial-intelligence-quantum-technologies-and-digital-innovation-at-the-2026-g7-digital-ministers-meeting.html",
       "category": "Government"
     },
     {
-      "title": "Putting commitment into action: How social protections can make Canada strong for all",
-      "source": "Maytree",
-      "score": 0.5641457,
-      "url": "https://www.google.com/url?rct=j&sa=t&url=https://maytree.com/publications/putting-commitment-into-action-how-social-protections-can-make-canada-strong-for-all/&ct=ga&cd=CAIyGWU0YjBkODRjYmZkZWVjMmY6Y2E6ZW46Q0E&usg=AOvVaw1LkgG8RAIJRhxYUSVxOIwK",
+      "title": "Carney government should get truly ‘ambitious’ and reform Old Age Security",
+      "source": "Fraser Institute",
+      "score": 0.5570857,
+      "url": "https://www.fraserinstitute.org/commentary/carney-government-should-get-truly-ambitious-and-reform-old-age-security",
       "category": "Think Tank"
     },
     {
-      "title": "Government of Canada announces support to help a Mount Pearl business modernize, compete, and reach new markets",
+      "title": "News &amp; Research | CCPA - Canadian Centre for Policy Alternatives",
+      "source": "Policy Alternatives",
+      "score": 0.5528437,
+      "url": "https://www.google.com/url?rct=j&sa=t&url=https://www.policyalternatives.ca/%3Fquery-0-page%3D1083%26cst%26query-20-page%3D38%26p%3Darticles%252Fcovid-19-&ct=ga&cd=CAIyG2QyY2EwMGU1ODI1YTM3YTU6Y2E6ZW46Q0E6Ug&usg=AOvVaw3XNLlZ5fenwIRaEy3p1L6C",
+      "category": "Think Tank"
+    },
+    {
+      "title": "Funding for Toronto-area public housing needs to more than double to reduce homelessness, study says",
+      "source": "Globe and Mail - Canada",
+      "score": 0.53932005,
+      "url": "https://www.theglobeandmail.com/business/article-public-housing-funding-toronto-region-double-reduce-homelessness/",
+      "category": "News & Media"
+    },
+    {
+      "title": "Indigenous governments take the lead on building housing in Fort Smith, N.W.T.",
+      "source": "CBC North",
+      "score": 0.51977986,
+      "url": "https://www.cbc.ca/news/canada/north/indigenous-governments-take-lead-building-fort-smith-housing-9.7219357?cmp=rss",
+      "category": "News & Media"
+    },
+    {
+      "title": "Improving primary health care access: Lessons from Canada and Scotland",
+      "source": "Policy Alternatives",
+      "score": 0.50670624,
+      "url": "https://www.google.com/url?rct=j&sa=t&url=https://www.policyalternatives.ca/news-research/improving-primary-health-care-access-lessons-from-canada-and-scotland/&ct=ga&cd=CAIyG2QyY2EwMGU1ODI1YTM3YTU6Y2E6ZW46Q0E6Ug&usg=AOvVaw1GbEHEVmchIr2tCEbwDPsP",
+      "category": "Think Tank"
+    },
+    {
+      "title": "Canada invests in Newfoundland and Labrador’s energy sector",
       "source": "GovCan - National News",
-      "score": 0.561577,
-      "url": "https://www.canada.ca/en/atlantic-canada-opportunities/news/2026/05/government-of-canada-announces-support-to-help-a-mount-pearl-business-modernize-compete-and-reach-new-markets.html",
+      "score": 0.5020923,
+      "url": "https://www.canada.ca/en/natural-resources-canada/news/2026/06/canada-invests-in-newfoundland-and-labradors-energy-sector.html",
       "category": "Government"
     },
     {
-      "title": "Amid Canada’s massive housing and infrastructure build-out, a few changes can limit climate impact at little or no cost: report",
-      "source": "Clean Energy Canada",
-      "score": 0.56051576,
-      "url": "https://cleanenergycanada.org/amid-canadas-massive-housing-and-infrastructure-build-out-a-few-changes-can-limit-climate-impact-at-little-or-no-cost-report/",
-      "category": "Policy Advocacy"
+      "title": "What happens when Canada's energy future meets the Indo-Pacific's soaring demand?",
+      "source": "Macdonald-Laurier Institute",
+      "score": 0.48974657,
+      "url": "https://www.google.com/url?rct=j&sa=t&url=https://macdonaldlaurier.ca/what-happens-when-canadas-energy-future-meets-the-indo-pacifics-soaring-demand-heather-exner-pirot-on-ciac-conversations/&ct=ga&cd=CAIyGTc1NGZlZWJmYWZmMGRlYTY6Y2E6ZW46Q0E&usg=AOvVaw3GcyP_ReW0pe9sX9G-PpZO",
+      "category": "Think Tank"
     },
     {
-      "title": "State of the Canadian Space Sector Report 2025: Strength and Growth of Canada’s Space Economy",
-      "source": "GovCan - National News",
-      "score": 0.5576451,
-      "url": "https://www.canada.ca/en/space-agency/news/2026/05/state-of-the-canadian-space-sector-report-2025-strength-and-growth-of-canadas-space-economy.html",
-      "category": "Government"
+      "title": "The federal government is prioritizing Canada's pharma company profits | CCPA",
+      "source": "Policy Alternatives",
+      "score": 0.4877344,
+      "url": "https://www.google.com/url?rct=j&sa=t&url=https://www.policyalternatives.ca/news-research/the-federal-government-is-prioritizing-canadas-pharma-company-profits/&ct=ga&cd=CAIyG2QyY2EwMGU1ODI1YTM3YTU6Y2E6ZW46Q0E6Ug&usg=AOvVaw0wyLRWSGtvabgkwVX1Do-C",
+      "category": "Think Tank"
     }
   ]
 }
