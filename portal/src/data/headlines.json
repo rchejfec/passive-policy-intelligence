@@ -1,74 +1,74 @@
 {
-  "updated_at": "2026-06-02T12:41:06Z",
+  "updated_at": "2026-06-12T15:58:36Z",
   "headlines": [
     {
-      "title": "Draft federal AI strategy aims to scale up adoption, offer literacy training by 2031",
-      "source": "CBC Ottawa",
-      "score": 0.5701479,
-      "url": "https://www.cbc.ca/news/politics/federal-artificial-intelligence-strategy-9.7216576?cmp=rss",
-      "category": "News & Media"
-    },
-    {
-      "title": "Canada advances priorities on artificial intelligence, quantum technologies and digital innovation at the 2026 G7 Digital Ministers’ Meeting",
-      "source": "GovCan - ISED",
-      "score": 0.5658483,
-      "url": "https://www.canada.ca/en/innovation-science-economic-development/news/2026/05/canada-advances-priorities-on-artificial-intelligence-quantum-technologies-and-digital-innovation-at-the-2026-g7-digital-ministers-meeting.html",
+      "title": "Governments of Canada and Manitoba partner to support tariff-impacted workers and strengthen the workforce",
+      "source": "GovCan - ESDC",
+      "score": 0.58269083,
+      "url": "https://www.canada.ca/en/employment-social-development/news/2026/06/governments-of-canada-and-manitoba-partner-to-support-tariff-impacted-workers-and-strengthen-the-workforce.html",
       "category": "Government"
     },
     {
-      "title": "Carney government should get truly ‘ambitious’ and reform Old Age Security",
+      "title": "Canada’s Technical Recession Isn’t the Real Problem. A Decade of Economic Weakness Is.",
+      "source": "C.D. Howe Institute",
+      "score": 0.5654465,
+      "url": "https://cdhowe.org/publication/canadas-technical-recession-isnt-the-real-problem-a-decade-of-economic-weakness-is/",
+      "category": "Think Tank"
+    },
+    {
+      "title": "Canada’s Technical Recession Isn’t the Real Problem. A Decade of Economic Weakness Is.",
+      "source": "C.D. Howe Institute",
+      "score": 0.56092495,
+      "url": "https://cdhowe.org/publication/canadas-technical-recession-isnt-the-real-problem-a-decade-of-economic-weakness-is-2/",
+      "category": "Think Tank"
+    },
+    {
+      "title": "Proposed Major Project Regulatory Changes a Good Step, but Work Remains",
+      "source": "C.D. Howe Institute",
+      "score": 0.5592576,
+      "url": "https://cdhowe.org/publication/the-building-canada-act-wont-actually-build-anything-in-canada/",
+      "category": "Think Tank"
+    },
+    {
+      "title": "Executing AI for All: How to Get a Capability-Raising Result",
+      "source": "C.D. Howe Institute",
+      "score": 0.55477077,
+      "url": "https://cdhowe.org/publication/executing-ai-for-all-how-to-get-a-capability-raising-result/",
+      "category": "Think Tank"
+    },
+    {
+      "title": "Here’s the major problem with Canada’s new electric everything strategy",
       "source": "Fraser Institute",
-      "score": 0.5570857,
-      "url": "https://www.fraserinstitute.org/commentary/carney-government-should-get-truly-ambitious-and-reform-old-age-security",
+      "score": 0.5526472,
+      "url": "https://www.fraserinstitute.org/commentary/heres-major-problem-canadas-new-electric-everything-strategy",
       "category": "Think Tank"
     },
     {
-      "title": "News &amp; Research | CCPA - Canadian Centre for Policy Alternatives",
-      "source": "Policy Alternatives",
-      "score": 0.5528437,
-      "url": "https://www.google.com/url?rct=j&sa=t&url=https://www.policyalternatives.ca/%3Fquery-0-page%3D1083%26cst%26query-20-page%3D38%26p%3Darticles%252Fcovid-19-&ct=ga&cd=CAIyG2QyY2EwMGU1ODI1YTM3YTU6Y2E6ZW46Q0E6Ug&usg=AOvVaw3XNLlZ5fenwIRaEy3p1L6C",
-      "category": "Think Tank"
-    },
-    {
-      "title": "Funding for Toronto-area public housing needs to more than double to reduce homelessness, study says",
-      "source": "Globe and Mail - Canada",
-      "score": 0.53932005,
-      "url": "https://www.theglobeandmail.com/business/article-public-housing-funding-toronto-region-double-reduce-homelessness/",
-      "category": "News & Media"
-    },
-    {
-      "title": "Indigenous governments take the lead on building housing in Fort Smith, N.W.T.",
-      "source": "CBC North",
-      "score": 0.51977986,
-      "url": "https://www.cbc.ca/news/canada/north/indigenous-governments-take-lead-building-fort-smith-housing-9.7219357?cmp=rss",
-      "category": "News & Media"
-    },
-    {
-      "title": "Improving primary health care access: Lessons from Canada and Scotland",
-      "source": "Policy Alternatives",
-      "score": 0.50670624,
-      "url": "https://www.google.com/url?rct=j&sa=t&url=https://www.policyalternatives.ca/news-research/improving-primary-health-care-access-lessons-from-canada-and-scotland/&ct=ga&cd=CAIyG2QyY2EwMGU1ODI1YTM3YTU6Y2E6ZW46Q0E6Ug&usg=AOvVaw1GbEHEVmchIr2tCEbwDPsP",
-      "category": "Think Tank"
-    },
-    {
-      "title": "Canada invests in Newfoundland and Labrador’s energy sector",
-      "source": "GovCan - National News",
-      "score": 0.5020923,
-      "url": "https://www.canada.ca/en/natural-resources-canada/news/2026/06/canada-invests-in-newfoundland-and-labradors-energy-sector.html",
+      "title": "Canada and Ontario Investing $12 million to Protect Farmers and Strengthen the Agri-Food Sector",
+      "source": "Ontario Newsroom",
+      "score": 0.5506072,
+      "url": "https://news.ontario.ca/en/release/1007597/canada_and_ontario_investing_12_million_to_protect_farmers_and_strengthen_the_agri_food_sector",
       "category": "Government"
     },
     {
-      "title": "What happens when Canada's energy future meets the Indo-Pacific's soaring demand?",
-      "source": "Macdonald-Laurier Institute",
-      "score": 0.48974657,
-      "url": "https://www.google.com/url?rct=j&sa=t&url=https://macdonaldlaurier.ca/what-happens-when-canadas-energy-future-meets-the-indo-pacifics-soaring-demand-heather-exner-pirot-on-ciac-conversations/&ct=ga&cd=CAIyGTc1NGZlZWJmYWZmMGRlYTY6Y2E6ZW46Q0E&usg=AOvVaw3GcyP_ReW0pe9sX9G-PpZO",
+      "title": "Here's the major problem with Canada's new electric everything strategy | Fraser Institute",
+      "source": "Fraser Institute",
+      "score": 0.549971,
+      "url": "https://www.google.com/url?rct=j&sa=t&url=https://www.fraserinstitute.org/commentary/heres-major-problem-canadas-new-electric-everything-strategy&ct=ga&cd=CAIyGzllODBhNzEzODg2Nzg3ZTA6Y2E6ZW46Q0E6Ug&usg=AOvVaw0NmJnMfCMJu-LLDgCHvTCf",
       "category": "Think Tank"
     },
     {
-      "title": "The federal government is prioritizing Canada's pharma company profits | CCPA",
-      "source": "Policy Alternatives",
-      "score": 0.4877344,
-      "url": "https://www.google.com/url?rct=j&sa=t&url=https://www.policyalternatives.ca/news-research/the-federal-government-is-prioritizing-canadas-pharma-company-profits/&ct=ga&cd=CAIyG2QyY2EwMGU1ODI1YTM3YTU6Y2E6ZW46Q0E6Ug&usg=AOvVaw0wyLRWSGtvabgkwVX1Do-C",
+      "title": "Minister Hajdu strengthens Canada’s partnerships with Employment Ministers at the G7",
+      "source": "GovCan - ESDC",
+      "score": 0.54946345,
+      "url": "https://www.canada.ca/en/employment-social-development/news/2026/06/minister-hajdu-strengthens-canadas-partnerships-with-employment-ministers-at-the-g7.html",
+      "category": "Government"
+    },
+    {
+      "title": "The Building Canada Act Won’t Actually Build Anything in Canada",
+      "source": "C.D. Howe Institute",
+      "score": 0.54679877,
+      "url": "https://cdhowe.org/publication/the-building-canada-act-wont-actually-build-anything-in-canada-2/",
       "category": "Think Tank"
     }
   ]
