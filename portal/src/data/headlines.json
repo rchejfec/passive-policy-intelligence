@@ -1,74 +1,74 @@
 {
-  "updated_at": "2026-06-12T15:58:36Z",
+  "updated_at": "2026-07-07T13:37:33Z",
   "headlines": [
     {
-      "title": "Governments of Canada and Manitoba partner to support tariff-impacted workers and strengthen the workforce",
+      "title": "Strengthening our sovereignty, diversifying our exports, reducing emissions, and building a stronger economy",
+      "source": "GovCan - National News",
+      "score": 0.66318405,
+      "url": "https://www.canada.ca/en/one-canadian-economy/news/2026/07/strengthening-our-sovereignty-diversifying-our-exports-reducing-emissions-and-building-a-stronger-economy.html",
+      "category": "Government"
+    },
+    {
+      "title": "Expanding the Greener Homes Affordability Program a good first step to unlock energy savings and comfort for Canadian households",
+      "source": "Clean Energy Canada",
+      "score": 0.65551645,
+      "url": "https://cleanenergycanada.org/expanding-the-greener-homes-affordability-program-a-good-first-step-to-unlock-energy-savings-and-comfort-for-canadian-households/",
+      "category": "Policy Advocacy"
+    },
+    {
+      "title": "Building Canada Strong for All – Powered by Canada’s Workers: Targeted Second Phase : Consultation Document",
       "source": "GovCan - ESDC",
-      "score": 0.58269083,
-      "url": "https://www.canada.ca/en/employment-social-development/news/2026/06/governments-of-canada-and-manitoba-partner-to-support-tariff-impacted-workers-and-strengthen-the-workforce.html",
+      "score": 0.6017957,
+      "url": "https://www.canada.ca/en/employment-social-development/news/2026/07/building-canada-strong-for-all--powered-by-canadas-workers-targeted-second-phase--consultation-document.html",
       "category": "Government"
     },
     {
-      "title": "Canada’s Technical Recession Isn’t the Real Problem. A Decade of Economic Weakness Is.",
-      "source": "C.D. Howe Institute",
-      "score": 0.5654465,
-      "url": "https://cdhowe.org/publication/canadas-technical-recession-isnt-the-real-problem-a-decade-of-economic-weakness-is/",
-      "category": "Think Tank"
-    },
-    {
-      "title": "Canada’s Technical Recession Isn’t the Real Problem. A Decade of Economic Weakness Is.",
-      "source": "C.D. Howe Institute",
-      "score": 0.56092495,
-      "url": "https://cdhowe.org/publication/canadas-technical-recession-isnt-the-real-problem-a-decade-of-economic-weakness-is-2/",
-      "category": "Think Tank"
-    },
-    {
-      "title": "Proposed Major Project Regulatory Changes a Good Step, but Work Remains",
-      "source": "C.D. Howe Institute",
-      "score": 0.5592576,
-      "url": "https://cdhowe.org/publication/the-building-canada-act-wont-actually-build-anything-in-canada/",
-      "category": "Think Tank"
-    },
-    {
-      "title": "Executing AI for All: How to Get a Capability-Raising Result",
-      "source": "C.D. Howe Institute",
-      "score": 0.55477077,
-      "url": "https://cdhowe.org/publication/executing-ai-for-all-how-to-get-a-capability-raising-result/",
-      "category": "Think Tank"
-    },
-    {
-      "title": "Here’s the major problem with Canada’s new electric everything strategy",
-      "source": "Fraser Institute",
-      "score": 0.5526472,
-      "url": "https://www.fraserinstitute.org/commentary/heres-major-problem-canadas-new-electric-everything-strategy",
-      "category": "Think Tank"
-    },
-    {
-      "title": "Canada and Ontario Investing $12 million to Protect Farmers and Strengthen the Agri-Food Sector",
-      "source": "Ontario Newsroom",
-      "score": 0.5506072,
-      "url": "https://news.ontario.ca/en/release/1007597/canada_and_ontario_investing_12_million_to_protect_farmers_and_strengthen_the_agri_food_sector",
+      "title": "Canada and Ontario investing $12 million to protect farmers and strengthen the agri-food sector",
+      "source": "GovCan - Rural Community",
+      "score": 0.5745098,
+      "url": "https://www.canada.ca/en/agriculture-agri-food/news/2026/06/canada-and-ontario-investing-12-million-to-protect-farmers-and-strengthen-the-agri-food-sector.html",
       "category": "Government"
     },
     {
-      "title": "Here's the major problem with Canada's new electric everything strategy | Fraser Institute",
-      "source": "Fraser Institute",
-      "score": 0.549971,
-      "url": "https://www.google.com/url?rct=j&sa=t&url=https://www.fraserinstitute.org/commentary/heres-major-problem-canadas-new-electric-everything-strategy&ct=ga&cd=CAIyGzllODBhNzEzODg2Nzg3ZTA6Y2E6ZW46Q0E6Ug&usg=AOvVaw0NmJnMfCMJu-LLDgCHvTCf",
+      "title": "Building indigenous business in Canada’s energy economy: Christine Goulais and Karen Restoule for Breakthrough Nation",
+      "source": "Macdonald-Laurier Institute",
+      "score": 0.5632845,
+      "url": "https://macdonaldlaurier.ca/building-indigenous-business-in-canadas-energy-economy/",
       "category": "Think Tank"
     },
     {
-      "title": "Minister Hajdu strengthens Canada’s partnerships with Employment Ministers at the G7",
-      "source": "GovCan - ESDC",
-      "score": 0.54946345,
-      "url": "https://www.canada.ca/en/employment-social-development/news/2026/06/minister-hajdu-strengthens-canadas-partnerships-with-employment-ministers-at-the-g7.html",
+      "title": "Carney wants Canada to become an energy superpower. Where will the money come from?: David Detomasi in The Hub",
+      "source": "Macdonald-Laurier Institute",
+      "score": 0.5570097,
+      "url": "https://macdonaldlaurier.ca/carney-wants-canada-to-become-an-energy-superpower-where-will-the-money-come-from-david-detomasi-in-the-hub/",
+      "category": "Think Tank"
+    },
+    {
+      "title": "Government of Canada investing in business growth and trade resilience in Alberta",
+      "source": "GovCan - National News",
+      "score": 0.552533,
+      "url": "https://www.canada.ca/en/prairies-economic-development/news/2026/07/government-of-canada-investing-in-business-growth-and-trade-resilience-in-alberta.html",
       "category": "Government"
     },
     {
-      "title": "The Building Canada Act Won’t Actually Build Anything in Canada",
-      "source": "C.D. Howe Institute",
-      "score": 0.54679877,
-      "url": "https://cdhowe.org/publication/the-building-canada-act-wont-actually-build-anything-in-canada-2/",
+      "title": "Serving up fresh, value-added investment in Alberta",
+      "source": "GovCan - Rural Community",
+      "score": 0.5521242,
+      "url": "https://www.canada.ca/en/agriculture-agri-food/news/2026/06/serving-up-fresh-value-added-investment-in-alberta.html",
+      "category": "Government"
+    },
+    {
+      "title": "Backgrounder: Canada invests in clean energy in Alberta and Saskatchewan",
+      "source": "GovCan - National News",
+      "score": 0.55150366,
+      "url": "https://www.canada.ca/en/natural-resources-canada/news/2026/07/backgrounder-canada-invests-in-clean-energy-in-alberta-and-saskatchewan.html",
+      "category": "Government"
+    },
+    {
+      "title": "Political Drama Over Technical Recession Not Justified",
+      "source": "Centre for Future Work",
+      "score": 0.54868054,
+      "url": "https://centreforfuturework.ca/2026/06/15/political-drama-over-technical-recession-not-justified/",
       "category": "Think Tank"
     }
   ]
