@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-07T13:37:33Z",
+  "updated_at": "2026-07-09T15:27:41Z",
   "headlines": [
     {
       "title": "Strengthening our sovereignty, diversifying our exports, reducing emissions, and building a stronger economy",
@@ -23,6 +23,27 @@
       "category": "Government"
     },
     {
+      "title": "The Prosocial AI Index: What Governments Need to Know Before Deploying AI",
+      "source": "CIGI",
+      "score": 0.5851549,
+      "url": "https://cigionlineorg.substack.com/p/the-prosocial-ai-index-what-governments",
+      "category": "Think Tank"
+    },
+    {
+      "title": "Backgrounder: Government of Canada backs Manitoba companies using AI to scale, compete and lead",
+      "source": "GovCan - National News",
+      "score": 0.57676595,
+      "url": "https://www.canada.ca/en/prairies-economic-development/news/2026/07/backgrounder-government-of-canada-backs-manitoba-companies-using-ai-to-scale-compete-and-lead.html",
+      "category": "Government"
+    },
+    {
+      "title": "Submission: National strategy for an electrified Canadian economy - Clean Energy Canada",
+      "source": "Clean Energy Canada",
+      "score": 0.57558835,
+      "url": "https://www.google.com/url?rct=j&sa=t&url=https://cleanenergycanada.org/report/submission-national-strategy-for-an-electrified-canadian-economy/&ct=ga&cd=CAIyGWJlMzg5YzNjZTZkM2NhNzU6Y2E6ZW46Q0E&usg=AOvVaw26rtPkcj5sqaUMW0u_zONT",
+      "category": "Policy Advocacy"
+    },
+    {
       "title": "Canada and Ontario investing $12 million to protect farmers and strengthen the agri-food sector",
       "source": "GovCan - Rural Community",
       "score": 0.5745098,
@@ -44,31 +65,10 @@
       "category": "Think Tank"
     },
     {
-      "title": "Government of Canada investing in business growth and trade resilience in Alberta",
-      "source": "GovCan - National News",
-      "score": 0.552533,
-      "url": "https://www.canada.ca/en/prairies-economic-development/news/2026/07/government-of-canada-investing-in-business-growth-and-trade-resilience-in-alberta.html",
-      "category": "Government"
-    },
-    {
-      "title": "Serving up fresh, value-added investment in Alberta",
-      "source": "GovCan - Rural Community",
-      "score": 0.5521242,
-      "url": "https://www.canada.ca/en/agriculture-agri-food/news/2026/06/serving-up-fresh-value-added-investment-in-alberta.html",
-      "category": "Government"
-    },
-    {
-      "title": "Backgrounder: Canada invests in clean energy in Alberta and Saskatchewan",
-      "source": "GovCan - National News",
-      "score": 0.55150366,
-      "url": "https://www.canada.ca/en/natural-resources-canada/news/2026/07/backgrounder-canada-invests-in-clean-energy-in-alberta-and-saskatchewan.html",
-      "category": "Government"
-    },
-    {
-      "title": "Political Drama Over Technical Recession Not Justified",
-      "source": "Centre for Future Work",
-      "score": 0.54868054,
-      "url": "https://centreforfuturework.ca/2026/06/15/political-drama-over-technical-recession-not-justified/",
+      "title": "Carney government should not ‘champion’ modular homes",
+      "source": "Fraser Institute",
+      "score": 0.5555028,
+      "url": "https://www.fraserinstitute.org/commentary/carney-government-should-not-champion-modular-homes",
       "category": "Think Tank"
     }
   ]
