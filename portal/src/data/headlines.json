@@ -1,75 +1,75 @@
 {
-  "updated_at": "2026-07-09T15:27:41Z",
+  "updated_at": "2026-07-27T14:23:46Z",
   "headlines": [
     {
-      "title": "Strengthening our sovereignty, diversifying our exports, reducing emissions, and building a stronger economy",
+      "title": "Government of Canada boosts manufacturing growth in Dartmouth",
       "source": "GovCan - National News",
-      "score": 0.66318405,
-      "url": "https://www.canada.ca/en/one-canadian-economy/news/2026/07/strengthening-our-sovereignty-diversifying-our-exports-reducing-emissions-and-building-a-stronger-economy.html",
+      "score": 0.646127,
+      "url": "https://www.canada.ca/en/atlantic-canada-opportunities/news/2026/07/government-of-canada-boosts-manufacturing-growth-in-dartmouth.html",
       "category": "Government"
     },
     {
-      "title": "Expanding the Greener Homes Affordability Program a good first step to unlock energy savings and comfort for Canadian households",
-      "source": "Clean Energy Canada",
-      "score": 0.65551645,
-      "url": "https://cleanenergycanada.org/expanding-the-greener-homes-affordability-program-a-good-first-step-to-unlock-energy-savings-and-comfort-for-canadian-households/",
-      "category": "Policy Advocacy"
-    },
-    {
-      "title": "Building Canada Strong for All – Powered by Canada’s Workers: Targeted Second Phase : Consultation Document",
-      "source": "GovCan - ESDC",
-      "score": 0.6017957,
-      "url": "https://www.canada.ca/en/employment-social-development/news/2026/07/building-canada-strong-for-all--powered-by-canadas-workers-targeted-second-phase--consultation-document.html",
+      "title": "Government of Canada launches public consultation on AI transparency",
+      "source": "GovCan - ISED",
+      "score": 0.63780904,
+      "url": "https://www.canada.ca/en/innovation-science-economic-development/news/2026/07/government-of-canada-launches-public-consultation-on-ai-transparency.html",
       "category": "Government"
     },
     {
-      "title": "The Prosocial AI Index: What Governments Need to Know Before Deploying AI",
-      "source": "CIGI",
-      "score": 0.5851549,
-      "url": "https://cigionlineorg.substack.com/p/the-prosocial-ai-index-what-governments",
-      "category": "Think Tank"
+      "title": "Government of Canada investment to support growth, innovation and competitiveness in Toronto",
+      "source": "GovCan - FedDev Ontario",
+      "score": 0.6334467,
+      "url": "https://www.canada.ca/en/economic-development-southern-ontario/news/2026/07/government-of-canada-investment-to-support-growth-innovation-and-competitiveness-in-toronto.html",
+      "category": "Government"
     },
     {
-      "title": "Backgrounder: Government of Canada backs Manitoba companies using AI to scale, compete and lead",
+      "title": "Statement from the Minister of Health and the Minister of Industry on Advancing Canada's Pharmaceutical and Life Sciences Sector",
       "source": "GovCan - National News",
-      "score": 0.57676595,
-      "url": "https://www.canada.ca/en/prairies-economic-development/news/2026/07/backgrounder-government-of-canada-backs-manitoba-companies-using-ai-to-scale-compete-and-lead.html",
+      "score": 0.6047886,
+      "url": "https://www.canada.ca/en/health-canada/news/2026/07/statement-from-the-minister-of-health-and-the-minister-of-industry-on-advancing-canadas-pharmaceutical-and-life-sciences-sector.html",
       "category": "Government"
     },
     {
-      "title": "Submission: National strategy for an electrified Canadian economy - Clean Energy Canada",
-      "source": "Clean Energy Canada",
-      "score": 0.57558835,
-      "url": "https://www.google.com/url?rct=j&sa=t&url=https://cleanenergycanada.org/report/submission-national-strategy-for-an-electrified-canadian-economy/&ct=ga&cd=CAIyGWJlMzg5YzNjZTZkM2NhNzU6Y2E6ZW46Q0E&usg=AOvVaw26rtPkcj5sqaUMW0u_zONT",
-      "category": "Policy Advocacy"
-    },
-    {
-      "title": "Canada and Ontario investing $12 million to protect farmers and strengthen the agri-food sector",
-      "source": "GovCan - Rural Community",
-      "score": 0.5745098,
-      "url": "https://www.canada.ca/en/agriculture-agri-food/news/2026/06/canada-and-ontario-investing-12-million-to-protect-farmers-and-strengthen-the-agri-food-sector.html",
+      "title": "Government of Canada to announce support to strengthen innovation and competitiveness in Greater Toronto Area",
+      "source": "GovCan - FedDev Ontario",
+      "score": 0.59781843,
+      "url": "https://www.canada.ca/en/economic-development-southern-ontario/news/2026/07/government-of-canada-to-announce-support-to-strengthen-innovation-and-competitiveness-in-greater-toronto-area.html",
       "category": "Government"
     },
     {
-      "title": "Building indigenous business in Canada’s energy economy: Christine Goulais and Karen Restoule for Breakthrough Nation",
-      "source": "Macdonald-Laurier Institute",
-      "score": 0.5632845,
-      "url": "https://macdonaldlaurier.ca/building-indigenous-business-in-canadas-energy-economy/",
-      "category": "Think Tank"
-    },
-    {
-      "title": "Carney wants Canada to become an energy superpower. Where will the money come from?: David Detomasi in The Hub",
-      "source": "Macdonald-Laurier Institute",
-      "score": 0.5570097,
-      "url": "https://macdonaldlaurier.ca/carney-wants-canada-to-become-an-energy-superpower-where-will-the-money-come-from-david-detomasi-in-the-hub/",
-      "category": "Think Tank"
-    },
-    {
-      "title": "Carney government should not ‘champion’ modular homes",
+      "title": "Opportunities to Diversify Canada's Trade - Fraser Institute",
       "source": "Fraser Institute",
-      "score": 0.5555028,
-      "url": "https://www.fraserinstitute.org/commentary/carney-government-should-not-champion-modular-homes",
+      "score": 0.5857024,
+      "url": "https://www.google.com/url?rct=j&sa=t&url=https://www.fraserinstitute.org/studies/opportunities-diversify-canadas-trade&ct=ga&cd=CAIyGzllODBhNzEzODg2Nzg3ZTA6Y2E6ZW46Q0E6Ug&usg=AOvVaw30XPfYurR0KIq69pPw1jhG",
       "category": "Think Tank"
+    },
+    {
+      "title": "Government of Canada Supports 23 Waterloo and Brant Region businesses and organizations to scale, accelerate innovate and strengthen economic resilience",
+      "source": "GovCan - FedDev Ontario",
+      "score": 0.57490486,
+      "url": "https://www.canada.ca/en/economic-development-southern-ontario/news/2026/07/government-of-canada-supports-23-waterloo-and-brant-region-businesses-and-organizations-to-scale-accelerate-innovate-and-strengthen-economic-resili.html",
+      "category": "Government"
+    },
+    {
+      "title": "Reality check—governments in Canada are large and growing | Fraser Institute",
+      "source": "Fraser Institute",
+      "score": 0.5737196,
+      "url": "https://www.google.com/url?rct=j&sa=t&url=https://www.fraserinstitute.org/commentary/reality-check-governments-canada-are-large-and-growing&ct=ga&cd=CAIyGzllODBhNzEzODg2Nzg3ZTA6Y2E6ZW46Q0E6Ug&usg=AOvVaw0_hbOno-WKXhp6upJjmYzj",
+      "category": "Think Tank"
+    },
+    {
+      "title": "Winnipeg neighbourhood looks to new foundations with a pilot project aimed at affordable home ownership",
+      "source": "Globe and Mail - Canada",
+      "score": 0.5727938,
+      "url": "https://www.theglobeandmail.com/canada/article-winnipeg-neighbourhood-vacant-home-pilot-project/",
+      "category": "News & Media"
+    },
+    {
+      "title": "Government of Canada to support business growth and competitiveness in Burlington",
+      "source": "GovCan - FedDev Ontario",
+      "score": 0.57167655,
+      "url": "https://www.canada.ca/en/economic-development-southern-ontario/news/2026/07/government-of-canada-to-support-business-growth-and-competitiveness-in-burlington.html",
+      "category": "Government"
     }
   ]
 }
