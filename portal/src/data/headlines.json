@@ -1,74 +1,74 @@
 {
-  "updated_at": "2026-07-27T14:23:46Z",
+  "updated_at": "2026-08-06T16:31:01Z",
   "headlines": [
     {
-      "title": "Government of Canada boosts manufacturing growth in Dartmouth",
-      "source": "GovCan - National News",
-      "score": 0.646127,
-      "url": "https://www.canada.ca/en/atlantic-canada-opportunities/news/2026/07/government-of-canada-boosts-manufacturing-growth-in-dartmouth.html",
-      "category": "Government"
-    },
-    {
-      "title": "Government of Canada launches public consultation on AI transparency",
-      "source": "GovCan - ISED",
-      "score": 0.63780904,
-      "url": "https://www.canada.ca/en/innovation-science-economic-development/news/2026/07/government-of-canada-launches-public-consultation-on-ai-transparency.html",
-      "category": "Government"
-    },
-    {
-      "title": "Government of Canada investment to support growth, innovation and competitiveness in Toronto",
-      "source": "GovCan - FedDev Ontario",
-      "score": 0.6334467,
-      "url": "https://www.canada.ca/en/economic-development-southern-ontario/news/2026/07/government-of-canada-investment-to-support-growth-innovation-and-competitiveness-in-toronto.html",
-      "category": "Government"
-    },
-    {
-      "title": "Statement from the Minister of Health and the Minister of Industry on Advancing Canada's Pharmaceutical and Life Sciences Sector",
-      "source": "GovCan - National News",
-      "score": 0.6047886,
-      "url": "https://www.canada.ca/en/health-canada/news/2026/07/statement-from-the-minister-of-health-and-the-minister-of-industry-on-advancing-canadas-pharmaceutical-and-life-sciences-sector.html",
-      "category": "Government"
-    },
-    {
-      "title": "Government of Canada to announce support to strengthen innovation and competitiveness in Greater Toronto Area",
-      "source": "GovCan - FedDev Ontario",
-      "score": 0.59781843,
-      "url": "https://www.canada.ca/en/economic-development-southern-ontario/news/2026/07/government-of-canada-to-announce-support-to-strengthen-innovation-and-competitiveness-in-greater-toronto-area.html",
-      "category": "Government"
-    },
-    {
-      "title": "Opportunities to Diversify Canada's Trade - Fraser Institute",
-      "source": "Fraser Institute",
-      "score": 0.5857024,
-      "url": "https://www.google.com/url?rct=j&sa=t&url=https://www.fraserinstitute.org/studies/opportunities-diversify-canadas-trade&ct=ga&cd=CAIyGzllODBhNzEzODg2Nzg3ZTA6Y2E6ZW46Q0E6Ug&usg=AOvVaw30XPfYurR0KIq69pPw1jhG",
-      "category": "Think Tank"
-    },
-    {
-      "title": "Government of Canada Supports 23 Waterloo and Brant Region businesses and organizations to scale, accelerate innovate and strengthen economic resilience",
-      "source": "GovCan - FedDev Ontario",
-      "score": 0.57490486,
-      "url": "https://www.canada.ca/en/economic-development-southern-ontario/news/2026/07/government-of-canada-supports-23-waterloo-and-brant-region-businesses-and-organizations-to-scale-accelerate-innovate-and-strengthen-economic-resili.html",
-      "category": "Government"
-    },
-    {
-      "title": "Reality check—governments in Canada are large and growing | Fraser Institute",
-      "source": "Fraser Institute",
-      "score": 0.5737196,
-      "url": "https://www.google.com/url?rct=j&sa=t&url=https://www.fraserinstitute.org/commentary/reality-check-governments-canada-are-large-and-growing&ct=ga&cd=CAIyGzllODBhNzEzODg2Nzg3ZTA6Y2E6ZW46Q0E6Ug&usg=AOvVaw0_hbOno-WKXhp6upJjmYzj",
-      "category": "Think Tank"
-    },
-    {
-      "title": "Winnipeg neighbourhood looks to new foundations with a pilot project aimed at affordable home ownership",
+      "title": "Ottawa wants to hear from Canadians on what AI system transparency looks like",
       "source": "Globe and Mail - Canada",
-      "score": 0.5727938,
-      "url": "https://www.theglobeandmail.com/canada/article-winnipeg-neighbourhood-vacant-home-pilot-project/",
+      "score": 0.6262065,
+      "url": "https://www.theglobeandmail.com/canada/article-ottawa-ai-system-transparency-consultation/",
       "category": "News & Media"
     },
     {
-      "title": "Government of Canada to support business growth and competitiveness in Burlington",
+      "title": "Government of Canada announces support to help a New Brunswick company modernize, compete, and reach new markets",
+      "source": "GovCan - National News",
+      "score": 0.5973714,
+      "url": "https://www.canada.ca/en/atlantic-canada-opportunities/news/2026/07/government-of-canada-announces-support-to-help-a-new-brunswick-company-modernize-compete-and-reach-new-markets.html",
+      "category": "Government"
+    },
+    {
+      "title": "New Research Shows National Cild Care Plan Already Driving Economic Benefits In Ontario",
+      "source": "Centre for Future Work",
+      "score": 0.5752186,
+      "url": "https://centreforfuturework.ca/2026/07/27/new-research-shows-national-cild-care-plan-already-driving-economic-benefits-in-ontario/",
+      "category": "Think Tank"
+    },
+    {
+      "title": "News &amp; Research | CCPA - Canadian Centre for Policy Alternatives",
+      "source": "Policy Alternatives",
+      "score": 0.5676793,
+      "url": "https://www.google.com/url?rct=j&sa=t&url=https://www.policyalternatives.ca/%3Fquery-0-page%3D1112%26cst%26query-20-page%3D62%26query-29-page%3D253%26p%3Darticles%252Fcovid-19-&ct=ga&cd=CAIyG2QyY2EwMGU1ODI1YTM3YTU6Y2E6ZW46Q0E6Ug&usg=AOvVaw353I8MOf1SzcmzclFrHv0P",
+      "category": "Think Tank"
+    },
+    {
+      "title": "Minister McGuinty brings together industry and investment leaders to accelerate Canada’s Defence Industrial Strategy",
+      "source": "GovCan - National News",
+      "score": 0.56092155,
+      "url": "https://www.canada.ca/en/department-national-defence/news/2026/07/minister-mcguinty-brings-together-industry-and-investment-leaders-to-accelerate-canadas-defence-industrial-strategy.html",
+      "category": "Government"
+    },
+    {
+      "title": "Government of Canada investments to help Niagara Region businesses adapt and drive innovation",
       "source": "GovCan - FedDev Ontario",
-      "score": 0.57167655,
-      "url": "https://www.canada.ca/en/economic-development-southern-ontario/news/2026/07/government-of-canada-to-support-business-growth-and-competitiveness-in-burlington.html",
+      "score": 0.5570791,
+      "url": "https://www.canada.ca/en/economic-development-southern-ontario/news/2026/07/government-of-canada-investments-to-help-niagara-region-businesses-adapt-and-drive-innovation.html",
+      "category": "Government"
+    },
+    {
+      "title": "Weak productivity drives affordability crisis",
+      "source": "Macdonald-Laurier Institute",
+      "score": 0.5566101,
+      "url": "https://macdonaldlaurier.ca/weak-productivity-drives-affordability-crisis/",
+      "category": "Think Tank"
+    },
+    {
+      "title": "The price of policy – How government shapes affordability: Webinar",
+      "source": "Macdonald-Laurier Institute",
+      "score": 0.54461324,
+      "url": "https://macdonaldlaurier.ca/the-price-of-policy-how-government-shapes-affordability-webinar/",
+      "category": "Think Tank"
+    },
+    {
+      "title": "Ontario Investing $16 Million to Help Smaller and Rural Communities Access Safe and Reliable Transit",
+      "source": "Ontario Newsroom",
+      "score": 0.5438198,
+      "url": "https://news.ontario.ca/en/release/1007838/ontario_investing_16_million_to_help_smaller_and_rural_communities_access_safe_and_reliable_transit",
+      "category": "Government"
+    },
+    {
+      "title": "Government of Canada support to help Ontario businesses strengthen trade resilience and expand into new markets",
+      "source": "GovCan - FedDev Ontario",
+      "score": 0.54234767,
+      "url": "https://www.canada.ca/en/economic-development-southern-ontario/news/2026/07/government-of-canada-support-to-help-ontario-businesses-strengthen-trade-resilience-and-expand-into-new-markets.html",
       "category": "Government"
     }
   ]
