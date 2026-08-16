@@ -1,75 +1,75 @@
 {
-  "updated_at": "2026-08-06T16:31:01Z",
+  "updated_at": "2026-08-16T19:04:29Z",
   "headlines": [
     {
-      "title": "Ottawa wants to hear from Canadians on what AI system transparency looks like",
-      "source": "Globe and Mail - Canada",
-      "score": 0.6262065,
-      "url": "https://www.theglobeandmail.com/canada/article-ottawa-ai-system-transparency-consultation/",
-      "category": "News & Media"
+      "title": "Is the Age of Purely Private-Sector AI Coming to an End?",
+      "source": "CIGI",
+      "score": 0.59092903,
+      "url": "https://cigionlineorg.substack.com/p/is-the-age-of-purely-private-sector",
+      "category": "Think Tank"
     },
     {
-      "title": "Government of Canada announces support to help a New Brunswick company modernize, compete, and reach new markets",
-      "source": "GovCan - National News",
-      "score": 0.5973714,
-      "url": "https://www.canada.ca/en/atlantic-canada-opportunities/news/2026/07/government-of-canada-announces-support-to-help-a-new-brunswick-company-modernize-compete-and-reach-new-markets.html",
+      "title": "Erosion of property rights and the housing crisis",
+      "source": "Fraser Institute",
+      "score": 0.5767756,
+      "url": "https://www.fraserinstitute.org/commentary/erosion-property-rights-and-housing-crisis",
+      "category": "Think Tank"
+    },
+    {
+      "title": "Secretary of State Zerucelli highlights additional funding to support Alberta’s skilled trades workforce",
+      "source": "GovCan - ESDC",
+      "score": 0.57053244,
+      "url": "https://www.canada.ca/en/employment-social-development/news/2026/08/secretary-of-state-zerucelli-highlights-additional-funding-to-support-albertas-skilled-trades-workforce.html",
       "category": "Government"
     },
     {
-      "title": "New Research Shows National Cild Care Plan Already Driving Economic Benefits In Ontario",
+      "title": "Building Canada Strong: Investing in Transportation Infrastructure in North Bay",
+      "source": "GovCan - National News",
+      "score": 0.5417764,
+      "url": "https://www.canada.ca/en/housing-infrastructure-communities/news/2026/08/building-canada-strong-investing-in-transportation-infrastructure-in-north-bay.html",
+      "category": "Government"
+    },
+    {
+      "title": "Government of Canada advances major infrastructure project to strengthen public and animal health, border protection and security science",
+      "source": "GovCan - National News",
+      "score": 0.5411657,
+      "url": "https://www.canada.ca/en/public-services-procurement/news/2026/08/government-of-canada-advances-major-infrastructure-project-to-strengthen-public-and-animal-health-border-protection-and-security-science.html",
+      "category": "Government"
+    },
+    {
+      "title": "Health Care is an Economic Engine, not Just a Cost Item",
       "source": "Centre for Future Work",
-      "score": 0.5752186,
-      "url": "https://centreforfuturework.ca/2026/07/27/new-research-shows-national-cild-care-plan-already-driving-economic-benefits-in-ontario/",
+      "score": 0.5391061,
+      "url": "https://centreforfuturework.ca/2026/08/10/health-care-is-an-economic-engine-not-just-a-cost-item/",
       "category": "Think Tank"
     },
     {
-      "title": "News &amp; Research | CCPA - Canadian Centre for Policy Alternatives",
-      "source": "Policy Alternatives",
-      "score": 0.5676793,
-      "url": "https://www.google.com/url?rct=j&sa=t&url=https://www.policyalternatives.ca/%3Fquery-0-page%3D1112%26cst%26query-20-page%3D62%26query-29-page%3D253%26p%3Darticles%252Fcovid-19-&ct=ga&cd=CAIyG2QyY2EwMGU1ODI1YTM3YTU6Y2E6ZW46Q0E6Ug&usg=AOvVaw353I8MOf1SzcmzclFrHv0P",
+      "title": "Canada’s Productivity Problem is a Superstar-Firm Problem – And AI is Our Chance to Fix It",
+      "source": "C.D. Howe Institute",
+      "score": 0.5389994,
+      "url": "https://cdhowe.org/publication/canadas-productivity-problem-is-a-superstar-firm-problem-and-ai-is-our-chance-to-fix-it/",
       "category": "Think Tank"
     },
     {
-      "title": "Minister McGuinty brings together industry and investment leaders to accelerate Canada’s Defence Industrial Strategy",
+      "title": "Emergency benefits in Canada: A comparison of jurisdictions",
+      "source": "Wellesley Institute",
+      "score": 0.5318738,
+      "url": "https://www.wellesleyinstitute.com/emergency-benefits-in-canada-a-comparison-of-jurisdictions/",
+      "category": "Think Tank"
+    },
+    {
+      "title": "The Government of Canada and Ontario Investing $1 Billion to Help Non-Development Charge Municipalities Build More Homes",
       "source": "GovCan - National News",
-      "score": 0.56092155,
-      "url": "https://www.canada.ca/en/department-national-defence/news/2026/07/minister-mcguinty-brings-together-industry-and-investment-leaders-to-accelerate-canadas-defence-industrial-strategy.html",
+      "score": 0.5269595,
+      "url": "https://www.canada.ca/en/housing-infrastructure-communities/news/2026/08/the-government-of-canada-and-ontario-investing-1-billion-to-help-non-development-charge-municipalities-build-more-homes.html",
       "category": "Government"
     },
     {
-      "title": "Government of Canada investments to help Niagara Region businesses adapt and drive innovation",
-      "source": "GovCan - FedDev Ontario",
-      "score": 0.5570791,
-      "url": "https://www.canada.ca/en/economic-development-southern-ontario/news/2026/07/government-of-canada-investments-to-help-niagara-region-businesses-adapt-and-drive-innovation.html",
-      "category": "Government"
-    },
-    {
-      "title": "Weak productivity drives affordability crisis",
-      "source": "Macdonald-Laurier Institute",
-      "score": 0.5566101,
-      "url": "https://macdonaldlaurier.ca/weak-productivity-drives-affordability-crisis/",
+      "title": "Carney wants to ‘catalyze’ investment by deploying capital from Parliament Hill",
+      "source": "Fraser Institute",
+      "score": 0.5225199,
+      "url": "https://www.fraserinstitute.org/commentary/carney-wants-catalyze-investment-deploying-capital-parliament-hill",
       "category": "Think Tank"
-    },
-    {
-      "title": "The price of policy – How government shapes affordability: Webinar",
-      "source": "Macdonald-Laurier Institute",
-      "score": 0.54461324,
-      "url": "https://macdonaldlaurier.ca/the-price-of-policy-how-government-shapes-affordability-webinar/",
-      "category": "Think Tank"
-    },
-    {
-      "title": "Ontario Investing $16 Million to Help Smaller and Rural Communities Access Safe and Reliable Transit",
-      "source": "Ontario Newsroom",
-      "score": 0.5438198,
-      "url": "https://news.ontario.ca/en/release/1007838/ontario_investing_16_million_to_help_smaller_and_rural_communities_access_safe_and_reliable_transit",
-      "category": "Government"
-    },
-    {
-      "title": "Government of Canada support to help Ontario businesses strengthen trade resilience and expand into new markets",
-      "source": "GovCan - FedDev Ontario",
-      "score": 0.54234767,
-      "url": "https://www.canada.ca/en/economic-development-southern-ontario/news/2026/07/government-of-canada-support-to-help-ontario-businesses-strengthen-trade-resilience-and-expand-into-new-markets.html",
-      "category": "Government"
     }
   ]
 }
