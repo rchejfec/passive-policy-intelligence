@@ -1,75 +1,75 @@
 {
-  "updated_at": "2026-08-16T19:04:29Z",
+  "updated_at": "2026-08-25T15:27:10Z",
   "headlines": [
     {
-      "title": "Is the Age of Purely Private-Sector AI Coming to an End?",
-      "source": "CIGI",
-      "score": 0.59092903,
-      "url": "https://cigionlineorg.substack.com/p/is-the-age-of-purely-private-sector",
-      "category": "Think Tank"
+      "title": "Federal government strengthens support for municipalities in Ontario to tackle unsheltered homelessness and encampments",
+      "source": "GovCan - National News",
+      "score": 0.59831375,
+      "url": "https://www.canada.ca/en/housing-infrastructure-communities/news/2026/08/federal-government-strengthens-support-for-municipalities-in-ontario-to-tackle-unsheltered-homelessness-and-encampments.html",
+      "category": "Government"
     },
     {
-      "title": "Erosion of property rights and the housing crisis",
+      "title": "What’s the recipe for economic growth in Atlantic Canada?",
       "source": "Fraser Institute",
-      "score": 0.5767756,
-      "url": "https://www.fraserinstitute.org/commentary/erosion-property-rights-and-housing-crisis",
+      "score": 0.56844056,
+      "url": "https://www.fraserinstitute.org/commentary/whats-recipe-economic-growth-atlantic-canada",
       "category": "Think Tank"
     },
     {
-      "title": "Secretary of State Zerucelli highlights additional funding to support Alberta’s skilled trades workforce",
-      "source": "GovCan - ESDC",
-      "score": 0.57053244,
-      "url": "https://www.canada.ca/en/employment-social-development/news/2026/08/secretary-of-state-zerucelli-highlights-additional-funding-to-support-albertas-skilled-trades-workforce.html",
-      "category": "Government"
+      "title": "Canada's an agricultural superpower. Could it feed the whole world?",
+      "source": "CBC Politics",
+      "score": 0.5667883,
+      "url": "https://www.cbc.ca/news/politics/canada-food-security-strategy-agrifood-exports-tech-adoption-infrastructure-labour-9.7315712?cmp=rss",
+      "category": "News & Media"
     },
     {
-      "title": "Building Canada Strong: Investing in Transportation Infrastructure in North Bay",
+      "title": "Backgrounder: Federal government builds strong infrastructure across Ontario",
       "source": "GovCan - National News",
-      "score": 0.5417764,
-      "url": "https://www.canada.ca/en/housing-infrastructure-communities/news/2026/08/building-canada-strong-investing-in-transportation-infrastructure-in-north-bay.html",
+      "score": 0.56652874,
+      "url": "https://www.canada.ca/en/housing-infrastructure-communities/news/2026/08/federal-government-builds-strong-infrastructure-across-ontario0.html",
       "category": "Government"
     },
     {
-      "title": "Government of Canada advances major infrastructure project to strengthen public and animal health, border protection and security science",
-      "source": "GovCan - National News",
-      "score": 0.5411657,
-      "url": "https://www.canada.ca/en/public-services-procurement/news/2026/08/government-of-canada-advances-major-infrastructure-project-to-strengthen-public-and-animal-health-border-protection-and-security-science.html",
-      "category": "Government"
-    },
-    {
-      "title": "Health Care is an Economic Engine, not Just a Cost Item",
-      "source": "Centre for Future Work",
-      "score": 0.5391061,
-      "url": "https://centreforfuturework.ca/2026/08/10/health-care-is-an-economic-engine-not-just-a-cost-item/",
-      "category": "Think Tank"
-    },
-    {
-      "title": "Canada’s Productivity Problem is a Superstar-Firm Problem – And AI is Our Chance to Fix It",
+      "title": "AI Scribes Demonstrate Healthcare AI’s Potential, but Fragmentation Risks Canada’s Commercialization Opportunity",
       "source": "C.D. Howe Institute",
-      "score": 0.5389994,
-      "url": "https://cdhowe.org/publication/canadas-productivity-problem-is-a-superstar-firm-problem-and-ai-is-our-chance-to-fix-it/",
+      "score": 0.5651342,
+      "url": "https://cdhowe.org/publication/ai-scribes-demonstrate-healthcare-ais-potential-but-fragmentation-risks-canadas-commercialization-opportunity/",
       "category": "Think Tank"
     },
     {
-      "title": "Emergency benefits in Canada: A comparison of jurisdictions",
-      "source": "Wellesley Institute",
-      "score": 0.5318738,
-      "url": "https://www.wellesleyinstitute.com/emergency-benefits-in-canada-a-comparison-of-jurisdictions/",
-      "category": "Think Tank"
-    },
-    {
-      "title": "The Government of Canada and Ontario Investing $1 Billion to Help Non-Development Charge Municipalities Build More Homes",
-      "source": "GovCan - National News",
-      "score": 0.5269595,
-      "url": "https://www.canada.ca/en/housing-infrastructure-communities/news/2026/08/the-government-of-canada-and-ontario-investing-1-billion-to-help-non-development-charge-municipalities-build-more-homes.html",
+      "title": "Government of Canada investment supports growth and innovation for two businesses in Lindsay",
+      "source": "GovCan - FedDev Ontario",
+      "score": 0.56296915,
+      "url": "https://www.canada.ca/en/economic-development-southern-ontario/news/2026/08/government-of-canada-investment-supports-growth-and-innovation-for-two-businesses-in-lindsay.html",
       "category": "Government"
     },
     {
-      "title": "Carney wants to ‘catalyze’ investment by deploying capital from Parliament Hill",
-      "source": "Fraser Institute",
-      "score": 0.5225199,
-      "url": "https://www.fraserinstitute.org/commentary/carney-wants-catalyze-investment-deploying-capital-parliament-hill",
+      "title": "Buyers Want Houses, Not More Apartments",
+      "source": "C.D. Howe Institute",
+      "score": 0.56153876,
+      "url": "https://cdhowe.org/publication/buyers-want-houses-not-more-apartments/",
       "category": "Think Tank"
+    },
+    {
+      "title": "Self-Imposed Barriers Hampering Canada’s Life Sciences Sector",
+      "source": "C.D. Howe Institute",
+      "score": 0.5523811,
+      "url": "https://cdhowe.org/publication/self-imposed-barriers-hampering-canadas-life-sciences-sector/",
+      "category": "Think Tank"
+    },
+    {
+      "title": "Carney government opposes Alberta health-care reforms and embraces failed status quo",
+      "source": "Fraser Institute",
+      "score": 0.551033,
+      "url": "https://www.fraserinstitute.org/commentary/carney-government-opposes-alberta-health-care-reforms-and-embraces-failed-status-quo",
+      "category": "Think Tank"
+    },
+    {
+      "title": "Investing in cycling facilities in Ottawa’s east end",
+      "source": "GovCan - National News",
+      "score": 0.5454974,
+      "url": "https://www.canada.ca/en/housing-infrastructure-communities/news/2026/08/investing-in-cycling-facilities-in-ottawas-east-end.html",
+      "category": "Government"
     }
   ]
 }
